@@ -16,7 +16,7 @@ module HistoryHelpers
 	end
 
 	def get_number_from_fail_file
-		CSV.foreach(Dir.pwd + "/history/fail.csv") do |row| ## Get unique number from file
+		CSV.foreach(Dir.pwd + "/history/failed_sc.csv") do |row| ## Get unique number from file
 	    @failed_sc_count = row[0].to_i ## Set fail scenario count
 		end
 	end

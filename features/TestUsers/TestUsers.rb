@@ -2,8 +2,9 @@
 
 class EmulatorUser
   attr_reader :name
-  attr_reader :surname
-  attr_reader :number
+  attr_reader :password
+  attr_reader :demo_email
+  attr_reader :demo_password
   attr_reader :email
   attr_reader :address
   attr_reader :test_user_1
@@ -22,13 +23,14 @@ class EmulatorUser
   attr_reader :user_1_joined
   attr_reader :user_2_joined
 
-  def initialize(name, surname, number, email, address, test_user_1, test_user_1_email,
+  def initialize(name, password, demo_email, demo_password, email, address, test_user_1, test_user_1_email,
                  test_user_1_cell, test_user_2, test_user_2_email,
                  test_user_2_cell, display_name_1, display_name_edit, persona_2, test_ios,
                  test_ios_email, removed_user_1, removed_user_2, user_1_joined, user_2_joined)
     @name = name
-    @surname = surname
-    @number = number
+    @password = password
+    @demo_email = demo_email
+    @demo_password = demo_password
     @email = email
     @address = address
     @test_user_1 = test_user_1
@@ -50,8 +52,9 @@ class EmulatorUser
 end
 
 TestUser = EmulatorUser.new('Werner Test',
-                            'Emulator',
-                            '08343715311',
+                            'Test123',
+                            'demo@test.com',
+                            'letmein',
                             'wernero@fastcomm.com',
                             '15 Bradford Street, Highveld, Centurion',
                             'Werner User 1',

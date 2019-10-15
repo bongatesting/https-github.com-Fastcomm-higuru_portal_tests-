@@ -1,9 +1,13 @@
-require 'selenium-webdriver'
-require 'byebug'
-require 'securerandom'
-require 'colorize'
+require 'appium_lib'
 require 'allure-cucumber'
 require "bundler/inline"
+require 'byebug'
+require 'colorize'
+require 'rspec'
+require 'rspec/expectations'
+require 'selenium-webdriver'
+require 'securerandom'
+require 'touch_action'
 require 'watir'
 
 if ENV['HOST'].nil?
