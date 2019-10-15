@@ -1,0 +1,11 @@
+[caps]
+platformName = "Android"
+deviceName = "Android"
+noReset = "true"
+app = "./features/support/latch_rc.apk"
+appPackage = "com.latch.app.rc"
+appActivity = "com.l4b.app.SplashScreen"
+autoLaunch = "True"
+autoGrantPermissions = "true"
+automationName = "uiautomator2"
+

@@ -1,0 +1,37 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+gem 'allure-cucumber'
+gem 'allure-ruby-adaptor-api'
+gem 'appium_console'
+gem 'appium_lib'
+gem 'appium_lib_core'
+gem 'builder'
+gem 'byebug'
+gem 'capybara'
+gem 'capybara-screenshot'
+gem 'colorize'
+gem 'cucumber'
+gem 'debase'
+gem 'debase-ruby_core_source'
+gem 'ffi'
+gem 'flay'
+gem 'flog'
+gem 'geocoder'
+gem 'headless'
+gem 'pry-rails'
+gem 'rails'
+gem 'require_all'
+gem 'rspec'
+gem 'rspec-core'
+gem 'rspec-example_steps'
+gem 'ruby-maven'
+gem 'selenium-webdriver'
+gem 'simplecov', require: false, group: :test
+gem 'simplecov-html'
+gem 'touch_action'
+gem 'version'
+gem 'watir'
