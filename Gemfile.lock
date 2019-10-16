@@ -235,6 +235,7 @@ GEM
     ruby_parser (3.14.0)
       sexp_processor (~> 4.9)
     rubyzip (2.0.0)
+    screen_capture (0.0.0)
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -266,6 +267,8 @@ GEM
     watir (6.16.5)
       regexp_parser (~> 1.2)
       selenium-webdriver (~> 3.6)
+    watir-scroll (0.4.0)
+      watir (>= 6.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -302,12 +305,14 @@ DEPENDENCIES
   rspec-core
   rspec-example_steps
   ruby-maven
+  screen_capture
   selenium-webdriver
   simplecov
   simplecov-html
   touch_action
   version
   watir
+  watir-scroll
 
 BUNDLED WITH
    2.0.2

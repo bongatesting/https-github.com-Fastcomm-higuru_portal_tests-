@@ -11,7 +11,7 @@ module Scroll
 	end
 
 	def scroll_on(object:, direction:, duration: 500, scroll_intensity: 200)
-		dementions = object.find_el.rect
+		dementions = object.find_element.rect
 		height = dementions.height
 		width = dementions.width
 		x_coordinate = dementions.x

@@ -1,5 +1,3 @@
-require 'appium_lib'
-require 'allure-cucumber'
 require "bundler/inline"
 require 'byebug'
 require 'colorize'
@@ -9,6 +7,7 @@ require 'selenium-webdriver'
 require 'securerandom'
 require 'touch_action'
 require 'watir'
+require 'watir-scroll'
 
 if ENV['HOST'].nil?
 	ENV['HOST'] = "portal-stage"

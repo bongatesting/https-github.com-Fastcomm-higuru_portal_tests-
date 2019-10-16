@@ -52,7 +52,7 @@ send_data(sock, message)
 
 message = {
     #"temp": random.randrange(0, 100)
-    "temp": 32
+    "temp": 35
 }
 
 message = json.dumps(message)
