@@ -72,27 +72,3 @@ TestUser = EmulatorUser.new('Werner Test',
                             'Successfully removed Werner User 2 from the group',
                             'Werner User 1 has joined the group',
                             'Werner User 2 has joined the group')
-
-class ChannelDetails
-  attr_reader :discussionchanname, :discussionchandescr, :businesschanname, :businesschandesc,
-              :newschanname, :newschandesc
-
-  def initialize(discussionchanname, discussionchandescr,
-                 businesschanname, businesschandesc,
-                 newschanname, newschandesc)
-
-    @discussionchanname = discussionchanname
-    @discussionchandescr = discussionchandescr
-    @businesschanname = businesschanname
-    @businesschandesc = businesschandesc
-    @newschanname = newschanname
-    @newschandesc = newschandesc
-  end
-end
-
-Channel = ChannelDetails.new('Werner Discussion Channel',
-                             'This is a discussion channel',
-                             'Werner Business Channel',
-                             'This is a business channel',
-                             'Werner News Channel',
-                             'This is a news channel')

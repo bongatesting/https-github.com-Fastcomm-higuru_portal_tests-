@@ -15,6 +15,17 @@ def scroll_up
   swipe(start_x: 530, start_y: 340, end_x: 530, end_y: 1300)
 end
 
+def browser_scroll
+browser.scroll.to(:bottom)
+execute_script
+$web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+# 1069,491
+end
+
+#To save a screenshot on specific step:
+# # $web_driver.save_screenshot (Dir.pwd + "/tmp/screenshots/" + "Failed_sc_#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png")
+
+
 ##----Touch Actions Method----##
 # Appium::TouchAction.new.long_press(x: 500, y: 520, duration: 2000).perform
 # Appium::TouchAction.new.press(x: 280, y: 530).wait(2000).release.perform

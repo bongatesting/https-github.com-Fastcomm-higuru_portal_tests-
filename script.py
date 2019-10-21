@@ -47,7 +47,8 @@ server_address = (HOST, PORT)
 print('connecting to {} port {}'.format(*server_address))
 sock.connect(server_address)
 
-message = '{"id":"werner_test"}'
+message = '{"id":"868446030645978"}'
+#message = '{"id":"YX8NB8"}'
 send_data(sock, message)
 
 message = {

@@ -1,11 +1,18 @@
 # frozen_string_literal: true
 
-Before do
-  get_number_from_fail_file
+def run
+  setup
+  begin
+    yield
+  rescue RSpec::Expectations::ExpectationNotMetError => e
+    puts e.message
+    $web_driver.save_screenshot "./#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png"
+  end
+  teardown
 end
 
-After do |scenario|
-  puts scenario.status.inspect
+Before do
+  get_number_from_fail_file
 end
 
 After do |scenario| ## Shut down the appium test run / driver
@@ -20,15 +27,12 @@ After do |scenario| ## Shut down the appium test run / driver
     #   $app_driver.find_exact("Open app again").click
     # end
   end
+  $web_driver.manage.timeouts.page_load = 30
+  $web_driver.manage.timeouts.implicit_wait = 30
+  sleep 5
+  # $web_driver.quit
 end
 
-def run
-  setup
-  begin
-    yield
-  rescue RSpec::Expectations::ExpectationNotMetError => e
-    puts e.message
-    $web_driver.save_screenshot "./#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png"
-  end
-  teardown
+After do |scenario|
+  puts scenario.status.inspect
 end

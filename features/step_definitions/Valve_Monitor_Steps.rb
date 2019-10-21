@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 When('I go to Valve Monitor') do
 	$web_driver.find_element(PortalWarehouse::VALVE_MONITOR_TAB).click
 	$web_driver.find_element(PortalWarehouse::SLEEVE_OK)
@@ -7,7 +9,9 @@ When('I go to Valve Monitor') do
 	$web_driver.find_element(PortalWarehouse::VALVE_OPEN)
 	$web_driver.find_element(PortalWarehouse::WIRE_FAULT)
 	$web_driver.find_element(PortalWarehouse::TEMP_HISTORY)
-	browser.scroll.to(:bottom)
-execute_script
-	$web_driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
+	system( "python script.py" )
+	$web_driver.find_element(PortalWarehouse::ACTUAL_TEMPERATURE)
+	$web_driver.find_element(PortalWarehouse::DASHBOARD_TAB).click
+	$web_driver.find_element(PortalWarehouse::EDART_DEVICE).click
+	$web_driver.find_element(PortalWarehouse::DASHBOARD_TEMPERATURE)
 end

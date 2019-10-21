@@ -2,3 +2,9 @@
 .idea/
 
 history/
+
+debug.log
+
+tmp/screenshots/
+
+features/tmp/screenshots/

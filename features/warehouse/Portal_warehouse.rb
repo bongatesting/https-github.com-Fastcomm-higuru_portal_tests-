@@ -2,7 +2,9 @@
 
 class PortalWarehouse
   LOGIN_EMAIL_FIELD = { xpath: "//input[@name='ion-input-0']" }.freeze
+  SECOND_LOGIN_EMAIL_FIELD = { xpath: "//input[@name='ion-input-2']" }.freeze
   LOGIN_PASSWORD = { xpath: "//input[@name='ion-input-1']" }.freeze
+  SECOND_LOGIN_PASSWORD = { xpath: "//input[@name='ion-input-3']" }.freeze
   SUBMIT_BUTTON = { css: '.submitButton' }.freeze
   LOGO_HEADER = { css: '.header-logo' }.freeze
   VALVE_MONITOR_TAB = { xpath: '//div[3]' }.freeze
@@ -10,6 +12,8 @@ class PortalWarehouse
   DEVICE_MANAGEMENT = { xpath: '//div[5]' }.freeze
   INVALID_LOGIN_MESSAGE = { xpath: "//span[contains(.,'Incorrect login details.')]" }.freeze
   TEMP_HISTORY = { xpath: './/*[contains(., "Temperature History")]' }.freeze
+  ACCOUNT_DROPDOWN = { xpath: "//ion-icon[@name='arrow-dropdown']" }.freeze
+  LOGOUT = { css: '.menu-item:nth-child(3)' }.freeze
 
 #****Valve Monitor options****
   SLEEVE_OK = { xpath: './/*[contains(., "Sleeve Ok")]' }.freeze
@@ -27,6 +31,9 @@ class PortalWarehouse
   LOCATION = { xpath: "//mat-panel-title[contains(.,'Location')]" }.freeze
   MESSAGES = { xpath: "//mat-panel-title[contains(.,'Messages')]" }.freeze
   TEMPERATURE = { xpath: "//mat-panel-title[contains(.,'Temp')]" }.freeze
+  DASHBOARD_TEMPERATURE = { xpath: './/*[contains(., "Temperature: 35")]' }.freeze
+  EDART_DEVICE = { css: '.ng-star-inserted:nth-child(18) .device-name' }.freeze
+  ACTUAL_TEMPERATURE = { css: '.ng-star-inserted:nth-child(3) .details > div', value: '35' }.freeze
 
 #****Left_menu_tabs****
   ARDUINO_TEMP = { css: '.ng-star-inserted:nth-child(3) .device-name' }.freeze
