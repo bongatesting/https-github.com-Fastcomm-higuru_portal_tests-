@@ -47,13 +47,13 @@ server_address = (HOST, PORT)
 print('connecting to {} port {}'.format(*server_address))
 sock.connect(server_address)
 
-message = '{"id":"868446030645978"}'
+message = '{"id":"123valve"}'
 #message = '{"id":"YX8NB8"}'
 send_data(sock, message)
 
 message = {
     #"temp": random.randrange(0, 100)
-    "temp": 35
+    "temp": 41
 }
 
 message = json.dumps(message)

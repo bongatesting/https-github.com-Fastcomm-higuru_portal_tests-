@@ -11,6 +11,7 @@ require 'selenium-webdriver'
 require 'securerandom'
 require 'touch_action'
 require 'watir'
+require 'watir-scroll'
 
 ENV['HOST'] = 'portal-stage' if ENV['HOST'].nil?
 

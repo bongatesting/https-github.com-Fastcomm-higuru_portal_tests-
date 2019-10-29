@@ -16,11 +16,31 @@ def scroll_up
 end
 
 def browser_scroll
-browser.scroll.to(:bottom)
-execute_script
 $web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
-# 1069,491
 end
+
+def scroll_to_element(element, locator=nil)
+  script_string = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);" +
+      "var elementTop = arguments[0].getBoundingClientRect().top;" +
+      "window.scrollBy(0, elementTop-(viewPortHeight/2));"
+  element = element.nil? ? find(locator) : element
+  execute_script(script_string, element)
+end
+
+def scroll_in_page
+  $web_driver.find_element(class: 'device-list-container').click
+  scroll = $web_driver.find_element(xpath: ".//*[contains(., 'Panic Position')]")
+  scroll.send_keys(:page_down)
+end
+
+def scroll_in_dashboard
+  scroll = $web_driver.find_element(PortalWarehouse::MESSAGE_TEMP)
+  scroll.location_once_scrolled_into_view
+end
+#scroll_in_page
+# $web_driver.find_element(PortalWarehouse::EDART_DEVICE).click
+# scroll.send_keys(:page_down)
+
 
 #To save a screenshot on specific step:
 # # $web_driver.save_screenshot (Dir.pwd + "/tmp/screenshots/" + "Failed_sc_#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png")

@@ -48,9 +48,9 @@ end
 
 Given('I am already signed in') do
 	$web_driver.find_element(PortalWarehouse::LOGIN_EMAIL_FIELD).clear
-	$web_driver.find_element(PortalWarehouse::LOGIN_EMAIL_FIELD).send_keys(TestUser.demo_email)
+	$web_driver.find_element(PortalWarehouse::LOGIN_EMAIL_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(PortalWarehouse::LOGIN_PASSWORD).clear
-	$web_driver.find_element(PortalWarehouse::LOGIN_PASSWORD).send_keys(TestUser.demo_password)
+	$web_driver.find_element(PortalWarehouse::LOGIN_PASSWORD).send_keys(TestUser.password)
 	$web_driver.find_element(PortalWarehouse::SUBMIT_BUTTON).click
 	sleep 5
 	$web_driver.find_element(PortalWarehouse::LOGO_HEADER)
