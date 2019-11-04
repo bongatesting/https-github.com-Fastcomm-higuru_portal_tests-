@@ -37,14 +37,21 @@ def scroll_in_dashboard
   scroll = $web_driver.find_element(ElementWarehouse::MESSAGE_TEMP)
   scroll.location_once_scrolled_into_view
 end
+
 #scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
 
+# Upload file
+# elem = $web_driver.execute_script(js, elem)
+# elem.sendKeys("/path/to/file")
 
 #To save a screenshot on specific step:
 # # $web_driver.save_screenshot (Dir.pwd + "/tmp/screenshots/" + "Failed_sc_#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png")
 
+# Wait for a specific element to show up
+# wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
+# wait.until { driver.find_element(:id => "foo") }
 
 ##----Touch Actions Method----##
 # Appium::TouchAction.new.long_press(x: 500, y: 520, duration: 2000).perform
