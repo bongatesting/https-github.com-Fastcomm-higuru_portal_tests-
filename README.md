@@ -1,2 +1,2 @@
-# hellothing_portal_tests
-Portal Testing for Hello Thing and different branding
+# hiGuru Web Widget Tests
+Testing All platforms and websites where the hiGugru widget is active
