@@ -34,11 +34,11 @@ def scroll_in_page
 end
 
 def scroll_in_dashboard
-  scroll = $web_driver.find_element(PortalWarehouse::MESSAGE_TEMP)
+  scroll = $web_driver.find_element(ElementWarehouse::MESSAGE_TEMP)
   scroll.location_once_scrolled_into_view
 end
 #scroll_in_page
-# $web_driver.find_element(PortalWarehouse::EDART_DEVICE).click
+# $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
 
 
