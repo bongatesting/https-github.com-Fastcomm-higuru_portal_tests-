@@ -51,11 +51,11 @@ class EmulatorUser
   end
 end
 
-TestUser = EmulatorUser.new('Werner Test',
-                            'Test123',
+TestUser = EmulatorUser.new('Bonga Fati',
+                            'higuru@123',
                             'demo@test.com',
                             'letmein',
-                            'wernero@fastcomm.com',
+                            'bonga+37@hi.guru',
                             '15 Bradford Street, Highveld, Centurion',
                             'Werner User 1',
                             'test_user_1@fastcomm.com',
