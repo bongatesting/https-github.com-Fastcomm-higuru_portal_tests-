@@ -13,7 +13,7 @@ require 'touch_action'
 require 'watir'
 require 'watir-scroll'
 
-# ENV['HOST'] = 'portal-stage' if ENV['HOST'].nil?
+ENV['HOST'] = 'app-stage' if ENV['HOST'].nil?
 
 Before do
 	$web_driver = Selenium::WebDriver.for :chrome
