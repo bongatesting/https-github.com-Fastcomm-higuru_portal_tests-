@@ -19,7 +19,11 @@ class ElementWarehouse
 	PAYMENT_METHOD = { xpath: '//div[@id="cdk-overlay-0"]/div/div/div/div[3]/div/span[2]/span' }
 	COMPANY_NAME = { css: '.company-name' }
 	COMPANY_UNIT = { css: '.image-rectangle > img' }
-	HISTORY = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[9]' }
+	CONVERSATION_HISTORY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[9]' }
+	CONVO_HISTORY = { xpath: '//*[contains(., "Conversation History")]' }
+	CONVO = { xpath: '//*[contains(., "Conversations")]' }
+	CONVO_SEARCH_FIELD = { id: 'mat-input-1' }
+	TEN_SHOULD_NOT_SEE = { xpath: '//*[contains(., "10290")]' }
 	GET_STARTED_REPLY = { xpath: '//*[@id="higuru-webchat"]/1]/div[2]/div[3]/div[2]/button[1]' }
 	SUPPORT_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[2]' }
 	PRODUCT_INFO_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[3]' }
