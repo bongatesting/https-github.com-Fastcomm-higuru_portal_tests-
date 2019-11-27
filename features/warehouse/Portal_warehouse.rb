@@ -30,11 +30,11 @@ class ElementWarehouse
 	COMPANY_NAME = { css: '.company-name' }
 	COMPANY_UNIT = { css: '.image-rectangle > img' }
 	CONVERSATION_HISTORY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[9]' }
-	CONVO_HISTORY = { xpath: '/html/body/app-root/app-home/div/div/app-history/div[1]/div[1]' }
 	BOT_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[10]' }
-	CONVO = { xpath: '/html/body/app-root/app-home/div/div/app-history/div[2]/h6/b' }
-	CONVO_SEARCH_FIELD = { xpath: '//*[@id="mat-input-29"]' }
-	TEN_SHOULD_NOT_SEE = { xpath: '/html/body/app-root/app-home/div/div/app-history/div[2]/div/div[2]/div/div[2]/div[2]/div[1]' }
+	CONVO_HISTORY = { xpath: '//*[contains(., "Conversation History")]' }
+	CONVO = { xpath: '//*[contains(., "Conversations")]' }
+	CONVO_SEARCH_FIELD = { id: 'mat-input-1' }
+	TEN_SHOULD_NOT_SEE = { xpath: '//*[contains(., "10290")]' }
 	GET_STARTED_REPLY = { xpath: '//*[@id="higuru-webchat"]/1]/div[2]/div[3]/div[2]/button[1]' }
 	SUPPORT_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[2]' }
 	PRODUCT_INFO_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[3]' }
