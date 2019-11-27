@@ -43,4 +43,9 @@ Given('I am already signed in') do
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
 	# $web_driver.find_element(ElementWarehouse::ALLOW_NOTIFICATION).click
 	# $web_driver.find_element(ElementWarehouse::ALLOW_NATIVE_NOTIFICATION).click
+	end
+
+Given('I am viewing the hi.guru website') do
+	$web_driver.navigate.to "https://hi.guru/"
+	$web_driver.find_element(ElementWarehouse::WIDGET)
 end
