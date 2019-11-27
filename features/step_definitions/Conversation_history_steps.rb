@@ -7,6 +7,6 @@ Then('I click on Conversation History')do
 	if $web_driver.find_elements(ElementWarehouse::TEN_SHOULD_NOT_SEE).first
 		raise('Search Results not working')
 	else
-		puts 'Search Field Working'.green
+		puts ('Search Field Working').green
 	end
 end
