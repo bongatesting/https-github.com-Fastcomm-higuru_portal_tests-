@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Given('I am on the Sign In Page') do
-
 	$web_driver.find_element(ElementWarehouse::LOGO)
 	$web_driver.find_element(ElementWarehouse::WIDGET).click
 	robot = $web_driver.find_element(xpath: '/html/body/div[2]/div/div[1]/div[2]/div[3]/div[1]/div/div/div[1]')
@@ -18,22 +17,10 @@ Given('I am on the Sign In Page') do
 	expect(robot.text).to include('today?')
 end
 
-When('I Sign in with Invalid Credentials') do
-
-end
-
-Then('I Sign in with Demo Credentials') do
-
-end
-
 Then('I Sign in with my own valid Credentials') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-end
-
-When('I Sign out') do
-
 end
 
 Given('I am already signed in') do
@@ -48,4 +35,16 @@ end
 Given('I am viewing the hi.guru website') do
 	$web_driver.navigate.to "https://hi.guru/"
 	$web_driver.find_element(ElementWarehouse::WIDGET).click
+end
+
+When('I Sign out') do
+
+end
+
+When('I Sign in with Invalid Credentials') do
+
+end
+
+Then('I Sign in with Demo Credentials') do
+
 end
