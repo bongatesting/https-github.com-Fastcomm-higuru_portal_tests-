@@ -17,6 +17,11 @@ Given('I am on the Sign In Page') do
 	expect(robot.text).to include('today?')
 end
 
+Given('I am viewing the hi.guru website') do
+	$web_driver.navigate.to "https://hi.guru/"
+	$web_driver.find_element(ElementWarehouse::WIDGET).click
+end
+
 Then('I Sign in with my own valid Credentials') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
@@ -30,11 +35,6 @@ Given('I am already signed in') do
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
 	# $web_driver.find_element(ElementWarehouse::ALLOW_NOTIFICATION).click
 	# $web_driver.find_element(ElementWarehouse::ALLOW_NATIVE_NOTIFICATION).click
-end
-
-Given('I am viewing the hi.guru website') do
-	$web_driver.navigate.to "https://hi.guru/"
-	$web_driver.find_element(ElementWarehouse::WIDGET).click
 end
 
 When('I Sign out') do

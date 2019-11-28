@@ -1,26 +1,51 @@
 Then('I click on the WIDGET') do
 	$web_driver.find_element(ElementWarehouse::WIDGET).click
-	$web_driver.find_element(xpath: "//button[contains(.,'Get Started')]" )
-	$web_driver.find_element(xpath: "//button[contains(.,'Support')]" )
-	$web_driver.find_element(xpath: "//button[contains(.,'Product Info')]" )
-	$web_driver.find_element(xpath: "//button[contains(.,'Feedback')]" )
-	$web_driver.find_element(xpath: "//button[contains(.,'Chat with us')]" )
+	$web_driver.find_element(ElementWarehouse::GET_STARTED_TEXT)
+	$web_driver.find_element(ElementWarehouse::SUPPORT_TEXT)
+	$web_driver.find_element(ElementWarehouse::PRODUCT_INFO_TEXT)
+	$web_driver.find_element(ElementWarehouse::FEEDBACK_TEXT)
+	$web_driver.find_element(ElementWarehouse::CHAT_WITH_US_TEXT)
 end
 
-Then('I click on get started') do
+Then('I Complete my chat with the bot') do
 	$web_driver.find_element(ElementWarehouse::GET_STARTED_BUTTON).click
-	$web_driver.find_element(xpath: "//button[contains(.,'Yes')]" )
-	$web_driver.find_element(xpath: "//button[contains(.,'No')]" )
-end
-
-Then('I click on the Yes response') do
+	$web_driver.find_element(ElementWarehouse::GET_STARTED_REPLY)
+	$web_driver.find_element(ElementWarehouse::WANT_TO_KNOW_MORE_REPLY)
+	$web_driver.find_element(ElementWarehouse:: YES_BUTTON)
+	$web_driver.find_element(ElementWarehouse:: NO_BUTTON)
+	sleep 1
 	$web_driver.find_element(ElementWarehouse::YES_BUTTON).click
-	$web_driver.find_element(xpath: "//button[contains(.,'Yes')]" )
-	$web_driver.find_element(xpath: "//button[contains(.,'No')]" )
-end
-
-Then('I click on the Yes response') do
+	$web_driver.find_element(ElementWarehouse::GREAT_BOT_RESPONSE)
+	$web_driver.find_element(ElementWarehouse::HELP_BOT_RESPONSE)
+	$web_driver.find_element(ElementWarehouse:: YES_BUTTON)
+	$web_driver.find_element(ElementWarehouse:: NO_BUTTON)
+	sleep 1
 	$web_driver.find_element(ElementWarehouse::NO_BUTTON).click
-	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED)
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
 	puts 'Conversation resolved successfully'
 end
+
+Then('I re-initiate my Chat with the Bot') do
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hallo')
+	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
+	$web_driver.find_element(ElementWarehouse:: SUPPORT_BUTTON)
+	$web_driver.find_element(ElementWarehouse:: SUPPORT_BOT_RESPONSE)
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Support')
+	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
+	$web_driver.find_element(ElementWarehouse:: DESCRIPTION_BOT_RESPONSE_1)
+	$web_driver.find_element(ElementWarehouse:: DESCRIPTION_BOT_RESPONSE_2)
+	Puts 'Chat sent to Agent. Next Test is to see the chat transferred to Agent.'
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot!👌')
+	sleep 2
+	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::BOT_PLEASURE_RESPONSE)
+	end
+
+Then('I confirm the chat has been closed') do
+	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+#TODO - Here we go to check if chat was transferred.
+end
+
