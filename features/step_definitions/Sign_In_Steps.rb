@@ -19,7 +19,7 @@ end
 
 Given('I am viewing the hi.guru website') do
 	$web_driver.navigate.to "https://hi.guru/"
-	$web_driver.find_element(ElementWarehouse::WIDGET).click
+	$web_driver.find_element(ElementWarehouse::WIDGET)
 end
 
 Then('I Sign in with my own valid Credentials') do

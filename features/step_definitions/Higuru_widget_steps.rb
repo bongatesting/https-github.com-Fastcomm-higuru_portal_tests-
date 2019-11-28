@@ -28,17 +28,20 @@ end
 Then('I re-initiate my Chat with the Bot') do
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hallo')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
-	$web_driver.find_element(ElementWarehouse:: SUPPORT_BUTTON)
+	if $web_driver.find_elements(ElementWarehouse::CONVERSATION_RESOLVED_TEXT).first
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi')
+		$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
+	end
+	$web_driver.find_element(ElementWarehouse:: SUPPORT_BUTTON).click
 	$web_driver.find_element(ElementWarehouse:: SUPPORT_BOT_RESPONSE)
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Support')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
 	$web_driver.find_element(ElementWarehouse:: DESCRIPTION_BOT_RESPONSE_1)
 	$web_driver.find_element(ElementWarehouse:: DESCRIPTION_BOT_RESPONSE_2)
-	Puts 'Chat sent to Agent. Next Test is to see the chat transferred to Agent.'
+	puts 'Chat sent to Agent. Next Test is to see the chat transferred to Agent.'
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot!👌')
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
-	$web_driver.find_element(ElementWarehouse::BOT_PLEASURE_RESPONSE)
 	end
 
 Then('I confirm the chat has been closed') do

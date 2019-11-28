@@ -8,3 +8,7 @@ debug.log
 tmp/screenshots/
 
 features/tmp/screenshots/
+
+features/TestUsers/
+
+features/TestDetails/
