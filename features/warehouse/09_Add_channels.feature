@@ -7,4 +7,4 @@ Feature: Web message
 	 Then I click on higuru web message
 	 Then I click on Add channel button 2
 	 Then I click on send instructions
-
+	 Then I click on Channels tab
