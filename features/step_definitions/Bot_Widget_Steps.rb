@@ -7,6 +7,23 @@ Then('I click on the WIDGET') do
 	$web_driver.find_element(ElementWarehouse::CHAT_WITH_US_TEXT)
 end
 
+Then('I click on the Fastcomm WIDGET') do
+	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
+	$web_driver.find_element(ElementWarehouse::WELCOME_FASTCOMM_TEXT)
+	$web_driver.find_element(ElementWarehouse::MORE_FASTCOMM_BUTTON)
+	$web_driver.find_element(ElementWarehouse::MEDIA_BUTTON)
+	$web_driver.find_element(ElementWarehouse::CREATING_WITH_US_BUTTON)
+	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON)
+	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE)
+	$web_driver.find_element(ElementWarehouse::HI_GURU_BUTTON)
+	$web_driver.find_element(ElementWarehouse::HELLOTHING_BUTTON)
+	$web_driver.find_element(ElementWarehouse::LATCH_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::NO_BUTTON)
+	$web_driver.find_element(ElementWarehouse::YES_BUTTON).click
+
+end
+
 Then('I Complete my chat with the bot') do
 	$web_driver.find_element(ElementWarehouse::GET_STARTED_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::GET_STARTED_REPLY)
@@ -46,8 +63,8 @@ Then('I re-initiate my Chat with the Bot') do
 
 Then('I confirm the chat has been closed') do
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	#$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	#$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 #TODO - Here we go to check if chat was transferred.
 end

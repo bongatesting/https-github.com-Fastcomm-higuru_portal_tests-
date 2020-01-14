@@ -1,5 +1,16 @@
 # frozen_string_literal: true
 
+Given('I am viewing the hi.guru website') do
+	$web_driver.navigate.to "https://hi.guru/"
+	$web_driver.find_element(ElementWarehouse::WIDGET)
+end
+
+Given('I am viewing the Fastcomm website') do
+	$web_driver.navigate.to "https://fastcomm.com"
+	$web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
+	$web_driver.find_element(ElementWarehouse::WIDGET)
+end
+
 Given('I am on the Sign In Page') do
 	$web_driver.find_element(ElementWarehouse::LOGO)
 	$web_driver.find_element(ElementWarehouse::WIDGET).click
@@ -15,11 +26,6 @@ Given('I am on the Sign In Page') do
 	expect(robot.text).to include('get chatting, how can I assist you')
 	robot = $web_driver.find_element(xpath: '/html/body/div[2]/div/div[1]/div[2]/div[3]/div[1]/div/div/div[1]')
 	expect(robot.text).to include('today?')
-end
-
-Given('I am viewing the hi.guru website') do
-	$web_driver.navigate.to "https://hi.guru/"
-	$web_driver.find_element(ElementWarehouse::WIDGET)
 end
 
 Then('I Sign in with my own valid Credentials') do

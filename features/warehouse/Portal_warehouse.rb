@@ -2,6 +2,8 @@
 
 class ElementWarehouse
 	WIDGET = { xpath: '//*[@id="higuru-webchat"]/div' }
+	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
+	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
 	LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
 	EMAIL_FIELD = { css: '.form-group:nth-child(1) > .form-input' }
 	PASSWORD_FIELD = { css: '.form-group:nth-child(2) > .form-input' }
@@ -76,4 +78,26 @@ class ElementWarehouse
 	CHAT_WITH_US_TEXT = { xpath: "//button[contains(.,'Chat with us')]" }
 	SECOND_BOT_RESPONSE = { xpath: "//*[contains(.,'Hi! Welcome to hi.guru')]" }
 	BOT_PLEASURE_RESPONSE = { xpath: "//*[contains(.,'It's my pleasure.')]" }
+
+
+#########################-----------Fastcomm Elements-----------#########################
+# Initial Bot response #
+	WELCOME_FASTCOMM_TEXT = { xpath: "//button[contains(.,'Hi! Welcome to Fastcomm. What are you most interested in today?')]" }
+	OUR_SOLUTION_BUTTON = { xpath: "//button[contains(.,'Our Solutions')]" }
+	MORE_FASTCOMM_BUTTON = { xpath: "//button[contains(.,'More about Fastcomm')]" }
+	MEDIA_BUTTON = { xpath: "//button[contains(.,'Media')]" }
+	CREATING_WITH_US_BUTTON = { xpath: "//button[contains(.,'Creating with us')]" }
+	CHATTING_TO_US_BUTTON = { xpath: "//button[contains(.,'Chatting to us')]" }
+
+# Our Solution Bot response #
+
+	OUR_SOLUTION_RESPONSE_1 = { xpath: "//*[contains(.,'We have successfully created and')]" }
+	OUR_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'implemented various platforms')]" }
+	OUR_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'aimed at connecting people, places')]" }
+	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
+	LATCH_BUTTON = { xpath: "//button[contains(.,'latch')]" }
+	HELLOTHING_BUTTON = { xpath: "//button[contains(.,'HelloThing)]" }
+
+# Latch Button Bot response #
+	HI_GURU_BUTTON = { xpath: "//button[contains(.,'Easily manage your conversations')]" }
 end
