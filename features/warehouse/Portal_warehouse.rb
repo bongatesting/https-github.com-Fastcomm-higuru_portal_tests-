@@ -57,6 +57,8 @@ class ElementWarehouse
 	HELP_BOT_RESPONSE = { xpath: '//*[contains(.,"Is there anything else I can help you with?")]' }
 	YES_BUTTON = { xpath: '//button[contains(.,"Yes")]' }
 	NO_BUTTON = { xpath: '//button[contains(.,"No")]' }
+	NO_BUTTON_RESPONSE_1 = { xpath: '//*[contains(.,"It has been great chatting with you.")]' }
+	NO_BUTTON_RESPONSE_2 = { xpath: '//*[contains(.,"Have a wonderful day")]' }
 
   ADD_IMAGE = {id: 'upload-btn'}
 	SUPPORT_BUTTON = { css: '.higuru_quick-reply:nth-child(2)' }
@@ -82,22 +84,73 @@ class ElementWarehouse
 
 #########################-----------Fastcomm Elements-----------#########################
 # Initial Bot response #
-	WELCOME_FASTCOMM_TEXT = { xpath: "//button[contains(.,'Hi! Welcome to Fastcomm. What are you most interested in today?')]" }
+	WELCOME_FASTCOMM_TEXT = { xpath: "//*[contains(.,'Hi! Welcome to Fastcomm. What are you most interested in today?')]" }
 	OUR_SOLUTION_BUTTON = { xpath: "//button[contains(.,'Our Solutions')]" }
 	MORE_FASTCOMM_BUTTON = { xpath: "//button[contains(.,'More about Fastcomm')]" }
 	MEDIA_BUTTON = { xpath: "//button[contains(.,'Media')]" }
 	CREATING_WITH_US_BUTTON = { xpath: "//button[contains(.,'Creating with us')]" }
 	CHATTING_TO_US_BUTTON = { xpath: "//button[contains(.,'Chatting to us')]" }
+	CHAT_TEXT_FIELD = { css: ".higuru_input" }
 
 # Our Solution Bot response #
 
-	OUR_SOLUTION_RESPONSE_1 = { xpath: "//*[contains(.,'We have successfully created and')]" }
-	OUR_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'implemented various platforms')]" }
-	OUR_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'aimed at connecting people, places')]" }
+	OUR_SOLUTION_RESPONSE_1 = { xpath: "//*[contains(.,'We have successfully created and implemented various platforms aimed')]" }
+	OUR_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'at connecting people, places and things in a more convenient and')]" }
+	OUR_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'flexible way. These platforms allow businesses to')]" }
+	OUR_SOLUTION_RESPONSE_4 = { xpath: "//*[contains(.,'focus on their growth and boost productivity by enhancing their')]" }
+	OUR_SOLUTION_RESPONSE_5 = { xpath: "//*[contains(.,'existing business processes. Our Platforms are:')]" }
+
 	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
 	LATCH_BUTTON = { xpath: "//button[contains(.,'latch')]" }
-	HELLOTHING_BUTTON = { xpath: "//button[contains(.,'HelloThing)]" }
+	HELLOTHING_BUTTON = { xpath: "//button[contains(.,'HelloThing')]" }
 
 # Latch Button Bot response #
-	HI_GURU_BUTTON = { xpath: "//button[contains(.,'Easily manage your conversations')]" }
+	LATCH_RESPONSE_1 = { xpath: "//*[contains(.,'Easily manage your conversations')]" }
+	LATCH_RESPONSE_2 = { xpath: "//*[contains(.,'media and documents through a')]" }
+	LATCH_RESPONSE_3 = { xpath: "//*[contains(.,'closed, secure and protected')]" }
+	LATCH_RESPONSE_4 = { xpath: "//*[contains(.,'intranet. Latch provides a central')]" }
+	LATCH_RESPONSE_5 = { xpath: "//*[contains(.,'hub with customised 'WhatsApp'')]" }
+	LATCH_URL = { xpath: "//a[contains(.,'https://latch.chat')]" }
+	LATCH_SITE_TEXT = { xpath: "//h1[contains(.,'Making collaboration easier using a secure business messenger')]" }
+	LATCH_SIGN_IN = { xpath: "//a[contains(.,'Sign In')]" }
+	LATCH_YES_RESPONSE_1 = { xpath: "//*[contains(.,'Great! These are the available')]" }
+	LATCH_YES_RESPONSE_2 = { xpath: "//*[contains(.,'options. Please select the one you')]" }
+	LATCH_YES_RESPONSE_3 = { xpath: "//*[contains(.,'are interested in.')]" }
+	ABOUT_FASTCOMM_RESPONSE_1 = { xpath: "//*[contains(.,'At Fastcomm we believe in')]" }
+	ABOUT_FASTCOMM_RESPONSE_2 = { xpath: "//*[contains(.,'Innovation Through Technology.')]" }
+	ABOUT_FASTCOMM_RESPONSE_3 = { xpath: "//*[contains(.,'We value the unique relationship')]" }
+	ABOUT_FASTCOMM_RESPONSE_4 = { xpath: "//*[contains(.,'between technology and people,')]" }
+	ABOUT_FASTCOMM_RESPONSE_5 = { xpath: "//*[contains(.,'and strive to expertly enable the')]" }
+	ABOUT_FASTCOMM_RESPONSE_6 = { xpath: "//*[contains(.,'linking of people, places and things')]" }
+	FASTCOMM_LINK = { xpath: "//a[contains(.,'https://fastcomm.com/about')]" }
+	FASTCOMM_TITLE = { xpath: "//h3[contains(.,'Innovation through technology')]" }
+	SEND_CHAT_BUTTON = { css: 'rect' }
+	CHATTING_TO_US_RESPONSE_1 = { xpath: "//*[contains(.,'We love connecting. A consultant')]" }
+	CHATTING_TO_US_RESPONSE_2 = { xpath: "//*[contains(.,'will be with you shortly to discuss')]" }
+	CHATTING_TO_US_RESPONSE_3 = { xpath: "//*[contains(.,'anything further you may be')]" }
+	CHATTING_TO_US_RESPONSE_4 = { xpath: "//*[contains(.,'interested in.')]" }
+	AGENT_RESPONSE = { xpath: "//*[contains(.,'How may I assist you today?')]" }
+	AGENT_RESOLVE_TEXT = { xpath: "//*[contains(.,'Conversation resolved by agent')]" }
+	MEDIA_RESPONSE_TEXT = { xpath: "//*[contains(.,'To view some of our media articles follow this link:')]" }
+	MEDIA_RESPONSE_LINK = { xpath: "//a[contains(.,'https://fastcomm.com/media')]" }
+	MEDIA_URL_TEXT = { xpath: "//h1[contains(.,'Linking people, places & things')]" }
+	MEDIA_URL_TEXT_2 = { xpath: "//h2[contains(.,'Enabling businesses to digitally transform through customizable platforms.')]" }
+	MEDIA_PLAY_BUTTON = { xpath: '//*[@id="Capa_1"]' }
+	YOUTUBE_PLAY_BUTTON = { xpath: '//*[@id="player_uid_264695290_1"]/div[4]/button' }
+	YOUTUBE_PLAY_TEXT = { xpath: "//a[contains(.,'Fastcomm Video 2019')]" }
+	CLOSE_YOUTUBE_VIDEO = { xpath: '//*[@id="elementor-popup-modal-2908"]/div[2]/i' }
+	THREE_LINES = { xpath: '//*[@id="page"]/div[1]/div/div/section/div/div/div/div/div/section/div/div/div[3]/div/div/div/div/div/a/i' }
+	HOME_TEXT = { xpath: "//a[contains(.,'Home')]" }
+	STORE_TEXT = { xpath: "//a[contains(.,'Store')]" }
+	IOT_TEXT = { xpath: "//a[contains(.,'IoT Solutions')]" }
+	MEDIA_TEXT = { xpath: "//a[contains(.,'Media')]" }
+	COMPANY_TEXT = { xpath: "//a[contains(.,'Company')]" }
+	THREE_LINES_CLOSE_BUTTON = { xpath: '//*[@id="elementor-popup-modal-5988"]/div/div[4]/i' }
+	MEDIA_LOGO = { id: "page" }
+	SHOPPING_CART = { xpath: '//*[@id="elementor-menu-cart__toggle_button"]/span[2]/i' }
+	CREATING_RESPONSE = { xpath: "//*[contains(.,'At Fastcomm we recognise that not every business is the same and we')]" }
+	CREATING_RESPONSE_2 = { xpath: "//*[contains(.,'offer various ways for successful applicants to partner with us.')]" }
+	CREATING_RESPONSE_3 = { xpath: "//*[contains(.,'What is your email address?')]" }
+	HOW_MAY_WE_ASSIST_TEXT = { xpath: "//*[contains(.,'Hi Werner how may we assist you today?')]" }
+	EMAIL_RESPONSE = { xpath: "//*[contains(.,'Our consultants will be contacting you via your email as soon as possible. Thank you for stopping by and have a nice day. ')]" }
 end
