@@ -166,8 +166,8 @@ And('I confirm the chat has been closed') do
 	$web_driver.execute_script( "window.open()" )
 	sleep 1
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	$web_driver.navigate.to 'https://app.hi.guru/home/agent-interface'
-	#$web_driver.get 'https://app.hi.guru/home/agent-interface'
+	$web_driver.navigate.to 'https://app-qa.hi.guru/home/agent-interface'
+	#$web_driver.get 'https://app-qa.hi.guru/home/agent-interface'
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
