@@ -9,3 +9,4 @@ features/support/android_helpers/*
 features/TestDetails/TestDetails.rb
 Gemfile.lock
 debug.log
+features/Attachment_Files/LatchCSVExample.csv

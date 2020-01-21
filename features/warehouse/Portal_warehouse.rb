@@ -12,7 +12,7 @@ class ElementWarehouse
 	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[2]/button' }
 	ALLOW_NATIVE_NOTIFICATION = { xpath: "//span[contains(.,'Allow')]" }
 	ALLOW_NATIVE_NOTIFICATION_1 = { xpath: "//*[contains(.,'Allow')]" }
-
+	ALLOW_NOTIFICATION_TEXT = { xpath: "/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[2]/span[2]/button"}
 	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[3]' }
 	CLOSE_NOTIFICATION_CONVO_PAGE = { xpath: '/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[3]' }
 	CONVERSATIONS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/span[1]/img' }
@@ -71,7 +71,7 @@ class ElementWarehouse
 	CHAT_WITH_US_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[5]' }
   SEND_BUTTON = { css: '.higuru_compose-action-icon path' }
   CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
-  CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
+  CONVERSATION_RESOLVED_TEXT = { xpath: '//*[@id="higuru-webchat"][contains(.,"Conversation resolved by agent")]' }
 
 	GET_STARTED_TEXT = { xpath: "//button[contains(.,'Get Started')]" }
 	SUPPORT_TEXT = { xpath: "//button[contains(.,'Support')]" }
@@ -129,8 +129,10 @@ class ElementWarehouse
 	CHATTING_TO_US_RESPONSE_2 = { xpath: "//*[contains(.,'will be with you shortly to discuss')]" }
 	CHATTING_TO_US_RESPONSE_3 = { xpath: "//*[contains(.,'anything further you may be')]" }
 	CHATTING_TO_US_RESPONSE_4 = { xpath: "//*[contains(.,'interested in.')]" }
-	AGENT_RESPONSE = { xpath: "//*[contains(.,'How may I assist you today?')]" }
+	AGENT_RESPONSE = { xpath: "//*[contains(.,'Hi, My name Is BOT, How may I assist you?')]" }
 	AGENT_RESOLVE_TEXT = { xpath: "//*[contains(.,'Conversation resolved by agent')]" }
+	AGENT_RESOLVE_TEXT_2 = { xpath: "//*[contains(.,'Sure thing. Consider it Resolved...')]" }
+	CLIENT_RESOLVE_TEXT = { xpath: "//*[contains(.,'Hi Bot, I am just testing. We may close this query')]" }
 	MEDIA_RESPONSE_TEXT = { xpath: "//*[contains(.,'To view some of our media articles follow this link:')]" }
 	MEDIA_RESPONSE_LINK = { xpath: "//a[contains(.,'https://fastcomm.com/media')]" }
 	MEDIA_URL_TEXT = { xpath: "//h1[contains(.,'Linking people, places & things')]" }
@@ -153,4 +155,19 @@ class ElementWarehouse
 	CREATING_RESPONSE_3 = { xpath: "//*[contains(.,'What is your email address?')]" }
 	HOW_MAY_WE_ASSIST_TEXT = { xpath: "//*[contains(.,'Hi Werner how may we assist you today?')]" }
 	EMAIL_RESPONSE = { xpath: "//*[contains(.,'Our consultants will be contacting you via your email as soon as possible. Thank you for stopping by and have a nice day. ')]" }
+	HIGURU_AGENT_TITLE = { xpath: "//*[contains(.,'Your Company Accounts')]" }
+	GENERAL_GO_BUTTON = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-company-selector/div/div/ul/li[1]/div/div[3]/button" }
+	HIGURU_GO_BUTTON = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-company-selector/div/div/ul/li[2]/div/div[3]/button" }
+
+	HIGURU_UNIT_TEXT = { xpath: '//*[@id="company-unit-selection-overlay"][contains(.,"hi.guru")]' }
+	FASTCOMM_UNIT_TEXT = { xpath: '//*[@id="company-unit-selection-overlay"][contains(.,"Fastcomm")]' }
+	LINK_UNIT_TEXT = { xpath: '//*[@id="company-unit-selection-overlay"][contains(.,"Link")]' }
+	LINK_UNIT_TEXT = { xpath: '//*[@id="company-unit-selection-overlay"][contains(.,"Link")]' }
+	LATCH_UNIT_TEXT = { xpath: '//*[@id="company-unit-selection-overlay"][contains(.,"Latch")]' }
+	INBOUND_CHAT = { xpath: '//*[@id="mat-tab-content-0-0"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
+	INBOUND_CHAT_FIELD = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-footer-block/app-agent-chatbox/div[1]' }
+	INBOUND_CHAT_SEND_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-footer-block/app-agent-chatbox/div[2]/img' }
+	RESOLVE_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-header/div[2]/button/img' }
+	CLOSE_BUTTON = { xpath: '//*[@id="cdk-overlay-0"]/div/div/button[4]' }
+
 end
