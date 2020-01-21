@@ -15,4 +15,4 @@ Feature: Bot Widget Feature
 
   Scenario: As a user I want to Test speaking to a Live agent
 	Then I initiate chatting to a live agent
-	Then I confirm the chat has been closed
+	And I confirm the chat has been closed

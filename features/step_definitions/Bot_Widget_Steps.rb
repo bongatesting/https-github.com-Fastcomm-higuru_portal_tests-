@@ -151,27 +151,52 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 end
 
 Then('I initiate chatting to a live agent') do
-	$web_driver.navigate.to "https://fastcomm.com"
+	wait.until{ $web_driver.navigate.to "https://fastcomm.com" }
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
-	$web_driver.find_element(ElementWarehouse:: CHATTING_TO_US_BUTTON).click
-	$web_driver.find_element(ElementWarehouse:: CHATTING_TO_US_RESPONSE_1)
-	$web_driver.find_element(ElementWarehouse:: CHATTING_TO_US_RESPONSE_2)
-	$web_driver.find_element(ElementWarehouse:: CHATTING_TO_US_RESPONSE_3)
-	$web_driver.find_element(ElementWarehouse:: CHATTING_TO_US_RESPONSE_4)
-	wait.until{ $web_driver.find_element(ElementWarehouse:: AGENT_RESPONSE) }
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi, This is a Test. We can resolve this query')
-	$web_driver.find_element(ElementWarehouse:: SEND_BUTTON).click
-	wait.until{ $web_driver.find_element(ElementWarehouse:: AGENT_RESOLVE_TEXT) }
-	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
-	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_1)
+	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_2)
+	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_3)
+	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_4)
 end
 
-Then('I confirm the chat has been closed') do
-	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+And('I confirm the chat has been closed') do
+	sleep 2
+	$web_driver.execute_script( "window.open()" )
+	sleep 1
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	$web_driver.navigate.to 'https://app-qa.hi.guru/home/agent-interface'
+	#$web_driver.get 'https://app-qa.hi.guru/home/agent-interface'
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-
+	sleep 2
+	$web_driver.find_element(ElementWarehouse::HIGURU_AGENT_TITLE)
+	$web_driver.find_element(ElementWarehouse::HIGURU_GO_BUTTON).click
+	sleep 2
+	$web_driver.find_element(ElementWarehouse::FASTCOMM_UNIT_TEXT).click
+	#TODO - ALLOW Notifications
+	#$web_driver.find_element(ElementWarehouse::FASTCOMM_UNIT_TEXT).click
+	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT).click
+	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Hi, My name Is BOT, How may I assist you?')
+	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	wait.until{ $web_driver.find_element(ElementWarehouse::AGENT_RESPONSE) }
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi Bot, I am just testing. We may close this query')
+	$web_driver.find_element(ElementWarehouse:: SEND_BUTTON).click
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	wait.until{ $web_driver.find_element(ElementWarehouse::CLIENT_RESOLVE_TEXT) }
+	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Sure thing. Consider it Resolved...')
+	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.find_element(ElementWarehouse::AGENT_RESOLVE_TEXT_2)
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot')
+	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::CLOSE_BUTTON).click
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
 end
