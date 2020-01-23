@@ -100,7 +100,7 @@ Then('I click on the WIDGET and send messages instead of clicking') do
 	$web_driver.find_element(ElementWarehouse::NO_BUTTON)
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Yes there is')
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
-	#TODO - Bug Found- Saying yes instead of clicking yes gives incorrect response
+	#TODO - Bug Found- Saying yes instead of clicking yes gives incorrect response when sending "yes, Thank you"
 	$web_driver.find_element(ElementWarehouse::LATCH_YES_RESPONSE_1)
 	$web_driver.find_element(ElementWarehouse::LATCH_YES_RESPONSE_2)
 	$web_driver.find_element(ElementWarehouse::LATCH_YES_RESPONSE_3)

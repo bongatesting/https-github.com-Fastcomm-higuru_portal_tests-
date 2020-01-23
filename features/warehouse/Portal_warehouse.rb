@@ -170,7 +170,7 @@ class ElementWarehouse
 	INBOUND_CHAT_FIELD = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-footer-block/app-agent-chatbox/div[1]' }
 	INBOUND_CHAT_SEND_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-footer-block/app-agent-chatbox/div[2]/img[1]' }
 	RESOLVE_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-header/div[2]/button/img' }
-	RESOLVE_TEXT = { xpath: '//*[@id="cdk-overlay-1"]/div/div/button[3]' }
-	RESOLVED_TEXT = { xpath: '//*[contains(.,"Conversation successfully resolved")]' }
+	RESOLVE_TEXT = { xpath: '//button[3][contains(.,"Resolve")]' }
+	RESOLVED_TEXT = { xpath: '//span[contains(.,"Conversation successfully resolved")]' }
 
 end
