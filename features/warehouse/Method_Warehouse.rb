@@ -38,6 +38,12 @@ def scroll_in_dashboard
   scroll.location_once_scrolled_into_view
 end
 
+def open_new_tab
+  $web_driver.execute_script( "window.open()" )
+  sleep 1
+  $web_driver.switch_to.window( $web_driver.window_handles.last )
+end
+
 #scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
