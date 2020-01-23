@@ -127,10 +127,15 @@ class ElementWarehouse
 	FASTCOMM_LINK = { xpath: "//a[contains(.,'https://fastcomm.com/about')]" }
 	FASTCOMM_TITLE = { xpath: "//h3[contains(.,'Innovation through technology')]" }
 	SEND_CHAT_BUTTON = { css: 'rect' }
+
 	CHATTING_TO_US_RESPONSE_1 = { xpath: "//*[contains(.,'We love connecting. A consultant')]" }
 	CHATTING_TO_US_RESPONSE_2 = { xpath: "//*[contains(.,'will be with you shortly to discuss')]" }
 	CHATTING_TO_US_RESPONSE_3 = { xpath: "//*[contains(.,'anything further you may be')]" }
 	CHATTING_TO_US_RESPONSE_4 = { xpath: "//*[contains(.,'interested in.')]" }
+
+	CHATTING_RESPONSE_NOT_AVAILABLE = { xpath: "//*[contains(.,'We love connecting. Our consultants are currently unavailable.')]" }
+	CHATTING_RESPONSE_NOT_AVAILABLE_1 = { xpath: "//*[contains(.,'Please leave us your email and they will get back to you.')]" }
+
 	AGENT_RESPONSE = { xpath: "//*[contains(.,'Hi, My name Is BOT, How may I assist you?')]" }
 	AGENT_RESOLVE_TEXT = { xpath: "//*[contains(.,'Conversation resolved by agent')]" }
 	AGENT_RESOLVE_TEXT_2 = { xpath: "//*[contains(.,'Sure thing. Consider it Resolved...')]" }

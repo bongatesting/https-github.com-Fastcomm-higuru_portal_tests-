@@ -212,10 +212,18 @@ Then('I initiate chatting to a live agent') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
-	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_1)
-	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_2)
-	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_3)
-	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_4)
+	if $web_driver.find_elements(ElementWarehouse::CHATTING_TO_US_RESPONSE_1).first
+		puts 'Agent available'
+		$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_2)
+		$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_3)
+		$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_4)
+	elsif $web_driver.find_elements(ElementWarehouse::CHATTING_RESPONSE_NOT_AVAILABLE).first
+		puts 'Agent not available'.red
+		$web_driver.find_element(ElementWarehouse::CHATTING_RESPONSE_NOT_AVAILABLE_1)
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(TestUser.email)
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		$web_driver.find_element(ElementWarehouse::EMAIL_RESPONSE)
+	end
 end
 
 Then('I reply as an Agent and resolve the chat') do
@@ -228,31 +236,63 @@ Then('I reply as an Agent and resolve the chat') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
-	wait.until{ $web_driver.find_element(ElementWarehouse::CONVERSATION_COUNT_ONE) }.click
-	sleep 5
-	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT).click
-	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Hi, My name Is BOT, How may I assist you?')
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
-	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	$web_driver.find_element(ElementWarehouse::AGENT_RESPONSE)
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi Bot, I am just testing. We may close this query')
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
-	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	$web_driver.find_element(ElementWarehouse::CLIENT_RESOLVE_TEXT)
-	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Sure thing. Consider it Resolved...')
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
-	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	$web_driver.find_element(ElementWarehouse::AGENT_RESOLVE_TEXT_2)
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot')
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
-	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
-	$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
-	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
-	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+	if $web_driver.find_elements(ElementWarehouse::CONVERSATION_COUNT_ONE).first
+		$web_driver.find_elements(ElementWarehouse::CONVERSATION_COUNT_ONE).first.click
+		sleep 5
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT).click
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Hi, My name Is BOT, How may I assist you?')
+		sleep 3
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		$web_driver.switch_to.window( $web_driver.window_handles.first )
+		$web_driver.find_element(ElementWarehouse::AGENT_RESPONSE)
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi Bot, I am just testing. We may close this query')
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		$web_driver.switch_to.window( $web_driver.window_handles.last )
+		$web_driver.find_element(ElementWarehouse::CLIENT_RESOLVE_TEXT)
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Sure thing. Consider it Resolved...')
+		sleep 3
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		$web_driver.switch_to.window( $web_driver.window_handles.first )
+		$web_driver.find_element(ElementWarehouse::AGENT_RESOLVE_TEXT_2)
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot')
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		$web_driver.switch_to.window( $web_driver.window_handles.last )
+		$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
+		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
+		$web_driver.switch_to.window( $web_driver.window_handles.first )
+		#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+	elsif $web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first
+		$web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first.click
+		$web_driver.find_elements(ElementWarehouse::BOT_TAB).click
+		$web_driver.find_elements(ElementWarehouse::BOT_CHAT).click
+		$web_driver.find_elements(ElementWarehouse::CLAIM_BUTTON).click
+		$web_driver.find_elements(ElementWarehouse::INBOUND_TAB).click
+		$web_driver.find_elements(ElementWarehouse::INBOUND_CHAT).click
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Hi, My name Is BOT, How may I assist you?')
+		sleep 3
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		$web_driver.switch_to.window( $web_driver.window_handles.first )
+		$web_driver.find_element(ElementWarehouse::AGENT_RESPONSE)
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi Bot, I am just testing. We may close this query')
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		$web_driver.switch_to.window( $web_driver.window_handles.last )
+		$web_driver.find_element(ElementWarehouse::CLIENT_RESOLVE_TEXT)
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Sure thing. Consider it Resolved...')
+		sleep 3
+		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		$web_driver.switch_to.window( $web_driver.window_handles.first )
+		$web_driver.find_element(ElementWarehouse::AGENT_RESOLVE_TEXT_2)
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot')
+		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		$web_driver.switch_to.window( $web_driver.window_handles.last )
+		$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
+		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
+		$web_driver.switch_to.window( $web_driver.window_handles.first )
+		#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+	end
+
 end
 
 Then('I confirm the chat has been closed') do
