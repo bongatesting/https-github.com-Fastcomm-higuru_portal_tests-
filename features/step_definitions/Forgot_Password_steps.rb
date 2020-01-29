@@ -22,16 +22,18 @@ Then('I reset the password') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::PASSWORD_NEXT_BUTTON).click
 	sleep 8
-	$web_driver.find_element(ElementWarehouse::PASSWORD_RESET_REQUEST)
+	$web_driver.find_element(ElementWarehouse::PASSWORD_RESET_REQUEST).click
 	$web_driver.find_element(ElementWarehouse::RESET_PASSWORD).click
 	sleep 1
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	sleep 10
-	wait.until { $web_driver.find_element(ElementWarehouse::NEW_PASSWORD).click }
-	NEW_PASSWORD = $web_driver.find_element(ElementWarehouse::NEW_PASSWORD_FIELD)
-	NEW_PASSWORD.click
-	NEW_PASSWORD.type(TestUser.new_password)
-	sleep 3
+	$web_driver.find_element(ElementWarehouse::NEW_PASSWORD_FIELD).click
+	$web_driver.find_element(ElementWarehouse::NEW_PASSWORD_FIELD).send_keys(TestUser.new_password)
+  sleep 2
+	$web_driver.find_element(ElementWarehouse::CONFIRM_PASSWORD_FIELD).click
+	$web_driver.find_element(ElementWarehouse::CONFIRM_PASSWORD_FIELD).send_keys(TestUser.new_password)
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::DONE_BUTTON).click
 	sleep 3
+  #TODO - Here You can continue your test. Working on my side now😊
 end

@@ -15,9 +15,8 @@ class ElementWarehouse
 	BACK_TO_LOGIN = { xpath: '//a[contains(text(),"Back to Login")]' }
 	PASSWORD_RESET_REQUEST = { css: ".bqe:nth-child(1)" }
 	RESET_PASSWORD = { xpath: '//a[contains(.,"Reset password.")]' }
-	NEW_PASSWORD = { xpath: '//span[contains(., "Password")]' }
-	NEW_PASSWORD_FIELD = { xpath: '//*[@id="mat-form-field-label-1"]' }
-	CONFIRM_NEW_PASSWORD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/mat-form-field[2]' }
+	NEW_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-0"]' }
+	CONFIRM_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-1"]' }
 	DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
 	GMAIL_EMAIL_FIELD = { xpath: '//*[@id="identifierId"]' }
