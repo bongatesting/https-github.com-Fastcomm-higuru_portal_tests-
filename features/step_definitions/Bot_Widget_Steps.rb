@@ -160,7 +160,7 @@ Then('I re-initiate my Chat with the Bot') do
 	elsif $web_driver.find_elements(ElementWarehouse::YOUR_WELCOME_TEXT).first
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi')
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
-	elsif $web_driver.find_elements(ElementWarehouse::CONVERSATION_RESOLVED_TEXT).first
+	elsif $web_driver.find_elements(ElementWarehouse::CONVERSATION_AGENT_RESOLVED).first
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi')
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
 	end
@@ -276,7 +276,7 @@ Then('I reply as an Agent and resolve the chat') do
 		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 		$web_driver.switch_to.window( $web_driver.window_handles.first )
-		#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+		#$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 	elsif $web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first
 		$web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first.click
 		$web_driver.find_elements(ElementWarehouse::BOT_TAB).click
@@ -305,7 +305,7 @@ Then('I reply as an Agent and resolve the chat') do
 		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 		$web_driver.switch_to.window( $web_driver.window_handles.first )
-		#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+		#$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 	end
 end
 
@@ -346,7 +346,7 @@ Then('I confirm the chat has been closed on HiGuru Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+	#$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 end
 
 Then('I claim and close the chat on Fastcomm Portal Channel') do
@@ -375,5 +375,5 @@ Then('I claim and close the chat on Fastcomm Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	#$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVED_TEXT)
+	#$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 end
