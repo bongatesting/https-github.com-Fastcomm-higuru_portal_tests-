@@ -95,15 +95,12 @@ class ElementWarehouse
 	CHAT_WITH_US_BUTTON = { xpath: '//button[contains(.,"Chat with us")]' }
   SEND_BUTTON = { css: '.higuru_compose-action-icon path' }
   CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
-  CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
-
 	WIDGET_SEND_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/svg/g/rect' }
-  CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
-  CONVERSATION_RESOLVED_TEXT = { xpath: '//*[@id="higuru-webchat"][contains(.,"Conversation resolved by agent")]' }
+	HG_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
+	CONVERSATION_AGENT_RESOLVED = { xpath: '//*[@id="higuru-webchat"][contains(.,"Conversation resolved by agent")]' }
 	MY_PLEASURE_TEXT = { xpath: '//*[contains(.,"my pleasure.")]' }
 	YOUR_WELCOME_TEXT = { xpath: '//*[contains(.,"re welcome.")]' }
-  CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
-  CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
+  CONVERSATION_BOT_RESOLVED = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
 	GET_STARTED_TEXT = { xpath: "//button[contains(.,'Get Started')]" }
 	SUPPORT_TEXT = { xpath: "//button[contains(.,'Support')]" }
 	PRODUCT_INFO_TEXT = { xpath: "//button[contains(.,'Product Info')]" }
