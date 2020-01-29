@@ -23,6 +23,7 @@ Then('I reset the password') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_NEXT_BUTTON).click
 	sleep 8
 	$web_driver.find_element(ElementWarehouse::PASSWORD_RESET_REQUEST).click
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::RESET_PASSWORD).click
 	sleep 1
 	$web_driver.switch_to.window( $web_driver.window_handles.last )

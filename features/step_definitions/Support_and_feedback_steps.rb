@@ -7,7 +7,7 @@ Then('I Ask for Support')do
 	$web_driver.find_element(ElementWarehouse::SUPPORT_BUTTON).click
 	$web_driver.find_element(ElementWarehouse:: SUPPORT_BOT_RESPONSE)
 	sleep 2
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Bonga Test')
+	$web_driver.find_element(ElementWarehouse::HG_CHAT_FIELD).send_keys('Bonga Test')
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
 	sleep 3
@@ -22,7 +22,7 @@ Then('I send Feedback')do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::FEEDBACK_REPLY).click
 	sleep 2
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('This is Feedback')
+	$web_driver.find_element(ElementWarehouse::HG_CHAT_FIELD).send_keys('This is Feedback')
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
 end
