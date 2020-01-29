@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ElementWarehouse
+	#########################-----------HiGuru Elements-----------#########################
 	WIDGET = { xpath: '//*[@id="higuru-webchat"]/div' }
 	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
 	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
@@ -10,6 +11,8 @@ class ElementWarehouse
 	PASSWORD_FIELD = { css: '.form-group:nth-child(2) > .form-input' }
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
 	LOGIN_BUTTON = { css: '.btn > div' }
+	TEST_FASTCOMM = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[1]/div[2]' }
+	TEST_HIGURU = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[2]/div[2]' }
 	LOGIN_BUTTON_1 = { css: '.btn > div' }
 	BACK_TO_LOGIN = { xpath: '//a[contains(text(),"Back to Login")]' }
 	PASSWORD_RESET_REQUEST = { css: ".bqe:nth-child(1)" }
@@ -24,7 +27,6 @@ class ElementWarehouse
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
 	HIGURU_BUTTON = { css: 'li:nth-child(2) .higuru-button-bordered' }
 	HIGURU_COMPANY_UNIT = { css: '.company-unit-container:nth-child(1) .company-unit-logo' }
-
 	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
 	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[2]/button' }
 	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[3]' }
@@ -68,12 +70,10 @@ class ElementWarehouse
 	PRODUCT_INFO_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[3]' }
 	FEEDBACK_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[4]' }
 	CHAT_WITH_US_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[5]' }
-
 	ATTACH_FILE_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[2]/label/svg/g' }
 	CHAT_CLOSE_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[1]/div[1]/svg/path' }
 	IN_CHAT_URL = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[1]/div/div/div[1]/a' }
-
-	GET_STARTED_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[1]' }
+	GET_STARTED_BUTTON = { xpath: '//button[contains(.,"Get Started")]' }
 	GET_STARTED_REPLY = { xpath: '//*[contains(.,"To get you started on your journey")]' }
 	WANT_TO_KNOW_MORE_REPLY = { xpath: '//*[contains(.,"Want to know more?")]' }
 	GREAT_BOT_RESPONSE = { xpath: '//*[contains(.,"Great!")]' }
@@ -82,20 +82,25 @@ class ElementWarehouse
 	NO_BUTTON = { xpath: '//button[contains(.,"No")]' }
 	NO_BUTTON_RESPONSE_1 = { xpath: '//*[contains(.,"It has been great chatting with you.")]' }
 	NO_BUTTON_RESPONSE_2 = { xpath: '//*[contains(.,"Have a wonderful day")]' }
-
   ADD_IMAGE = {id: 'upload-btn'}
-	SUPPORT_BUTTON = { css: '.higuru_quick-reply:nth-child(2)' }
-
+	REGISTER_LINK = { xpath: '//a[contains(.,"https://app.hi.guru/account/register")]' }
+	WELCOME_HIGURU = { xpath: '//h1[contains(.,"Welcome to hi.guru")]' }
+	HIGURU_LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
+	SUPPORT_BUTTON = { xpath: '//button[contains(.,"Support")]' }
 	SUPPORT_BOT_RESPONSE = { xpath: '//*[contains(.,"Please give us a short")]' }
-	DESCRIPTION_BOT_RESPONSE_1 = { xpath: '//*[contains(.,"Thank you!")]' }
-	DESCRIPTION_BOT_RESPONSE_2 = { xpath: '//*[contains(.,"touch shortly.")]' }
-  PRODUCT_INFO_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[3]' }
-	FEEDBACK_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[4]' }
-	CHAT_WITH_US_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[5]' }
+	DESCRIPTION_BOT_RESPONSE_1 = { xpath: '//*[contains(.,"Thank you! We have received your query.")]' }
+	DESCRIPTION_BOT_RESPONSE_2 = { xpath: '//*[contains(.,"will be in touch shortly.")]' }
+  PRODUCT_INFO_BUTTON = { xpath: '//button[contains(.,"Product Info")]' }
+	FEEDBACK_BUTTON = { xpath: '//button[contains(.,"Feedback")]' }
+	CHAT_WITH_US_BUTTON = { xpath: '//button[contains(.,"Chat with us")]' }
   SEND_BUTTON = { css: '.higuru_compose-action-icon path' }
+	WIDGET_SEND_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/svg/g/rect' }
+  CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
+  CONVERSATION_RESOLVED_TEXT = { xpath: '//*[@id="higuru-webchat"][contains(.,"Conversation resolved by agent")]' }
+	MY_PLEASURE_TEXT = { xpath: '//*[contains(.,"my pleasure.")]' }
+	YOUR_WELCOME_TEXT = { xpath: '//*[contains(.,"re welcome.")]' }
   CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
   CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
-
 	GET_STARTED_TEXT = { xpath: "//button[contains(.,'Get Started')]" }
 	SUPPORT_TEXT = { xpath: "//button[contains(.,'Support')]" }
 	PRODUCT_INFO_TEXT = { xpath: "//button[contains(.,'Product Info')]" }
@@ -103,10 +108,10 @@ class ElementWarehouse
 	CHAT_WITH_US_TEXT = { xpath: "//button[contains(.,'Chat with us')]" }
 	SECOND_BOT_RESPONSE = { xpath: "//*[contains(.,'Hi! Welcome to hi.guru')]" }
 	BOT_PLEASURE_RESPONSE = { xpath: "//*[contains(.,'It's my pleasure.')]" }
-
+	END_GREETING_TEXT = { xpath: "//*[contains(.,'Thanks for stopping by. Chat soon and have a great day.')]" }
 
 #########################-----------Fastcomm Elements-----------#########################
-# Initial Bot response #
+
 	WELCOME_FASTCOMM_TEXT = { xpath: "//*[contains(.,'Hi! Welcome to Fastcomm. What are you most interested in today?')]" }
 	OUR_SOLUTION_BUTTON = { xpath: "//button[contains(.,'Our Solutions')]" }
 	MORE_FASTCOMM_BUTTON = { xpath: "//button[contains(.,'More about Fastcomm')]" }
@@ -114,20 +119,14 @@ class ElementWarehouse
 	CREATING_WITH_US_BUTTON = { xpath: "//button[contains(.,'Creating with us')]" }
 	CHATTING_TO_US_BUTTON = { xpath: "//button[contains(.,'Chatting to us')]" }
 	CHAT_TEXT_FIELD = { css: ".higuru_input" }
-
-# Our Solution Bot response #
-
 	OUR_SOLUTION_RESPONSE_1 = { xpath: "//*[contains(.,'We have successfully created and implemented various platforms aimed')]" }
 	OUR_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'at connecting people, places and things in a more convenient and')]" }
 	OUR_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'flexible way. These platforms allow businesses to')]" }
 	OUR_SOLUTION_RESPONSE_4 = { xpath: "//*[contains(.,'focus on their growth and boost productivity by enhancing their')]" }
 	OUR_SOLUTION_RESPONSE_5 = { xpath: "//*[contains(.,'existing business processes. Our Platforms are:')]" }
-
 	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
 	LATCH_BUTTON = { xpath: "//button[contains(.,'latch')]" }
 	HELLOTHING_BUTTON = { xpath: "//button[contains(.,'HelloThing')]" }
-
-# Latch Button Bot response #
 	LATCH_RESPONSE_1 = { xpath: "//*[contains(.,'Easily manage your conversations')]" }
 	LATCH_RESPONSE_2 = { xpath: "//*[contains(.,'media and documents through a')]" }
 	LATCH_RESPONSE_3 = { xpath: "//*[contains(.,'closed, secure and protected')]" }
@@ -148,15 +147,12 @@ class ElementWarehouse
 	FASTCOMM_LINK = { xpath: "//a[contains(.,'https://fastcomm.com/about')]" }
 	FASTCOMM_TITLE = { xpath: "//h3[contains(.,'Innovation through technology')]" }
 	SEND_CHAT_BUTTON = { css: 'rect' }
-
 	CHATTING_TO_US_RESPONSE_1 = { xpath: "//*[contains(.,'We love connecting. A consultant')]" }
 	CHATTING_TO_US_RESPONSE_2 = { xpath: "//*[contains(.,'will be with you shortly to discuss')]" }
 	CHATTING_TO_US_RESPONSE_3 = { xpath: "//*[contains(.,'anything further you may be')]" }
 	CHATTING_TO_US_RESPONSE_4 = { xpath: "//*[contains(.,'interested in.')]" }
-
-	CHATTING_RESPONSE_NOT_AVAILABLE = { xpath: "//*[contains(.,'We love connecting. Our consultants are currently unavailable.')]" }
-	CHATTING_RESPONSE_NOT_AVAILABLE_1 = { xpath: "//*[contains(.,'Please leave us your email and they will get back to you.')]" }
-
+	AGENT_NOT_AVAILABLE = { xpath: "//*[contains(.,'We love connecting. Our consultants are currently unavailable.')]" }
+	AGENT_NOT_AVAILABLE_1 = { xpath: "//*[contains(.,'Please leave us your email and they will get back to you.')]" }
 	AGENT_RESPONSE = { xpath: "//*[contains(.,'Hi, My name Is BOT, How may I assist you?')]" }
 	AGENT_RESOLVE_TEXT = { xpath: "//*[contains(.,'Conversation resolved by agent')]" }
 	AGENT_RESOLVE_TEXT_2 = { xpath: "//*[contains(.,'Sure thing. Consider it Resolved...')]" }
@@ -187,11 +183,10 @@ class ElementWarehouse
 	BOT_CHAT = { xpath: '//*[@id="mat-tab-content-0-2"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
 	CLAIM_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-claim-footer-block/div/button' }
 	CONVO_CLAIMED_TEXT = { xpath: "//*[contains(.,'Conversation successfully claimed')]" }
-
 	INBOUND_CHAT_FIELD = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-footer-block/app-agent-chatbox/div[1]' }
 	INBOUND_CHAT_SEND_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-footer-block/app-agent-chatbox/div[2]/img[1]' }
 	RESOLVE_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-chat-header/div[2]/button/img' }
-	RESOLVE_TEXT = { xpath: '//button[3][contains(.,"Resolve")]' }
+	RESOLVE_TEXT = { xpath: '//button[2][contains(.,"Resolve")]' }
 	RESOLVED_TEXT = { xpath: '//span[contains(.,"Conversation successfully resolved")]' }
-
+	THANK_YOU_TEXT = { xpath: '//*[contains(.,"Thank you Awesome Bot!")]' }
 end
