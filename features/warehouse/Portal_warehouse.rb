@@ -11,6 +11,8 @@ class ElementWarehouse
 	PASSWORD_FIELD = { css: '.form-group:nth-child(2) > .form-input' }
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
 	LOGIN_BUTTON = { css: '.btn > div' }
+	TEST_FASTCOMM = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[1]/div[2]' }
+	TEST_HIGURU = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[2]/div[2]' }
 	LOGIN_BUTTON_1 = { css: '.btn > div' }
 	BACK_TO_LOGIN = { xpath: '//a[contains(text(),"Back to Login")]' }
 	PASSWORD_RESET_REQUEST = { css: ".bqe:nth-child(1)" }
@@ -25,7 +27,7 @@ class ElementWarehouse
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
 	HIGURU_BUTTON = { css: 'li:nth-child(2) .higuru-button-bordered' }
 	HIGURU_COMPANY_UNIT = { css: '.company-unit-container:nth-child(1) .company-unit-logo' }
-
+	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
 	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[2]/button' }
 	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[3]' }
 	CLOSE_NOTIFICATION_CONVO_PAGE = { xpath: '/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[3]' }
@@ -100,6 +102,8 @@ class ElementWarehouse
   CONVERSATION_RESOLVED_TEXT = { xpath: '//*[@id="higuru-webchat"][contains(.,"Conversation resolved by agent")]' }
 	MY_PLEASURE_TEXT = { xpath: '//*[contains(.,"my pleasure.")]' }
 	YOUR_WELCOME_TEXT = { xpath: '//*[contains(.,"re welcome.")]' }
+  CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
+  CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
 	GET_STARTED_TEXT = { xpath: "//button[contains(.,'Get Started')]" }
 	SUPPORT_TEXT = { xpath: "//button[contains(.,'Support')]" }
 	PRODUCT_INFO_TEXT = { xpath: "//button[contains(.,'Product Info')]" }
@@ -108,7 +112,6 @@ class ElementWarehouse
 	SECOND_BOT_RESPONSE = { xpath: "//*[contains(.,'Hi! Welcome to hi.guru')]" }
 	BOT_PLEASURE_RESPONSE = { xpath: "//*[contains(.,'It's my pleasure.')]" }
 	END_GREETING_TEXT = { xpath: "//*[contains(.,'Thanks for stopping by. Chat soon and have a great day.')]" }
-
 
 #########################-----------Fastcomm Elements-----------#########################
 
