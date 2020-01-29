@@ -21,5 +21,5 @@ Before do
 	Selenium::WebDriver::Wait.new(timeout: 10)
 	$web_driver.manage.window.maximize
 	$web_driver.manage.timeouts.page_load = 60
-	$web_driver.manage.timeouts.implicit_wait = 30
+	$web_driver.manage.timeouts.implicit_wait = 60
 end
