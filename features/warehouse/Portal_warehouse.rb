@@ -6,7 +6,8 @@ class ElementWarehouse
 	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
 	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
 	LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
-	EMAIL_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-forgot-password-form/div/form/div[1]/input' }
+	FORGOT_EMAIL_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-forgot-password-form/div/form/div[1]/input' }
+	EMAIL_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-login-form/div/form/div[1]/input' }
 	SEND_RESET_EMAIL = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-forgot-password-form/div/form/div[3]/button' }
 	PASSWORD_FIELD = { css: '.form-group:nth-child(2) > .form-input' }
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
@@ -20,9 +21,13 @@ class ElementWarehouse
 	NEW_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-0"]' }
 	CONFIRM_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-1"]' }
 	DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
+	PROFILE_BUTTON = { xpath: '//button/img' }
+	SIGN_OUT = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div[3]/button[3]' }
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
 	GMAIL_EMAIL_FIELD = { xpath: '//*[@id="identifierId"]' }
 	GMAIL_PASSWORD_FIELD = { xpath: '//input[@name="password"]' }
+	NEW_LOGIN_EMAIL_FIELD = { xpath: '' }
+	NEW_LOGIN_PASSWORD= { xpath: '' }
 	NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]' }
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
 	HIGURU_BUTTON = { css: 'li:nth-child(2) .higuru-button-bordered' }
@@ -53,7 +58,8 @@ class ElementWarehouse
 	HIGURU_WEB_ICON = { xpath: '//div[@id="webchat"]/div/div/img' }
 	BILLING_INFO = { xpath: '//*[@id="mat-tab-label-0-2"]/div' }
 	COMPANY_NAME = { css: '.company-name' }
-	COMPANY_UNIT = { xpath: '//div[@id="sidebar-wrapper"]/div/img' }
+	COMPANY_UNIT = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-unit-selector' }
+	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
 	CONVERSATION_HISTORY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[9]' }
 	BOT_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[10]' }
 	BOT_TEXT = { xpath: '//*[@id="mat-tab-label-0-2"][contains(., "Bot")]' }
