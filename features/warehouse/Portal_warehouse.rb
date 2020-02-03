@@ -136,7 +136,8 @@ class ElementWarehouse
 	PROFILE_IMAGE_SELECT_BUTTON = { xpath: '/html/body/ngb-modal-window/div/div/div[3]/button' }
 	ENTER_COMPANY_NAME_FIELD = { css: '.form-input' }
 	GMAIL_VERIFICATION_TEXT = { css: ".bqe:nth-child(1)" }
-	VERIFICATION_CODE = { xpath: '//*[@id=":m9"]/div/div[1]/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td/table/tbody/tr[1]/td/p[1]' }
+	GMAIL_VERIFICATION_TEXT_2 = { xpath: "//span[@id=':2q'][contains(.,'is your hi.guru verification code')]" }
+	VERIFICATION_CODE = { css: 'p:nth-child(3)' }
 	NEXT_BUTTON_2 = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button/div" }
 	BUSINESS_EMAIL_FIELD = { css: ".ng-invalid:nth-child(2)" }
 	BUSINESS_PASSWORD_FIELD = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/div[2]/input" }
