@@ -126,7 +126,6 @@ class ElementWarehouse
 	OTP_NEXT_BUTTON = { xpath: '//*[@id="5"]' }
 	GMAIL_NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]/span/span' }
 	GMAIL_PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span' }
-	CONFIRM_BUTTON = { xpath: '' }
 	SIGN_UP_BUTTON = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-login-form/div/div[4]/a" }
 	ENTER_NAME_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-profile-form/div/div/div[2]/form/div/div[3]/input' }
 	ADD_IMAGE_ICON = { css: '.add-image-icon-other' }
@@ -135,8 +134,7 @@ class ElementWarehouse
 	CREATE_COMPANY_DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[4]/button/div' }
 	PROFILE_IMAGE_SELECT_BUTTON = { xpath: '/html/body/ngb-modal-window/div/div/div[3]/button' }
 	ENTER_COMPANY_NAME_FIELD = { css: '.form-input' }
-	GMAIL_VERIFICATION_TEXT = { css: ".bqe:nth-child(1)" }
-	GMAIL_VERIFICATION_TEXT_2 = { xpath: "//span[@id=':2q'][contains(.,'is your hi.guru verification code')]" }
+	GMAIL_VERIFICATION_TEXT = { xpath: "//span[contains(.,'is your verification code for katherine+1980@hi.guru.')]" }
 	VERIFICATION_CODE = { css: 'p:nth-child(3)' }
 	NEXT_BUTTON_2 = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button/div" }
 	BUSINESS_EMAIL_FIELD = { css: ".ng-invalid:nth-child(2)" }
@@ -189,10 +187,7 @@ class ElementWarehouse
 	FASTCOMM_LINK = { xpath: "//a[contains(.,'https://fastcomm.com/about')]" }
 	FASTCOMM_TITLE = { xpath: "//h3[contains(.,'Innovation through technology')]" }
 	SEND_CHAT_BUTTON = { css: 'rect' }
-	CHATTING_TO_US_RESPONSE_1 = { xpath: "//*[contains(.,'We love connecting. A consultant')]" }
-	CHATTING_TO_US_RESPONSE_2 = { xpath: "//*[contains(.,'will be with you shortly to discuss')]" }
-	CHATTING_TO_US_RESPONSE_3 = { xpath: "//*[contains(.,'anything further you may be')]" }
-	CHATTING_TO_US_RESPONSE_4 = { xpath: "//*[contains(.,'interested in.')]" }
+	CHATTING_TO_US_RESPONSE_1 = { xpath: "//*[contains(.,'We love connecting. A consultant will be with you shortly to discuss anything further you may be interested in')]" }
 	AGENT_NOT_AVAILABLE = { xpath: "//*[contains(.,'We love connecting. Our consultants are currently unavailable.')]" }
 	AGENT_NOT_AVAILABLE_1 = { xpath: "//*[contains(.,'Please leave us your email and they will get back to you.')]" }
 	AGENT_RESPONSE = { xpath: "//*[contains(.,'Hi, My name Is BOT, How may I assist you?')]" }
@@ -222,6 +217,7 @@ class ElementWarehouse
 	HOW_MAY_WE_ASSIST_TEXT = { xpath: "//*[contains(.,'Hi Werner how may we assist you today?')]" }
 	EMAIL_RESPONSE = { xpath: "//*[contains(.,'Our consultants will be contacting you via your email as soon as possible. Thank you for stopping by and have a nice day. ')]" }
 	INBOUND_CHAT = { xpath: '//*[@id="mat-tab-content-0-0"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
+	REPLY_CHAT = { xpath: '//*[@id="higuru-webchat"][contains(.,"Hi, My name is")]' }
 	BOT_CHAT = { xpath: '//*[@id="mat-tab-content-0-2"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
 	CLAIM_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-claim-footer-block/div/button' }
 	CONVO_CLAIMED_TEXT = { xpath: "//*[contains(.,'Conversation successfully claimed')]" }
