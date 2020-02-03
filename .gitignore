@@ -6,9 +6,10 @@ history/
 Reports/
 screenshots/
 features/support/android_helpers/*
-features/TestDetails/TestDetails.rb
 Gemfile.lock
 debug.log
 features/Attachment_Files/LatchCSVExample.csv
-
+tmp/screenshots/
+features/tmp/screenshots/
+features/TestDetails/
 webmessage.html
