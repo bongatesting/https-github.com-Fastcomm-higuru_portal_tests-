@@ -23,3 +23,11 @@ Before do
 	$web_driver.manage.timeouts.page_load = 60
 	$web_driver.manage.timeouts.implicit_wait = 60
 end
+
+#Before do
+#	$ff_driver = Selenium::WebDriver.for :firefox
+#	Selenium::WebDriver::Wait.new(timeout: 60)
+#	$ff_driver.manage.window.maximize
+#	$ff_driver.manage.timeouts.page_load = 60
+#	$ff_driver.manage.timeouts.implicit_wait = 60
+#end

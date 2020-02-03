@@ -309,21 +309,6 @@ Then('I reply as an Agent and resolve the chat') do
 	end
 end
 
-Then('I get feedback from the agent')do
-	wait_text = find_element(ElementWarehouse::INBOUND_CHAT)
-	time_of_posting = Time.now
-	begin
-		while wait_text.displayed?
-			sleep 5
-		end
-	rescue
-		nil
-	end
-	total_time = Time.now - time_of_posting
-	puts 'Total time of response = '
-	puts total_time
-end
-
 Then('I confirm the chat has been closed on HiGuru Portal Channel') do
 	sleep 2
 	open_new_tab
@@ -376,4 +361,19 @@ Then('I claim and close the chat on Fastcomm Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	#$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+end
+
+Then('I get feedback from the agent')do
+	wait_text = find_element(ElementWarehouse::INBOUND_CHAT)
+	time_of_posting = Time.now
+	begin
+		while wait_text.displayed?
+			sleep 5
+		end
+	rescue
+		nil
+	end
+	total_time = Time.now - time_of_posting
+	puts 'Total time of response = '
+	puts total_time
 end
