@@ -12,3 +12,9 @@ features/tmp/screenshots/
 features/TestUsers/
 
 features/TestDetails/
+
+.DS_Store
+
+screenshots/
+
+TestDetails/
