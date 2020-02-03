@@ -6,10 +6,9 @@ Given('I am viewing the hi.guru website') do
 end
 
 Given('I am viewing the Fastcomm website') do
-	#$web_driver.get "https://fastcomm.com" }
-	#$web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
-	$web_driver.get 'file:///D:/FastcommWidget.html'
+	$web_driver.get "https://fastcomm.com"
 	$web_driver.find_element(ElementWarehouse::WIDGET)
+	$web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
 end
 
 Given('I am on the HiGuru Sign In Page') do

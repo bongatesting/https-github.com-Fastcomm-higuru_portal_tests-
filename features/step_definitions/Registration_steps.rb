@@ -36,7 +36,6 @@ Then('I sign in with a valid email and OTP') do
 	sleep 2
 	B.type('2unicorn')
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASSWORD_NEXT_BUTTON).click
-	# $web_driver.find_element(ElementWarehouse::CONFIRM_BUTTON).click
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::GMAIL_VERIFICATION_TEXT).click
 	CODE = $web_driver.find_element(ElementWarehouse::VERIFICATION_CODE).text

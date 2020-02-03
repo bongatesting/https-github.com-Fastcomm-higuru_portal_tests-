@@ -16,8 +16,6 @@ Feature: Bot Widget Feature
 	Given I am viewing the Fastcomm website
 	Then I initiate chatting to a live agent
 	Then I reply as an Agent and resolve the chat
-#	or Test for the actual agent
-#	Then I get feedback from the agent
 
   Scenario: As a user I want to Test the Bots accuracy and claim a bot a chat as an Agent
 	Given I am viewing the Fastcomm website

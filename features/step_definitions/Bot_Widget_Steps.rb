@@ -227,10 +227,7 @@ Then('I initiate chatting to a live agent') do
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
 	if $web_driver.find_elements(ElementWarehouse::CHATTING_TO_US_RESPONSE_1).first
-		puts 'Agent available'
-		$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_2)
-		$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_3)
-		$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_RESPONSE_4)
+		puts 'Agent available'.blue
 	elsif $web_driver.find_elements(ElementWarehouse::AGENT_NOT_AVAILABLE).first
 		puts 'Agent not available'.red
 		$web_driver.find_element(ElementWarehouse::AGENT_NOT_AVAILABLE_1)
@@ -364,7 +361,7 @@ Then('I claim and close the chat on Fastcomm Portal Channel') do
 end
 
 Then('I get feedback from the agent')do
-	wait_text = find_element(ElementWarehouse::INBOUND_CHAT)
+	wait_text = $web_driver.find_element(ElementWarehouse::REPLY_CHAT)
 	time_of_posting = Time.now
 	begin
 		while wait_text.displayed?
@@ -374,6 +371,5 @@ Then('I get feedback from the agent')do
 		nil
 	end
 	total_time = Time.now - time_of_posting
-	puts 'Total time of response = '
-	puts total_time
+	puts('Total time of response = ', + total_time)
 end
