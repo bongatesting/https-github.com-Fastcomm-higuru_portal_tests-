@@ -13,7 +13,8 @@ class ElementWarehouse
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
 	LOGIN_BUTTON = { css: '.btn > div' }
 	I_AGREE_BUTTON = { css: '.radio-container > .ng-dirty' }
-	NEXT_BUTTON = {  xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button" }
+	NEXT_BUTTON_1 = {  xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button" }
+	NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]' }
 	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[2]/button' }
 	ALLOW_NATIVE_NOTIFICATION = { xpath: "//span[contains(.,'Allow')]" }
 	ALLOW_NATIVE_NOTIFICATION_1 = { xpath: "//*[contains(.,'Allow')]" }
@@ -25,7 +26,6 @@ class ElementWarehouse
 	RESET_PASSWORD = { xpath: '//a[contains(.,"Reset password.")]' }
 	NEW_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-0"]' }
 	CONFIRM_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-1"]' }
-	DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
 	PROFILE_BUTTON = { xpath: '//button/img' }
 	SIGN_OUT = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div[3]/button[3]' }
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
@@ -33,12 +33,10 @@ class ElementWarehouse
 	GMAIL_PASSWORD_FIELD = { xpath: '//input[@name="password"]' }
 	NEW_LOGIN_EMAIL_FIELD = { xpath: '' }
 	NEW_LOGIN_PASSWORD= { xpath: '' }
-	NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]' }
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
 	HIGURU_BUTTON = { css: 'li:nth-child(2) .higuru-button-bordered' }
 	HIGURU_COMPANY_UNIT = { css: '.company-unit-container:nth-child(1) .company-unit-logo' }
 	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
-	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[2]/button' }
 	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[3]' }
 	CLOSE_NOTIFICATION_CONVO_PAGE = { xpath: '/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[3]' }
 	CONVERSATION_COUNT_ONE = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/div/span' }
@@ -93,10 +91,8 @@ class ElementWarehouse
 	YES_BUTTON = { xpath: '//button[contains(.,"Yes")]' }
 	NO_BUTTON = { xpath: '//button[contains(.,"No")]' }
   ADD_IMAGE = {id: 'upload-btn'}
-	SUPPORT_BUTTON = { css: '.higuru_quick-reply:nth-child(2)' }
 	NO_BUTTON_RESPONSE_1 = { xpath: '//*[contains(.,"It has been great chatting with you.")]' }
 	NO_BUTTON_RESPONSE_2 = { xpath: '//*[contains(.,"Have a wonderful day")]' }
-  ADD_IMAGE = {id: 'upload-btn'}
 	REGISTER_LINK = { xpath: '//a[contains(.,"https://app.hi.guru/account/register")]' }
 	WELCOME_HIGURU = { xpath: '//h1[contains(.,"Welcome to hi.guru")]' }
 	HIGURU_LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
@@ -108,9 +104,8 @@ class ElementWarehouse
 	FEEDBACK_BUTTON = { xpath: '//button[contains(.,"Feedback")]' }
 	CHAT_WITH_US_BUTTON = { xpath: '//button[contains(.,"Chat with us")]' }
   SEND_BUTTON = { css: '.higuru_compose-action-icon path' }
-  CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
-  CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
-  CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
+	CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
+	CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
 	WIDGET_SEND_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/svg/g/rect' }
 	HG_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	CONVERSATION_AGENT_RESOLVED = { xpath: '//*[@id="higuru-webchat"][contains(.,"Conversation resolved by agent")]' }
@@ -128,15 +123,12 @@ class ElementWarehouse
 	VERIFICATION_TEXT = { xpath: "//*[contains(.,' Account verification ')]" }
 	GMAIL_SIGN_IN_BUTTON = { xpath: "//a[contains(.,'Sign in')]" }
 	OTP_FIELD = { xpath: '//*[@id="1"]' }
-	SIGN_IN = { xpath: '/html/body/div[1]/div[1]/div[5]/ul/li[2]/a' }
 	OTP_NEXT_BUTTON = { xpath: '//*[@id="5"]' }
-	GMAIL_EMAIL_FIELD = {id: 'identifierId'}
 	GMAIL_NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]/span/span' }
-	GMAIL_PASSWORD_FIELD = { xpath: '//input[@name="password"]' }
 	GMAIL_PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span' }
 	CONFIRM_BUTTON = { xpath: '' }
 	SIGN_UP_BUTTON = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-login-form/div/div[4]/a" }
-	ENTER_NAME_FIELD = { css: 'form-input' }
+	ENTER_NAME_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-profile-form/div/div/div[2]/form/div/div[3]/input' }
 	ADD_IMAGE_ICON = { css: '.add-image-icon-other' }
 	CHOOSE_FILE_BUTTON = { xpath: '//*[@id="custom-input"]' }
 	CREATE_PROFILE_NEXT_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-profile-form/div/div/div[2]/form/div/div[4]/button' }
@@ -144,14 +136,15 @@ class ElementWarehouse
 	PROFILE_IMAGE_SELECT_BUTTON = { xpath: '/html/body/ngb-modal-window/div/div/div[3]/button' }
 	ENTER_COMPANY_NAME_FIELD = { css: '.form-input' }
 	GMAIL_VERIFICATION_TEXT = { css: ".bqe:nth-child(1)" }
-	VERIFICATION_CODE = { xpath: '//*[@id=":rq"]/div/div[1]/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td/table/tbody/tr[1]/td/p[1]' }
+	VERIFICATION_CODE = { xpath: '//*[@id=":m9"]/div/div[1]/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td/table/tbody/tr[1]/td/p[1]' }
 	NEXT_BUTTON_2 = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button/div" }
 	BUSINESS_EMAIL_FIELD = { css: ".ng-invalid:nth-child(2)" }
 	BUSINESS_PASSWORD_FIELD = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/div[2]/input" }
 	SIGN_UP_CHECKBOX = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/div[3]/label/input'}
 	DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[4]/button/div'}
+	DONE_BUTTON_1 = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
 	CREATE_YOUR_COMPANY_TEXT = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[1]'}
-	CREATE_YOUR_PROFILE_TEXT = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-profile-form/div/div/div[2]/form/div/div[1]]'}
+	CREATE_YOUR_PROFILE_TEXT = { xpath: '//*[contains(.,"Create Your Profile")]' }
   DASHBOARD_TEXT = { xpath: '/html/body/app-root/app-home/div/div/app-dashboard/app-page-layout/div/div[1]/div'}
 	END_GREETING_TEXT = { xpath: "//*[contains(.,'Thanks for stopping by. Chat soon and have a great day.')]" }
 
@@ -164,20 +157,16 @@ class ElementWarehouse
 	CREATING_WITH_US_BUTTON = { xpath: "//button[contains(.,'Creating with us')]" }
 	CHATTING_TO_US_BUTTON = { xpath: "//button[contains(.,'Chatting to us')]" }
 # Our Solution Bot response #
-	OUR_SOLUTION_RESPONSE_1 = { xpath: "//*[contains(.,'We have successfully created and')]" }
-	OUR_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'implemented various platforms')]" }
-	OUR_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'aimed at connecting people, places')]" }
+	FC_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'implemented various platforms')]" }
+	FC_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'aimed at connecting people, places')]" }
 	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
 	LATCH_BUTTON = { xpath: "//button[contains(.,'latch')]" }
-	HELLOTHING_BUTTON = { xpath: "//button[contains(.,'HelloThing)]" }
 	CHAT_TEXT_FIELD = { css: ".higuru_input" }
 	OUR_SOLUTION_RESPONSE_1 = { xpath: "//*[contains(.,'We have successfully created and implemented various platforms aimed')]" }
-	OUR_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'at connecting people, places and things in a more convenient and')]" }
-	OUR_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'flexible way. These platforms allow businesses to')]" }
+	HG_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'at connecting people, places and things in a more convenient and')]" }
+	HG_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'flexible way. These platforms allow businesses to')]" }
 	OUR_SOLUTION_RESPONSE_4 = { xpath: "//*[contains(.,'focus on their growth and boost productivity by enhancing their')]" }
 	OUR_SOLUTION_RESPONSE_5 = { xpath: "//*[contains(.,'existing business processes. Our Platforms are:')]" }
-	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
-	LATCH_BUTTON = { xpath: "//button[contains(.,'latch')]" }
 	HELLOTHING_BUTTON = { xpath: "//button[contains(.,'HelloThing')]" }
 	LATCH_RESPONSE_1 = { xpath: "//*[contains(.,'Easily manage your conversations')]" }
 	LATCH_RESPONSE_2 = { xpath: "//*[contains(.,'media and documents through a')]" }

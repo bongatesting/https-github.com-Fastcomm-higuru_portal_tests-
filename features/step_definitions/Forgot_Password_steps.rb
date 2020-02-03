@@ -11,7 +11,7 @@ end
 Then('I reset the password') do
 	open_new_tab
 	$web_driver.get "https://mail.google.com/"
-	$web_driver.find_element(ElementWarehouse::SIGN_IN).click
+	$web_driver.find_element(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).click
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	A = $web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD)
 	A.click
