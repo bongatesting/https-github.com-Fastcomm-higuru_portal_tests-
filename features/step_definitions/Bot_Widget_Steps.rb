@@ -378,8 +378,10 @@ Then('I get feedback from the agent') do
 	$stdout.flush
 	check_for_reply_3
 	RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME).text
-	$stdout.puts("Resolved Time = " + RESOLVED_TIME)
 	TIME_3 = Time.now - TIME
 	$stdout.puts('Total time of conversation = ' + TIME_3.to_s + ' Seconds')
+	$stdout.flush
+	$stdout.puts 'Time Chat ended'.blue
+	$stdout.puts("Resolved Time = " + RESOLVED_TIME)
 	$stdout.flush
 end
