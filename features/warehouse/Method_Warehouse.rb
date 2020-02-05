@@ -44,6 +44,36 @@ def open_new_tab
   $web_driver.switch_to.window( $web_driver.window_handles.last )
 end
 
+def check_for_reply
+  begin
+    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    check_for_reply # this block get's executed if there is any kind of exception error
+  end
+end
+
+def check_for_reply_2
+  begin
+    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT_2)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    check_for_reply_2 # this block get's executed if there is any kind of exception error
+  end
+end
+
+def check_for_reply_3
+  begin
+    until ($web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    check_for_reply_3 # this block get's executed if there is any kind of exception error
+  end
+end
+
 #scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
