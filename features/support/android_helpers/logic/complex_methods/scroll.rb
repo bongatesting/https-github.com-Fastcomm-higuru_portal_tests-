@@ -4,7 +4,8 @@ module Scroll
 		begin
 			Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.9, offset_x: 0.4, offset_y: 0.2, duration:600).perform.release
 		rescue Selenium::WebDriver::Error::UnknownError
-			puts "An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully"
+			$stdout.puts "An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully"
+			$stdout.flush
 
 			Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.9, offset_x: 0.4, offset_y: 0.2, duration:600).perform
 		end

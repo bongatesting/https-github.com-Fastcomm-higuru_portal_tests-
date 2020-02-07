@@ -23,10 +23,12 @@ Then('I sign in with a valid email and OTP') do
 	 #if $web_driver.find_elements(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).first
 	# 	$web_driver.find_elements(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).first.click
 	# 	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	# 	puts 'Sign In Button Shown'
+	# 	$stdout.puts 'Sign In Button Shown'
+	#   $stdout.flush
 	# elsif A = $web_driver.find_elements(ElementWarehouse::GMAIL_EMAIL_FIELD).first
-	# 	puts 'Sign In Button Not Shown'
-	# end
+	# 	$stdout.puts 'Sign In Button Not Shown'
+	#   $stdout.flush
+	#end
 	A = $web_driver.find_elements(ElementWarehouse::GMAIL_EMAIL_FIELD).first
 	A.send_keys('katherine@hi.guru')
 	sleep 2

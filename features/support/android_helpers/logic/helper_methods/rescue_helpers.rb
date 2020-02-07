@@ -47,7 +47,8 @@ module RescueHelpers
 				begin
 					return object.public_send(action)
 				rescue Selenium::WebDriver::Error::StaleElementReferenceError
-					puts "StaleElementReferenceError"
+					$stdout.puts "StaleElementReferenceError"
+					$stdout.flush
 					next
 				end
 				current_attempt += 1

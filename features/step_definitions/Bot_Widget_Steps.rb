@@ -148,7 +148,8 @@ Then('I Complete my chat with the bot') do
 	$web_driver.switch_to.window($web_driver.window_handles.first)
 	$web_driver.find_element(ElementWarehouse::NO_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::END_GREETING_TEXT)
-	puts 'Conversation resolved successfully'
+	$stdout.puts 'Conversation resolved successfully'
+	$stdout.flush
 end
 
 When('I re-initiate my Chat with the Bot') do
@@ -170,7 +171,8 @@ When('I re-initiate my Chat with the Bot') do
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
 	$web_driver.find_element(ElementWarehouse:: DESCRIPTION_BOT_RESPONSE_1)
 	$web_driver.find_element(ElementWarehouse:: DESCRIPTION_BOT_RESPONSE_2)
-	puts 'Chat sent to Agent. Next Test is to see the chat transferred to Agent.'
+	$stdout.puts 'Chat sent to Agent. Next Test is to see the chat transferred to Agent.'
+	$stdout.flush
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot!')
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
@@ -228,9 +230,11 @@ When('I initiate chatting to a live agent') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
 	if $web_driver.find_elements(ElementWarehouse::CHATTING_TO_US_RESPONSE_1).first
-		puts 'Agent available'.blue
+		$stdout.puts 'Agent available'.blue
+		$stdout.flush
 	elsif $web_driver.find_elements(ElementWarehouse::AGENT_NOT_AVAILABLE).first
-		puts 'Agent not available'.red
+		$stdout.puts 'Agent not available'.red
+		$stdout.flush
 		$web_driver.find_element(ElementWarehouse::AGENT_NOT_AVAILABLE_1)
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(TestUser.email)
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)

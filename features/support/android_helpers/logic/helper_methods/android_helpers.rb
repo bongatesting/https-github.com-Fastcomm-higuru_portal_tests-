@@ -3,7 +3,8 @@ module AndroidHelpers
 		begin
 			$app_driver.hide_keyboard
 		rescue Selenium::WebDriver::Error::UnknownError
-			puts "** Android Native Soft Keyboard Already hidden **"
+			$stdout.puts "** Android Native Soft Keyboard Already hidden **"
+			$stdout.flush
 		end		
 	end
 	
