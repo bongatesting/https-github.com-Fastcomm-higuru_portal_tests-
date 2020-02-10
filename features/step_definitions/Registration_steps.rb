@@ -20,13 +20,15 @@ Then('I sign in with a valid email and OTP') do
 	$web_driver.execute_script( "window.open()" )
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	$web_driver.navigate.to 'https://mail.google.com'
-	# if $web_driver.find_elements(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).first
+	 #if $web_driver.find_elements(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).first
 	# 	$web_driver.find_elements(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).first.click
 	# 	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	# 	puts 'Sign In Button Shown'
+	# 	$stdout.puts 'Sign In Button Shown'
+	#   $stdout.flush
 	# elsif A = $web_driver.find_elements(ElementWarehouse::GMAIL_EMAIL_FIELD).first
-	# 	puts 'Sign In Button Not Shown'
-	# end
+	# 	$stdout.puts 'Sign In Button Not Shown'
+	#   $stdout.flush
+	#end
 	A = $web_driver.find_elements(ElementWarehouse::GMAIL_EMAIL_FIELD).first
 	A.send_keys('katherine@hi.guru')
 	sleep 2
@@ -67,4 +69,3 @@ Then('I create my profile') do
 	$web_driver.find_element(ElementWarehouse::DONE_BUTTON)
 	$web_driver.find_element(ElementWarehouse::DASHBOARD_TEXT)
 end
-
