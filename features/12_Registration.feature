@@ -9,5 +9,3 @@ Feature: hi.guru Register
   Scenario: As a User I want to test Invalid and Valid Sign Up process
 	Then I sign in with a valid email and OTP
 
-  Scenario: As a User I want to create my account profile
-	Then I create my profile
