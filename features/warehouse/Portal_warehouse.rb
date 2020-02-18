@@ -229,6 +229,4 @@ class ElementWarehouse
 	RESOLVED_TEXT = { xpath: '//span[contains(.,"Conversation successfully resolved")]' }
 	THANK_YOU_TEXT = { xpath: '//*[contains(.,"Thank you Awesome Bot!")]' }
 	RESOLVED_TIME = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[9]/div/div/div/div/div/time' }
-
-
 end
