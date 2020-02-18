@@ -30,8 +30,8 @@ Then('I Sign in with my own valid Credentials') do
 end
 
 Given('I am already signed in') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.test_user_1_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEST_HIGURU).click
