@@ -16,7 +16,7 @@ def scroll_up
 end
 
 def browser_scroll
-$web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+  $web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
 end
 
 def scroll_to_element(element, locator=nil)
