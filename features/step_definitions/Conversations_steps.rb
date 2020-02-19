@@ -24,6 +24,7 @@ Given('The Conversation Expiry Slider is Disabled') do
   $web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
   $web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
   $web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+  sleep 3
   $web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
   sleep 2
   $web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
@@ -32,8 +33,9 @@ Given('The Conversation Expiry Slider is Disabled') do
 end
 
 Then('I Adjust Conversation Expiry Slider by One hour') do
+  browser_scroll
   A = $web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER)
-  A.click
+  A.send_keys(:up)
 end
 
 Then('I initiate a Conversation') do
