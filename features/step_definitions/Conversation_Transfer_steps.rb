@@ -16,13 +16,13 @@ Then('Create Routing Tags') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::ROUTING_SETTINGS).click
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-chip-list-input-0"]' }).send_keys('Gcuwa')
+	$web_driver.find_element(ElementWarehouse::ADD_TAG_1).send_keys('Gcuwa')
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::CLOSE).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::ROUTING_SETTINGS).click
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-chip-list-input-0"]' }).send_keys('Centane')
+	$web_driver.find_element(ElementWarehouse::ADD_TAG_2).send_keys('Centane')
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::CLOSE).click
 	sleep 3
@@ -35,9 +35,9 @@ Then('Assign Routing tags to Teams') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEAM_1_EDIT_BUTTON).click
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-chip-list-input-2"]' }).send_keys('Gcuwa')
+	$web_driver.find_element(ElementWarehouse::TYPE_ROUTING_TAG_1).send_keys('Gcuwa')
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-option-8"]/span' }).click
+	$web_driver.find_element(ElementWarehouse::SELECT_ROUTING_TAG_1).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::UPDATE_BUTTON_1).click
 	sleep 2
@@ -47,13 +47,13 @@ Then('Assign Routing tags to Teams') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEAM_2_EDIT_BUTTON).click
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-chip-list-input-4"]' }).send_keys('Centane')
+	$web_driver.find_element(ElementWarehouse::TYPE_ROUTING_TAG_2).send_keys('Centane')
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-option-10"]/span' }).click
+	$web_driver.find_element(ElementWarehouse::SELECT_ROUTING_TAG_2).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::UPDATE_BUTTON_2).click
 	sleep 3
-	$web_driver.find_element({ xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/span[1]' }).click
+	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 4
 end
 
@@ -79,21 +79,21 @@ Then('Initiate a Conversation') do
 end
 
 Then('Transfer the conversation') do
-	$web_driver.find_element({ xpath: '//*[@id="mat-tab-label-3-0"]/div/app-room-tab-header/div/div[1]/span' }).click
+	$web_driver.find_element(ElementWarehouse::INBOUND_TAB).click
 	sleep 2
-	$web_driver.find_element({ xpath: '//*[@id="mat-tab-content-3-0"]/div/div/app-room/div/div[1]/img[2]' }).click
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_CONVERSATION).click
 	sleep 2
-	$web_driver.find_element({ xpath: '/html/body/app-root/app-agent-interface-page/div/app-chat/app-chat-header/div[2]/div' }).click
+	$web_driver.find_element(ElementWarehouse::TRANSFER_BUTTON).click
 	sleep 3
-	$web_driver.find_element({ xpath: '//*[@id="cdk-overlay-4"]/div/div/button' }).click
+	$web_driver.find_element(ElementWarehouse::CENTANE_TAG).click
 	sleep 3
 end
 
 Then('Check if the conversation transfer labels are correct') do
-	$web_driver.find_element({ xpath: '/html/body/app-root/app-agent-interface-page/app-header-main/div/div[2]/img' }).click
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
-	$web_driver.find_element({ xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[9]/span[1]' }).click
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY).click
 	sleep 3
-	$web_driver.find_element({ xpath: '/html/body/app-root/app-home/div/div/app-consumer-platform-history-container/ion-content/ion-list/app-consumer-platform-history-item[1]/ion-item/div/div[2]/div[2]/div' }).click
+	$web_driver.find_element(ElementWarehouse::OPEN_CONVERSATION).click
 	sleep 4
 end
