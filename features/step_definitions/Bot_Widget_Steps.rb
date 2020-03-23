@@ -371,19 +371,19 @@ Then('I get feedback from the agent') do
 	$stdout.puts(TIME)
 	$stdout.flush
 	check_for_reply
-	TIME_1 = Time.now - TIME
-	$stdout.puts('Total time of first response = ' + TIME_1.to_s + ' Seconds')
+	TIME_1 = Time.now - TIME / 60
+	$stdout.puts('Total time of first response = ' + TIME_1 + ' Minutes')
 	$stdout.flush
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a Test. Please can we Resolve this query')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
 	check_for_reply_2
-	TIME_2 = Time.now - TIME
-	$stdout.puts('Total time of second response = ' + TIME_2.to_s + ' Seconds')
+	TIME_2 = Time.now - TIME / 60
+	$stdout.puts('Total time of second response = ' + TIME_2 + ' Minutes')
 	$stdout.flush
 	check_for_reply_3
 	RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME).text
-	TIME_3 = Time.now - TIME
-	$stdout.puts('Total time of conversation = ' + TIME_3.to_s + ' Seconds')
+	TIME_3 = Time.now - TIME / 60
+	$stdout.puts('Total time of conversation = ' + TIME_3 + ' Minutes')
 	$stdout.flush
 	$stdout.puts 'Time Chat ended'.blue
 	$stdout.puts("Resolved Time = " + RESOLVED_TIME)

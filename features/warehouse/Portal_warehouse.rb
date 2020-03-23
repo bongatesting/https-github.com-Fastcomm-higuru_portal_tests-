@@ -105,7 +105,7 @@ class ElementWarehouse
 	FEEDBACK_BUTTON = { xpath: '//button[contains(.,"Feedback")]' }
 	CHAT_WITH_US_BUTTON = { xpath: '//button[contains(.,"Chat with us")]' }
   SEND_BUTTON = { css: '.higuru_compose-action-icon path' }
-	CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
+	CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
 	WIDGET_SEND_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/svg/g/rect' }
 	WEB_WIDGET = { xpath: '//*[@id="higuru-webchat"]/div/div/img' }
