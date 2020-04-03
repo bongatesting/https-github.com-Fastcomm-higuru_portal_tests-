@@ -221,8 +221,8 @@ class ElementWarehouse
 	HOW_MAY_WE_ASSIST_TEXT = { xpath: "//*[contains(.,'Hi Werner how may we assist you today?')]" }
 	EMAIL_RESPONSE = { xpath: "//*[contains(.,'Our consultants will be contacting you via your email as soon as possible. Thank you for stopping by and have a nice day. ')]" }
 	INBOUND_CHAT = { xpath: '//*[@id="mat-tab-content-0-0"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
-	REPLY_CHAT = { xpath: '//*[@id="higuru-webchat"][contains(.,"How may we help")]' }
-	REPLY_CHAT_2 = { xpath: '//*[@id="higuru-webchat"][contains(.,"Sure")]' }
+	REPLY_CHAT_GENERIC = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[6]/div/div' }
+	REPLY_CHAT_GENERIC_2 = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[8]/div/div' }
 	BOT_CHAT = { xpath: '//*[@id="mat-tab-content-0-2"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
 	CLAIM_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-claim-footer-block/div/button' }
 	CONVO_CLAIMED_TEXT = { xpath: "//*[contains(.,'Conversation successfully claimed')]" }

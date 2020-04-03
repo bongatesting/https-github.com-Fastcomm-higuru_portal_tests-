@@ -278,7 +278,7 @@ Then('I reply as an Agent and resolve the chat') do
 		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 		$web_driver.switch_to.window($web_driver.window_handles.first)
-		# $web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+		$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 	elsif $web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first
 		$web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first.click
 		$web_driver.find_elements(ElementWarehouse::BOT_TAB).click
@@ -307,7 +307,7 @@ Then('I reply as an Agent and resolve the chat') do
 		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 		$web_driver.switch_to.window($web_driver.window_handles.first)
-		# $web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+		$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 	end
 end
 
@@ -315,7 +315,7 @@ Then('I confirm the chat has been closed on HiGuru Portal Channel') do
 	sleep 2
 	open_new_tab
 	# Send link manually and wait
-	# wait.until{ $web_driver.get 'https://app-qa.hi.guru/account/login' }
+	$web_driver.get 'https://app-qa.hi.guru/account/login'
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
@@ -333,7 +333,7 @@ Then('I confirm the chat has been closed on HiGuru Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 	$web_driver.switch_to.window($web_driver.window_handles.first)
-	# $web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+	 $web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 end
 
 Then('I claim and close the chat on Fastcomm Portal Channel') do
@@ -341,7 +341,7 @@ Then('I claim and close the chat on Fastcomm Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::NO_BUTTON)
 	sleep 2
 	open_new_tab
-	# $web_driver.get 'https://app-qa.hi.guru/account/login'
+	 $web_driver.get 'https://app-qa.hi.guru/account/login'
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
@@ -362,7 +362,7 @@ Then('I claim and close the chat on Fastcomm Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
 	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
 	$web_driver.switch_to.window($web_driver.window_handles.first)
-	# $web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
 end
 
 Then('I get feedback from the agent') do
@@ -371,21 +371,30 @@ Then('I get feedback from the agent') do
 	$stdout.puts(TIME)
 	$stdout.flush
 	check_for_reply
-	TIME_1 = Time.now - TIME / 60
-	$stdout.puts('Total time of first response = ' + TIME_1 + ' Minutes')
+	TIME_1 = Time.now - TIME
+	x = TIME_1/60
+	$stdout.puts 'Total time of first response = '.green
+	$stdout.puts x
+	$stdout.puts 'Minutes'.green
 	$stdout.flush
-	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a Test. Please can we Resolve this query')
+	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a an automated Test. Please can you text one more thing back and then Resolve this query')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
 	check_for_reply_2
-	TIME_2 = Time.now - TIME / 60
-	$stdout.puts('Total time of second response = ' + TIME_2 + ' Minutes')
+	TIME_2 = Time.now - TIME
+	y = TIME_2/60
+	$stdout.puts 'Total time of second response = '.green
+	$stdout.puts y
+	$stdout.puts 'Minutes'.green
 	$stdout.flush
 	check_for_reply_3
 	RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME).text
-	TIME_3 = Time.now - TIME / 60
-	$stdout.puts('Total time of conversation = ' + TIME_3 + ' Minutes')
+	TIME_3 = Time.now - TIME
+	z = TIME_3/60
+	$stdout.puts 'Total time of conversation = '.green
+	$stdout.puts z
+	$stdout.puts 'Minutes'.green
 	$stdout.flush
 	$stdout.puts 'Time Chat ended'.blue
-	$stdout.puts("Resolved Time = " + RESOLVED_TIME)
+	#$stdout.puts("Resolved Time = " + RESOLVED_TIME)
 	$stdout.flush
 end
