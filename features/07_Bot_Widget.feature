@@ -22,7 +22,7 @@ Feature: Bot Widget Feature
 	Then I click on the WIDGET and send messages instead of clicking
 	Then I claim and close the chat on Fastcomm Portal Channel
 
-# This test is to be scheduled with an Agent before running
+# TODO - This test is to be scheduled with an Agent before running
   Scenario: As a user I want to Test speaking to a Live agent
 	Given I am viewing the Fastcomm website
 	When I initiate chatting to a live agent
