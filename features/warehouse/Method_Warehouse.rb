@@ -74,6 +74,15 @@ def check_for_reply_3
   end
 end
 
+def wait_for_email
+  begin
+    until ($web_driver.find_element(ElementWarehouse::RECEIVED_MAIL)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_email # this block get's executed if there is any kind of exception error
+  end
+end
 #scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)

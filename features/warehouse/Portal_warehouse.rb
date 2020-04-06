@@ -7,38 +7,53 @@ class ElementWarehouse
 	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
 	LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
 	FORGOT_EMAIL_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-forgot-password-form/div/form/div[1]/input' }
-	EMAIL_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-login-form/div/form/div[1]/input' }
+	EMAIL_FIELD = { xpath: "//ion-input[@id='email']/input" }
 	SEND_RESET_EMAIL = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-forgot-password-form/div/form/div[3]/button' }
-	PASSWORD_FIELD = { css: '.form-group:nth-child(2) > .form-input' }
+	PASSWORD_FIELD = { xpath: "//ion-input[@id='password']/input" }
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
-	LOGIN_BUTTON = { css: '.btn > div' }
+	LOGIN_BUTTON = { xpath: "//ion-button[@id='login']" }
 	I_AGREE_BUTTON = { css: '.radio-container > .ng-dirty' }
-	NEXT_BUTTON_1 = {  xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button" }
-	NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]' }
+	REGISTER_NEXT_BUTTON_1 = {  xpath: '//*[@id="register"]' }
+	NEXT_BUTTON = { xpath: "//ion-button[@id='goToCompanyDetails']" }
 	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-header/app-notification-bar/div/div[2]/span[2]/button' }
-	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-header-main/app-notification-bar/div/div[2]/span[3]/button' }
+	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	TEST_FASTCOMM = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[1]/div[2]' }
 	TEST_HIGURU = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[2]/div[2]' }
 	LOGIN_BUTTON_1 = { css: '.btn > div' }
 	BACK_TO_LOGIN = { xpath: '//a[contains(text(),"Back to Login")]' }
 	PASSWORD_RESET_REQUEST = { css: ".bqe:nth-child(1)" }
 	RESET_PASSWORD = { xpath: '//a[contains(.,"Reset password.")]' }
-	NEW_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-0"]' }
-	CONFIRM_PASSWORD_FIELD = { xpath: '//*[@id="mat-input-1"]' }
-	PROFILE_BUTTON = { xpath: '//button/img' }
-	SIGN_OUT = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div[3]/button[3]' }
+	NEW_PASSWORD_FIELD = { xpath: "//input[@name='ion-input-0']" }
+	CONFIRM_PASSWORD_FIELD = { xpath: "//ion-input[@id='verifyPassword']/input" }
+	PROFILE_BUTTON = { css: '.agent-image' }
+	SIGN_OUT = { xpath: "//button[contains(.,'Log Out')]" }
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
 	GMAIL_EMAIL_FIELD = { xpath: '//*[@id="identifierId"]' }
+	OUTLOOK_EMAIL_FIELD = { xpath: '//*[@id="i0116"]' }
+	OUTLOOK_EMAIL_FIELD_2 = { xpath: '/html/body/div/form[1]/div/div/div[1]/div[3]/div/div/div/div[2]/div[2]/div/input[1]' }
+  SKIP_FOR_NOW_TEXT = { xpath: '/html/body/div/form[1]/div/div/div[1]/div[3]/div/div[2]/div/div[3]/a' }
+	OUTLOOK_NEXT_BUTTON = { xpath: '//*[@id="idSIButton9"]' }
+	OUTLOOK_NEXT_BUTTON_2 = { xpath: '//*[@id="idSubmit_ProofUp_Redirect"]' }
+	OUTLOOK_PASSWORD_FIELD = { xpath: '//*[@id="i0118"]' }
+	OUTLOOK_SIGN_IN_BUTTON = { xpath: '//*[@id="idSIButton9"]' }
+	OUTLOOK_STAY_SIGNED_IN_NO_BUTTON = { xpath: '//*[@id="idBtn_Back"]' }
+	OUTLOOK_ICON = { xpath: '//*[@id="ShellMail_link"]/span/ohp-icon-font/span' }
 	GMAIL_PASSWORD_FIELD = { xpath: '//input[@name="password"]' }
 	NEW_LOGIN_EMAIL_FIELD = { xpath: '' }
 	NEW_LOGIN_PASSWORD= { xpath: '' }
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
+	NEW_PASSWORD_DONE_BUTTON = { xpath: "//ion-button[@id='resetPassword']" }
 	HIGURU_BUTTON = { css: 'li:nth-child(2) .higuru-button-bordered' }
 	HIGURU_COMPANY_UNIT = { css: '.company-unit-container:nth-child(1) .company-unit-logo' }
-	COMPANY_UNIT_SETTINGS = { xpath: '/html/body/app-root/app-home/div/div/app-side-menu/div[2]/ul' }
-	SETTINGS = { xpath: '//*[@id="mat-tab-label-0-1"]/div' }
-	CONVERSATION_RESOLVE_SLIDER = { xpath: '//*[@id="mat-tab-content-0-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div' }
-	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[3]' }
+# <<<<<<< Updated upstream
+# 	COMPANY_UNIT_SETTINGS = { xpath: '/html/body/app-root/app-home/div/div/app-side-menu/div[2]/ul' }
+# 	SETTINGS = { xpath: '//*[@id="mat-tab-label-0-1"]/div' }
+# 	CONVERSATION_RESOLVE_SLIDER = { xpath: '//*[@id="mat-tab-content-0-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div' }
+# 	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[3]' }
+# # =======
+# 	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
+# 	CLOSE_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-header-main/app-notification-bar/div/div[2]/span[3]/button' }
+# >>>>>>> Stashed changes
 	CLOSE_NOTIFICATION_CONVO_PAGE = { xpath: '/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[3]' }
 	CONVERSATION_COUNT_ONE = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/div/span' }
 	CONVERSATIONS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/span[1]/img' }
@@ -48,7 +63,7 @@ class ElementWarehouse
 	STATS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[3]' }
 	CHANNELS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[4]' }
 	TEAMS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[5]' }
-	PEOPLE_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[6]' }
+	PEOPLE_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[6]/ion-label' }
 	DOCUMENT_LIBRARY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[7]' }
 	ADD_DOCUMENT_BUTTON = { css: '.title-button' }
 	ADD_ATTACHMENT = { css: '.title-button' }
@@ -62,7 +77,11 @@ class ElementWarehouse
 	HIGURU_WEB_ICON = { xpath: '//div[@id="webchat"]/div/div/img' }
 	BILLING_INFO = { xpath: '//*[@id="mat-tab-label-0-2"]/div' }
 	COMPANY_NAME = { css: '.company-name' }
-	COMPANY_UNIT = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-unit-selector' }
+	COMPANY_UNIT = {xpath: "//div[@id='sidebar-wrapper']/div/div/span" }
+	COMPANY_UNIT_SElECT = { xpath: '//app-company-unit/div' }
+	COMPANY_UNIT_SETTINGS = { xpath: '//*[@id="mat-tab-label-0-1"]' }
+	GO_BUTTON_COMPANY_UNIT_SELECT_ON_LOGIN = { css: 'li:nth-child(1) .higuru-button-bordered' }
+	CONVO_EXPIRY_BAR = { xpath: '//*[@id="mat-tab-content-6-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div/div[3]/div[3]' }
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
 	CONVERSATION_HISTORY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[9]' }
 	BOT_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[10]' }
@@ -105,7 +124,7 @@ class ElementWarehouse
 	FEEDBACK_BUTTON = { xpath: '//button[contains(.,"Feedback")]' }
 	CHAT_WITH_US_BUTTON = { xpath: '//button[contains(.,"Chat with us")]' }
   SEND_BUTTON = { css: '.higuru_compose-action-icon path' }
-	CHAT_FIELD = { xpath: '//div[@id="webchat"]/div/div/div[3]/div/div/div/div' }
+	CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div' }
 	CONVERSATION_RESOLVED_TEXT = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
 	WIDGET_SEND_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/svg/g/rect' }
 	WEB_WIDGET = { xpath: '//*[@id="higuru-webchat"]/div/div/img' }
@@ -126,30 +145,61 @@ class ElementWarehouse
 	ERROR_MESSAGE = { xpath: "//*[contains(.,'Invalid Email address provided')]" }
 	VERIFICATION_TEXT = { xpath: "//*[contains(.,' Account verification ')]" }
 	GMAIL_SIGN_IN_BUTTON = { xpath: "//a[contains(.,'Sign in')]" }
-	OTP_FIELD = { xpath: '//*[@id="1"]' }
-	OTP_NEXT_BUTTON = { xpath: '//*[@id="5"]' }
+	LOGIN_TEXT = { xpath: "//*[contains(.,'Log In')]" }
+	EMAIL_TEXT = { xpath: "//*[contains(.,'Email')]" }
+	ENTER_PASSWORD_TEXT = { xpath: "//*[contains(.,'Enter your password')]" }
+	INVALID_EMAIL_TEXT = { xpath: "//*[contains(.,'Invalid email')]" }
+	LOGIN_FROM_CREATE = { xpath: "//a[contains(.,'Login')]" }
+	OTP_FIELD = { xpath: '//*[@id="digit1"]/input' }
+	OTP_NEXT_BUTTON = { xpath: '//*[@id="validateOtp"]' }
 	GMAIL_NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]/span/span' }
 	GMAIL_PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span' }
-	SIGN_UP_BUTTON = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-login-form/div/div[4]/a" }
-	ENTER_NAME_FIELD = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-profile-form/div/div/div[2]/form/div/div[3]/input' }
+	SIGN_UP_BUTTON = { xpath: '//*[@id="signUp"]' }
+	ENTER_NAME_FIELD = { xpath: "//ion-input[@id='companyName']/input" }
+	ENTER_ACCOUNT_NAME_FIELD = { xpath: "//ion-input[@id='fullName']/input" }
 	ADD_IMAGE_ICON = { css: '.add-image-icon-other' }
 	CHOOSE_FILE_BUTTON = { xpath: '//*[@id="custom-input"]' }
 	CREATE_PROFILE_NEXT_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-profile-form/div/div/div[2]/form/div/div[4]/button' }
 	CREATE_COMPANY_DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[4]/button/div' }
 	PROFILE_IMAGE_SELECT_BUTTON = { xpath: '/html/body/ngb-modal-window/div/div/div[3]/button' }
 	ENTER_COMPANY_NAME_FIELD = { css: '.form-input' }
-	GMAIL_VERIFICATION_TEXT = { xpath: "//span[contains(.,'is your verification code for katherine+1980@hi.guru.')]" }
+	RECEIVED_MAIL = { xpath: '//span[contains(text(),"Hi there")]' }
 	VERIFICATION_CODE = { css: 'p:nth-child(3)' }
 	NEXT_BUTTON_2 = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button/div" }
-	BUSINESS_EMAIL_FIELD = { css: ".ng-invalid:nth-child(2)" }
-	BUSINESS_PASSWORD_FIELD = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/div[2]/input" }
-	SIGN_UP_CHECKBOX = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/div[3]/label/input'}
-	DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[4]/button/div'}
+	BUSINESS_EMAIL_FIELD = { xpath: "(//ion-input[@id='email']/input)[2]" }
+	BUSINESS_PASSWORD_FIELD = { xpath: "(//ion-input[@id='password']/input)[2]" }
+	SIGN_UP_CHECKBOX = { xpath: "//ion-checkbox[@id='acceptTerms']"}
+	DONE_BUTTON = { xpath: "//ion-button[@id='createAccount']"}
+	WALK_THROUGH_TOUR_CLOSE =  { xpath: '//*[@id="cdk-overlay-0"]/app-dashboard-overlay/div/div[13]' }
 	DONE_BUTTON_1 = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
 	CREATE_YOUR_COMPANY_TEXT = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[1]'}
 	CREATE_YOUR_PROFILE_TEXT = { xpath: '//*[contains(.,"Create Your Profile")]' }
   DASHBOARD_TEXT = { xpath: '/html/body/app-root/app-home/div/div/app-dashboard/app-page-layout/div/div[1]/div'}
 	END_GREETING_TEXT = { xpath: "//*[contains(.,'Thanks for stopping by. Chat soon and have a great day.')]" }
+  PEOPLES_TAB = { xpath: "//div[@id='sidebar-wrapper']/div[2]/ul/li[6]/span[2]/a" }
+	PEOPLE_TAB_UPGRADE_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]' }
+	AGENT_PLACEHOLDER = { xpath: "//ion-nav[@id='usersNav']/app-users-container/ion-content/ion-list/app-user-item[2]/ion-nav-link/ion-card/ion-avatar/img"}
+	AGENT_DROP_DOWN_MENU = { xpath: "//ion-nav[@id='usersNav']/app-user-details/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-button[2]" }
+  DELETE_USER_BUTTON = { xpath: '//app-list-popover/ion-list/ion-item/ion-label' }
+  MODAL_DELETE_USER_BUTTON = { xpath: "//button[contains(.,'Delete')]" }
+  ADD_PERSON_BUTTON = { xpath: "//ion-button[contains(.,'Add Person')]" }
+  AGENT_NAME_FIELD = { xpath: "//ion-modal[@id='UserCreateComponent']/div/app-user-create/ion-content/div/form/ion-item/ion-input/input" }
+  AGENT_EMAIL_FIELD = {  xpath: "//ion-modal[@id='UserCreateComponent']/div/app-user-create/ion-content/div/form/ion-item[2]/ion-input/input" }
+	AGENT_OVERLAY= { xpath: '/html/body/div[3]/div[2]'}
+	AGENT_CREATE_BUTTON = { xpath: "//ion-button[contains(.,'Create')]" }
+	STANDARD_PLAN_UPGRADE_BUTTON= { xpath: '//*[@id="upgrade-btn-ga-7"]'}
+	SELECT_A_COUNTRY_FIELD = { xpath: '//*[@id="mat-select-1"]/div/div[1]/span'}
+	SELECT_COUNTRY_DROP_DOWN_SELECT = { xpath: '//*[@id="mat-option-4"]/span'}
+	UPGRADE_COMPANY_NAME_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[2]/div/div[1]/div'}
+	UPGRADE_STREET_ADDRESS_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[3]/div/div[1]/div'}
+	UPGRADE_CITY_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[4]/div/div[1]/div'}
+	UPGRADE_PAYMENT_METHOD_BUTTON = { xpath: '/html/body/app-root/app-billing-details-container/div/div[3]/button[2]'}
+
+  PEOPLE_TAB_TITLE_TEXT = { xpath: "//app-people/div/div" }
+	AGENT_INVITE_EMAIL = { xpath: "//tr[@id=':4u']" }
+	OUTLOOK_AGENT_INVITE_EMAIL_TEXT= { xpath: '//span[contains(text(),"agent account")]' }
+	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
+
 
 #########################-----------Fastcomm Elements-----------#########################
 
