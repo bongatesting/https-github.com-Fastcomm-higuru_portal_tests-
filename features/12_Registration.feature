@@ -1,11 +1,8 @@
 Feature: hi.guru Register
 
-  Scenario: As a User I want to register On the Portal
+  Scenario: I want to register On the Portal
 	Given I am viewing the log in page
-
-  Scenario: As a User I want to register On the Portal
-    Then I enter an Invalid Email
-
-  Scenario: As a User I want to test Invalid and Valid Sign Up process
+	When I enter an Invalid Email
 	Then I sign in with a valid email and OTP
+	Then I create my profile
 

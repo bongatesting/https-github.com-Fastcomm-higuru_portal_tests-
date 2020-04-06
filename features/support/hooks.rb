@@ -18,7 +18,8 @@ end
 After do |scenario| ## Shut down the appium test run / driver
 	if scenario.failed? ## Takes a screenshot when a scenario fails
 		$web_driver.save_screenshot(Dir.pwd + "/screenshots/#{@failed_sc_count}_Failed_sc_ #{scenario.name.gsub(' ', '_')}.png") ## Set the screenshot path and screenshot name
-		#driver.save_screenshot(Dir.pwd + "/tmp/screenshots/Failed.png") ## Set the screenshot path and screenshot name
+		# $web_driver.save_screenshot(Dir.pwd + "/screenshots/#{@failed_sc_count}_Failed_sc_ #{scenario.name.gsub(' ', '_')}.png") ## Set the screenshot path and screenshot name
+		# driver.save_screenshot(Dir.pwd + "/tmp/screenshots/Failed.png") ## Set the screenshot path and screenshot name
 		get_number_from_fail_file
 		set_new_fail_number ## Increment @failed_sc_count and save new value to failed.csv
 
@@ -28,7 +29,7 @@ After do |scenario| ## Shut down the appium test run / driver
 		# end
 	end
 	sleep 5
-	 $web_driver.quit
+	 #$web_driver.quit
 end
 
 After do |scenario|
