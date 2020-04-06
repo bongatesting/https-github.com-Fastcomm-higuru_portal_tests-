@@ -10,7 +10,7 @@ end
 Given('I am viewing the Fastcomm website') do
 	$web_driver.get 'https://fastcomm.com'
 	#$web_driver.get 'file:///D:/FastcommWidget.html'
-	$web_driver.find_element(ElementWarehouse::WIDGET)
+	wait_for_widget
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
 end
 

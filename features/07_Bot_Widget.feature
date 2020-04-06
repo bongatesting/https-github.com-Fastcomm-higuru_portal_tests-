@@ -17,12 +17,12 @@ Feature: Bot Widget Feature
 	When I initiate chatting to a live agent
 	Then I reply as an Agent and resolve the chat
 
-  Scenario: As a user I want to Test the Bots accuracy and claim a bot a chat as an Agent
+  Scenario: As a user I want to Test the Bots accuracy and claim a bot chat as an Agent
 	Given I am viewing the Fastcomm website
 	Then I click on the WIDGET and send messages instead of clicking
 	Then I claim and close the chat on Fastcomm Portal Channel
 
-	#This test is to be scheduled with an Agent before running
+# TODO - This test is to be scheduled with an Agent before running
   Scenario: As a user I want to Test speaking to a Live agent
 	Given I am viewing the Fastcomm website
 	When I initiate chatting to a live agent

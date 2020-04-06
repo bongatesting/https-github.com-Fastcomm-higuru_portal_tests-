@@ -44,9 +44,19 @@ def open_new_tab
   $web_driver.switch_to.window( $web_driver.window_handles.last )
 end
 
+def wait_for_widget
+  begin
+    until ($web_driver.find_element(ElementWarehouse::WIDGET)).displayed?
+      sleep 2 # check if message received
+    end
+  rescue
+    wait_for_widget # this block get's executed if there is any kind of exception error
+  end
+end
+
 def check_for_reply
   begin
-    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT)).displayed?
+    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC)).displayed?
       sleep 10 # check if message received
     end
   rescue
@@ -56,7 +66,7 @@ end
 
 def check_for_reply_2
   begin
-    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT_2)).displayed?
+    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_2)).displayed?
       sleep 10 # check if message received
     end
   rescue
@@ -72,7 +82,7 @@ def check_for_reply_3
   rescue
     check_for_reply_3 # this block get's executed if there is any kind of exception error
   end
-end
+  end
 
 def wait_for_email
   begin
