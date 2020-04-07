@@ -1,4 +1,5 @@
 Feature: Company Unit
-  Scenario: As an Agent I want to navigate to Company Name
-	Given I am already signed in
-	Then I click on Company name
+  Scenario: As an Agent I want to navigate to both Company Units
+	Given I have more than one Company Unit linked to the Account
+	Then Go to the Conversation View
+	Then Switch to company unit Two
