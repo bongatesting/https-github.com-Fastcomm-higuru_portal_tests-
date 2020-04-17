@@ -35,6 +35,7 @@ Given('I am already signed in') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEST_HIGURU).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
 end
 

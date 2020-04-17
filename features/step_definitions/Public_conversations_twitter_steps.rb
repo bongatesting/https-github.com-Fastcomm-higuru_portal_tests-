@@ -14,9 +14,9 @@ Then('I start a Twitter conversation') do
   open_new_tab
   $web_driver.navigate.to 'https://twitter.com/login'
   sleep 3
-  $web_driver.find_element(ElementWarehouse::TWITTER_USERNAME).send_keys('@Khivakaxhoseni')
+  $web_driver.find_element(ElementWarehouse::TWITTER_USERNAME).send_keys(TestUser.twitter_username)
   sleep 3
-  $web_driver.find_element(ElementWarehouse::TWITTER_PASSWORD).send_keys('Likhanye@2015')
+  $web_driver.find_element(ElementWarehouse::TWITTER_PASSWORD).send_keys(TestUser.twitter_password)
   sleep 3
   $web_driver.find_element(ElementWarehouse::TWITTER_SIGN_IN_BUTTON).click
   sleep 3
@@ -34,13 +34,13 @@ Then('I start a Twitter conversation') do
   open_new_tab
   $web_driver.navigate.to 'https://twitter.com/login'
   sleep 5
-  $web_driver.find_element(ElementWarehouse::TWITTER_USERNAME_1).send_keys('@Ndluzodaka')
+  $web_driver.find_element(ElementWarehouse::TWITTER_USERNAME_1).send_keys(TestUser.twitter_username_1)
   sleep 3
-  $web_driver.find_element(ElementWarehouse::TWITTER_PASSWORD_1).send_keys('Xhanixhani@1910')
+  $web_driver.find_element(ElementWarehouse::TWITTER_PASSWORD_1).send_keys(TestUser.twitter_password_1)
   sleep 3
   $web_driver.find_element(ElementWarehouse::TWITTER_SIGN_IN_BUTTON_1).click
   sleep 3
-  $web_driver.find_element(ElementWarehouse::TWITTER_SEARCH_BUTTON).send_keys('@KhivaKaXhoseni')
+  $web_driver.find_element(ElementWarehouse::TWITTER_SEARCH_BUTTON).send_keys(TestUser.twitter_username)
   sleep 3
   $web_driver.find_element(ElementWarehouse::SELECT_TWITTER_USER).click
   sleep 3
