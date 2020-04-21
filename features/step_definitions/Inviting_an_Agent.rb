@@ -8,7 +8,7 @@ Then('I add the Agent')do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).click
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 2
+	sleep 1
 	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::PEOPLE_TAB).click
@@ -29,11 +29,11 @@ Then('I add the Agent')do
   $web_driver.switch_to.window( $web_driver.window_handles.last )
   $web_driver.get 'https://login.microsoftonline.com/'
 	sleep 4
-  $web_driver.find_element(ElementWarehouse::OUTLOOK_EMAIL_FIELD).send_keys('katherine@hi.guru')
+  $web_driver.find_element(ElementWarehouse::OUTLOOK_EMAIL_FIELD).send_keys(TestUser.outlook_email)
   sleep 2
   $web_driver.find_element(ElementWarehouse::OUTLOOK_NEXT_BUTTON).click
   sleep 4
-  $web_driver.find_element(ElementWarehouse::OUTLOOK_PASSWORD_FIELD).type('2Unicorn1809')
+  $web_driver.find_element(ElementWarehouse::OUTLOOK_PASSWORD_FIELD).type(TestUser.outlook_password)
   sleep 4
   $web_driver.find_element(ElementWarehouse::OUTLOOK_SIGN_IN_BUTTON).click
 	sleep 2
@@ -49,6 +49,7 @@ Then('I add the Agent')do
   $web_driver.find_element(ElementWarehouse::OUTLOOK_ICON).click
 	sleep 10
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	$web_driver.find_element(ElementWarehouse::OTHER).click
   $web_driver.find_element(ElementWarehouse::OUTLOOK_AGENT_INVITE_EMAIL_TEXT).click
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::AGENT_CONFIRM_EMAIL_BUTTON).click

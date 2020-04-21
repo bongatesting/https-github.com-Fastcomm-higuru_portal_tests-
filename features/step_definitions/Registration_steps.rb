@@ -11,8 +11,6 @@ When('I enter an Invalid Email') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::BUSINESS_EMAIL_FIELD).send_keys('incorrect!test.co')
 	sleep 2
-	$web_driver.find_element(ElementWarehouse::BUSINESS_PASSWORD_FIELD).click
-	sleep 2
 	if $web_driver.find_elements(ElementWarehouse::INVALID_EMAIL_TEXT).first
 		$stdout.puts 'Incorrect test Passed'.green
 	else
@@ -24,6 +22,7 @@ end
 Then('I sign in with a valid email and OTP') do
 	$web_driver.find_element(ElementWarehouse::BUSINESS_EMAIL_FIELD).clear
 	$web_driver.find_element(ElementWarehouse::BUSINESS_EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::BUSINESS_PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::SIGN_UP_CHECKBOX).click
@@ -54,6 +53,8 @@ Then('I sign in with a valid email and OTP') do
 	sleep 10
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	wait_for_email
+	$web_driver.find_element(ElementWarehouse::OTHER).click
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).click
 	CODE = $web_driver.find_element(ElementWarehouse::VERIFICATION_CODE).text
 	$stdout.puts(CODE)
