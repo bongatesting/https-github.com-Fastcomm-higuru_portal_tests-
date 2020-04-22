@@ -16,17 +16,25 @@ end
 
 Given('I am on the HiGuru Sign In Page') do
 	$web_driver.get 'https://hi.guru'
-	$web_driver.find_element(ElementWarehouse::LOGO)
-	$web_driver.find_element(ElementWarehouse::WIDGET).click
-	$web_driver.find_element(ElementWarehouse::WELCOME_FASTCOMM_TEXT).click
+	$web_driver.find_element(ElementWarehouse::CORONA_POP_UP_DISMISS).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON_TEXT).click
 end
 
 Then('I Sign in with my own valid Credentials') do
+	$web_driver.get 'https://hi.guru'
+	$web_driver.find_element(ElementWarehouse::CORONA_POP_UP_DISMISS).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON_TEXT).click
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 2
-	$web_driver.find_element(ElementWarehouse::TEST_HIGURU).click
+	sleep 5
+	$web_driver.find_element(ElementWarehouse::HIGURU_COMPANY_UNIT).click
+	sleep 8
+	$web_driver.find_element(ElementWarehouse::HIGURU_COMPANY_UNIT_SELECTION).click
+	sleep 5
+	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION_CONVO_PAGE).click
 end
 
 Given('I am already signed in') do
@@ -39,16 +47,10 @@ Given('I am already signed in') do
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
 end
 
-When('I Sign out') do
-
-end
-
 When('I Sign in with Invalid Credentials') do
-
-end
-
-Then('I Sign in with Demo Credentials') do
-
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys('Bonga@test.com')
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys('password@1234')
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
 
 Given('I forgot my password') do
