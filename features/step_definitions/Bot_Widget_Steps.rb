@@ -370,31 +370,24 @@ Then('I get feedback from the agent') do
 	$stdout.puts 'Time Chat started: '.blue
 	$stdout.puts(TIME)
 	$stdout.flush
-	check_for_reply
+	check_for_first_reply
 	TIME_1 = Time.now - TIME
 	x = TIME_1/60
-	$stdout.puts 'Total time of first response = '.green
+	$stdout.puts 'Total time of agent reply = '.green
 	$stdout.puts x
 	$stdout.puts 'Minutes'.green
 	$stdout.flush
-	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a an automated Test. Please can you text one more thing back and then Resolve this query')
+	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a an automated Test. Please can you Resolve this query')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
-	check_for_reply_2
+	check_for_resolved
+	RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME).text
 	TIME_2 = Time.now - TIME
 	y = TIME_2/60
-	$stdout.puts 'Total time of second response = '.green
+	$stdout.puts 'Total time of conversation = '.green
 	$stdout.puts y
 	$stdout.puts 'Minutes'.green
 	$stdout.flush
-	check_for_reply_3
-	RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME).text
-	TIME_3 = Time.now - TIME
-	z = TIME_3/60
-	$stdout.puts 'Total time of conversation = '.green
-	$stdout.puts z
-	$stdout.puts 'Minutes'.green
-	$stdout.flush
 	$stdout.puts 'Time Chat ended'.blue
-	#$stdout.puts("Resolved Time = " + RESOLVED_TIME)
+	$stdout.puts("Resolved Time = " + RESOLVED_TIME)
 	$stdout.flush
 end

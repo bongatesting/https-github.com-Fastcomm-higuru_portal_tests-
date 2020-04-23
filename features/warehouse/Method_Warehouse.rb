@@ -19,10 +19,10 @@ def browser_scroll
   $web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
 end
 
-def scroll_to_element(element, locator=nil)
-  script_string = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);" +
-      "var elementTop = arguments[0].getBoundingClientRect().top;" +
-      "window.scrollBy(0, elementTop-(viewPortHeight/2));"
+def scroll_to_element(element, locator = nil)
+  script_string = 'var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);' \
+                  'var elementTop = arguments[0].getBoundingClientRect().top;' \
+                  'window.scrollBy(0, elementTop-(viewPortHeight/2));'
   element = element.nil? ? find(locator) : element
   execute_script(script_string, element)
 end
@@ -39,81 +39,67 @@ def scroll_in_dashboard
 end
 
 def open_new_tab
-  $web_driver.execute_script( "window.open()" )
+  $web_driver.execute_script('window.open()')
   sleep 1
-  $web_driver.switch_to.window( $web_driver.window_handles.last )
+  $web_driver.switch_to.window($web_driver.window_handles.last)
 end
 
 def wait_for_widget
-  begin
-    until ($web_driver.find_element(ElementWarehouse::WIDGET)).displayed?
-      sleep 2 # check if message received
-    end
-  rescue
-    wait_for_widget # this block get's executed if there is any kind of exception error
+  until $web_driver.find_element(ElementWarehouse::WIDGET).displayed?
+    sleep 2 # check if message received
   end
+rescue StandardError
+  wait_for_widget # this block get's executed if there is any kind of exception error
 end
 
-def check_for_reply
-  begin
-    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    check_for_reply # this block get's executed if there is any kind of exception error
+def check_for_first_reply
+  until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_2).displayed?
+    sleep 10 # check if message received
   end
+rescue StandardError
+  check_for_second_reply # this block get's executed if there is any kind of exception error
 end
 
-def check_for_reply_2
-  begin
-    until ($web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_2)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    check_for_reply_2 # this block get's executed if there is any kind of exception error
+def check_for_second_reply
+  until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_3).displayed?
+    sleep 10 # check if message received
   end
+rescue StandardError
+  check_for_first_reply # this block get's executed if there is any kind of exception error
 end
 
-def check_for_reply_3
-  begin
-    until ($web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    check_for_reply_3 # this block get's executed if there is any kind of exception error
+def check_for_resolved
+  until $web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED).displayed?
+    sleep 10 # check if message received
   end
-  end
+rescue StandardError
+  check_for_resolved # this block get's executed if there is any kind of exception error
+end
 
 def wait_for_email
-  begin
-    until ($web_driver.find_element(ElementWarehouse::RECEIVED_MAIL)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    wait_for_email # this block get's executed if there is any kind of exception error
+  until $web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).displayed?
+    sleep 10 # check if message received
   end
+rescue StandardError
+  wait_for_email # this block get's executed if there is any kind of exception error
 end
 
 def wait_for_twitter_email_1
-  begin
-    until ($web_driver.find_element(ElementWarehouse::PREMIUM_MAILER)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    wait_for_twitter_email_1# this block get's executed if there is any kind of exception error
+  until $web_driver.find_element(ElementWarehouse::PREMIUM_MAILER).displayed?
+    sleep 10 # check if message received
   end
+rescue StandardError
+  wait_for_twitter_email_1 # this block get's executed if there is any kind of exception error
 end
 
 def wait_for_twitter_email_2
-  begin
-    until ($web_driver.find_element(ElementWarehouse::PREMIUM_MAILER_2)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    wait_for_twitter_email_2# this block get's executed if there is any kind of exception error
+  until $web_driver.find_element(ElementWarehouse::PREMIUM_MAILER_2).displayed?
+    sleep 10 # check if message received
   end
+rescue StandardError
+  wait_for_twitter_email_2 # this block get's executed if there is any kind of exception error
 end
-#scroll_in_page
+# scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
 
@@ -121,7 +107,7 @@ end
 # elem = $web_driver.execute_script(js, elem)
 # elem.sendKeys("/path/to/file")
 
-#To save a screenshot on specific step:
+# To save a screenshot on specific step:
 # # $web_driver.save_screenshot (Dir.pwd + "/tmp/screenshots/" + "Failed_sc_#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png")
 
 # Wait for a specific element to show up

@@ -21,9 +21,3 @@ Feature: Bot Widget Feature
 	Given I am viewing the Fastcomm website
 	Then I click on the WIDGET and send messages instead of clicking
 	Then I claim and close the chat on Fastcomm Portal Channel
-
-# TODO - This test is to be scheduled with an Agent before running
-  Scenario: As a user I want to Test speaking to a Live agent
-	Given I am viewing the Fastcomm website
-	When I initiate chatting to a live agent
-	Then I get feedback from the agent

@@ -15,8 +15,13 @@ require 'watir-scroll'
 # ENV['HOST'] = 'app-stage' if ENV['HOST'].nil?
 ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
 
+# configure the driver to run in headless mode
+options = Selenium::WebDriver::Chrome::Options.new
+options.add_argument('--headless')
+$web_driver = Selenium::WebDriver.for :chrome, options: options
+
 Before do
-  $web_driver = Selenium::WebDriver.for :chrome
+  # $web_driver = Selenium::WebDriver.for :chrome
   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
   $web_driver.navigate.to "https://google.com/"
   Selenium::WebDriver::Wait.new(timeout: 10)
