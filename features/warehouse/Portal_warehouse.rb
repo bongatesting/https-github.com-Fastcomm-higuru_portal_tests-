@@ -221,7 +221,7 @@ class ElementWarehouse
 	AGENT_CREATE_BUTTON = { xpath: "//ion-button[contains(.,'Create')]" }
 	STANDARD_PLAN_UPGRADE_BUTTON= { xpath: '//*[@id="upgrade-btn-ga-7"]'}
 	SELECT_A_COUNTRY_FIELD = { xpath: '//*[@id="mat-select-1"]/div/div[1]/span'}
-	SELECT_COUNTRY_DROP_DOWN_SELECT = { xpath: '//*[@id="mat-option-4"]/span'}
+	SELECT_COUNTRY_DROP_DOWN = { xpath: '//*[@id="mat-option-4"]/span'}
 	UPGRADE_COMPANY_NAME_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[2]/div/div[1]/div'}
 	UPGRADE_STREET_ADDRESS_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[3]/div/div[1]/div'}
 	UPGRADE_CITY_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[4]/div/div[1]/div'}
@@ -229,7 +229,7 @@ class ElementWarehouse
 
   PEOPLE_TAB_TITLE_TEXT = { xpath: "//app-people/div/div" }
 	AGENT_INVITE_EMAIL = { xpath: "//tr[@id=':4u']" }
-	OUTLOOK_AGENT_INVITE_EMAIL_TEXT= { xpath: '//span[contains(text(),"agent account")]' }
+	OUTLOOK_INVITE_EMAIL= { xpath: '//span[contains(text(),"agent account")]' }
 	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
 
 
