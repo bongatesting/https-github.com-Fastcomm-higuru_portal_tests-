@@ -10,8 +10,10 @@ end
 Given('I am viewing the Fastcomm website') do
 	$web_driver.get 'https://fastcomm.com'
 	#$web_driver.get 'file:///D:/FastcommWidget.html'
-		$web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).click
-		sleep 4
+	if $web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).first
+		$web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).first.click
+	end
+	sleep 4
 	wait_for_widget
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
 end
