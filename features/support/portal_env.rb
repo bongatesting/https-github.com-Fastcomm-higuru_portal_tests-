@@ -17,7 +17,7 @@ ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
 
 # configure the driver to run in headless mode
 options = Selenium::WebDriver::Chrome::Options.new
-options.add_argument('--headless')
+# options.add_argument('--headless')
 $web_driver = Selenium::WebDriver.for :chrome, options: options
 
 Before do
