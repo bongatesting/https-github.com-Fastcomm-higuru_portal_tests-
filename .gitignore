@@ -6,3 +6,4 @@ Gemfile.lock
 debug.log
 features/Attachment_Files/LatchCSVExample.csv
 webmessage.html
+screenshots/
