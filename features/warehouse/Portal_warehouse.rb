@@ -65,7 +65,7 @@ class ElementWarehouse
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
 	NEW_PASSWORD_DONE_BUTTON = { xpath: "//ion-button[@id='resetPassword']" }
 	HIGURU_BUTTON = { css: 'li:nth-child(2) .higuru-button-bordered' }
-	HIGURU_COMPANY_UNIT = { css: '.company-unit-container:nth-child(1) .company-unit-logo' }
+	HIGURU_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-companies-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-item[2]/ion-item/ion-button' }
 	COMPANY_UNIT_SETTINGS = { xpath: '//*[@id="mat-tab-label-0-1"]' }
 	COMPANY_UNIT_SETTINGS_2 = { xpath: '/html/body/app-root/app-home/div/div/app-side-menu/div[2]/ul' }
 	SETTINGS = { xpath: '//*[@id="mat-tab-label-0-1"]/div' }
@@ -191,6 +191,9 @@ class ElementWarehouse
 	CREATE_COMPANY_DONE_BUTTON = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[4]/button/div' }
 	PROFILE_IMAGE_SELECT_BUTTON = { xpath: '/html/body/ngb-modal-window/div/div/div[3]/button' }
 	ENTER_COMPANY_NAME_FIELD = { css: '.form-input' }
+	CORONA_POP_UP_DISMISS = { xpath: '//*[@id="elementor-popup-modal-5312"]/div/div[4]/i' }
+	LOGIN_BUTTON_TEXT = { xpath: '//*[@id="menu-1-d5d5cab"]/li[7]/a' }
+	HIGURU_COMPANY_UNIT_SELECTION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-avatar/img' }
 	RECEIVED_MAIL = { xpath: '//span[contains(text(),"Hi there")]' }
 	PREMIUM_MAILER =  { xpath: '//span[contains(text(),"Your Company Unit has added a service")]' }
 	PREMIUM_MAILER_2=  { xpath: '//span[contains(text(),"Your Company Unit has removed a service")]'}

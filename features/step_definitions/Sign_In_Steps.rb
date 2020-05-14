@@ -43,7 +43,9 @@ end
 
 Given('I am already signed in') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.test_user_1_password)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEST_HIGURU).click
@@ -53,7 +55,9 @@ end
 
 When('I Sign in with Invalid Credentials') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys('Bonga@test.com')
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys('password@1234')
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
 
