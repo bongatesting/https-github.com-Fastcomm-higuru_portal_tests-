@@ -15,13 +15,10 @@ require 'watir-scroll'
 # ENV['HOST'] = 'app-stage' if ENV['HOST'].nil?
 ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
 
-# configure the driver to run in headless mode
-options = Selenium::WebDriver::Chrome::Options.new
-# options.add_argument('--headless')
-$web_driver = Selenium::WebDriver.for :chrome, options: options
-
-Before do
-  # $web_driver = Selenium::WebDriver.for :chrome
+Before do # Chrome Env
+  options = Selenium::WebDriver::Chrome::Options.new
+  # options.add_argument('--headless') # configure the driver to run in headless mode
+  $web_driver = Selenium::WebDriver.for :chrome, options: options
   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
   $web_driver.navigate.to "https://google.com/"
   Selenium::WebDriver::Wait.new(timeout: 10)
@@ -29,11 +26,27 @@ Before do
   $web_driver.manage.timeouts.page_load = 240
   $web_driver.manage.timeouts.implicit_wait = 10
 end
-#
-# Before do
-#  $ff_driver = Selenium::WebDriver.for :firefox
-#  Selenium::WebDriver::Wait.new(timeout: 60)
-#  $ff_driver.manage.window.maximize
-#  $ff_driver.manage.timeouts.page_load = 60
-#  $ff_driver.manage.timeouts.implicit_wait = 60
+
+# Before do # Firefox Env
+#   options = Selenium::WebDriver::Firefox::Options.new
+#   # options.add_argument('--headless') # configure the driver to run in headless mode
+#   $web_driver = Selenium::WebDriver.for :firefox, options: options
+#   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+#   $web_driver.navigate.to "https://google.com/"
+#   Selenium::WebDriver::Wait.new(timeout: 10)
+#   $web_driver.manage.window.maximize
+#   $web_driver.manage.timeouts.page_load = 240
+#   $web_driver.manage.timeouts.implicit_wait = 10
+# end
+
+# Before do # Safari Env
+#   options = Selenium::WebDriver::Safari::Options.new
+#   # options.add_argument('--headless') # configure the driver to run in headless mode
+#   $web_driver = Selenium::WebDriver.for :safari, options: options
+#   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+#   $web_driver.navigate.to "https://google.com/"
+#   Selenium::WebDriver::Wait.new(timeout: 10)
+#   $web_driver.manage.window.maximize
+#   $web_driver.manage.timeouts.page_load = 240
+#   $web_driver.manage.timeouts.implicit_wait = 10
 # end
