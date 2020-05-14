@@ -30,23 +30,23 @@ end
 # Before do # Firefox Env
 #   options = Selenium::WebDriver::Firefox::Options.new
 #   # options.add_argument('--headless') # configure the driver to run in headless mode
-#   $ff_driver = Selenium::WebDriver.for :firefox, options: options
-#   #$ff_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-#   $ff_driver.navigate.to "https://google.com/"
+#   $web_driver = Selenium::WebDriver.for :firefox, options: options
+#   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+#   $web_driver.navigate.to "https://google.com/"
 #   Selenium::WebDriver::Wait.new(timeout: 10)
-#   $ff_driver.manage.window.maximize
-#   $ff_driver.manage.timeouts.page_load = 240
-#   $ff_driver.manage.timeouts.implicit_wait = 10
+#   $web_driver.manage.window.maximize
+#   $web_driver.manage.timeouts.page_load = 240
+#   $web_driver.manage.timeouts.implicit_wait = 10
 # end
 
 # Before do # Safari Env
 #   options = Selenium::WebDriver::Safari::Options.new
 #   # options.add_argument('--headless') # configure the driver to run in headless mode
-#   $ss_driver = Selenium::WebDriver.for :safari, options: options
-#   #$ss_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-#   $ss_driver.navigate.to "https://google.com/"
+#   $web_driver = Selenium::WebDriver.for :safari, options: options
+#   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+#   $web_driver.navigate.to "https://google.com/"
 #   Selenium::WebDriver::Wait.new(timeout: 10)
-#   $ss_driver.manage.window.maximize
-#   $ss_driver.manage.timeouts.page_load = 240
-#   $ss_driver.manage.timeouts.implicit_wait = 10
+#   $web_driver.manage.window.maximize
+#   $web_driver.manage.timeouts.page_load = 240
+#   $web_driver.manage.timeouts.implicit_wait = 10
 # end
