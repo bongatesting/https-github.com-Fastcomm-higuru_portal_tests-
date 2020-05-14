@@ -304,8 +304,9 @@ class ElementWarehouse
 	EMAIL_RESPONSE = { xpath: "//*[contains(.,'Our consultants will be contacting you via your email as soon as possible. Thank you for stopping by and have a nice day. ')]" }
 	INBOUND_CHAT = { xpath: '//*[@id="mat-tab-content-0-0"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
 	REPLY_CHAT_GENERIC = { class: 'higuru_message undefined higuru_message-in' }
-	REPLY_CHAT_GENERIC_2 = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[6]/div/div/div/div[1]' }
-	REPLY_CHAT_GENERIC_3 = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[7]/div/div/div/div[1]' }
+	CONVO_ASSIGNED_TEXT = { xpath: '//*[contains(., "Conversation assigned to ")]' }
+	REPLY_CHAT_GENERIC_1 = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[6]/div/div/div/div[1]' }
+	REPLY_CHAT_GENERIC_2 = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[7]/div/div/div/div[1]' }
 	BOT_CHAT = { xpath: '//*[@id="mat-tab-content-0-2"]/div/div/app-room/div/div[2]/div[1]/span[1]' }
 	CLAIM_BUTTON = { xpath: '/html/body/app-root/app-agent-interface-page/div[2]/app-chat/app-claim-footer-block/div/button' }
 	CONVO_CLAIMED_TEXT = { xpath: "//*[contains(.,'Conversation successfully claimed')]" }
@@ -315,6 +316,7 @@ class ElementWarehouse
 	RESOLVE_TEXT = { xpath: '//button[2][contains(.,"Resolve")]' }
 	RESOLVED_TEXT = { xpath: '//span[contains(.,"Conversation successfully resolved")]' }
 	THANK_YOU_TEXT = { xpath: '//*[contains(.,"Thank you Awesome Bot!")]' }
-	RESOLVED_TIME = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[9]/div/div/div/div/div/time' }
+	RESOLVED_TIME_1 = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[8]/div' }
+	RESOLVED_TIME_2 = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[9]/div' }
 	POP_UP_DISMISS = { class: 'eicon-close' }
 end

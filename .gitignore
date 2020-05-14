@@ -7,3 +7,5 @@ debug.log
 features/Attachment_Files/LatchCSVExample.csv
 webmessage.html
 screenshots/
+
+features/TestDetails/

@@ -53,19 +53,23 @@ rescue StandardError
 end
 
 def check_for_first_reply
-  until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_2).displayed?
-    sleep 10 # check if message received
-  end
+  sleep 10 until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_1).displayed?
+    if $web_driver.find_elements(ElementWarehouse::CONVO_ASSIGNED_TEXT).first
+      assignee = $web_driver.find_elements(ElementWarehouse::CONVO_ASSIGNED_TEXT).text
+      $stdout.puts(assignee)
+      check_for_second_reply
+    elsif $web_driver.find_elements(ElementWarehouse::REPLY_CHAT_GENERIC_1).first
+      $stdout.puts 'Conversation assigned text not displayed'.red
+    end
+  $stdout.flush
 rescue StandardError
-  check_for_second_reply # this block get's executed if there is any kind of exception error
+  check_for_first_reply # this block get's executed if there is any kind of exception error
 end
 
 def check_for_second_reply
-  until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_3).displayed?
-    sleep 10 # check if message received
-  end
+  sleep 10 until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_2).displayed?
 rescue StandardError
-  check_for_first_reply # this block get's executed if there is any kind of exception error
+  check_for_second_reply # this block get's executed if there is any kind of exception error
 end
 
 def check_for_resolved
