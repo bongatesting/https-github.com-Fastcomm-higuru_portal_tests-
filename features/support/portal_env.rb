@@ -19,8 +19,8 @@ Before do # Chrome Env
   options = Selenium::WebDriver::Chrome::Options.new
   # options.add_argument('--headless') # configure the driver to run in headless mode
   $web_driver = Selenium::WebDriver.for :chrome, options: options
-  #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-  $web_driver.navigate.to "https://google.com/"
+  $web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+  #$web_driver.navigate.to "https://google.com/"
   Selenium::WebDriver::Wait.new(timeout: 10)
   $web_driver.manage.window.maximize
   $web_driver.manage.timeouts.page_load = 240
