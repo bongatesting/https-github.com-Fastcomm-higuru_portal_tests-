@@ -193,6 +193,9 @@ class ElementWarehouse
 	ENTER_COMPANY_NAME_FIELD = { css: '.form-input' }
 	CORONA_POP_UP_DISMISS = { xpath: '//*[@id="elementor-popup-modal-5312"]/div/div[4]/i' }
 	LOGIN_BUTTON_TEXT = { xpath: '//*[@id="menu-1-d5d5cab"]/li[7]/a' }
+	DELETE_AGENT = { xpath: '//*[@id="ion-overlay-2"]/div/div[2]/app-list-popover/ion-list/ion-item/ion-label' }
+	SELECT_DELETE = { xpath: '//*[@id="usersNav"]/app-user-details/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-button[2]' }
+	SELECT_AGENT = { xpath: '//*[@id="usersNav"]/app-users-container/ion-content/ion-list/app-user-item[2]/ion-nav-link/ion-card/ion-avatar/img[1]' }
 	HIGURU_COMPANY_UNIT_SELECTION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-avatar/img' }
 	RECEIVED_MAIL = { xpath: '//span[contains(text(),"Hi there")]' }
 	PREMIUM_MAILER =  { xpath: '//span[contains(text(),"Your Company Unit has added a service")]' }

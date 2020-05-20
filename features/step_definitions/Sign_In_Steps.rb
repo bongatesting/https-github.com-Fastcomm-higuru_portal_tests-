@@ -23,7 +23,11 @@ end
 
 Given('I am on the HiGuru Sign In Page') do
   $web_driver.get 'https://hi.guru'
-  $web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).click
+  if $web_driver.find_elements(ElementWarehouse::POP_UP_DISMISS).first
+	  sleep 2
+	  $web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).click
+	  $stdout.puts 'Corona Pop up Displayed'
+  end
   sleep 4
   $web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
