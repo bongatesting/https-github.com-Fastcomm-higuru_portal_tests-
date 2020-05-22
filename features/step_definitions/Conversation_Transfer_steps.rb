@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+wait = Selenium::WebDriver::Wait.new(timeout: 30)
+
 Given('I am on the Login View') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 3
@@ -65,8 +69,9 @@ end
 Then('Initiate a Conversation') do
 	open_new_tab
 	sleep 3
-	$web_driver.get "file:///C:/Users/Bonga%20Fati/Desktop/QA%20Test%20run/WebmessageQA6.html"
+	$web_driver.get(TestUser.qa_web_widget)
 	sleep 3
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_CHAT_FIELD).send_keys('Conversation Transfer Test Case')
