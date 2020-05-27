@@ -225,7 +225,8 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 end
 
 When('I initiate chatting to a live agent') do
-	sleep 4
+	sleep 8
+	wait.until { $web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click

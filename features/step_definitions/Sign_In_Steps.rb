@@ -9,8 +9,8 @@ end
 
 Given('I am viewing the Fastcomm website') do
   $web_driver.get 'https://fastcomm.com'
-  # $web_driver.get 'file:///D:/FastcommWidget.html'
-  sleep 5
+   #$web_driver.get 'file:///D:/FastcommWidget.html'
+  sleep 10
   if $web_driver.find_elements(ElementWarehouse::POP_UP_DISMISS).first
 		sleep 2
 	  $web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).click
@@ -18,7 +18,7 @@ Given('I am viewing the Fastcomm website') do
   end
   sleep 4
   wait_for_widget
-  $web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
+  wait.until { $web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO).displayed? }
 end
 
 Given('I am on the HiGuru Sign In Page') do

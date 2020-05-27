@@ -3,8 +3,7 @@ module AndroidHelpers
 		begin
 			$app_driver.hide_keyboard
 		rescue Selenium::WebDriver::Error::UnknownError
-			$stdout.puts "** Android Native Soft Keyboard Already hidden **"
-			$stdout.flush
+			puts "** Android Native Soft Keyboard Already hidden **"
 		end		
 	end
 	
@@ -37,6 +36,10 @@ module AndroidHelpers
 		if current_activity != main_activity
 			raise "App needs to be in a registered state for restart_android_app to work"
 		end
+	end
+
+	def restart_latch_app
+		$app_driver.launch_app
 	end
 
 	def import_contacts_list

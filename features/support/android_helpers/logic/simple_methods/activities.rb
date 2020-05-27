@@ -20,7 +20,7 @@ module Activities
 	end
 	
 	def main_activity
-		return "com.ttrumpet.sa.MainActivity"
+		return "com.latch.app.qa.MainActivity"
 	end	
 	
 	def chat_content_activity
