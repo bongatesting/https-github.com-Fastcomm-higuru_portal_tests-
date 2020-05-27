@@ -13,3 +13,5 @@ features/TestDetails/
 history/
 
 Report.html
+
+features/support/hooks.rb
