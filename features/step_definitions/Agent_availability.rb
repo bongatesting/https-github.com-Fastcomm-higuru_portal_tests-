@@ -2,7 +2,7 @@
 
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
-Given('The Agent is no available') do
+Given('The Agent is not available') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)

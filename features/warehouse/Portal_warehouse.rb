@@ -36,7 +36,7 @@ class ElementWarehouse
 	SELECT_TWITTER_USER = { xpath: '//*[@id="typeaheadDropdown-6"]/div[3]/div[1]/li/div/div[1]/div/div[2]' }
 	TWITTER_SEARCH_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/div/div/form/div[1]/div/div/div[2]/input' }
 	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-header/app-notification-bar/div/div[2]/span[2]/button' }
-	QA_NOT_NOW_NOTIFICATION = { xpath: '' }
+	QA_NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	NOT_NOW_NOTIFICATION_2 = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
 	TEST_FASTCOMM = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[1]/div[2]' }
