@@ -4,7 +4,6 @@ features/\.DS_Store
 coverage/
 Gemfile.lock
 debug.log
-features/Attachment_Files/LatchCSVExample.csv
 webmessage.html
 screenshots/
 features/TestDetails/

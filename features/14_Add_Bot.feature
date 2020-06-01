@@ -1,4 +1,8 @@
-Feature: Add Bot
+Feature: Add Bot Feature
+
+  @Feature: Fastcomm Widget Feature
+  @Urgency: High
+
   Scenario: I want to add a Bot
 	Given I have no Bots added
 	Then I Add the Bot
