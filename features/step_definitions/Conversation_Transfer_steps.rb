@@ -104,7 +104,7 @@ end
 Then('Check if the conversation transfer labels are correct') do
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY).click
+	$web_driver.find_element(ElementWarehouse::QA_CONVERSATION_HISTORY).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::OPEN_CONVERSATION).click
 	sleep 4

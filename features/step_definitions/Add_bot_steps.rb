@@ -46,7 +46,7 @@ Then('I Add the Bot') do
 	$web_driver.find_element(ElementWarehouse::ADD_LEGAL_BOT_BUTTON).click
 end
 
-Then('Activate the Bot') do
+Then('I Activate the Bot') do
 	$web_driver.find_element(ElementWarehouse::INACTIVE_BOT_TAB).click
 	$web_driver.find_element(ElementWarehouse::TEST_BOT).click
 	sleep 7
@@ -70,7 +70,7 @@ Then('I activate first responder') do
 	$web_driver.find_element(ElementWarehouse::ACTIVATE_BOT_FIRST_RESPONDER).click
 end
 
-Then('Test Bot') do
+Then('I Test the Bot') do
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 3
 	open_new_tab
