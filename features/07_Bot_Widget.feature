@@ -1,5 +1,8 @@
 Feature: Bot Widget Feature
 
+  @Feature: Bot Widget Feature
+  @Urgency: High
+
   Scenario: As a user I want to Test the hi.guru web widget
 	Given I am viewing the hi.guru website
 	Then I click on the WIDGET
