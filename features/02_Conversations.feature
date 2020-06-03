@@ -13,11 +13,11 @@ Feature: Conversations Feature
     Then I start a conversation
     Then I click on conversation history
 
-    Scenario: I want to adjust the conversation expiry slider
-      Given I am on the Company Unit Settings page
-      Then I Adjust Conversation Expiry Slider by One hour
-      Then I initiate a conversation
-      Then I check if the conversation has been Closed after one hour
+  Scenario: I want to adjust the conversation expiry slider
+    Given I am on the Company Unit Settings page
+    Then I Adjust Conversation Expiry Slider by One hour
+    Then I initiate a conversation
+    Then I check if the conversation has been Closed after one hour
 
   Scenario: I want to transfer a conversation between Agents
     Given I am on the Login View
