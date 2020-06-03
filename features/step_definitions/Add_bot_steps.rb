@@ -11,7 +11,7 @@ Given('I have no Bots added') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::BOT_TAB).click
+	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
 	sleep 3
 end
 
@@ -48,7 +48,8 @@ end
 
 Then('I Activate the Bot') do
 	$web_driver.find_element(ElementWarehouse::INACTIVE_BOT_TAB).click
-	$web_driver.find_element(ElementWarehouse::TEST_BOT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::INACTIVE_TEST_BOT).click
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::BOT_MENU_BUTTON).click
 	sleep 3
