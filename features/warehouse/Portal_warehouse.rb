@@ -159,14 +159,14 @@ class ElementWarehouse
 	INACTIVE_TEST_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/ion-content/ion-slides/div/ion-slide[2]/ion-list/app-bot-item/ion-nav-link/ion-card' }
 	BOT_MENU_BUTTON = { xpath: '//*[@id="botsNav"]/app-bot-details/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-button[2]' }
 	ACTIVATE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-5"]/div/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	DEACTIVATE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-4"]/div/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	DELETE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-5"]/div/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
+	DEACTIVATE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-16"]/div/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
+	DELETE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-18"]/div/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
 	CONFIRM_DELETE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-6"]/div/div[3]/button[2]/span' }
 	WELCOME_ASSISTANT_BUTTON = { xpath: '//*[@id="ion-tg-1-lbl"]/ion-label/ion-text' }
 	ACTIVATE_TEST_BOT = { xpath: '//*[@id="companyUnitBotSelect"]/div/div[2]/app-company-unit-bot-select/ion-content/ion-item[2]/div/ion-card/ion-avatar/img' }
 	QA_BOT_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[3]' }
 	PUBLIC_BOT_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[4]' }
-	REMOVE_QA_TEST_BOT = { xpath: '//*[@id="ion-overlay-1"]/div/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
+	REMOVE_QA_TEST_BOT = { xpath: '//*[@id="ion-overlay-10"]/div/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	SAVE_ASSIGN_CONVERSATION_TOPICS_TAGS = { xpath: '//*[@id="assignSupportQueryTopicTags"]/div/app-assign-support-query-topic-tags/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	QA_INSTANT_RESOLVE = { xpath: '' }
 	QA_SELECT_BOT_CHAT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[3]/ion-list/app-room-item[1]/ion-item/ion-avatar/img[1]' }
