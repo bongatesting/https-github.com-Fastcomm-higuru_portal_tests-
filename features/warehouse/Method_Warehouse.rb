@@ -113,6 +113,16 @@ def wait_for_twitter_email_2
     wait_for_twitter_email_2# this block get's executed if there is any kind of exception error
   end
 end
+
+def wait_for_facebook_public_chat
+  begin
+    until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_facebook_public_chat# this block get's executed if there is any kind of exception error
+  end
+end
 #scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)

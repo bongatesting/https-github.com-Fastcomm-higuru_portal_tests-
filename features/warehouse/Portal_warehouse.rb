@@ -77,13 +77,18 @@ class ElementWarehouse
 	CLOSE_NOTIFICATION_CONVO_PAGE = { xpath: '/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[3]' }
 	CONVERSATION_COUNT_ONE = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/div/span' }
 	CONVERSATIONS_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[2]/ion-label' }
+	CONVO_NAVIGATION_BUTTON = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img' }
 	INBOUND_TAB = { xpath: "//span[contains(.,'Inbound')]" }
 	OUTBOUND_TAB = { xpath: "//span[contains(.,'Outbound')]" }
+	PUBLIC_TAB = { xpath: "/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[4]" }
+	PUBLIC_CHAT = { xpath: "/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[4]/ion-list/app-room-item[1]/ion-item/ion-avatar" }
 	MAIN_MENU = { css: '.logo-small' }
 	STATS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[3]' }
-	CHANNELS_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[4]/ion-label' }
+	CHANNELS_TAB = { xpath: "//ion-label[contains(.,'Channels')]" }
 	ADD_CHANNEL_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	TWITTER_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[2]/ion-nav-link/ion-card/ion-avatar/img'}
+	CHANNEL_DROP_DOWN = {xpath: "//ion-nav[@id='channelsNav']/app-channels-container/ion-content/ion-slides/div/ion-slide/ion-list/app-channel-item[4]/ion-item/ion-button"}
+	CHANNEL_REAUTHORISE = {xpath: "//ion-item[contains(.,'Reauthorise Channel')]"}
 	ADD_TWITTER_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
 	CHANNEL_OPTIONS = {xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-channel-item/ion-item/ion-button'}
 	DELETE_CHANNEL = {xpath: '//*[@id="ion-overlay-3"]/div/div[2]/app-list-popover/ion-list/ion-item[2]'}
@@ -234,6 +239,40 @@ class ElementWarehouse
 	AGENT_INVITE_EMAIL = { xpath: "//tr[@id=':4u']" }
 	OUTLOOK_AGENT_INVITE_EMAIL_TEXT= { xpath: '//span[contains(text(),"agent account")]' }
 	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
+
+	FACEBOOK_CHANNEL_CARD = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[1]/ion-nav-link/ion-card'}
+	ADD_FACEBOOK_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
+	FACEBOOK_EMAIL_FIELD = {css: "#email"}
+	FACEBOOK_EMAIL_FIELD_2 = { id: 'email'}
+	FACEBOOK_PASSWORD_FIELD = {css: "#pass"}
+	FACEBOOK_LOGIN_BUTTON_3 = {xpath: "//label[@id='loginbutton']/input"}
+	FACEBOOK_CONTINUE_AS_BUTTON = {xpath: "//span[contains(.,'Continue as Katherine Kelly')]"}
+	FACEBOOK_SELECT_ALL_BUTTON = {xpath: "//input[@id='allAssetsInput']"}
+	FACEBOOK_NEXT_BUTTON = {xpath: "//span[contains(.,'Next')]"}
+	FACEBOOK_DONE_BUTTON = {xpath: "//span[contains(.,'Done')]"}
+	FACEBOOK_OK_BUTTON = {xpath: "//form[@id='platformDialogForm']/div/div/div/div/div/div[3]/div/div/div/div"}
+	ADD_PAGE_BUTTON = {xpath: "//ion-nav[@id='channelsNav']/app-facebook-page-select/ion-content/ion-list/app-facebook-page-item[21]/ion-item/ion-button"}
+	ENABLE_PUBLIC_CONVERSATIONS = {xpath: "//ion-toggle[@id='publicActive']"}
+	FACEBOOK_ADD_BUTTON = {xpath: '//*[@id="channelsNav"]/app-facebook-page-select/ion-content/ion-list/app-facebook-page-item[21]/ion-item/ion-button]'}
+	FACEBOOK_DONE_BUTTON_2 = {xpath: "//ion-modal[@id='platformPermissionModal']/div/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]"}
+	FACEBOOK_LOG_IN_BUTTON = {xpath: '//*[@id="loginbutton"]'}
+	FACEBOOK_LOG_IN_BUTTON_2 = {xpath: '//*[@id="u_0_b"]'}
+	CLOSE_FACEBOOK_NOTIFICATION = {xpath: ''}
+	SEARCH_FIELD = {xpath: '//*[@id="mount_0_0"]/div/div/div[2]/div[2]/div/div/div[1]/div/div[3]/label/input'}
+	PAGE_OPTION = {xpath: '//*[@id="qa 9020 2"]/div/div[1]/div/div[2]/span'}
+	PAGE_OPTION_2 = {xpath: "//li[@id='qa 9020 2']/div/div/div/div[2]/span"}
+	SEARCH_BUTTON = {xpath: '//*[@id="js_r"]/form/button'}
+	FACEBOOK_PAGE = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div[2]/div/div[1]/span/div/a'}
+	FACEBOOK_PAGE_2 = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div[2]/div/div[1]/span/div/a/span'}
+	VIEW_AS_VISITOR = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[2]/a/div[1]'}
+	CREATE_POST_BUTTON = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[6]/div[2]/div/div[2]/div[1]/div/div/div[1]/div[2]/div[1]/div/span'}
+	POST_FIELD = {xpath: '//*[@id="mount_0_0"]/div/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div[2]/div[2]/div[1]/div/div[1]/div[1]/div/div/div/div[2]/div/div/div/div'}
+	POST_FIELD_POP_UP = {xpath: '//*[@id="js_ex"]/div[1]/div/div[1]/div[1]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div'}
+	POST_BUTTON = {xpath: '//*[@id="js_ex"]/div[2]/div[3]/div[2]/div[2]/div/button/span'}
+	POST_BUTTON_2 = {xpath: '//*[@id="mount_0_0"]/div/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div[2]/div[3]/div[2]'}
+	FACEBOOK_PAGE_SWITCH_OPTION = {xpath: '//*[@id="js_2p4"]/span[3]/i'}
+	FACEBOOK_PAGE_OPTION = {xpath: '//*[@id="globalContainer"]/div[3]/div/div/div/div/div/div[1]/div/div[2]/div/div/div[2]/div[1]'}
+	COMMENT_FIELD = {xpath: '//*[@id="u_3i_l"]/div/div[3]/div[2]/div[2]/div/div/div/div/div/form/div/div/div[2]/div/div/div/div'}
 
 
 #########################-----------Fastcomm Elements-----------#########################
