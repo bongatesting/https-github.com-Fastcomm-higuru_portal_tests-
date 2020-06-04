@@ -1,8 +1,8 @@
-Given('I go to the log in page')do
+Given('I go to the log in page') do
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 end
 
-Then('I login to my account')do
+Then('I login to my account') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).click
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).click
@@ -10,7 +10,7 @@ Then('I login to my account')do
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
 
-Then ('I create a facebook post')do
+Then('I create a facebook post') do
 	$web_driver.execute_script( "window.open()" )
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	$web_driver.get 'https://www.facebook.com/'
@@ -50,7 +50,7 @@ Then ('I create a facebook post')do
 	sleep 4
 end
 
-Then ('receive the public chat')do
+Then('receive the public chat') do
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 4
@@ -59,7 +59,7 @@ Then ('receive the public chat')do
 	$web_driver.find_element(ElementWarehouse::PUBLIC_CHAT).click
 end
 
-Then ('I reauthorise my facebook page')do
+Then('I reauthorise my facebook page') do
 	$web_driver.find_element(ElementWarehouse::CONVO_NAVIGATION_BUTTON).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
