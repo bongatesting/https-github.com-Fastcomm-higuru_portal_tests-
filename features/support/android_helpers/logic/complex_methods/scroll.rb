@@ -4,15 +4,14 @@ module Scroll
 		begin
 			Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.9, offset_x: 0.4, offset_y: 0.2, duration:600).perform.release
 		rescue Selenium::WebDriver::Error::UnknownError
-			$stdout.puts "An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully"
-			$stdout.flush
+			puts "An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully"
 
 			Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.9, offset_x: 0.4, offset_y: 0.2, duration:600).perform
 		end
 	end
 
 	def scroll_on(object:, direction:, duration: 500, scroll_intensity: 200)
-		dementions = object.find_element.rect
+		dementions = object.find_el.rect
 		height = dementions.height
 		width = dementions.width
 		x_coordinate = dementions.x

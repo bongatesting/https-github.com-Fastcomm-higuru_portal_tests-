@@ -50,7 +50,7 @@ Then('I add the Agent')do
 	sleep 10
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	$web_driver.find_element(ElementWarehouse::OTHER).click
-  $web_driver.find_element(ElementWarehouse::OUTLOOK_AGENT_INVITE_EMAIL_TEXT).click
+  $web_driver.find_element(ElementWarehouse::OUTLOOK_INVITE_EMAIL).click
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::AGENT_CONFIRM_EMAIL_BUTTON).click
   sleep 4

@@ -225,7 +225,8 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 end
 
 When('I initiate chatting to a live agent') do
-	sleep 2
+	sleep 8
+	wait.until { $web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
@@ -236,8 +237,8 @@ When('I initiate chatting to a live agent') do
 		$stdout.puts 'Agent not available'.red
 		$stdout.flush
 		$web_driver.find_element(ElementWarehouse::AGENT_NOT_AVAILABLE_1)
-		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(TestUser.email)
-		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(TestUser.email)
+		$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(:return)
 		$web_driver.find_element(ElementWarehouse::EMAIL_RESPONSE)
 	end
 end
@@ -370,31 +371,25 @@ Then('I get feedback from the agent') do
 	$stdout.puts 'Time Chat started: '.blue
 	$stdout.puts(TIME)
 	$stdout.flush
-	check_for_reply
-	TIME_1 = Time.now - TIME
-	x = TIME_1/60
-	$stdout.puts 'Total time of first response = '.green
-	$stdout.puts x
+	check_for_first_reply
+	TIME_1 = TIME - Time.now
+	response = TIME_1/60
+	$stdout.puts 'Time of first agent response = '.green
+	$stdout.puts response
 	$stdout.puts 'Minutes'.green
-	$stdout.flush
-	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a an automated Test. Please can you text one more thing back and then Resolve this query')
+	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a an automated Test. Please can you Resolve this query')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
-	check_for_reply_2
+	check_for_resolved
+	if $web_driver.find_elements(ElementWarehouse::RESOLVED_TIME_1).first
+		RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME_1).text
+	elsif $web_driver.find_elements(ElementWarehouse::RESOLVED_TIME_2).first
+		RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME_2).text
+	end
+	$stdout.puts(RESOLVED_TIME)
 	TIME_2 = Time.now - TIME
-	y = TIME_2/60
-	$stdout.puts 'Total time of second response = '.green
-	$stdout.puts y
-	$stdout.puts 'Minutes'.green
-	$stdout.flush
-	check_for_reply_3
-	RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME).text
-	TIME_3 = Time.now - TIME
-	z = TIME_3/60
+	resolved = TIME_2/60
 	$stdout.puts 'Total time of conversation = '.green
-	$stdout.puts z
+	$stdout.puts resolved
 	$stdout.puts 'Minutes'.green
-	$stdout.flush
-	$stdout.puts 'Time Chat ended'.blue
-	#$stdout.puts("Resolved Time = " + RESOLVED_TIME)
 	$stdout.flush
 end
