@@ -3,7 +3,7 @@ Feature: Company Unit Feature
   @Feature: Company Unit Feature
   @Urgency: High
 
-  Scenario: As an Agent I want to navigate to both Company Units
-	Given I have more than one Company Unit linked to the Account
-	Then Go to the Conversation View
-	Then Switch to company unit Two and back
+  Scenario: I want to create a second Company Unit
+	Given I have one Company Unit
+	Then I go to the Company Unit settings and create a new Company Unit
+	Then I switch back to the original Company Unit
