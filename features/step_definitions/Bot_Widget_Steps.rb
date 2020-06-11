@@ -372,7 +372,7 @@ Then('I get feedback from the agent') do
 	$stdout.puts(TIME)
 	$stdout.flush
 	check_for_first_reply
-	TIME_1 = TIME - Time.now
+	TIME_1 = Time.now - TIME
 	response = TIME_1/60
 	$stdout.puts 'Time of first agent response = '.green
 	$stdout.puts response

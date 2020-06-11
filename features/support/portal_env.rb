@@ -17,7 +17,7 @@ ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
 
 Before do # Chrome Env
   options = Selenium::WebDriver::Chrome::Options.new
-  # options.add_argument('--headless') # configure the driver to run in headless mode
+  #options.add_argument('--headless') # configure the driver to run in headless mode
   $web_driver = Selenium::WebDriver.for :chrome, options: options
   $web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
   #$web_driver.navigate.to "https://google.com/"
