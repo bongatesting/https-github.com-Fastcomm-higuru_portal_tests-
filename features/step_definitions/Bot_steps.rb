@@ -65,7 +65,6 @@ Then('I Activate the Bot') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::ACTIVATE_TEST_BOT).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::ACTIVATE_BOT_FIRST_RESPONDER).click
 end
 
 Given('There is a chat on the Bot tab') do
@@ -83,6 +82,14 @@ Given('There is a chat on the Bot tab') do
 end
 
 Then('I claim the Bot chat and respond') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click

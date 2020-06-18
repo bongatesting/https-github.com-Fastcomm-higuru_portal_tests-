@@ -7,3 +7,4 @@ Feature: Company Unit Feature
 	Given I have one Company Unit
 	Then I go to the Company Unit settings and create a new Company Unit
 	Then I switch back to the original Company Unit
+	Then I delete the Company Unit

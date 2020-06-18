@@ -125,10 +125,12 @@ class ElementWarehouse
 	ADD_BUTTON = {xpath: '//*[@id="platformPermissionModal"]/div/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]'}
 	TEAMS_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[5]/ion-label' }
 	PEOPLE_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[6]/ion-label' }
-	DOCUMENT_LIBRARY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[7]' }
-	ADD_DOCUMENT_BUTTON = { css: '.title-button' }
+	DOCUMENTS_LIBRARY_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[7]/ion-label' }
+	ADD_DOCUMENT_BUTTON = { xpath: '//*[@id="home-content"]/app-document-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	ADD_ATTACHMENT = { css: '.title-button' }
 	UPLOAD_BUTTON = { xpath: '//*[@id="upload-btn"]' }
+	QA_DASHBOARD_TEXT = { xpath: '//*[@id="home-content"]/app-dashboard-container/app-header/ion-header/ion-toolbar/ion-title' }
+	QA_LOGIN_TEXT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-login/ion-grid/ion-row/ion-card/ion-card-title' }
 	GOT_IT_WALK_THROUGH = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[3]/ion-button' }
 	UPLOAD_ICON = { xpath: '//*[@id="doc-upload-overlay"]/div[4]/div[1]/img' }
 	FAQ_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[8]/span[2]/a' }
@@ -142,10 +144,14 @@ class ElementWarehouse
 	HIGURU_WEB_ICON = { xpath: '//div[@id="webchat"]/div/div/img' }
 	BILLING_INFO = { xpath: '//*[@id="mat-tab-label-0-2"]/div' }
 	COMPANY_NAME = { css: '.company-name' }
-	SECONDARY_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/app-account-company-unit/div/button/img' }
+	GO_BACK_TO_DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img' }
+	SECONDARY_COMPANY_UNIT = { xpath: '//*[@id="home-content"]/app-company-units-container/ion-content/ion-list/app-company-unit[2]/ion-card/ion-avatar/img' }
 	MAIN_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
 	COMPANY_UNIT = {xpath: "//div[@id='sidebar-wrapper']/div/div/span" }
+	COMPANY_UNIT_DROP_DOWN = {xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	COMPANY_UNIT_SElECT = { xpath: '//app-company-unit/div' }
+	DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-3"]/div/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
+	CONFIRM_DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-4"]/div/div[3]/button[2]' }
 	GO_BUTTON_COMPANY_UNIT_SELECT_ON_LOGIN = { css: 'li:nth-child(1) .higuru-button-bordered' }
 	CONVO_EXPIRY_BAR = { xpath: '//*[@id="mat-tab-content-6-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div/div[3]/div[3]' }
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
