@@ -1,13 +1,3 @@
-Given('I have a Company Unit') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
-	sleep 2
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
-	sleep 2
-	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 5
-	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
-end
-
 Then('I go to the Company Unit settings and create a second Company Unit') do
 	$web_driver.find_element(ElementWarehouse::MAIN_COMPANY_UNIT).click
 	sleep 3
@@ -21,6 +11,6 @@ Then('I go to the Company Unit settings and create a second Company Unit') do
 		sleep 6
 		$stdout.puts 'Company unit successfully created'
 	else
-		$stdout.puts 'Bug still exists'
+		raise('Bug still exists')
 	end
-	end
+end
