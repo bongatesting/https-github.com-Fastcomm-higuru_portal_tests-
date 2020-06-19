@@ -3,14 +3,11 @@ Feature: Bot Feature
   @Feature: Add Bot Feature
   @Urgency: High
 
-  Scenario: I want to add a Bot
+  Scenario: I want to add a Bot, initiate a chat and claim the bot chat
 	Given I have no Bots added
 	Then I Add the Bot
 	Then I Activate the Bot
-
-  Scenario: I want to test the Bot and claim the Bot chat
-	Given There is a chat on the Bot tab
-	Then I claim the Bot chat and respond
+	Then I initiate a chat and claim the bot chat
 
   Scenario: I want to deactivate and delete a Bot
 	Given The bot is active
