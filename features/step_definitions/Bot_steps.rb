@@ -12,7 +12,7 @@ Given('I have no Bots added') do
 	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
-	sleep 3
+	sleep 7
 end
 
 Then('I Add the Bot') do
@@ -67,7 +67,7 @@ Then('I Activate the Bot') do
 	sleep 5
 end
 
-Given('There is a chat on the Bot tab') do
+Then('I initiate a chat and claim the bot chat') do
 	open_new_tab
 	$web_driver.get(TestUser.qa_web_widget)
 	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
@@ -79,17 +79,7 @@ Given('There is a chat on the Bot tab') do
 	sleep 3
 	$web_driver.close.last
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
-end
-
-Then('I claim the Bot chat and respond') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
-	sleep 3
+	sleep 4
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click

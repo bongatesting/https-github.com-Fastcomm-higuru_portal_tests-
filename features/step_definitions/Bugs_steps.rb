@@ -11,6 +11,6 @@ Then('I go to the Company Unit settings and create a second Company Unit') do
 		sleep 6
 		$stdout.puts 'Company unit successfully created'
 	else
-		raise('Bug still exists')
+		raise('HG-2222 - Bug still exists')
 	end
 end
