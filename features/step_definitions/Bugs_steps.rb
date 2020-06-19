@@ -9,8 +9,8 @@ Then('I go to the Company Unit settings and create a second Company Unit') do
 	sleep 3
 	if $web_driver.find_elements(ElementWarehouse::QA_DASHBOARD_TEXT).first
 		sleep 6
-		$stdout.puts 'Company unit successfully created'
+		$stdout.puts 'Company unit successfully created'.green
 	else
-		raise('HG-2222 - Bug still exists')
+		raise 'HG-2082 - Bug still exists'.red
 	end
 end
