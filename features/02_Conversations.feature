@@ -31,3 +31,7 @@ Feature: Conversations Feature
     Given I am logged in
     Then I Add Conversation Topics Tags
     Then I start a conversation and Tag it
+
+  Scenario: I want to set the Concurrent Conversation Limit
+    Given I am logged in
+    Then I set the Concurrent Conversation Limit and Test it
