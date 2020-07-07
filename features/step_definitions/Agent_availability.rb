@@ -47,3 +47,19 @@ Then('I switch back to available and check if the conversation comes through') d
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_NOT_NOW_NOTIFICATION).click
 end
+
+Then('I set the time') do
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::USER_INACTIVITY_BUTTON))
+	sleep 5
+	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_INPUT).send_keys(:backspace)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_INPUT).send_keys('1')
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_INPUT_SAVE).click
+end
