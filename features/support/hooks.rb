@@ -1,37 +1,22 @@
 # frozen_string_literal: true
 
-#def run
-#	setup
-#	begin
-#		yield
-#	rescue RSpec::Expectations::ExpectationNotMetError => e
-#		puts e.message
-#		$web_driver.save_screenshot "./#{Time.now.strftime('screenshot__%d_%m_%Y__%H_%M_%S')}.png"
-#	end
-#	teardown
-#end
-
 Before do
 	get_number_from_fail_file
-end
-
-After do |scenario| ## Shut down the appium test run / driver
-	if scenario.failed? ## Takes a screenshot when a scenario fails
-		$web_driver.save_screenshot(Dir.pwd + "/screenshots/#{@failed_sc_count}_Failed_sc_ #{scenario.name.gsub(' ', '_')}.png") ## Set the screenshot path and screenshot name
-		# $web_driver.save_screenshot(Dir.pwd + "/screenshots/#{@failed_sc_count}_Failed_sc_ #{scenario.name.gsub(' ', '_')}.png") ## Set the screenshot path and screenshot name
-		# driver.save_screenshot(Dir.pwd + "/tmp/screenshots/Failed.png") ## Set the screenshot path and screenshot name
-		get_number_from_fail_file
-		set_new_fail_number ## Increment @failed_sc_count and save new value to failed.csv
-
-		# Temp check for App Crash
-		# if $app_driver.finds_exact("Latch QA has stopped").count > 0
-		#   $app_driver.find_exact("Open app again").click
-		# end
-	end
-	sleep 5
-	 #$web_driver.quit
+	$stdout.sync = true
 end
 
 After do |scenario|
-	puts scenario.status.inspect
+	logs_open = File.open('Reports/logs.txt')
+	if scenario.failed? # Takes a screenshot when a scenario fails and adds it to the Allure Report
+		screenshot = $web_driver.save_screenshot(Dir.pwd + "/screenshots/#{@failed_sc_count}_Failed_sc_#{scenario.name.gsub(' ', '_')}.png") ## Set the screenshot path and screenshot name
+		Allure.add_attachment(name: "Failed Screenshot", source: screenshot, type: Allure::ContentType::PNG, test_case: true)
+		Allure.add_attachment(name: "Console Logs", source: logs_open, type: Allure::ContentType::TXT)
+		set_new_fail_number ## Increment @failed_sc_count and save new value to fail_sc.csv
+		$stdout.puts ('Scenario *** ' + scenario.name.gsub(' ', '_') + ' *** Failed').red
+	elsif scenario.passed?
+		$stdout.puts ('Scenario *** ' + scenario.name.gsub(' ', '_') + ' *** Passed').green
+		Allure.add_attachment(name: "Console Logs", source: logs_open, type: Allure::ContentType::TXT)
+	end
+	sleep 5
+	$web_driver.quit # Shut down the selenium test run / driver
 end

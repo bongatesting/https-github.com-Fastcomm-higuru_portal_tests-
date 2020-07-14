@@ -26,6 +26,9 @@ Before do # Chrome Env
   options = Selenium::WebDriver::Chrome::Options.new
   #options.add_argument('--headless') # configure the driver to run in headless mode
   $web_driver = Selenium::WebDriver.for :chrome, options: options, prefs: preferences
+  #$web_driver = Selenium::WebDriver.for :firefox, options: options, prefs: preferences
+  #$web_driver = Selenium::WebDriver.for :ie, options: options, prefs: preferences
+  #$web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
   $web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
   #$web_driver.navigate.to "https://google.com/"
   Selenium::WebDriver::Wait.new(timeout: 10)
@@ -33,27 +36,3 @@ Before do # Chrome Env
   $web_driver.manage.timeouts.page_load = 240
   $web_driver.manage.timeouts.implicit_wait = 10
 end
-
-# Before do # Firefox Env
-#   options = Selenium::WebDriver::Firefox::Options.new
-#   # options.add_argument('--headless') # configure the driver to run in headless mode
-#   $web_driver = Selenium::WebDriver.for :firefox, options: options
-#   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-#   $web_driver.navigate.to "https://google.com/"
-#   Selenium::WebDriver::Wait.new(timeout: 10)
-#   $web_driver.manage.window.maximize
-#   $web_driver.manage.timeouts.page_load = 240
-#   $web_driver.manage.timeouts.implicit_wait = 10
-# end
-
-# Before do # Safari Env
-#   options = Selenium::WebDriver::Safari::Options.new
-#   # options.add_argument('--headless') # configure the driver to run in headless mode
-#   $web_driver = Selenium::WebDriver.for :safari, options: options
-#   #$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-#   $web_driver.navigate.to "https://google.com/"
-#   Selenium::WebDriver::Wait.new(timeout: 10)
-#   $web_driver.manage.window.maximize
-#   $web_driver.manage.timeouts.page_load = 240
-#   $web_driver.manage.timeouts.implicit_wait = 10
-# end
