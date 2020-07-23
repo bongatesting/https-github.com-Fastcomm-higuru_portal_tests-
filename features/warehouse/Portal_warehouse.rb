@@ -11,7 +11,10 @@ class ElementWarehouse
 	SEND_RESET_EMAIL = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-forgot-password-form/div/form/div[3]/button' }
 	PASSWORD_FIELD = { xpath: '//*[@id="password"]/input' }
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
-	LOGIN_BUTTON = { xpath: '//*[@id="menu-1-d5d5cab"]/li[6]/a' }
+	LOGIN_BUTTON = { xpath: '//*[@id="login"]' }
+	LOGIN_ACCOUNT_SELECT = { xpath: "//ion-button[contains(.,'Go')]"}
+	LOGIN_CU_SELECT = { xpath: '//app-company-unit-item/ion-item/ion-button' }
+	LOGIN_BUTTON_1 = { xpath: '//*[@id="menu-1-d5d5cab"]/li[6]/a' }
 	BRKLYN = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
 	SWITCH_TO_TEST = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div/div[3]/button' }
 	SWITCH_TO_MAIN_COMPANY = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div/div[3]/button' }
@@ -26,7 +29,7 @@ class ElementWarehouse
 	COMPANY_UNITS = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/app-account-company-unit/div/button/img' }
 	I_AGREE_BUTTON = { css: '.radio-container > .ng-dirty' }
 	NEXT_BUTTON_1 = {  xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button" }
-	NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]' }
+	REGISTER_NEXT_BUTTON_2 = { xpath: '//*[@id="goToCompanyDetails"]' }
 	TWITTER_USERNAME_1 = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[1]/label/div/div[2]/div/input' }
 	TWITTER_PASSWORD_1 = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[2]/label/div/div[2]/div/input' }
 	TWITTER_SIGN_IN_BUTTON_1 = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[3]/div/div/span/span' }
@@ -113,6 +116,7 @@ class ElementWarehouse
 	ADD_CHANNEL_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	TWITTER_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[2]/ion-nav-link/ion-card/ion-avatar/img'}
 	CHANNEL_DROP_DOWN = {xpath: "//ion-nav[@id='channelsNav']/app-channels-container/ion-content/ion-slides/div/ion-slide/ion-list/app-channel-item[4]/ion-item/ion-button"}
+	CHANNEL_DROP_DOWN_2 = {xpath: "//ion-nav[@id='channelsNav']/app-channels-container/ion-content/ion-slides/div/ion-slide/ion-list/app-channel-item[3]/ion-item/ion-button"}
 	CHANNEL_REAUTHORISE = {xpath: "//ion-item[contains(.,'Reauthorise Channel')]"}
 	ADD_TWITTER_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
 	CHANNEL_OPTIONS = {xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-channel-item/ion-item/ion-button'}
@@ -282,6 +286,8 @@ class ElementWarehouse
 	GMAIL_PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span' }
 	SIGN_UP_BUTTON = { xpath: '//*[@id="signUp"]' }
 	ENTER_NAME_FIELD = { xpath: "//ion-input[@id='companyName']/input" }
+	ENTER_NAME_FIELD_2= { xpath:'//*[@id="companyName"]/input' }
+	ENTER_WEBSITE_NAME_FIELD = { xpath: "//*[@id='websiteName']/input" }
 	ENTER_ACCOUNT_NAME_FIELD = { xpath: "//ion-input[@id='fullName']/input" }
 	ADD_IMAGE_ICON = { css: '.add-image-icon-other' }
 	CHOOSE_FILE_BUTTON = { xpath: '//*[@id="custom-input"]' }
@@ -304,13 +310,57 @@ class ElementWarehouse
 	NEXT_BUTTON_2 = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button/div" }
 	BUSINESS_EMAIL_FIELD = { xpath: "(//ion-input[@id='email']/input)[2]" }
 	BUSINESS_PASSWORD_FIELD = { xpath: "(//ion-input[@id='password']/input)[2]" }
-	SIGN_UP_CHECKBOX = { xpath: "//ion-checkbox[@id='acceptTerms']"}
-	DONE_BUTTON = { xpath: "//ion-button[@id='createAccount']"}
+	SIGN_UP_CHECKBOX= { xpath: '//*[@id="acceptTerms"]'}
+	REGISTER_NEXT_BUTTON_1 = { xpath: '//*[@id="register"]'}
+	REGISTER_NEXT_BUTTON_3 = { xpath: '//*[@id="goToOrganisationDetail"]'}
+	ORGANISATION_SIZE_FIELD = { xpath: "//ion-nav[@id='registrationNav']/app-organisation-detail/div[2]/ion-card-content/form/ion-item-group/ion-item/ion-label/ion-button/ion-label"}
+	ORGANISATION_SIZE_OPTION = { xpath:"//ion-label[contains(.,'1 - 9 People')]"}
+	CATEGORY_FIELD= { xpath: "//ion-nav[@id='registrationNav']/app-organisation-detail/div[2]/ion-card-content/form/ion-item-group/ion-item[2]/ion-label/ion-button"}
+	CATEGORY_OPTION = { xpath: "//ion-label[contains(.,'Customer Engagement')]"}
+	YOUR_ROLE_FIELD = { xpath: "//ion-nav[@id='registrationNav']/app-organisation-detail/div[2]/ion-card-content/form/ion-item-group/ion-item[3]/ion-label/ion-button/ion-label"}
+	YOUR_ROLE_OPTION = { xpath: "//ion-item[contains(.,'Owner')]"}
+	REGISTER_NEXT_BUTTON_4 = { xpath: '//*[@id="createAccount"]'}
+	ACCOUNT_WALKTHROUGH_TEXT = { css: '.account > .overlay-heading'}
+	ACCOUNT_WALKTHROUGH_NEXT_BUTTON = { xpath: '//*[@id="cdk-overlay-0"]/app-dashboard-overlay/div/div[2]/div[2]/button'}
+	CU_IMAGE_WALKTHROUGH_TEXT= { css: '.compunit-heading > .overlay-heading'}
+	CU_WALKTHROUGH_BACK_BUTTON = { css: '.compunit-heading > .btn:nth-child(3)'}
+	CU_WALKTHROUGH_NEXT_BUTTON = { xpath: "(//button[@type='button'])[5]"}
+	CONVERSATION_WALKTHROUGH_TEXT = { css: ".conv-heading > .overlay-heading"}
+	CONVERSATION_WALKTHROUGH_BACK_BUTTON = { css: '.conv-heading > .btn:nth-child(3)'}
+	CONVERSATION_WALKTHROUGH_NEXT_BUTTON = { css: ".conv-heading > .btn:nth-child(4)"}
+	STATS_WALKTHROUGH_TEXT= { css: '.stats-heading > .overlay-heading'}
+	STATS_WALKTHROUGH_BACK_BUTTON= { css: '.stats-heading > .btn:nth-child(3)'}
+	STATS_WALKTHROUGH_NEXT_BUTTON= { css: '.stats-heading > .btn:nth-child(4)'}
+	CHANNELS_WALKTHROUGH_TEXT = { css: '.channels-heading > .overlay-heading'}
+	CHANNELS_WALKTHROUGH_BACK_BUTTON = { css: '.channels-heading > .btn:nth-child(3)'}
+	CHANNELS_WALKTHROUGH_NEXT_BUTTON = { css: '.channels-heading > .btn:nth-child(4)'}
+	TEAMS_WALKTHROUGH_TEXT = { css: '#team .overlay-heading'}
+	TEAMS_WALKTHROUGH_BACK_BUTTON = { css: '#team .btn:nth-child(3)'}
+	TEAMS_WALKTHROUGH_NEXT_BUTTON = { css: '#team .btn:nth-child(4)'}
+	PEOPLE_WALKTHROUGH_TEXT= { css: '#peeps .overlay-heading'}
+	PEOPLE_WALKTHROUGH_BACK_BUTTON = { css: '#peeps .btn:nth-child(3)'}
+	PEOPLE_WALKTHROUGH_NEXT_BUTTON = { css: '#peeps .btn:nth-child(4)'}
+	DOC_LIBRARY_WALKTHROUGH_TEXT = { css: '#docs .overlay-heading'}
+	DOC_LIBRARY_WALKTHROUGH_BACK_BUTTON = { css: '#docs .btn:nth-child(3)'}
+	DOC_LIBRARY_WALKTHROUGH_NEXT_BUTTON = { css: '#docs .btn:nth-child(4)'}
+	FAQ_WALKTHROUGH_TEXT= { css: ''}
+	FAQ_WALKTHROUGH_BACK_BUTTON = { css: '#faq .btn:nth-child(3)'}
+	FAQ_WALKTHROUGH_NEXT_BUTTON = { css: '#faq .btn:nth-child(4)'}
+	CONVO_HISTORY_WALKTHROUGH_TEXT = { css: '#hist .overlay-heading'}
+	CONVO_HISTORY_WALKTHROUGH_BACK_BUTTON = { css: '#hist .btn:nth-child(3)'}
+	CONVO_HISTORY_WALKTHROUGH_NEXT_BUTTON = { css: '#hist .btn:nth-child(4)'}
+	BOTS_WALKTHROUGH_TEXT= { css: '#bot .overlay-heading'}
+	BOTS_WALKTHROUGH_BACK_BUTTON = { css: '#bot .btn:nth-child(3)'}
+	BOTS_WALKTHROUGH_DONE_BUTTON = { css: '#bot .btn:nth-child(4)'}
+	LETS_GET_STARTED_TEXT_BODY = { css: '.ion-text-wrap:nth-child(3)'}
+	WALKTHROUGH_GET_STARTED_BUTTON = { css: '.ios'}
+	CHANNEL_TITLE_TEXT = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-title'}
+	ACCOUNT_NEXT_BUTTON = { xpath: '//*[@id="cdk-overlay-1"]/app-dashboard-overlay/div/div[2]/div[2]/div[1]'}
 	WALK_THROUGH_TOUR_CLOSE =  { xpath: '//*[@id="cdk-overlay-0"]/app-dashboard-overlay/div/div[13]' }
 	DONE_BUTTON_1 = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
 	CREATE_YOUR_COMPANY_TEXT = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-company-form/div/div/div[2]/form/div/div[1]'}
 	CREATE_YOUR_PROFILE_TEXT = { xpath: '//*[contains(.,"Create Your Profile")]' }
-  DASHBOARD_TEXT = { xpath: '/html/body/app-root/app-home/div/div/app-dashboard/app-page-layout/div/div[1]/div'}
+  DASHBOARD_TEXT = { xpath: '//*[@id="home-content"]/app-dashboard-container/app-header/ion-header/ion-toolbar/ion-title'}
 	END_GREETING_TEXT = { xpath: "//*[contains(.,'Thanks for stopping by. Chat soon and have a great day.')]" }
   PEOPLES_TAB = { xpath: "//div[@id='sidebar-wrapper']/div[2]/ul/li[6]/span[2]/a" }
 	PEOPLE_TAB_UPGRADE_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]' }
@@ -330,19 +380,17 @@ class ElementWarehouse
 	UPGRADE_STREET_ADDRESS_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[3]/div/div[1]/div'}
 	UPGRADE_CITY_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[4]/div/div[1]/div'}
 	UPGRADE_PAYMENT_METHOD_BUTTON = { xpath: '/html/body/app-root/app-billing-details-container/div/div[3]/button[2]'}
-
   PEOPLE_TAB_TITLE_TEXT = { xpath: "//app-people/div/div" }
 	AGENT_INVITE_EMAIL = { xpath: "//tr[@id=':4u']" }
 	OUTLOOK_INVITE_EMAIL= { xpath: '//span[contains(text(),"agent account")]' }
 	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
-
 	FACEBOOK_CHANNEL_CARD = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[1]/ion-nav-link/ion-card'}
 	ADD_FACEBOOK_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
 	FACEBOOK_EMAIL_FIELD = {css: "#email"}
 	FACEBOOK_EMAIL_FIELD_2 = { id: 'email'}
 	FACEBOOK_PASSWORD_FIELD = {css: "#pass"}
 	FACEBOOK_LOGIN_BUTTON_3 = {xpath: "//label[@id='loginbutton']/input"}
-	FACEBOOK_CONTINUE_AS_BUTTON = {xpath: "//span[contains(.,'Continue as Katherine Kelly')]"}
+	FACEBOOK_CONTINUE_AS_BUTTON = {css: ".bwm1u5wc"}
 	FACEBOOK_SELECT_ALL_BUTTON = {xpath: "//input[@id='allAssetsInput']"}
 	FACEBOOK_NEXT_BUTTON = {xpath: "//span[contains(.,'Next')]"}
 	FACEBOOK_DONE_BUTTON = {xpath: "//span[contains(.,'Done')]"}
@@ -354,22 +402,21 @@ class ElementWarehouse
 	FACEBOOK_LOG_IN_BUTTON = {xpath: '//*[@id="loginbutton"]'}
 	FACEBOOK_LOG_IN_BUTTON_2 = {xpath: '//*[@id="u_0_b"]'}
 	CLOSE_FACEBOOK_NOTIFICATION = {xpath: ''}
-	SEARCH_FIELD = {xpath: '//*[@id="mount_0_0"]/div/div/div[2]/div[2]/div/div/div[1]/div/div[3]/label/input'}
-	PAGE_OPTION = {xpath: '//*[@id="qa 9020 2"]/div/div[1]/div/div[2]/span'}
-	PAGE_OPTION_2 = {xpath: "//li[@id='qa 9020 2']/div/div/div/div[2]/span"}
+	SEARCH_FIELD = {css: '.hidtqoto'}
+	PAGE_OPTION = {xpath: "//li[@id='qa 9020 2']/div/div/div/div[2]/span"}
+	PAGE_OPTION_2 = {css: ".g5gj957u > .ekzkrbhg"}
 	SEARCH_BUTTON = {xpath: '//*[@id="js_r"]/form/button'}
-	FACEBOOK_PAGE = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div[2]/div/div[1]/span/div/a'}
-	FACEBOOK_PAGE_2 = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/div[2]/div/div[1]/span/div/a/span'}
-	VIEW_AS_VISITOR = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[2]/a/div[1]'}
-	CREATE_POST_BUTTON = {xpath: '//*[@id="mount_0_0"]/div/div/div[3]/div/div/div[1]/div/div[6]/div[2]/div/div[2]/div[1]/div/div/div[1]/div[2]/div[1]/div/span'}
-	POST_FIELD = {xpath: '//*[@id="mount_0_0"]/div/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div[2]/div[2]/div[1]/div/div[1]/div[1]/div/div/div/div[2]/div/div/div/div'}
+	FACEBOOK_PAGE = {css: '.l9j0dhe7 > .gmql0nx0 > span'}
+	FACEBOOK_PAGE_2 = {css: '.l9j0dhe7:nth-child(1) > div:nth-child(1) > .j83agx80:nth-child(1) > .hpfvmrgz:nth-child(2) .qzhwtbm6:nth-child(1) > .oi732d6d:nth-child(1) span:nth-child(1)'}
+	VIEW_AS_VISITOR = {xpath: "//span[contains(.,'View as visitor')]"}
+	CREATE_POST_BUTTON = {css: '.oajrlxb2:nth-child(2) > .rq0escxv .oi732d6d'}
+	POST_FIELD = {css: '.rq0escxv > .\_5rp7 .\_1mf'}
 	POST_FIELD_POP_UP = {xpath: '//*[@id="js_ex"]/div[1]/div/div[1]/div[1]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div'}
 	POST_BUTTON = {xpath: '//*[@id="js_ex"]/div[2]/div[3]/div[2]/div[2]/div/button/span'}
-	POST_BUTTON_2 = {xpath: '//*[@id="mount_0_0"]/div/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div[2]/div[3]/div[2]'}
+	POST_BUTTON_2 = {css: '.oqcyycmt'}
 	FACEBOOK_PAGE_SWITCH_OPTION = {xpath: '//*[@id="js_2p4"]/span[3]/i'}
 	FACEBOOK_PAGE_OPTION = {xpath: '//*[@id="globalContainer"]/div[3]/div/div/div/div/div/div[1]/div/div[2]/div/div/div[2]/div[1]'}
 	COMMENT_FIELD = {xpath: '//*[@id="u_3i_l"]/div/div[3]/div[2]/div[2]/div/div/div/div/div/form/div/div/div[2]/div/div/div/div'}
-
 
 #########################-----------Fastcomm Elements-----------#########################
 
@@ -379,7 +426,9 @@ class ElementWarehouse
 	MEDIA_BUTTON = { xpath: "//button[contains(.,'Media')]" }
 	CREATING_WITH_US_BUTTON = { xpath: "//button[contains(.,'Creating with us')]" }
 	CHATTING_TO_US_BUTTON = { xpath: "//button[contains(.,'Chatting to us')]" }
+
 # Our Solution Bot response #
+
 	FC_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'implemented various platforms')]" }
 	FC_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'aimed at connecting people, places')]" }
 	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
