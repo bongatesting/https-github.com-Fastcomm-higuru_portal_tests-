@@ -7,7 +7,7 @@ Given('A customer is contacting us via Twitter') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
+  $web_driver.find_element(ElementWarehouse::ALLOW_NOTIFICATION).click
 end
 
 Then('I start a Twitter conversation') do

@@ -104,16 +104,65 @@ rescue StandardError
   wait_for_twitter_email_2 # this block get's executed if there is any kind of exception error
 end
 
-def wait_for_facebook_public_chat
+def wait_for_enter_name_field
+  begin
+    until ($web_driver.find_element(ElementWarehouse::ENTER_NAME_FIELD)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_enter_name_field# this block get's executed if there is any kind of exception error
+  end
+end
+
+def wait_for_sign_up_checkbox
+  begin
+    until ($web_driver.find_element(ElementWarehouse::SIGN_UP_CHECKBOX)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_sign_up_checkbox# this block get's executed if there is any kind of exception error
+  end
+end
+
+def wait_for_public_chat
   begin
     until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?
       sleep 10 # check if message received
     end
   rescue
-    wait_for_facebook_public_chat# this block get's executed if there is any kind of exception error
+    wait_for_public_chat# this block get's executed if there is any kind of exception error
   end
 end
 
+def wait_for_allow_notifications
+  begin
+    until ($web_driver.find_element(ElementWarehouse::ALLOW_NOTIFICATION)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_allow_notifications# this block get's executed if there is any kind of exception error
+  end
+end
+
+def wait_for_browser_notifications
+  begin
+    until ($web_driver.find_element(ElementWarehouse::BROWSER_NOTIFICATION)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_browser_notifications# this block get's executed if there is any kind of exception error
+  end
+end
+
+def wait_for_search_field
+  begin
+    until ($web_driver.find_element(ElementWarehouse::SEARCH_FIELD)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_search_field# this block get's executed if there is any kind of exception error
+  end
+end
 # scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
