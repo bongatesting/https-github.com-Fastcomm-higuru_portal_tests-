@@ -10,9 +10,9 @@ Feature: Higuru Sign In, Registration and Walk Through
 
   Scenario: I want to register On the Portal
 	Given I am viewing the log in page
-	When When I enter an Invalid Email
+	When I enter an Invalid Email
 	Then I Sign up with a valid Email
-    Then I sign into outlook and fetch the valid OTP
+	Then I sign into outlook and fetch the valid OTP
 	Then I create my profile
 
   Scenario: I want to login and take a walk through the Portal
