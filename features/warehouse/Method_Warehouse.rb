@@ -65,7 +65,6 @@ def check_for_first_reply
     elsif $web_driver.find_elements(ElementWarehouse::REPLY_CHAT_GENERIC_1).first
       $stdout.puts 'Conversation assigned text not displayed'.red
     end
-  $stdout.flush
 rescue StandardError
   check_for_first_reply # this block get's executed if there is any kind of exception error
 end
@@ -167,6 +166,7 @@ def wait_for_search_field
     wait_for_search_field# this block get's executed if there is any kind of exception error
   end
 end
+
 # scroll_in_page
 # $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
 # scroll.send_keys(:page_down)
