@@ -2,7 +2,7 @@ Given('I am viewing the log in page') do
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 end
 
-When('When I enter an Invalid Email') do
+When('I enter an Invalid Email') do
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::LOGIN_TEXT)
 	$web_driver.find_element(ElementWarehouse::EMAIL_TEXT)
@@ -17,7 +17,6 @@ When('When I enter an Invalid Email') do
 	else
 		$stdout.puts 'Incorrect test Failed'.red
 	end
-	$stdout.flush
 end
 
 Then('I Sign up with a valid Email') do
@@ -50,7 +49,6 @@ Then('I sign into outlook and fetch the valid OTP') do
 		$web_driver.find_elements(ElementWarehouse::OUTLOOK_STAY_SIGNED_IN_NO_BUTTON).first.click
 		$stdout.puts 'Stay Signed in Displayed'.blue
 	end
-	$stdout.flush
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::OUTLOOK_ICON).click
 	sleep 10
@@ -61,7 +59,6 @@ Then('I sign into outlook and fetch the valid OTP') do
 	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).click
 	CODE = $web_driver.find_element(ElementWarehouse::VERIFICATION_CODE).text
 	$stdout.puts(CODE)
-	$stdout.flush
 	sleep 4
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	sleep 3
