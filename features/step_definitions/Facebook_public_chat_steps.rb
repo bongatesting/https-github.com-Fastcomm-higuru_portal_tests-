@@ -17,19 +17,16 @@ Then('I login to my account') do
 end
 
 Then('I create a facebook post') do
-	$web_driver.execute_script( "window.open()" )
-	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	open_new_tab
 	$web_driver.get 'https://www.facebook.com/'
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::FACEBOOK_EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::FACEBOOK_PASSWORD_FIELD).type(TestUser.new_password)
 	sleep 2
-	if $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).first
-		$web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).first.click
-	elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first
-		$web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first.click
-		end
+	if $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).first&.click
+	elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first&.click
+	end
 	wait_for_search_field
 	$web_driver.find_element(ElementWarehouse::SEARCH_FIELD).click
 	# $web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('QA 9020 4')
