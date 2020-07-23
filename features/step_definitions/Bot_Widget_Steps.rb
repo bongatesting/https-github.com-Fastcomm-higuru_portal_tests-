@@ -368,15 +368,12 @@ end
 
 Then('I get feedback from the agent') do
 	TIME = Time.now
-	$stdout.puts 'Time Chat started: '.blue
-	$stdout.puts(TIME)
+	$stdout.puts 'Time Chat started: '.blue + TIME.to_s.green
 	$stdout.flush
 	check_for_first_reply
-	TIME_1 = TIME - Time.now
+	TIME_1 = Time.now - TIME
 	response = TIME_1/60
-	$stdout.puts 'Time of first agent response = '.green
-	$stdout.puts response
-	$stdout.puts 'Minutes'.green
+	$stdout.puts 'Time of first agent response = '.blue + response.to_s.green + ' Minutes'.blue
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you. This is a an automated Test. Please can you Resolve this query')
 	$web_driver.find_element(ElementWarehouse::SEND_BUTTON).click
 	check_for_resolved
@@ -385,11 +382,9 @@ Then('I get feedback from the agent') do
 	elsif $web_driver.find_elements(ElementWarehouse::RESOLVED_TIME_2).first
 		RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME_2).text
 	end
-	$stdout.puts(RESOLVED_TIME)
+	$stdout.puts RESOLVED_TIME.blue
 	TIME_2 = Time.now - TIME
 	resolved = TIME_2/60
-	$stdout.puts 'Total time of conversation = '.green
-	$stdout.puts resolved
-	$stdout.puts 'Minutes'.green
+	$stdout.puts 'Total time of conversation = '.green + resolved.to_s.blue + ' Minutes'.green
 	$stdout.flush
 end

@@ -14,7 +14,7 @@ Given('I am viewing the Fastcomm website') do
   if $web_driver.find_elements(ElementWarehouse::POP_UP_DISMISS).first
 		sleep 2
 	  $web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).click
-		$stdout.puts 'Corona Pop up Displayed'
+		$stdout.puts 'Corona Pop up Displayed'.green
   end
   sleep 4
   wait_for_widget

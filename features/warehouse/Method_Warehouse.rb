@@ -8,7 +8,11 @@ def backup_long_press
 end
 
 def scroll_down
-  swipe(start_x: 500, start_y: 1350, end_x: 500, end_y: 800)
+  swipe(start_x: 0, start_y: 1418, end_x: 0, end_y: 541)
+end
+
+def scroll_to(element)
+  $web_driver.execute_script("arguments[0].scrollIntoView();",element)
 end
 
 def scroll_up
@@ -34,7 +38,7 @@ def scroll_in_page
 end
 
 def scroll_in_dashboard
-  scroll = $web_driver.find_element(ElementWarehouse::MESSAGE_TEMP)
+  scroll = $web_driver.find_element(ElementWarehouse::USER_INACTIVITY_BUTTON)
   scroll.location_once_scrolled_into_view
 end
 

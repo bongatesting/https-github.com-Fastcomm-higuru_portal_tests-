@@ -14,9 +14,10 @@ class ElementWarehouse
 	LOGIN_BUTTON = { xpath: '//*[@id="login"]' }
 	LOGIN_ACCOUNT_SELECT = { xpath: "//ion-button[contains(.,'Go')]"}
 	LOGIN_CU_SELECT = { xpath: '//app-company-unit-item/ion-item/ion-button' }
+	LOGIN_BUTTON_1 = { xpath: '//*[@id="menu-1-d5d5cab"]/li[6]/a' }
 	BRKLYN = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
 	SWITCH_TO_TEST = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div/div[3]/button' }
-	SWITCH_TO_BRKLYN = { xpath: '' }
+	SWITCH_TO_MAIN_COMPANY = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div/div[3]/button' }
 	TWITTER_USERNAME = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[1]/label/div/div[2]/div/input' }
 	TWITTER_SIGN_IN_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[3]/div/div/span/span' }
 	TWEET_FIELD = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div/div' }
@@ -128,22 +129,34 @@ class ElementWarehouse
 	ADD_BUTTON = {xpath: '//*[@id="platformPermissionModal"]/div/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]'}
 	TEAMS_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[5]/ion-label' }
 	PEOPLE_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[6]/ion-label' }
-	DOCUMENT_LIBRARY_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[7]' }
-	ADD_DOCUMENT_BUTTON = { css: '.title-button' }
+	DOCUMENTS_LIBRARY_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[7]/ion-label' }
+	ADD_DOCUMENT_BUTTON = { xpath: '//*[@id="home-content"]/app-document-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	ADD_ATTACHMENT = { css: '.title-button' }
 	UPLOAD_BUTTON = { xpath: '//*[@id="upload-btn"]' }
+	QA_DASHBOARD_TEXT = { xpath: '//*[@id="home-content"]/app-dashboard-container/app-header/ion-header/ion-toolbar/ion-title' }
+	QA_LOGIN_TEXT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-login/ion-grid/ion-row/ion-card/ion-card-title' }
+	GOT_IT_WALK_THROUGH = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[3]/ion-button' }
 	UPLOAD_ICON = { xpath: '//*[@id="doc-upload-overlay"]/div[4]/div[1]/img' }
 	FAQ_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[8]/span[2]/a' }
-	BILLING = { xpath: '/html/body/app-root/app-home/div/div/app-billing-container/div/div[1]' }
+	BILLING = { xpath: '//*[@id="cdk-overlay-0"]/div/div/ion-list/ion-item[4]/ion-label' }
+	BILLING_PAYMENT_METHOD = { xpath: '//*[@id="mat-tab-label-0-1"]/div' }
+	BILLING_INFO_BUTTON = { xpath: '//*[@id="mat-tab-label-0-2"]/div' }
 	AGENT_IMAGE_CONVERSATION_VIEW = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/app-account-user/div/button/img[1]' }
 	AGENT_IMAGE = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/app-header-main/ion-header/ion-toolbar/app-account-user/div/button/img[1]' }
 	I_FORGOT_MY_PASSWORD = { xpath: '//a[contains(text(),"I forgot my Password")]' }
-	SUPPORT_AND_FEEDBACK = { xpath: '//button[contains(.,"Support & Feedback")]' }
-	HIGURU_WEB_ICON = { xpath: '//div[@id="webchat"]/div/div/img' }
+	SUPPORT_AND_FEEDBACK = { xpath: '//*[@id="cdk-overlay-0"]/div/div/ion-list/ion-item[5]/ion-label' }
+	HIGURU_WEB_ICON = { xpath: '//*[@id="webChat"]/div/div/div/img' }
+	FEEDBACK_QUICK_REPLY_BUTTON = { xpath: '//*[@id="webChat"]/div/div/div[1]/div[2]/div[2]/div[2]/button[4]' }
 	BILLING_INFO = { xpath: '//*[@id="mat-tab-label-0-2"]/div' }
 	COMPANY_NAME = { css: '.company-name' }
+	GO_BACK_TO_DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img' }
+	SECONDARY_COMPANY_UNIT = { xpath: '//*[@id="home-content"]/app-company-units-container/ion-content/ion-list/app-company-unit[2]/ion-card/ion-avatar/img' }
+	MAIN_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
 	COMPANY_UNIT = {xpath: "//div[@id='sidebar-wrapper']/div/div/span" }
+	COMPANY_UNIT_DROP_DOWN = {xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	COMPANY_UNIT_SElECT = { xpath: '//app-company-unit/div' }
+	DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-3"]/div/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
+	CONFIRM_DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-4"]/div/div[3]/button[2]' }
 	GO_BUTTON_COMPANY_UNIT_SELECT_ON_LOGIN = { css: 'li:nth-child(1) .higuru-button-bordered' }
 	CONVO_EXPIRY_BAR = { xpath: '//*[@id="mat-tab-content-6-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div/div[3]/div[3]' }
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
@@ -151,7 +164,13 @@ class ElementWarehouse
 	QA_BOT_VIEW = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[10]/ion-label' }
 	ADD_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	BOT_NAME_FIELD = { xpath: '//*[@id="name"]/input' }
+	CONCURRENT_CONVERSATION_LIMIT_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[5]/ion-toggle' }
+	USER_INACTIVITY_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[4]/ion-toggle' }
+	USER_INACTIVITY_INPUT = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[1]/ion-item-group/div/ion-item/ion-input/input' }
+	USER_INACTIVITY_INPUT_SAVE = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[1]/ion-item-group/ion-buttons/ion-button[2]' }
 	BOT_OVERVIEW_FIELD = { xpath: '//*[@id="description"]/textarea' }
+	CONVERSATION_LIMIT_FIELD = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/div/ion-item/ion-input/input' }
+	CONVERSATION_LIMIT_SAVE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/ion-buttons/ion-button[2]' }
 	BOT_PLATFORM = { xpath: '//*[@id="botIntegrationType"]/input' }
 	HIGURU_BOT = { xpath: '//*[@id="ion-overlay-2"]/div/div[2]/app-list-popover/ion-list/ion-item[1]' }
 	REQUEST_BUTTON = { xpath: '//*[@id="createBotModal"]/div/app-bot-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
@@ -197,9 +216,12 @@ class ElementWarehouse
 	CONVO = { xpath: '//*[contains(., "Conversations")]' }
 	CONVO_SEARCH_FIELD = { id: 'mat-input-1' }
 	TEN_SHOULD_NOT_SEE = { xpath: '//*[contains(., "10290")]' }
-	ADD_COMPANY_UNIT = { xpath: '/html/body/app-root/app-home/div/div/app-companies-container/div[1]/div[2]' }
+	COMPANY_UNIT_NAME = { xpath: '//*[@id="mat-input-0"]' }
+	COMPANY_UNIT_ADD_IMAGE = { xpath: '//*[@id="addImage"]' }
+	ADD_COMPANY_UNIT_BUTTON = { xpath: '//*[@id="home-content"]/app-company-units-container/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	COMPANY_UNIT_INPUT = { xpath: '//*[@id="mat-input-1"]' }
 	COMPANY_UNIT_2 = { xpath: '' }
+	CREATE_NEW_COMPANY_UNIT_ADD_BUTTON = { xpath: '//*[@id="companyUnitCreateComponent"]/div/app-company-unit-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[1]/ion-label' }
 	CREATE = { xpath: '//*[@id="mat-dialog-0"]/create-company-unit-dialog/div/div[3]/button[2]' }
 	SUPPORT_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[2]' }
@@ -216,6 +238,7 @@ class ElementWarehouse
 	GREAT_BOT_RESPONSE = { xpath: '//*[contains(.,"Great!")]' }
 	HELP_BOT_RESPONSE = { xpath: '//*[contains(.,"Is there anything else I can help you with?")]' }
 	YES_BUTTON = { xpath: '//button[contains(.,"Yes")]' }
+	QA_LOGIN_BUTTON = { xpath: '//*[@id="login"]' }
 	NO_BUTTON = { xpath: '//button[contains(.,"No")]' }
   ADD_IMAGE = {id: 'upload-btn'}
 	NO_BUTTON_RESPONSE_1 = { xpath: '//*[contains(.,"It has been great chatting with you.")]' }
@@ -237,7 +260,7 @@ class ElementWarehouse
 	WEB_WIDGET = { xpath: '//*[@id="higuru-webchat"]/div/div/img' }
 	WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	WEB_WIDGET_CHAT_FIELD_SEND_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/svg/g/rect' }
-	HG_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[3]/div[1]/div/div/div[1]' }
+	HG_CHAT_FIELD = { xpath: '//*[@id="webChat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	CONVERSATION_AGENT_RESOLVED = { xpath: '//div[contains(.,"Agent resolved conversation")]' }
 	MY_PLEASURE_TEXT = { xpath: '//*[contains(.,"my pleasure.")]' }
 	YOUR_WELCOME_TEXT = { xpath: '//*[contains(.,"re welcome.")]' }
@@ -277,7 +300,7 @@ class ElementWarehouse
 	DELETE_AGENT = { xpath: '//*[@id="ion-overlay-2"]/div/div[2]/app-list-popover/ion-list/ion-item/ion-label' }
 	SELECT_DELETE = { xpath: '//*[@id="usersNav"]/app-user-details/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-button[2]' }
 	SELECT_AGENT = { xpath: '//*[@id="usersNav"]/app-users-container/ion-content/ion-list/app-user-item[2]/ion-nav-link/ion-card/ion-avatar/img[1]' }
-	HIGURU_COMPANY_UNIT_SELECTION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-avatar/img' }
+	HIGURU_COMPANY_UNIT_SELECTION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
 	RECEIVED_MAIL = { xpath: '//span[contains(text(),"Hi there")]' }
 	PREMIUM_MAILER =  { xpath: '//span[contains(text(),"Your Company Unit has added a service")]' }
 	PREMIUM_MAILER_2=  { xpath: '//span[contains(text(),"Your Company Unit has removed a service")]'}
@@ -296,7 +319,6 @@ class ElementWarehouse
 	CATEGORY_OPTION = { xpath: "//ion-label[contains(.,'Customer Engagement')]"}
 	YOUR_ROLE_FIELD = { xpath: "//ion-nav[@id='registrationNav']/app-organisation-detail/div[2]/ion-card-content/form/ion-item-group/ion-item[3]/ion-label/ion-button/ion-label"}
 	YOUR_ROLE_OPTION = { xpath: "//ion-item[contains(.,'Owner')]"}
-
 	REGISTER_NEXT_BUTTON_4 = { xpath: '//*[@id="createAccount"]'}
 	ACCOUNT_WALKTHROUGH_TEXT = { css: '.account > .overlay-heading'}
 	ACCOUNT_WALKTHROUGH_NEXT_BUTTON = { xpath: '//*[@id="cdk-overlay-0"]/app-dashboard-overlay/div/div[2]/div[2]/button'}
@@ -333,7 +355,6 @@ class ElementWarehouse
 	LETS_GET_STARTED_TEXT_BODY = { css: '.ion-text-wrap:nth-child(3)'}
 	WALKTHROUGH_GET_STARTED_BUTTON = { css: '.ios'}
 	CHANNEL_TITLE_TEXT = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-title'}
-
 	ACCOUNT_NEXT_BUTTON = { xpath: '//*[@id="cdk-overlay-1"]/app-dashboard-overlay/div/div[2]/div[2]/div[1]'}
 	WALK_THROUGH_TOUR_CLOSE =  { xpath: '//*[@id="cdk-overlay-0"]/app-dashboard-overlay/div/div[13]' }
 	DONE_BUTTON_1 = { xpath: '/html/body/app-root/app-account-container/div/div[2]/app-password-reset-form/div/form/div/div[1]/button' }
@@ -359,12 +380,10 @@ class ElementWarehouse
 	UPGRADE_STREET_ADDRESS_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[3]/div/div[1]/div'}
 	UPGRADE_CITY_FIELD = { xpath: '/html/body/app-root/app-billing-details-container/div/div[2]/div/div/div/form/div/mat-form-field[4]/div/div[1]/div'}
 	UPGRADE_PAYMENT_METHOD_BUTTON = { xpath: '/html/body/app-root/app-billing-details-container/div/div[3]/button[2]'}
-
   PEOPLE_TAB_TITLE_TEXT = { xpath: "//app-people/div/div" }
 	AGENT_INVITE_EMAIL = { xpath: "//tr[@id=':4u']" }
 	OUTLOOK_INVITE_EMAIL= { xpath: '//span[contains(text(),"agent account")]' }
 	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
-
 	FACEBOOK_CHANNEL_CARD = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[1]/ion-nav-link/ion-card'}
 	ADD_FACEBOOK_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
 	FACEBOOK_EMAIL_FIELD = {css: "#email"}
@@ -399,7 +418,6 @@ class ElementWarehouse
 	FACEBOOK_PAGE_OPTION = {xpath: '//*[@id="globalContainer"]/div[3]/div/div/div/div/div/div[1]/div/div[2]/div/div/div[2]/div[1]'}
 	COMMENT_FIELD = {xpath: '//*[@id="u_3i_l"]/div/div[3]/div[2]/div[2]/div/div/div/div/div/form/div/div/div[2]/div/div/div/div'}
 
-
 #########################-----------Fastcomm Elements-----------#########################
 
 	WELCOME_FASTCOMM_TEXT = { xpath: "//*[contains(.,'Hi! Welcome to Fastcomm. What are you most interested in today?')]" }
@@ -408,7 +426,9 @@ class ElementWarehouse
 	MEDIA_BUTTON = { xpath: "//button[contains(.,'Media')]" }
 	CREATING_WITH_US_BUTTON = { xpath: "//button[contains(.,'Creating with us')]" }
 	CHATTING_TO_US_BUTTON = { xpath: "//button[contains(.,'Chatting to us')]" }
+
 # Our Solution Bot response #
+
 	FC_SOLUTION_RESPONSE_2 = { xpath: "//*[contains(.,'implemented various platforms')]" }
 	FC_SOLUTION_RESPONSE_3 = { xpath: "//*[contains(.,'aimed at connecting people, places')]" }
 	HI_GURU_BUTTON = { xpath: "//button[contains(.,'hi.guru')]" }
