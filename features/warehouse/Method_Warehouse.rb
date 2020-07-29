@@ -127,6 +127,36 @@ def wait_for_sign_up_checkbox
   end
 end
 
+def wait_for_company_unit
+  begin
+    until ($web_driver.find_element(ElementWarehouse::LOGIN_CU_SELECT)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_company_unit# this block get's executed if there is any kind of exception error
+  end
+end
+
+def wait_for_download_icon
+  begin
+    until ($web_driver.find_element(ElementWarehouse::DOWNLOAD_ICON)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_download_icon# this block get's executed if there is any kind of exception error
+  end
+end
+
+def wait_for_public_chat
+  begin
+    until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_public_chat# this block get's executed if there is any kind of exception error
+  end
+end
+
 def wait_for_public_chat
   begin
     until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?

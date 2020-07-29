@@ -10,9 +10,9 @@ Then('I login to my account') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).click
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 6
+	sleep 9
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
-	sleep 6
+	wait_for_company_unit
 	$web_driver.find_element(ElementWarehouse::LOGIN_CU_SELECT).click
 end
 
@@ -25,11 +25,11 @@ Then('I create a facebook post') do
 	$web_driver.find_element(ElementWarehouse::FACEBOOK_PASSWORD_FIELD).type(TestUser.new_password)
 	sleep 2
 	if $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).first&.click
-	elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first&.click
+	# elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first&.click
 	end
 	wait_for_search_field
 	$web_driver.find_element(ElementWarehouse::SEARCH_FIELD).click
-	# $web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('QA 9020 4')
+	# $web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('QA 9020 6')
 	$web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('Prod 8000')
 	sleep 10
 	# $web_driver.find_element(ElementWarehouse::PAGE_OPTION).click
@@ -52,11 +52,38 @@ end
 
 Then('receive the public chat') do
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	# sleep 2
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::PUBLIC_TAB).click
-	wait_for_facebook_public_chat
+	wait_for_public_chat
 	$web_driver.find_element(ElementWarehouse::PUBLIC_CHAT).click
+end
+
+Then('I download the current transcript then resolve and download my chat') do
+	wait_for_download_icon
+	$web_driver.find_element(ElementWarehouse::DOWNLOAD_ICON).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::CURRENT_TRANSCRIPT).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::RESOLVE_ICON).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::RESOLVE_AND_DOWNLOAD).click
+	# $web_driver.find_element(ElementWarehouse::RESOLVE_AND_DOWNLOAD_TOAST_2)
+end
+
+Then('I download the chat in the conversation history tab') do
+	$web_driver.find_element(ElementWarehouse::HI_GURU_AVATAR).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY_TAB).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_PUBLIC_TAB).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_PUBLIC_CHAT).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_DOWNLOAD_ICON).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::CURRENT_TRANSCRIPT).click
 end
 
 Then('I reauthorise my facebook page') do
