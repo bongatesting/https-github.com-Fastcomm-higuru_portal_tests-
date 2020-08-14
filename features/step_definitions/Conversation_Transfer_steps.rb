@@ -8,8 +8,6 @@ Given('I am on the Login View') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 8
-	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 	sleep 2
 end
 
@@ -94,10 +92,12 @@ end
 
 Then('Transfer the conversation') do
 	$web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TRANSFER_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CENTANE_TAG).click
+	$web_driver.find_element(ElementWarehouse::GCUWA_TAG).click
 	sleep 3
 end
 
@@ -105,7 +105,7 @@ Then('Check if the conversation transfer labels are correct') do
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_CONVERSATION_HISTORY).click
-	sleep 3
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::OPEN_CONVERSATION).click
-	sleep 4
+	sleep 5
 end

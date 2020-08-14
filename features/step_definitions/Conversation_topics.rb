@@ -20,7 +20,7 @@ Then('I Add Conversation Topics Tags') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_CONVERSATION_TAG_FIELD).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::ADD_CONVERSATION_TAG_FIELD).send_keys('Tag 1')
+	$web_driver.find_element(ElementWarehouse::ADD_CONVERSATION_TAG_FIELD).send_keys('Haiti')
 	sleep 3
 	$web_driver.action.key_down(:enter).key_up(:enter).perform
 	sleep 3
@@ -49,12 +49,17 @@ Then('I start a conversation and Tag it') do
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
-	sleep 3
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click
-	sleep 3
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT)
+	sleep 8
 	$web_driver.find_element(ElementWarehouse::TAG_CONVERSATION).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::ASSIGN_CONVERSATION_TOPICS_TAGS).click
+	$web_driver.find_element(ElementWarehouse::SEARCH_CONVO_TOPIC_TAG).send_keys('Haiti')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_CONVO_TOPIC_TAG).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SAVE_ASSIGN_CONVERSATION_TOPICS_TAGS).click
+	sleep 3
 end
