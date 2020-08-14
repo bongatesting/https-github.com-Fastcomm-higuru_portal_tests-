@@ -14,9 +14,8 @@ Given('I am on the Company Unit Settings page') do
 end
 
 Then('I Adjust Conversation Expiry Slider by One hour') do
-	element = $web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER)
-	scroll_to(element)
-	element.click
+	scroll_to($web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER))
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER).click
 end
 
 Then('I initiate a conversation') do
