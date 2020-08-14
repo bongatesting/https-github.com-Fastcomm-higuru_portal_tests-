@@ -4,15 +4,15 @@ wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Then('I set the Concurrent Conversation Limit and Test it') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
-	sleep 3
+	sleep 6
 	$web_driver.find_element(ElementWarehouse::SETTINGS).click
-	sleep 3
-	scroll_to($web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_BUTTON))
 	sleep 5
+	scroll_to($web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_BUTTON))
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_BUTTON).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_FIELD).send_keys(:backspace)
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_FIELD).send_keys('1')
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_SAVE_BUTTON).click
