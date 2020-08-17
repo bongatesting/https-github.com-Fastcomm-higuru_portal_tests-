@@ -7,7 +7,7 @@ Feature: Higuru Sign In, Registration and Walk Through
 	Given I am viewing the log in page
 	When I Sign in with Invalid Credentials
 	Then I Sign in with my own valid Credentials
-#
+
   Scenario: I want to register On the Portal
 	Given I am viewing the log in page
 	When I enter an Invalid Email
