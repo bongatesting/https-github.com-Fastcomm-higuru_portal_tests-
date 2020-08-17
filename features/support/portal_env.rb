@@ -13,8 +13,8 @@ require 'watir'
 require 'watir-scroll'
 
 # ENV['HOST'] = 'app-stage' if ENV['HOST'].nil?
-# ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
-ENV['HOST'] = 'app' if ENV['HOST'].nil?
+ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
+# ENV['HOST'] = 'app' if ENV['HOST'].nil?
 
 Before do # Chrome Env
   preferences = { "profile.managed_default_content_settings.notifications" => 1,

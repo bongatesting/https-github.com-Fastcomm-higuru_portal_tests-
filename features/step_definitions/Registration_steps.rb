@@ -30,42 +30,42 @@ Then('I Sign up with a valid Email') do
 	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_1).click
 end
 
-Then('I sign into outlook and fetch the valid OTP') do
-	$web_driver.execute_script( "window.open()" )
-	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	$web_driver.get 'https://login.microsoftonline.com/'
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_EMAIL_FIELD).send_keys(TestUser.outlook_email)
-	sleep 6
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_NEXT_BUTTON).click
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_PASSWORD_FIELD).type(TestUser.outlook_password)
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_SIGN_IN_BUTTON).click
-	sleep 6
-	if $web_driver.find_elements(ElementWarehouse::SKIP_FOR_NOW_TEXT).first
-		$web_driver.find_elements(ElementWarehouse::SKIP_FOR_NOW_TEXT).first.click
-		$stdout.puts 'Skip Option Displayed'.green
-	elsif $web_driver.find_elements(ElementWarehouse::OUTLOOK_STAY_SIGNED_IN_NO_BUTTON).first
-		$web_driver.find_elements(ElementWarehouse::OUTLOOK_STAY_SIGNED_IN_NO_BUTTON).first.click
-		$stdout.puts 'Stay Signed in Displayed'.blue
-	end
-	sleep 6
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_ICON).click
-	sleep 10
-	$web_driver.switch_to.window( $web_driver.window_handles.last )
-	wait_for_email
-	$web_driver.find_element(ElementWarehouse::OTHER).click
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).click
-	CODE = $web_driver.find_element(ElementWarehouse::VERIFICATION_CODE).text
-	$stdout.puts(CODE)
-	sleep 4
-	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(CODE)
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::OTP_NEXT_BUTTON).click
-end
+# Then('I sign into outlook and fetch the valid OTP') do
+# 	$web_driver.execute_script( "window.open()" )
+# 	$web_driver.switch_to.window( $web_driver.window_handles.last )
+# 	$web_driver.get 'https://login.microsoftonline.com/'
+# 	sleep 4
+# 	$web_driver.find_element(ElementWarehouse::OUTLOOK_EMAIL_FIELD).send_keys(TestUser.outlook_email)
+# 	sleep 6
+# 	$web_driver.find_element(ElementWarehouse::OUTLOOK_NEXT_BUTTON).click
+# 	sleep 4
+# 	$web_driver.find_element(ElementWarehouse::OUTLOOK_PASSWORD_FIELD).type(TestUser.outlook_password)
+# 	$web_driver.find_element(ElementWarehouse::OUTLOOK_SIGN_IN_BUTTON).click
+# 	sleep 6
+# 	if $web_driver.find_elements(ElementWarehouse::SKIP_FOR_NOW_TEXT).first
+# 		$web_driver.find_elements(ElementWarehouse::SKIP_FOR_NOW_TEXT).first.click
+# 		$stdout.puts 'Skip Option Displayed'.green
+# 	elsif $web_driver.find_elements(ElementWarehouse::OUTLOOK_STAY_SIGNED_IN_NO_BUTTON).first
+# 		$web_driver.find_elements(ElementWarehouse::OUTLOOK_STAY_SIGNED_IN_NO_BUTTON).first.click
+# 		$stdout.puts 'Stay Signed in Displayed'.blue
+# 	end
+# 	sleep 6
+# 	$web_driver.find_element(ElementWarehouse::OUTLOOK_ICON).click
+# 	sleep 10
+# 	$web_driver.switch_to.window( $web_driver.window_handles.last )
+# 	wait_for_email
+# 	$web_driver.find_element(ElementWarehouse::OTHER).click
+# 	sleep 4
+# 	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).click
+# 	CODE = $web_driver.find_element(ElementWarehouse::VERIFICATION_CODE).text
+# 	$stdout.puts(CODE)
+# 	sleep 4
+# 	$web_driver.switch_to.window( $web_driver.window_handles.first )
+# 	sleep 3
+# 	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(CODE)
+# 	sleep 4
+# 	$web_driver.find_element(ElementWarehouse::OTP_NEXT_BUTTON).click
+# end
 
 Then('I create my profile') do
 	$web_driver.find_element(ElementWarehouse::OTP_NEXT_BUTTON).click
@@ -158,4 +158,16 @@ Then('I create my profile') do
 	$web_driver.find_element(ElementWarehouse::LETS_GET_STARTED_TEXT_BODY)
 	$web_driver.find_element(ElementWarehouse::WALKTHROUGH_GET_STARTED_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::CHANNEL_TITLE_TEXT).click
+end
+
+Then ('I click on Conversation Portal')do
+	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
+		sleep 4
+	$web_driver.find_element(ElementWarehouse::INBOUND_TITLE_TEXT)
+	$web_driver.find_element(ElementWarehouse::INBOUND_TEXT_BODY)
+	$web_driver.find_element(ElementWarehouse::INBOUND_GOT_IT_BUTTON).click
+	sleep 2
+	$web_driver.find_element(ElementWarehouse::OUTBOUND_TITLE_TEXT)
+	$web_driver.find_element(ElementWarehouse::OUTBOUND_TEXT_BODY)
+	$web_driver.find_element(ElementWarehouse::OUTBOUND_GOT_IT_BUTTON).click
 end

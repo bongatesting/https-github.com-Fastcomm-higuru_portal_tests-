@@ -54,10 +54,10 @@ Then('receive the public chat') do
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	# sleep 2
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::PUBLIC_TAB).click
-	wait_for_public_chat
-	$web_driver.find_element(ElementWarehouse::PUBLIC_CHAT).click
+	sleep 6
+	# $web_driver.find_element(ElementWarehouse::PUBLIC_TAB).click
+	# wait_for_public_chat
+	# $web_driver.find_element(ElementWarehouse::PUBLIC_CHAT).click
 end
 
 Then('I download the current transcript then resolve and download my chat') do
