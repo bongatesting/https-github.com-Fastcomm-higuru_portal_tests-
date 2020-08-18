@@ -8,14 +8,14 @@ Given('I am on the Company Unit Settings page') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
-	sleep 2
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	sleep 3
 end
 
 Then('I Adjust Conversation Expiry Slider by One hour') do
-	browser_scroll
-	A = $web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER)
-	A.send_keys(:up)
+	scroll_to($web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER))
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER).click
 end
 
 Then('I initiate a conversation') do
