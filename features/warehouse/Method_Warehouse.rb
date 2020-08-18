@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class MethodWarehouse
+module MethodWarehouse
 end
 
 def backup_long_press
@@ -149,22 +149,10 @@ end
 
 def wait_for_public_chat
   begin
-    until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?
-      sleep 10 # check if message received
+    sleep 10 until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?
     end
   rescue
-    wait_for_public_chat# this block get's executed if there is any kind of exception error
-  end
-end
-
-def wait_for_public_chat
-  begin
-    until ($web_driver.find_element(ElementWarehouse::PUBLIC_CHAT)).displayed?
-      sleep 10 # check if message received
-    end
-  rescue
-    wait_for_public_chat# this block get's executed if there is any kind of exception error
-  end
+    nil
 end
 
 def wait_for_allow_notifications

@@ -50,14 +50,14 @@ end
 
 Given('I am already signed in') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
-	sleep 3
+	sleep 1
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.test_user_1_password)
-	sleep 3
+	sleep 1
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEST_HIGURU).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
+	$web_driver.find_elements(ElementWarehouse::CLOSE_NOTIFICATION).first&.click
 end
 
 When('I Sign in with Invalid Credentials') do
@@ -89,17 +89,17 @@ Then('I reset the password') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUTLOOK_NEXT_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_WORK_ACCNT_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::OUTLOOK_WORK_ACCOUNT_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUTLOOK_PASSWORD_FIELD).send_keys(TestUser.outlook_password)
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::OUTLOOK_SIGN_IN_BUTTON_2).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_USE_A_DFFRNT_ACCNT).click
+	$web_driver.find_element(ElementWarehouse::OUTLOOK_DIFF_ACCOUNT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONT_TO_OUTLOOK).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_USE_A_DFFRNT_ACCNT).click
+	$web_driver.find_element(ElementWarehouse::OUTLOOK_DIFF_ACCOUNT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONT_TO_OUTLOOK).click
 	sleep 7

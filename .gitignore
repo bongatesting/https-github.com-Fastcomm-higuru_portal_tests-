@@ -10,3 +10,4 @@ features/TestDetails/
 history/
 Report.html
 cucumber.yml
+Reports/Allure/allure-results/

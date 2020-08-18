@@ -1,0 +1,11 @@
+The system cannot find the path specified.
+Fast Debugger (ruby-debug-ide 0.8.0.beta19, debase 0.3.0.beta19, file filtering is supported, block breakpoints supported, smart steps supported, obtaining return values supported, partial obtaining of instance variables supported) listens on 0.0.0.0:62306
+
+##teamcity[enteredTheMatrix timestamp = '2020-08-18T11:04:42.913+0200']
+WARNING: The formatter Teamcity::Cucumber::Formatter is using the deprecated formatter API which will be removed in v4.0 of Cucumber.
+
+
+##teamcity[customProgressStatus testsCategory = 'Scenarios' count = '0' timestamp = '2020-08-18T11:04:42.918+0200']
+
+##teamcity[testSuiteStarted name = 'Feature: Higuru Sign In, Registration and Walk Through' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/01_Registration_and_walk_through.feature:1' timestamp = '2020-08-18T11:04:42.918+0200']
+2020-08-18 11:04:42 WARN Selenium [DEPRECATION] :prefs is deprecated. Use Selenium::WebDriver::Chrome::Options#add_preference instead.
