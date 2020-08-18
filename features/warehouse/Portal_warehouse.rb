@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class ElementWarehouse
+
 	#########################-----------HiGuru Elements-----------#########################
+
 	WIDGET = { xpath: '//*[@id="higuru-webchat"]/div' }
 	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
 	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
@@ -42,9 +44,8 @@ class ElementWarehouse
 	QA_NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	NOT_NOW_NOTIFICATION_2 = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
-	TEST_FASTCOMM = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[1]/div[2]' }
-	TEST_HIGURU = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div[2]/div[2]' }
-	# LOGIN_BUTTON_1 = { css: '.btn > div' }
+	TEST_FASTCOMM = { xpath: '//app-company-unit-item[1]/ion-item/ion-button' }
+	TEST_HIGURU = { xpath: '//app-company-unit-item[2]/ion-item/ion-button' }
 	BACK_TO_LOGIN = { xpath: '//a[contains(text(),"Back to Login")]' }
 	PASSWORD_RESET_REQUEST = { css: ".bqe:nth-child(1)" }
 	RESET_PASSWORD = { xpath: '//a[contains(.,"Reset password.")]' }
@@ -66,10 +67,10 @@ class ElementWarehouse
 	CONT_TO_OUTLOOK = { xpath: '//*[@id="tilesHolder"]/div[1]/div/div' }
 	OUTLOOK_OTHER_TAB = { xpath: '//*[@id="Pivot33-Tab1"]' }
 	OUTLOOK_RESET_PASSWD = { xpath: '//*[@id="app"]/div/div[2]/div[1]/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td/table/tbody/tr[3]/td/a' }
-	OUTLOOK_USE_A_DFFRNT_ACCNT = { xpath: '/html/body/div/form[1]/div/div/div[2]/div[3]/div/div[2]/div/div[3]/a' }
+	OUTLOOK_DIFF_ACCOUNT = { xpath: '/html/body/div/form[1]/div/div/div[2]/div[3]/div/div[2]/div/div[3]/a' }
 	OUTLOOK_STAY_SIGNED_IN_NO_BUTTON = { xpath: '//*[@id="idBtn_Back"]' }
-	OUTLOOK_WORK_ACCNT_BUTTON = { xpath: '//*[@id="aadTile"]' }
-	OUTLOOK_PERSONAL_ACCNT_BUTTON = { xpath: '//*[@id="msaTileHint"]/small' }
+	OUTLOOK_WORK_ACCOUNT_BUTTON = { xpath: '//*[@id="aadTile"]' }
+	OUTLOOK_PERS_ACCOUNT_BUTTON = { xpath: '//*[@id="msaTileHint"]/small' }
 	OUTLOOK_SIGN_IN_BUTTON_2 = { xpath: '//*[@id="idSIButton9"]' }
 	OUTLOOK_ICON = { xpath: '//*[@id="ShellMail_link"]/span/ohp-icon-font/span' }
 	GMAIL_PASSWORD_FIELD = { xpath: '//input[@name="password"]' }
@@ -139,12 +140,9 @@ class ElementWarehouse
 	CONVO_HISTORY_PUBLIC_TAB = { xpath: '//*[@id="consumerPlatformsNav"]/app-consumer-platform-history-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[3]' }
 	CONVO_HISTORY_PUBLIC_CHAT = { xpath: '//ion-nav[@id="consumerPlatformsNav"]/app-consumer-platform-history-container/ion-content/ion-list/app-consumer-platform-history-item/ion-nav-link/ion-item/div/div/div[2]' }
 	CONVO_HISTORY_DOWNLOAD_ICON = { xpath: '//ion-nav[@id="consumerPlatformsNav"]/app-chat-history/div/div/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-tab-button/ion-icon' }
-  CURRENT_TRANSCRIPT_2 = { xpath: '' }
-
-
-
+  #CURRENT_TRANSCRIPT_2 = { xpath: '' }
 	MAIN_MENU = { css: '.logo-small' }
-	STATS_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[3]' }
+	STATS_TAB = { xpath: "//ion-label[contains(.,'Stats')]" }
 	CHANNELS_TAB = { xpath: "//ion-label[contains(.,'Channels')]" }
 	ADD_CHANNEL_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	TWITTER_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[2]/ion-nav-link/ion-card/ion-avatar/img'}
