@@ -9,7 +9,6 @@ Given('I am signing in') do
   sleep 3
   $web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
   sleep 3
-  $web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 end
 
 Then('I start a new conversation') do

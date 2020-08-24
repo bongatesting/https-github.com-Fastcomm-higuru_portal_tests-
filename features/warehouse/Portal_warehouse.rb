@@ -52,6 +52,15 @@ class ElementWarehouse
 	NEW_PASSWORD_FIELD = { xpath: "//input[@name='ion-input-0']" }
 	OUTLOOK_SELECT_EMAIL = { xpath: '//*[@id="AQAAAEnFQpwBAAAAfphTXgAAAAA="]/div/div/div' }
 	CONFIRM_PASSWORD_FIELD = { xpath: "//ion-input[@id='verifyPassword']/input" }
+	CURRENT_PASSWORD_FIELD = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/form/ion-list/ion-item[1]/ion-input/input' }
+	SECURITY_NEW_PASSWORD_FIELD = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/form/ion-list/ion-item[2]/ion-input/input' }
+	SEC_CONFIRM_PASSWORD_FIELD = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/form/ion-list/ion-item[3]/ion-input/input' }
+	UPDATE_PASSWORD = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/form/ion-list/ion-buttons/ion-button[2]' }
+	ACCOUNT_FULL_NAME = { xpath: '//*[@id="ion-input-2-lbl"]/ion-input/input' }
+	ACCOUNT_SETTINGS = { xpath: '//*[@id="mat-menu-panel-0"]/div/ion-list/ion-item[3]/ion-label' }
+	ACCOUNT_INFO_SECURITY = { xpath: '//*[@id="home-content"]/app-account-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[3]' }
+	ACCOUNT_INFO_SETTINGS = { xpath: '//*[@id="home-content"]/app-account-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
+	ACC_INFO_PASSWD_RESET_BUTTON = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/ion-item/ion-button' }
 	PROFILE_BUTTON = { css: '.agent-image' }
 	SIGN_OUT = { xpath: '//*[@id="mat-menu-panel-0"]/div/ion-list/ion-item[6]/ion-label' }
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
@@ -66,7 +75,7 @@ class ElementWarehouse
 	OUTLOOK_SIGN_IN_BUTTON = { xpath: '/html/body/header/div/aside/div/nav/ul/li[2]/a' }
 	CONT_TO_OUTLOOK = { xpath: '//*[@id="tilesHolder"]/div[1]/div/div' }
 	OUTLOOK_OTHER_TAB = { xpath: '//*[@id="Pivot33-Tab1"]' }
-	OUTLOOK_RESET_PASSWD = { xpath: '//*[@id="app"]/div/div[2]/div[1]/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td/table/tbody/tr[3]/td/a' }
+	OUTLOOK_RESET_PASSWD = { xpath: '//*[@id="app"]/div/div[2]/div[1]/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div[1]/div/div/div/div[3]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td/table/tbody/tr[3]/td/a' }
 	OUTLOOK_DIFF_ACCOUNT = { xpath: '/html/body/div/form[1]/div/div/div[2]/div[3]/div/div[2]/div/div[3]/a' }
 	OUTLOOK_STAY_SIGNED_IN_NO_BUTTON = { xpath: '//*[@id="idBtn_Back"]' }
 	OUTLOOK_WORK_ACCOUNT_BUTTON = { xpath: '//*[@id="aadTile"]' }

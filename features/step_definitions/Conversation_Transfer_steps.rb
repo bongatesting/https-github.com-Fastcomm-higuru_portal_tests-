@@ -8,7 +8,7 @@ Given('I am on the Login View') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 2
+	sleep 4
 end
 
 Then('Create Routing Tags') do
