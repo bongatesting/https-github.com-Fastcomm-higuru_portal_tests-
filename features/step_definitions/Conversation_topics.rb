@@ -52,7 +52,7 @@ Then('I start a conversation and Tag it') do
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT)
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
 	sleep 8
 	$web_driver.find_element(ElementWarehouse::TAG_CONVERSATION).click
 	sleep 3

@@ -8,8 +8,6 @@ Given('I have no Bots added') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
 	sleep 7
