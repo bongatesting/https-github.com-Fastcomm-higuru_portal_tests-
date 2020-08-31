@@ -20,14 +20,21 @@ class ElementWarehouse
 	BRKLYN = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
 	SWITCH_TO_TEST = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div/div[3]/button' }
 	SWITCH_TO_MAIN_COMPANY = { xpath: '//*[@id="cdk-overlay-0"]/div/div/div/div/div[3]/button' }
-	TWITTER_USERNAME = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[1]/label/div/div[2]/div/input' }
+	TWITTER_USERNAME = { xpath: '//*[@id="username_or_email"]' }
 	TWITTER_SIGN_IN_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[3]/div/div/span/span' }
 	TWEET_FIELD = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div/div' }
 	TWEET_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]/div[3]/div/span/span' }
 	MORE_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/header/div/div/div/div/div[2]/nav/div/div/div[2]/span' }
 	LOG_OUT_TWITTER = { xpath: '//*[@id="react-root"]/div/div/div[1]/div[2]/div/div[2]/div[3]/div/div/div/div/div[12]/a/div/div/span' }
 	CONFIRM_LOGOUT_TWITTER = { xpath: '//*[@id="react-root"]/div/div/div[1]/div[2]/div/div/div/div[2]/div[2]/div[3]/div[2]/div/span/span' }
-	TWITTER_PASSWORD = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/form/div/div[2]/label/div/div[2]/div/input' }
+	TWITTER_PASSWORD = { xpath: '//*[@id="password"]' }
+	WEB_MESSAGE_DROP_DOWN = { css: '.button-small' }
+	CONFIRM_REMOVE_CHANNEL = { xpath: '//*[@id="ion-overlay-7"]/div[2]/div[3]/button[2]' }
+	ADD_FACEBOOK_DONE_BUTTON = { xpath: '//*[@id="channelsNav"]/app-facebook-page-select/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-nav-link/ion-button' }
+	CONFIRM_ADD_FACEBOOK = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
+	REMOVE_CHANNEL = { xpath: '//*[@id="ion-overlay-5"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
+	FACEBOOK_SELECT_PAGE = { xpath: '//*[@id="channelsNav"]/app-facebook-page-select/ion-content/ion-list/app-facebook-page-item[1]/ion-item/ion-button' }
+	CONFIRM_ADD_TWITTER = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	COMPANY_UNITS = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/app-account-company-unit/div/button/img' }
 	I_AGREE_BUTTON = { css: '.radio-container > .ng-dirty' }
 	NEXT_BUTTON_1 = {  xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button" }
@@ -147,6 +154,12 @@ class ElementWarehouse
 	MAIN_MENU = { css: '.logo-small' }
 	STATS_TAB = { xpath: "//ion-label[contains(.,'Stats')]" }
 	CHANNELS_TAB = { xpath: "//ion-label[contains(.,'Channels')]" }
+	WEB_MESSAGE_SEND_LINK = { xpath: '//*[@id="linkWebMessage"]' }
+	WEB_MESSAGE_DONE_BUTTON = { xpath: '//*[@id="channelsNav"]/app-web-message-container/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-nav-link/ion-button' }
+	WEB_MESSAGE_NAME_FIELD = { xpath: '//*[@id="siteName"]/input' }
+	ADD_WEBMESSAGE_POP_UP = { xpath: '//*[@id="webSdkIntroductionModal"]/div[2]/app-web-sdk-introduction/ion-footer/ion-button' }
+	WEB_MESSAGE_ADD_CHANNEL = { xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button' }
+	SELECT_WEB_MESSAGE = { xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[1]/app-platform-item/ion-nav-link/ion-card/ion-avatar/img' }
 	ADD_CHANNEL_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	TWITTER_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[2]/ion-nav-link/ion-card/ion-avatar/img'}
 	CHANNEL_DROP_DOWN = {xpath: "//ion-nav[@id='channelsNav']/app-channels-container/ion-content/ion-slides/div/ion-slide/ion-list/app-channel-item[4]/ion-item/ion-button"}
@@ -155,6 +168,7 @@ class ElementWarehouse
 	ADD_TWITTER_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
 	CHANNEL_OPTIONS = {xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-channel-item/ion-item/ion-button'}
 	DELETE_CHANNEL = {xpath: '//*[@id="ion-overlay-3"]/div/div[2]/app-list-popover/ion-list/ion-item[2]'}
+	CONFIRM_PREMIUM_TWITTER = {xpath: '//*[@id="premiumChannelModal"]/div[2]/app-premium-channel/ion-footer/ion-toolbar/ion-buttons/ion-button[2]'}
   CONFIRM_DELETE_BUTTON = {xpath: '//*[@id="ion-overlay-4"]/div/div[3]/button[2]'}
 	CONFIRM_BUTTON = {xpath: '//*[@id="premiumChannelModal"]/div/app-premium-channel/ion-footer/ion-toolbar/ion-buttons/ion-button[2]'}
 	TWITTER_EMAIL_INPUT = {xpath: '//*[@id="username_or_email"]'}
@@ -420,7 +434,7 @@ class ElementWarehouse
 	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
 	FACEBOOK_CHANNEL_CARD = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[1]/ion-nav-link/ion-card'}
 	ADD_FACEBOOK_CHANNEL_BUTTON = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
-	FACEBOOK_EMAIL_FIELD = {css: "#email"}
+	FACEBOOK_EMAIL_FIELD = {xpath: '//*[@id="email"]'}
 	FACEBOOK_EMAIL_FIELD_2 = { id: 'email'}
 	FACEBOOK_PASSWORD_FIELD = {css: "#pass"}
 	FACEBOOK_LOGIN_BUTTON_3 = {xpath: "//label[@id='loginbutton']/input"}
