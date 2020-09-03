@@ -153,6 +153,24 @@ class ElementWarehouse
   #CURRENT_TRANSCRIPT_2 = { xpath: '' }
 	MAIN_MENU = { css: '.logo-small' }
 	STATS_TAB = { xpath: "//ion-label[contains(.,'Stats')]" }
+	STATS_DROP_DOWN_BUTTON = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[1]/ion-item[1]/ion-button' }
+	TODAY_STATS = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
+	LAST_WEEK_STATS = { xpath: '//*[@id="ion-overlay-2"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
+	LAST_MONTH_STATS = { xpath: '//*[@id="ion-overlay-3"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[3]/ion-label' }
+	LAST_YEAR_STATS = { xpath: '//*[@id="ion-overlay-4"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
+	CUSTOM_DATE = { xpath: '//*[@id="ion-overlay-5"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[5]/ion-label' }
+	DATE_DROP_DOWN_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/sat-calendar-header/div/div/button[1]/span/div' }
+	YEAR_2020_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/div/sat-multi-year-view/table/tbody/tr[2]/td[1]/div' }
+	AUGUST_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/div/sat-year-view/table/tbody/tr[3]/td[4]/div' }
+	CHOOSE_DATE_1_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/div/sat-month-view/table/tbody/tr[4]/td[2]/div' }
+	CHOOSE_DATE_2_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/div/sat-month-view/table/tbody/tr[2]/td[4]/div' }
+	NEXT_MONTH_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/sat-calendar-header/div/div/button[3]' }
+	CUSTOM_DATE_APPLY_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
+	EXPORT_BUTTON = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[1]/ion-item[2]/ion-button' }
+	EXPORT_PDF_BUTTON = { xpath: '//*[@id="ion-overlay-7"]/div[2]/div[2]/app-list-popover/ion-list/ion-item/ion-label' }
+	STATS_REAL_TIME = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-realtime-overview/ion-list-header' }
+	TOP_CONVO_TOPICS = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[4]/ion-card/app-pie-chart/div[1]/span' }
+	CONVO_RESOLUTION_TYPE = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[6]/ion-card/app-pie-chart/div[1]/span' }
 	CHANNELS_TAB = { xpath: "//ion-label[contains(.,'Channels')]" }
 	WEB_MESSAGE_SEND_LINK = { xpath: '//*[@id="linkWebMessage"]' }
 	WEB_MESSAGE_DONE_BUTTON = { xpath: '//*[@id="channelsNav"]/app-web-message-container/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-nav-link/ion-button' }
