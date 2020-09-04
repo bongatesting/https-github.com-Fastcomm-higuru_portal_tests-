@@ -1,11 +1,48 @@
 The system cannot find the path specified.
-Fast Debugger (ruby-debug-ide 0.8.0.beta19, debase 0.3.0.beta19, file filtering is supported, block breakpoints supported, smart steps supported, obtaining return values supported, partial obtaining of instance variables supported) listens on 0.0.0.0:62306
+Fast Debugger (ruby-debug-ide 0.8.0.beta19, debase 0.3.0.beta19, file filtering is supported, block breakpoints supported, smart steps supported, obtaining return values supported, partial obtaining of instance variables supported) listens on 0.0.0.0:53391
 
-##teamcity[enteredTheMatrix timestamp = '2020-08-18T11:04:42.913+0200']
+##teamcity[enteredTheMatrix timestamp = '2020-08-25T12:46:54.175+0200']
 WARNING: The formatter Teamcity::Cucumber::Formatter is using the deprecated formatter API which will be removed in v4.0 of Cucumber.
 
 
-##teamcity[customProgressStatus testsCategory = 'Scenarios' count = '0' timestamp = '2020-08-18T11:04:42.918+0200']
+##teamcity[customProgressStatus testsCategory = 'Scenarios' count = '0' timestamp = '2020-08-25T12:46:54.180+0200']
 
-##teamcity[testSuiteStarted name = 'Feature: Higuru Sign In, Registration and Walk Through' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/01_Registration_and_walk_through.feature:1' timestamp = '2020-08-18T11:04:42.918+0200']
-2020-08-18 11:04:42 WARN Selenium [DEPRECATION] :prefs is deprecated. Use Selenium::WebDriver::Chrome::Options#add_preference instead.
+##teamcity[testSuiteStarted name = 'Feature: Fastcomm Web Widget Test' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/15_Fastcomm_Widget_Test.feature:1' timestamp = '2020-08-25T12:46:54.181+0200']
+2020-08-25 12:46:54 WARN Selenium [DEPRECATION] :prefs is deprecated. Use Selenium::WebDriver::Chrome::Options#add_preference instead.
+Corona Pop up Displayed
+
+##teamcity[testSuiteStarted name = 'Scenario: As a user I want to Test speaking to a Live agent' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/15_Fastcomm_Widget_Test.feature:8' timestamp = '2020-08-25T12:48:15.286+0200']
+Tags: @@Feature: Fastcomm Widget Feature, @@Urgency: High
+
+##teamcity[customProgressStatus type = 'testStarted' timestamp = '2020-08-25T12:48:15.286+0200']
+
+##teamcity[testStarted name = 'Given  I am viewing the Fastcomm website' captureStandardOutput = 'true' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/15_Fastcomm_Widget_Test.feature:9' timestamp = '2020-08-25T12:48:15.286+0200']
+
+##teamcity[testFinished name = 'Given  I am viewing the Fastcomm website' duration = '81075' diagnosticInfo = 'cucumber  f/s=(1598352495286, ), duration=81075, time.now=2020-08-25 12:48:15 +0200' timestamp = '2020-08-25T12:48:15.289+0200']
+Agent available
+
+##teamcity[testStarted name = 'When  I initiate chatting to a live agent' captureStandardOutput = 'true' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/15_Fastcomm_Widget_Test.feature:10' timestamp = '2020-08-25T12:48:32.291+0200']
+
+##teamcity[testFinished name = 'When  I initiate chatting to a live agent' duration = '17002' diagnosticInfo = 'cucumber  f/s=(1598352512291, ), duration=17002, time.now=2020-08-25 12:48:32 +0200' timestamp = '2020-08-25T12:48:32.291+0200']
+Time Chat started: 2020-08-25 12:48:32 +0200
+Conversation assigned text not displayed
+Time of first agent response = 0.4921567433333333 Minutes
+Will do
+12:49
+Total time of conversation = 0.9162441416666667 Minutes
+
+##teamcity[testStarted name = 'Then  I get feedback from the agent' captureStandardOutput = 'true' locationHint = 'file://D:/Fastcomm Projects/HiGuru/higuru_portal_tests/features/15_Fastcomm_Widget_Test.feature:11' timestamp = '2020-08-25T12:49:27.267+0200']
+
+##teamcity[testFinished name = 'Then  I get feedback from the agent' duration = '54975' diagnosticInfo = 'cucumber  f/s=(1598352567267, ), duration=54975, time.now=2020-08-25 12:49:27 +0200' timestamp = '2020-08-25T12:49:27.267+0200']
+Scenario *** As_a_user_I_want_to_Test_speaking_to_a_Live_agent *** Passed
+
+##teamcity[testSuiteFinished name = 'Scenario: As a user I want to Test speaking to a Live agent' timestamp = '2020-08-25T12:49:34.172+0200']
+
+##teamcity[customProgressStatus type = 'testFinished' timestamp = '2020-08-25T12:49:34.172+0200']
+
+##teamcity[testSuiteFinished name = 'Feature: Fastcomm Web Widget Test' timestamp = '2020-08-25T12:49:34.275+0200']
+
+##teamcity[customProgressStatus testsCategory = '' count = '0' timestamp = '2020-08-25T12:49:34.275+0200']
+1 scenario (1 passed)
+3 steps (3 passed)
+2m39.992s

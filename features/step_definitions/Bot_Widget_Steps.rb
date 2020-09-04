@@ -382,7 +382,7 @@ Then('I get feedback from the agent') do
 	elsif $web_driver.find_elements(ElementWarehouse::RESOLVED_TIME_2).first
 		RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME_2).text
 	end
-	$stdout.puts RESOLVED_TIME.blue
+	$stdout.puts 'Resolved Time: '.blue + RESOLVED_TIME.blue
 	TIME_2 = Time.now - TIME
 	resolved = TIME_2/60
 	$stdout.puts 'Total time of conversation = '.green + resolved.to_s.blue + ' Minutes'.green

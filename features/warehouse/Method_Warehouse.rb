@@ -60,7 +60,7 @@ def check_for_first_reply
   sleep 10 until $web_driver.find_element(ElementWarehouse::REPLY_CHAT_GENERIC_1).displayed?
     if $web_driver.find_elements(ElementWarehouse::CONVO_ASSIGNED_TEXT).first
       assignee = $web_driver.find_elements(ElementWarehouse::CONVO_ASSIGNED_TEXT).text
-      $stdout.puts(assignee)
+      $stdout.puts 'Conversation assigned to: '.blue + assignee.green
       check_for_second_reply
     elsif $web_driver.find_elements(ElementWarehouse::REPLY_CHAT_GENERIC_1).first
       $stdout.puts 'Conversation assigned text not displayed'.red
