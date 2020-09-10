@@ -3,7 +3,8 @@ Feature: Stats Feature
   @Feature: Stats Feature
   @Urgency: Medium
 
-  Scenario: I want to view Stats
+  Scenario: I want to view Stats and view the Agent's Activity
 	Given I am logged in
-	Then I navigate to the stats Tab and View the Stats
-	Then I choose a Custom Date and Export Stats
+	Then I navigate to the stats Tab and View the Statistics
+	Then I choose a Custom Date and Export to PDF
+	Then Navigate to the Agent Activity and View the Available stats
