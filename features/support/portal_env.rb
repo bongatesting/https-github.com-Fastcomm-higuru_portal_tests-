@@ -7,20 +7,34 @@ require 'bundler/inline'
 require 'byebug'
 require 'colorize'
 require 'csv'
+require 'json'
 require 'faker'
 require 'parallel_tests'
 require 'page-object'
+require 'pry'
 require 'pycall'
 require 'require_all'
 require 'rspec'
 require 'rspec/expectations'
+require 'rubygems'
+require 'rubocop-rails'
 require 'selenium-webdriver'
 require 'securerandom'
 require 'simplecov'
 require 'stripe'
+require 'syntax'
 require 'touch_action'
 require 'watir'
 require 'watir-scroll'
+
+require_relative '../../features/warehouse/Method_Warehouse.rb'
+require_relative '../../features/support/android_helpers/logic/helper_methods/history_helpers.rb'
+
+include MethodWarehouse
+include HistoryHelpers
+include Selenium
+
+SimpleCov.start
 
 # ENV['HOST'] = 'app-stage' if ENV['HOST'].nil?
 ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
@@ -59,8 +73,8 @@ Before do  #Chrome Env
 	#   $web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 	#$web_driver.navigate.to "https://google.com/"
-	Selenium::WebDriver::Wait.new(timeout: 10)
 	$web_driver.manage.window.maximize
+	Selenium::WebDriver::Wait.new(timeout: 10)
 	$web_driver.manage.timeouts.page_load = 240
 	$web_driver.manage.timeouts.implicit_wait = 10
 end
