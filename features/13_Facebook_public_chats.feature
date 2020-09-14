@@ -1,5 +1,10 @@
 Feature: Facebook public chats
 
+  @TEST:Public_chats
+  @SCENARIO:Facebook_public_chats
+  @URGENCY:High
+
+  @Scenario:Testing_facebook_public_chats
   Scenario: Receive facebook public chat
 	Given I go to the log in page
 	Then I login to my account

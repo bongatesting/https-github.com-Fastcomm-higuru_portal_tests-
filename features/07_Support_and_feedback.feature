@@ -1,8 +1,10 @@
 Feature: Support and Feedback Feature
 
-  @Feature: Support and Feedback Feature
-  @Urgency: Medium
+  @TEST:Support_and_feedback
+  @SCENARIO:Send_feedback
+  @URGENCY:Medium
 
+  @Scenario:Sending_feedback
   Scenario: I want to Send Feedback
 	Given I have some Feedback
 	Then I send Feedback

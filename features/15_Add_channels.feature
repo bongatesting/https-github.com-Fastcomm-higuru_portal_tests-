@@ -1,8 +1,10 @@
 Feature: Add Channels Feature
 
-  @Feature: Add Channels Feature
-  @Urgency: Medium
+  @TEST:Channels
+  @SCENARIO:Add_channels
+  @URGENCY:Medium
 
+  @Scenario:Adding_channels
   Scenario: I want to Add channels
 	Given I am logged in
 	Then I add WebMessage

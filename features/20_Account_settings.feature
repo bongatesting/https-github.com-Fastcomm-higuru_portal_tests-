@@ -1,8 +1,10 @@
 Feature: Account Settings Feature
 
-  @Feature: Account Settings Feature
-  @Urgency: Medium
+  @TEST:Account_settings
+  @SCENARIO:Enhance_security
+  @URGENCY:High
 
+  @Scenario:Updating_password
   Scenario: I want to enhance Security on my Account
 	Given I am logged in
 	Then I update my Password and Logout
