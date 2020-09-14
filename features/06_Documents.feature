@@ -1,8 +1,10 @@
 Feature: Upload Documents Feature
 
-  @Feature: Upload Documents Feature
-  @Urgency: Medium
+  @TEST:Documents_feature
+  @SCENARIO:Upload_documents
+  @URGENCY:Medium
 
+  @Scenario:Uploading_documents
   Scenario: I want to Add Documents
 	Given I sign in
 	Then I go to the Documents Library and add the PDF

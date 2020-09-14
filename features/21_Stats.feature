@@ -1,8 +1,10 @@
 Feature: Stats Feature
 
-  @Feature: Stats Feature
-  @Urgency: Medium
+  @TEST:higuru_stats
+  @SCENARIO:Stats
+  @URGENCY:High
 
+  @Scenario:Viewing_stats
   Scenario: I want to view Stats and view the Agent's Activity
 	Given I am logged in
 	Then I navigate to the stats Tab and View the Statistics

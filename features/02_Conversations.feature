@@ -1,8 +1,10 @@
 Feature: Conversations Feature
 
-  @Feature: Conversations Feature
-  @Urgency: High
+  @TEST:higuru_conversations
+  @SCENARIO:Conversations
+  @URGENCY:High
 
+  @Scenario:Viewing_conversations
   Scenario: As a User I want to view my conversations
 	Given I am signing in
 	Then I start a new conversation
