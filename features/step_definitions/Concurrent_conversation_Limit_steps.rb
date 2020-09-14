@@ -15,8 +15,6 @@ Then('I set the Concurrent Conversation Limit and Test it') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_FIELD).send_keys('1')
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_SAVE_BUTTON).click
-	sleep 3
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	open_new_tab
 	$web_driver.get(TestUser.qa_web_widget)

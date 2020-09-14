@@ -34,5 +34,4 @@ Then('I check if the conversation came through') do
   sleep 3
   $web_driver.find_element(ElementWarehouse::QA_BOT_TAB).click
   sleep 3
-  $web_driver.find_element(ElementWarehouse::PUBLIC_BOT_TAB).click
 end

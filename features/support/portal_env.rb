@@ -37,8 +37,8 @@ include Selenium
 SimpleCov.start
 
 # ENV['HOST'] = 'app-stage' if ENV['HOST'].nil?
-ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
-#ENV['HOST'] = 'app' if ENV['HOST'].nil?
+# ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
+ENV['HOST'] = 'app' if ENV['HOST'].nil?
 
 #include MethodWarehouse
 include HistoryHelpers
