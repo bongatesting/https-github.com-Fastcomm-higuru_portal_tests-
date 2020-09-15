@@ -52,7 +52,7 @@ Before do # Chrome Env
   #   $web_driver = Selenium::WebDriver.for :ie, options: options, prefs: preferences
   #   $web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
   $web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-  #$web_driver.navigate.to "https://google.com/"
+  $web_driver.navigate.to "https://google.com/"
   Selenium::WebDriver::Wait.new(timeout: 10)
   $web_driver.manage.window.maximize
   $web_driver.manage.timeouts.page_load = 240
