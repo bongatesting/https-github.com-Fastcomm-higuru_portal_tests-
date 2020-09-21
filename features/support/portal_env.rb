@@ -49,28 +49,24 @@ ENV['HOST'] = 'app-qa' if ENV['HOST'].nil?
 #ENV['HOST'] = 'app' if ENV['HOST'].nil?
 
 Before do  #Chrome Env
-	preferences = { "profile.managed_default_content_settings.notifications" => 1,
-	                "profile.managed_default_content_settings.cookies" => 1,
-	                "profile.managed_default_content_settings.plugins" => 1,
-	                "profile.managed_default_content_settings.geolocation" => 1,
-	                "profile.managed_default_content_settings.images" => 1,
-	                "profile.managed_default_content_settings.media_stream" => 1,
-	                "profile.managed_default_content_settings.popups" => 1
-	}
-	'chromeOptions' == {
-			:prefs => preferences,
-	}
 	options = Selenium::WebDriver::Chrome::Options.new
-	#options = Selenium::WebDriver::Firefox::Options.new
-	#options = Selenium::WebDriver::Safari::Options.new
-	#options = Selenium::WebDriver::Ie::Options.new
-	#options = Selenium::WebDriver::Edge::Options.new
-	#options.add_argument('--headless') # configure the driver to run in headless mode
-	$web_driver = Selenium::WebDriver.for :chrome, options: options, prefs: preferences
-	#   $web_driver = Selenium::WebDriver.for :firefox, options: options, prefs: preferences
-	#   $web_driver = Selenium::WebDriver.for :safari, options: options, prefs: preferences
-	#   $web_driver = Selenium::WebDriver.for :ie, options: options, prefs: preferences
-	#   $web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
+	# options = Selenium::WebDriver::Firefox::Options.new
+	# options = Selenium::WebDriver::Ie::Options.new
+	# options = Selenium::WebDriver::Edge::Options.new
+	# options = Selenium::WebDriver::Safari::Options.new
+	# options.add_argument('--headless') # configure the driver to run in headless mode
+	options.add_preference('profile.managed_default_content_settings.notifications', 1)
+	options.add_preference('profile.managed_default_content_settings.cookies', 1)
+	options.add_preference('profile.managed_default_content_settings.plugins', 1)
+	options.add_preference('profile.managed_default_content_settings.geolocation', 1)
+	options.add_preference('profile.managed_default_content_settings.images', 1)
+	options.add_preference('profile.managed_default_content_settings.media_stream', 1)
+	options.add_preference('profile.managed_default_content_settings.popups', 1)
+	$web_driver = Selenium::WebDriver.for :chrome, options: options
+	# $web_driver = Selenium::WebDriver.for :firefox, options: options, prefs: preferences
+	# $web_driver = Selenium::WebDriver.for :ie, options: options, prefs: preferences
+	# $web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
+	# $web_driver = Selenium::WebDriver.for :safari, options: options, prefs: preferences
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 	#$web_driver.navigate.to "https://google.com/"
 	$web_driver.manage.window.maximize
