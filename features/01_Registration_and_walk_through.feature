@@ -19,3 +19,9 @@ Feature: Higuru Sign In, Registration and Walk Through
 	Given I am already signed in
 	Then I click on Conversation Portal
 	Then I click on Stats
+
+  @Scenario:Resetting_forgotten_password
+  Scenario: I want to reset my password
+	Given I forgot my password
+	Then I reset the password
+	Then I Login with my changed password

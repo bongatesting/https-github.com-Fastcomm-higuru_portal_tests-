@@ -105,7 +105,7 @@ Then('I reset the password') do
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::OUTLOOK_OTHER_TAB).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::OUTLOOK_SELECT_EMAIL).click
+	#$web_driver.find_element(ElementWarehouse::OUTLOOK_SELECT_EMAIL).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUTLOOK_RESET_PASSWD).click
 	sleep 4
@@ -125,6 +125,5 @@ Then('I Login with my changed password') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.new_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	$web_driver.find_element(ElementWarehouse::NEW_COMPANY_UNIT).click
-	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
+	#$web_driver.find_element(ElementWarehouse::NEW_COMPANY_UNIT).click
 end

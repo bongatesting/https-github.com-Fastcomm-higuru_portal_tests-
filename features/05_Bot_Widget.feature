@@ -1,8 +1,10 @@
 Feature: Bot Widget Feature
 
-  @Feature: Bot Widget Feature
-  @Urgency: High
+  @TEST:Bot_widget
+  @SCENARIO:higuru_Bot_widget
+  @URGENCY:High
 
+  @Scenario:Testing_higuru_web_widget
   Scenario: As a user I want to Test the hi.guru web widget
 	Given I am viewing the hi.guru website
 	Then I click on the WIDGET

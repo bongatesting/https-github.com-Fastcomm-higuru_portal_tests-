@@ -1,8 +1,10 @@
 Feature: Agent Availability
 
-  @Feature: Agent Availability Feature
-  @Urgency: High
+  @TEST:Agent_availability
+  @SCENARIO:Agent_availability
+  @URGENCY:High
 
+  @Scenario:Switching_agent_availability
   Scenario: I want to switch the Agent's availability.
 	Given The Agent is not available
 	Then I make a conversation and check if it comes through

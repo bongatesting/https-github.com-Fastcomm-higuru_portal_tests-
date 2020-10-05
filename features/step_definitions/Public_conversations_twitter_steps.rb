@@ -5,8 +5,6 @@ Given('A customer is contacting us via Twitter') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
-	sleep 3
   $web_driver.find_element(ElementWarehouse::ALLOW_NOTIFICATION).click
 end
 
