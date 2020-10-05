@@ -31,15 +31,15 @@ def scroll_to_element(element, locator = nil)
   execute_script(script_string, element)
 end
 
-def scroll_in_page
-  $web_driver.find_element(class: 'device-list-container').click
-  scroll = $web_driver.find_element(xpath: ".//*[contains(., 'Panic Position')]")
-  scroll.send_keys(:page_down)
-end
+# def scroll_in_page
+#   $web_driver.find_element(class: 'device-list-container').click
+#   scroll = $web_driver.find_element(xpath: ".//*[contains(., 'Panic Position')]")
+#   scroll.send_keys(:page_down)
+# end
 
 def scroll_in_dashboard
-  scroll = $web_driver.find_element(ElementWarehouse::USER_INACTIVITY_BUTTON)
-  scroll.location_once_scrolled_into_view
+  scroll = $web_driver.find_element(ElementWarehouse::RESPONSIVENESS_TITLE)
+  scroll.Location_once_scrolled_into_view
 end
 
 def open_new_tab
@@ -155,6 +155,16 @@ def wait_for_public_chat
     nil
 end
 
+def wait_for_account_login_select
+  begin
+    until ($web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_account_login_select# this block get's executed if there is any kind of exception error
+  end
+end
+
 def wait_for_allow_notifications
   begin
     until ($web_driver.find_element(ElementWarehouse::ALLOW_NOTIFICATION)).displayed?
@@ -186,8 +196,9 @@ def wait_for_search_field
 end
 
 # scroll_in_page
-# $web_driver.find_element(ElementWarehouse::EDART_DEVICE).click
+# $web_driver.find_element(ElementWarehouse::RESPONSIVENESS_TITLE).click
 # scroll.send_keys(:page_down)
+
 
 # Upload file
 # elem = $web_driver.execute_script(js, elem)

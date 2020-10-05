@@ -5,12 +5,12 @@ end
 Then('I login to my account') do
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).click
-	# $web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	# $web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).click
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 9
+	wait_for_account_login_select
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	wait_for_company_unit
 	$web_driver.find_element(ElementWarehouse::LOGIN_CU_SELECT).click
@@ -25,18 +25,18 @@ Then('I create a facebook post') do
 	$web_driver.find_element(ElementWarehouse::FACEBOOK_PASSWORD_FIELD).type(TestUser.new_password)
 	sleep 2
 	if $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).first&.click
-	# elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first&.click
+	elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first&.click
 	end
 	wait_for_search_field
 	$web_driver.find_element(ElementWarehouse::SEARCH_FIELD).click
-	# $web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('QA 9020 6')
-	$web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('Prod 8000')
+	$web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('QA 9020 6')
+	# $web_driver.find_element(ElementWarehouse::SEARCH_FIELD).type('Prod 8000')
 	sleep 10
-	# $web_driver.find_element(ElementWarehouse::PAGE_OPTION).click
-	$web_driver.find_element(ElementWarehouse::PAGE_OPTION_2).click
+	$web_driver.find_element(ElementWarehouse::PAGE_OPTION).click
+	# $web_driver.find_element(ElementWarehouse::PAGE_OPTION_2).click
 	sleep 10
-	# $web_driver.find_elements(ElementWarehouse::FACEBOOK_PAGE).click
-	$web_driver.find_elements(ElementWarehouse::FACEBOOK_PAGE_2).first.click
+	$web_driver.find_elements(ElementWarehouse::FACEBOOK_PAGE).click
+	# $web_driver.find_elements(ElementWarehouse::FACEBOOK_PAGE_2).first.click
 	sleep 10
 	$web_driver.find_element(ElementWarehouse::VIEW_AS_VISITOR).click
 	sleep 4
@@ -52,9 +52,8 @@ end
 
 Then('receive the public chat') do
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
-	# sleep 2
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
-	sleep 4
+	sleep 6
 	$web_driver.find_element(ElementWarehouse::PUBLIC_TAB).click
 	wait_for_public_chat
 	$web_driver.find_element(ElementWarehouse::PUBLIC_CHAT).click

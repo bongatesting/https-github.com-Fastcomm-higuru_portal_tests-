@@ -13,5 +13,3 @@ Feature: Facebook public chats
 	Then I download the current transcript then resolve and download my chat
 	Then I download the chat in the conversation history tab
 	Then I reauthorise my facebook page
-
-

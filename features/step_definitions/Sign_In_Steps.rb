@@ -34,7 +34,7 @@ end
 
 Then('I Sign in with my own valid Credentials') do
 	$web_driver.get 'https://hi.guru'
-	$web_driver.find_element(ElementWarehouse::POP_UP_DISMISS).click
+	$web_driver.find_elements(ElementWarehouse::POP_UP_DISMISS).first&.click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)

@@ -17,6 +17,7 @@ Feature: Higuru Sign In, Registration and Walk Through
 
   Scenario: I want to login and take a walk through the Portal
 	Given I am already signed in
+	Then I click on Conversation Portal
 	Then I click on Stats
 
   @Scenario:Resetting_forgotten_password
