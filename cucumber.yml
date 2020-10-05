@@ -1,6 +1,7 @@
 #default: --format html --out=Reports/Report.html --retry 1
 
 # To Specify your Report Directory:
-#default: --format html --format AllureCucumber::CucumberFormatter --out Reports\Allure\allure-results --retry 1 "not @Sign_in"
+
+# default: --format html --format AllureCucumber::CucumberFormatter --out Reports\Allure\allure-results --retry 1 "not @Sign_in"
 
 default: --format html --format AllureCucumber::CucumberFormatter --out Reports\Allure\allure-results # --retry 1
