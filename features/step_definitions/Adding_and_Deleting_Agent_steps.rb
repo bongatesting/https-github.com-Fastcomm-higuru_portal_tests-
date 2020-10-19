@@ -24,7 +24,7 @@ Then('I Add the new Agent') do
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASSWORD_NEXT_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_OPEN_EMAIL).click
-	sleep 3
+	sleep 8
 	$web_driver.find_element(ElementWarehouse::GMAIL_AGENT_CONFIRM_EMAIL).click
 	sleep 3
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
@@ -42,6 +42,13 @@ Then('I Add the new Agent') do
 	$web_driver.close.last
 	sleep 2
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.navigate.refresh
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
 
 Then('I Remove the Agent') do
@@ -53,5 +60,4 @@ Then('I Remove the Agent') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DELETE_USER_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::BACK_TO_PEOPLE).click
 end

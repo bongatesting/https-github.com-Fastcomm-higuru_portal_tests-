@@ -4,7 +4,7 @@ class ElementWarehouse
 
 	#########################-----------HiGuru Elements-----------#########################
 
-	WIDGET = { xpath: '//*[@id="higuru-webchat"]/div' }
+	HIGURU_WIDGET = { xpath: '//*[@id="higuru-webchat"]/div/div/div' }
 	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
 	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
 	LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
@@ -73,7 +73,7 @@ class ElementWarehouse
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
 	GMAIL_EMAIL_FIELD = { xpath: '//*[@id="identifierId"]' }
 	GMAIL_OPEN_EMAIL = { xpath: '//*[@id=":1"]/div/div' }
-	GMAIL_AGENT_CONFIRM_EMAIL = { xpath: '//*[@id=":55"]/div[1]/div[1]/div[1]/div[2]/div/div/a' }
+	GMAIL_AGENT_CONFIRM_EMAIL = { xpath: '//*[@id=":50"]/div[1]/div[1]/div[1]/div[2]/div/div/a' }
 	GMAIL_NEW_PASSWORD_FIELD = { xpath: '//*[@id="password"]/input' }
 	GMAIL_CONFIRM_NEW_PASSWORD_FIELD = { xpath: '//*[@id="verifyPassword"]/input' }
 	CONFIRM_PASSWORD_DONE_BUTTON = { xpath: '//*[@id="resetPassword"]' }
@@ -357,7 +357,23 @@ class ElementWarehouse
   CONVERSATION_BOT_RESOLVED = {xpath: "//*[contains(.,'Conversation resolved by bot')]" }
 	GET_STARTED_TEXT = { xpath: "//button[contains(.,'Get Started')]" }
 	SUPPORT_TEXT = { xpath: "//button[contains(.,'Support')]" }
+	END_CHAT_TEXT = { xpath: "//*[contains(.,'End Chat')]" }
 	PRODUCT_INFO_TEXT = { xpath: "//button[contains(.,'Product Info')]" }
+	WHAT_IS_HIGURU = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[1]' }
+	HIGURU_SIGN_UP = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[9]/div[2]/button[1]' }
+	SIGN_UP_CONTINUE = { css: '.higuru_quick-reply:nth-child(1)' }
+	USER_HELP_TEXT = { xpath: "//*[contains(.,'User help')]" }
+	TECHNICAL_ISSUE = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[17]/div[2]/button[1]' }
+	HIGURU_SUPPORT = { css: '.higuru_quick-reply:nth-child(3)' }
+	HIGURU_CHAT_TO_SALES = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[15]/div[2]/button[3]' }
+	HG_WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }
+	HG_WEB_WIDGET_AGENT_REPLY = { xpath: "//*[contains(.,'Hello you are speaking to Bonga how may I assist you'" }
+	USE_CASES_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[2]' }
+	WHAT_IS_HIGURU_CONTINUE = { css: '.higuru_quick-reply:nth-child(1)' }
+	PRICING_AND_PLANS_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[3]' }
+	WHATSAPP_BUSINESS_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[4]' }
+	HIGURU_END_CHAT_TEXT = { xpath: "//*[contains(.,'End Chat')]" }
+	SIGN_UP_TEXT = { xpath: "//*[contains(.,'Sign Up')]" }
 	FEEDBACK_TEXT = { xpath: "//button[contains(.,'Feedback')]" }
 	CHAT_WITH_US_TEXT = { xpath: "//button[contains(.,'Chat with us')]" }
 	SECOND_BOT_RESPONSE = { xpath: "//*[contains(.,'Hi! Welcome to hi.guru')]" }
