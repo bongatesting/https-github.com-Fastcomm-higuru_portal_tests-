@@ -3,8 +3,8 @@
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Given('I am viewing the hi.guru website') do
-	$web_driver.get 'file:///D:/HiGuRuWidget.html'
-	$web_driver.find_element(ElementWarehouse::WIDGET)
+	$web_driver.get 'https://hi.guru/'
+	$web_driver.find_element(ElementWarehouse::HIGURU_WIDGET)
 end
 
 Given('I am viewing the Fastcomm website') do

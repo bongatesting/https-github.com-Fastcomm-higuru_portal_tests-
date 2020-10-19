@@ -7,10 +7,8 @@ Feature: Bot Widget Feature
   @Scenario:Testing_higuru_web_widget
   Scenario: As a user I want to Test the hi.guru web widget
 	Given I am viewing the hi.guru website
-	Then I click on the WIDGET
+	Then I click on the hi.guru WIDGET
 	Then I Complete my chat with the bot
-	When I re-initiate my Chat with the Bot
-	Then I confirm the chat has been closed on HiGuru Portal Channel
 
   Scenario: As a user I want to Test the Fastcomm web widget
 	Given I am viewing the Fastcomm website
