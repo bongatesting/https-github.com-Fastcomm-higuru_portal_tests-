@@ -8,7 +8,7 @@ Feature: Bot Widget Feature
   Scenario: As a user I want to Test the hi.guru web widget
 	Given I am viewing the hi.guru website
 	Then I click on the hi.guru WIDGET
-	Then I Complete my chat with the bot
+	Then I get feedback from the Agent And Complete my chat with the bot
 
   Scenario: As a user I want to Test the Fastcomm web widget
 	Given I am viewing the Fastcomm website
