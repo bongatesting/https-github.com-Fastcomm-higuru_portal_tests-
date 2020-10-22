@@ -126,7 +126,7 @@ Then('I click on the WIDGET and send messages instead of clicking') do
 	$web_driver.switch_to.window($web_driver.window_handles.first)
 end
 
-Then('I Complete my chat with the bot') do
+Then('I get feedback from the Agent And Complete my chat with the bot') do
 	$web_driver.find_element(ElementWarehouse::PRODUCT_INFO_TEXT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::USE_CASES_TEXT)
@@ -159,7 +159,28 @@ Then('I Complete my chat with the bot') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
 	sleep 3
-end
+		TIME = Time.now
+		$stdout.puts 'Time Chat started: '.blue + TIME.to_s.green
+		$stdout.flush
+		check_for_first_reply
+		TIME_1 = Time.now - TIME
+		response = TIME_1/60
+		$stdout.puts 'Time of first agent response = '.blue + response.to_s.green + ' Minutes'.blue
+		$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys('Thank you. This is an automated Test. Please can you Resolve this query')
+		sleep 2
+	  $web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
+		check_for_resolved
+		if $web_driver.find_elements(ElementWarehouse::RESOLVED_TIME_1).first
+			RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME_1).text
+		elsif $web_driver.find_elements(ElementWarehouse::RESOLVED_TIME_2).first
+			RESOLVED_TIME = $web_driver.find_element(ElementWarehouse::RESOLVED_TIME_2).text
+		end
+		$stdout.puts 'Resolved Time: '.blue + RESOLVED_TIME.blue
+		TIME_2 = Time.now - TIME
+		resolved = TIME_2/60
+		$stdout.puts 'Total time of conversation = '.green + resolved.to_s.blue + ' Minutes'.green
+		$stdout.flush
+	end
 
 Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hallo')
