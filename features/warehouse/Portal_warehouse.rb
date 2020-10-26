@@ -409,9 +409,11 @@ class ElementWarehouse
 	SELECT_AGENT = { xpath: '//*[@id="usersNav"]/app-users-container/ion-content/ion-list/app-user-item[2]/ion-nav-link/ion-card/ion-avatar/img[1]' }
 	HIGURU_COMPANY_UNIT_SELECTION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
 	RECEIVED_MAIL = { xpath: '//span[contains(text(),"Hi there")]' }
-	PREMIUM_MAILER =  { xpath: '//span[contains(text(),"Your Company Unit has added a service")]' }
+	PREMIUM_MAILER =  { xpath: '//*[@id=":al"]' }
 	PREMIUM_MAILER_2=  { xpath: '//span[contains(text(),"Your Company Unit has removed a service")]'}
 	PREMIUM_MAILER_TEXT=  { xpath: '//span[contains(text(),"Premium Channel - Twitter")]'}
+	DLT_1_MAIL_GMAIL=  { xpath: "//div[@id=':4']/div/div/div/div[2]/div[3]/div"}
+	DLT_2_MAIL_GMAIL=  { xpath: '//*[@id=":7k"]'}
 	OTHER = { xpath: '//*[@id="Pivot33-Tab1"]/span/div/div/span/span[2]' }
 	VERIFICATION_CODE = { css: 'p:nth-child(3)' }
 	NEXT_BUTTON_2 = { xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button/div" }
