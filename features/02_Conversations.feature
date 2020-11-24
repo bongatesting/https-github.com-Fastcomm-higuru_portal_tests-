@@ -22,12 +22,14 @@ Feature: Conversations Feature
 	Then I check if the conversation has been Closed after one hour
 
   Scenario: I want to transfer a conversation between Agents
-	Given I am on the Login View
+	Given I am on the Login View and I Create a Second Agent
 	Then Create Routing Tags
-	Then Assign Routing tags to Teams
+	Then Create the second Team and Assign Routing tags to both Teams
 	Then Initiate a Conversation
 	Then Transfer the conversation
 	Then Check if the conversation transfer labels are correct
+	Then I Delete Team Two and the Second Agent
+	Then I Remove Routing Tags
 
   Scenario: I want to add conversation topics
 	Given I am logged in

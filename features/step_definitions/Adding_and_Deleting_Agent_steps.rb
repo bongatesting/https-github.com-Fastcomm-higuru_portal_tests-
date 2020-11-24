@@ -29,12 +29,6 @@ Then('I Add the new Agent') do
 	sleep 3
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::GMAIL_NEW_PASSWORD_FIELD).send_keys(TestUser.new_password)
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::GMAIL_CONFIRM_NEW_PASSWORD_FIELD).send_keys(TestUser.new_password)
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::CONFIRM_PASSWORD_DONE_BUTTON).click
-	sleep 3
 	$web_driver.find_element(ElementWarehouse::GOT_IT_WALK_THROUGH).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GOT_IT_WALK_THROUGH).click
@@ -44,11 +38,11 @@ Then('I Add the new Agent') do
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	$web_driver.navigate.refresh
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	#$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	#sleep 3
+	#$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	#sleep 3
+	#$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
 
 Then('I Remove the Agent') do
