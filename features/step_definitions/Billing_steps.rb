@@ -5,7 +5,6 @@ Given('I have an account') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::NOT_NOW_NOTIFICATION).click
 end
 
 Then('I go to the billing page and navigate through the tabs') do
@@ -13,7 +12,7 @@ Then('I go to the billing page and navigate through the tabs') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::BILLING).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::BILLING_PAYMENT_METHOD).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::BILLING_INFO_BUTTON).click
+	#$web_driver.find_element(ElementWarehouse::BILLING_PAYMENT_METHOD).click
+	#sleep 3
+	#$web_driver.find_element(ElementWarehouse::BILLING_INFO_BUTTON).click
 end

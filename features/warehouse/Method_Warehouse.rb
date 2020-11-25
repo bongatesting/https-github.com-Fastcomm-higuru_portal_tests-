@@ -49,7 +49,7 @@ def open_new_tab
 end
 
 def wait_for_widget
-  until $web_driver.find_element(ElementWarehouse::WIDGET).displayed?
+  until $web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).displayed?
     sleep 2 # check if message received
   end
 rescue StandardError

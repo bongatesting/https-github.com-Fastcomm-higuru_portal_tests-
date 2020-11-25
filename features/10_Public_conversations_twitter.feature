@@ -7,4 +7,5 @@ Feature: Public Conversations
   @Scenario:Testing_twitter_public_chats
   Scenario: I want to test Twitter Public chats
 	Given A customer is contacting us via Twitter
+	Then I Add the channel
 	Then I start a Twitter conversation

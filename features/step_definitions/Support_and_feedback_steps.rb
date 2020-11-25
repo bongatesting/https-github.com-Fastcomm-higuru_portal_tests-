@@ -15,7 +15,7 @@ Then('I send Feedback') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::SUPPORT_AND_FEEDBACK).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::HIGURU_WEB_ICON).click
+	$web_driver.find_element(ElementWarehouse::SUPPORT_FEEDBACK_HIGURU_WEB_ICON).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::FEEDBACK_QUICK_REPLY_BUTTON).click
 	sleep 2
