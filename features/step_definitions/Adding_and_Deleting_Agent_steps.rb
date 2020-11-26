@@ -11,6 +11,12 @@ Then('I Add the new Agent') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_PERSON_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::ROLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_ROLE).click
+	sleep 2
+	$web_driver.find_element(ElementWarehouse::MOBILE_NUMBER).send_keys(TestUser.number)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_PERSON_CREATE_BUTTON).click
 	open_new_tab
 	$web_driver.get 'https://gmail.com/'
