@@ -34,18 +34,20 @@ end
 
 Then('I Sign in with my own valid Credentials') do
 	$web_driver.get 'https://hi.guru'
-	$web_driver.find_elements(ElementWarehouse::POP_UP_DISMISS).first&.click
+	#$web_driver.find_elements(ElementWarehouse::POP_UP_DISMISS).first&.click
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::HIGURU_LOGIN_BUTTON).click
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::HIGURU_COMPANY_UNIT).click
 	sleep 8
 	$web_driver.find_element(ElementWarehouse::HIGURU_COMPANY_UNIT_SELECTION).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION_CONVO_PAGE).click
 end
 
 Given('I am already signed in') do
