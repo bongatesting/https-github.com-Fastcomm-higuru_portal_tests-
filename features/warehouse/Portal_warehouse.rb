@@ -14,6 +14,7 @@ class ElementWarehouse
 	PASSWORD_FIELD = { xpath: '//*[@id="password"]/input' }
 	PASSWORD_FIELD_1 = { css: '.form-group:nth-child(2) > .form-input' }
 	LOGIN_BUTTON = { xpath: '//*[@id="login"]' }
+	HIGURU_LOGIN_BUTTON = { xpath: '//*[@id="menu-1-d5d5cab"]/li[6]/a' }
 	LOGIN_ACCOUNT_SELECT = { xpath: "//ion-button[contains(.,'Go')]"}
 	LOGIN_CU_SELECT = { xpath: '//app-company-unit-item/ion-item/ion-button' }
 	LOGIN_BUTTON_1 = { xpath: '//*[@id="menu-1-d5d5cab"]/li[6]/a' }
