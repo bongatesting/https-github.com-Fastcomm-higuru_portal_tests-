@@ -149,6 +149,9 @@ class ElementWarehouse
 	HIGURU_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-companies-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-item[2]/ion-item/ion-button' }
 	COMPANY_UNIT_SETTINGS = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-footer/ion-toolbar/ion-item/ion-label' }
 	COMPANY_UNIT_SETTINGS_2 = { xpath: '/html/body/app-root/app-home/div/div/app-side-menu/div[2]/ul' }
+	ROUTING_TAG_UPGRADE = { xpath: '//*[@id="upgrade-btn-ga-2"]/div' }
+	DISMISS_PLAN_SELECTION = { xpath: '//*[@id="subscriptionNav"]/app-billing-plans/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
+	CONVERSATION_TOPIC_UPGRADE = { xpath: '//*[@id="upgrade-btn-ga-2"]/div' }
 	SETTINGS = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	CONVERSATION_RESOLVE_SLIDER = { xpath: "//ion-router-outlet[@id='home-content']/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[8]/div/ion-range" }
 	SELECT_INBOUND_CHAT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-content/app-room-item/ion-item/ion-label/ion-text' }
@@ -220,6 +223,11 @@ class ElementWarehouse
 	SELECT_WEB_MESSAGE = { xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[1]/app-platform-item/ion-nav-link/ion-card/ion-avatar/img' }
 	ADD_CHANNEL_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	TWITTER_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[2]/ion-nav-link/ion-card/ion-avatar/img'}
+	TEXT_SMS_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[3]/app-platform-item[1]/ion-nav-link/ion-card/ion-avatar/img'}
+	WHATSAPP_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[4]/ion-nav-link/ion-card/ion-avatar/img'}
+	UPGRADE_TWITTER = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
+	UPGRADE_TEXT_SMS_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
+	UPGRADE_WHATSAPP_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button'}
 	CHANNEL_DROP_DOWN = {xpath: "//ion-nav[@id='channelsNav']/app-channels-container/ion-content/ion-slides/div/ion-slide/ion-list/app-channel-item[4]/ion-item/ion-button"}
 	CHANNEL_DROP_DOWN_2 = {xpath: "//ion-nav[@id='channelsNav']/app-channels-container/ion-content/ion-slides/div/ion-slide/ion-list/app-channel-item[3]/ion-item/ion-button"}
 	CHANNEL_REAUTHORISE = {xpath: "//ion-item[contains(.,'Reauthorise Channel')]"}
@@ -234,6 +242,10 @@ class ElementWarehouse
 	AUTHORIZE_APP_BUTTON = {xpath: '//*[@id="allow"]'}
 	ADD_BUTTON = {xpath: '//*[@id="platformPermissionModal"]/div/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]'}
 	TEAMS_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[5]/ion-label' }
+	INACTIVE_TEAMS_TAB = { xpath: '//*[@id="teamsNav"]/app-teams/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
+	UPGRADE_TEAMS_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]/div' }
+	UPGRADE_BILLING_PAGE = { xpath: '//*[@id="billingSlides"]/div/ion-slide[1]/app-billing-details/ion-content/ion-list/ion-item/ion-button' }
+	UPGRADE_ACCOUNT = { xpath: '//*[@id="mat-menu-panel-0"]/div/ion-list/ion-item[4]/ion-buttons/app-upgrade-button/div' }
 	TEAM_TWO = { xpath: '//*[@id="teamsNav"]/app-teams/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-team-item[2]/ion-nav-link/ion-card' }
 	ADD_TEAM_BUTTON = { xpath: '//*[@id="teamsNav"]/app-teams/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	TEAM_NAME = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item[1]/ion-input/input' }
@@ -263,9 +275,9 @@ class ElementWarehouse
 	GO_BACK_TO_DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img' }
 	SECONDARY_COMPANY_UNIT = { xpath: '//*[@id="home-content"]/app-company-units-container/ion-content/ion-list/app-company-unit[2]/ion-card/ion-avatar/img' }
 	MAIN_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
-	COMPANY_UNIT = {xpath: "//div[@id='sidebar-wrapper']/div/div/span" }
+	COMPANY_UNIT_IMAGE = {xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
 	COMPANY_UNIT_DROP_DOWN = {xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
-	COMPANY_UNIT_SElECT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
+	COMPANY_UNIT_SELECT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
 	DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-3"]/div/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
 	CONFIRM_DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-4"]/div/div[3]/button[2]' }
 	GO_BUTTON_COMPANY_UNIT_SELECT_ON_LOGIN = { css: 'li:nth-child(1) .higuru-button-bordered' }
@@ -505,6 +517,7 @@ class ElementWarehouse
   DELETE_USER_BUTTON = { xpath: '//app-list-popover/ion-list/ion-item/ion-label' }
   MODAL_DELETE_USER_BUTTON = { xpath: "//button[contains(.,'Delete')]" }
   ADD_PERSON_BUTTON = { xpath: "//ion-button[contains(.,'Add Person')]" }
+	ADD_PERSON_UPGRADE_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]/div' }
   SCREEN_NAME = { xpath: '//*[@id="UserCreateComponent"]/div[2]/app-user-create/ion-content/ion-item-group/form/ion-item[1]/ion-input/input' }
 	ADD_PERSON_EMAIL_FIELD = {  xpath: '//*[@id="UserCreateComponent"]/div[2]/app-user-create/ion-content/ion-item-group/form/ion-item[2]/ion-input/input' }
 	ROLE = {  xpath: '//*[@id="UserCreateComponent"]/div[2]/app-user-create/ion-content/ion-item-group/form/ion-item[3]/ion-input/input' }

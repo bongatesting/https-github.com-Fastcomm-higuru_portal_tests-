@@ -103,7 +103,7 @@ Then('select the company account and the company unit') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SElECT).click
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
 	sleep 3
