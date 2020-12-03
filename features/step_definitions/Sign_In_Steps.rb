@@ -74,6 +74,7 @@ Given('I forgot my password') do
 	$web_driver.get 'https://app-qa.hi.guru/account/login'
 	$web_driver.find_element(ElementWarehouse::I_FORGOT_MY_PASSWORD).click
 	sleep 2
+	$web_driver.find_element(ElementWarehouse::FORGOT_EMAIL_FIELD).click
 	$web_driver.find_element(ElementWarehouse::FORGOT_EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::SEND_RESET_EMAIL).click
