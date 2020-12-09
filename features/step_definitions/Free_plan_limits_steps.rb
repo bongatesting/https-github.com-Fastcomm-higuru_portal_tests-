@@ -94,6 +94,8 @@ Then('I attempt adding another Team') do
 	$web_driver.find_element(ElementWarehouse::DISMISS_PLAN_SELECTION).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_TEAM_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DISMISS_PLAN_SELECTION).click
 end
 
 Then('I attempt exporting stats') do

@@ -275,11 +275,16 @@ class ElementWarehouse
 	GO_BACK_TO_DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img' }
 	SECONDARY_COMPANY_UNIT = { xpath: '//*[@id="home-content"]/app-company-units-container/ion-content/ion-list/app-company-unit[2]/ion-card/ion-avatar/img' }
 	MAIN_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
+	COMPANY_UNIT_INFO = { xpath: '//*[@id="home-content"]/app-company-units-container/ion-content/ion-list/app-company-unit/ion-card/ion-avatar/img' }
+	COMPANY_UNIT_CHANGE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[1]/app-company-unit-details/ion-content/ion-list/form/ion-item-group[1]/ion-item-group/ion-item/ion-buttons/ion-button' }
+	COMPANY_UNIT_INFO_NAME_FIELD = { xpath: '//*[@id="ion-input-2-lbl"]/ion-input/input' }
+	CREATE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
+	COMPANY_UNIT_INFO_SAVE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[1]/app-company-unit-details/ion-content/ion-list/form/ion-item-group[1]/ion-item-group/ion-item/ion-buttons/ion-button[2]' }
 	COMPANY_UNIT_IMAGE = {xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
 	COMPANY_UNIT_DROP_DOWN = {xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	COMPANY_UNIT_SELECT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
-	DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-3"]/div/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
-	CONFIRM_DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-4"]/div/div[3]/button[2]' }
+	DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-3"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]' }
+	CONFIRM_DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-4"]/div[2]/div[3]/button[2]' }
 	GO_BUTTON_COMPANY_UNIT_SELECT_ON_LOGIN = { css: 'li:nth-child(1) .higuru-button-bordered' }
 	CONVO_EXPIRY_BAR = { xpath: '//*[@id="mat-tab-content-6-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div/div[3]/div[3]' }
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
@@ -344,8 +349,7 @@ class ElementWarehouse
 	COMPANY_UNIT_ADD_IMAGE = { xpath: '//*[@id="addImage"]' }
 	ADD_COMPANY_UNIT_BUTTON = { xpath: '//*[@id="home-content"]/app-company-units-container/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	COMPANY_UNIT_INPUT = { xpath: '//*[@id="mat-input-1"]' }
-	COMPANY_UNIT_2 = { xpath: '' }
-	CREATE_NEW_COMPANY_UNIT_ADD_BUTTON = { xpath: '//*[@id="companyUnitCreateComponent"]/div/app-company-unit-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
+	CREATE_COMPANY_UNIT_ADD_BUTTON = { xpath: '//*[@id="companyUnitCreateComponent"]/div[2]/app-company-unit-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-content/ion-list/ion-item[1]/ion-label' }
 	CREATE = { xpath: '//*[@id="mat-dialog-0"]/create-company-unit-dialog/div/div[3]/button[2]' }
 	SUPPORT_REPLY = { xpath: '//*[@id="higuru-webchat"]/div/div[1]/div[2]/div[3]/div[2]/button[2]' }
@@ -394,10 +398,10 @@ class ElementWarehouse
 	END_CHAT_TEXT = { xpath: "//*[contains(.,'End Chat')]" }
 	PRODUCT_INFO_TEXT = { xpath: "//button[contains(.,'Product Info')]" }
 	WHAT_IS_HIGURU = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[1]' }
-	HIGURU_SIGN_UP = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[8]/div[2]/button[1]' }
+	HIGURU_SIGN_UP = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[9]/div[2]/button[1]' }
 	SIGN_UP_CONTINUE = { css: '.higuru_quick-reply:nth-child(1)' }
 	USER_HELP_TEXT = { xpath: "//*[contains(.,'User help')]" }
-	TECHNICAL_ISSUE = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[16]/div[2]/button[1]' }
+	TECHNICAL_ISSUE = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[17]/div[2]/button[1]' }
 	HIGURU_SUPPORT = { css: '.higuru_quick-reply:nth-child(3)' }
 	HIGURU_CHAT_TO_SALES = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[15]/div[2]/button[3]' }
 	HG_WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }

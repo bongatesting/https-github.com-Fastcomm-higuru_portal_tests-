@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+wait = Selenium::WebDriver::Wait.new(timeout: 80)
+
 Then('I go to the Company Unit settings and create a new Company Unit') do
 	$web_driver.find_element(ElementWarehouse::MAIN_COMPANY_UNIT).click
 	sleep 3
