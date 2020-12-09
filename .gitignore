@@ -13,3 +13,5 @@ screenshots/
 webmessage.html
 Reports/Allure/allure-results/
 Reports/Allure/
+Reports/logs.txt
+cucumber.yml
