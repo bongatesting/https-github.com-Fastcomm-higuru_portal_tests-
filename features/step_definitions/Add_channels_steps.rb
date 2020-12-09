@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+wait = Selenium::WebDriver::Wait.new(timeout: 80)
+
 Then('I add WebMessage') do
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
 	sleep 3

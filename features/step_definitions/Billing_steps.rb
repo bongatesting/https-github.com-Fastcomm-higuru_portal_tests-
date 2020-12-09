@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+wait = Selenium::WebDriver::Wait.new(timeout: 80)
+
 Given('I have an account') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 3

@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+wait = Selenium::WebDriver::Wait.new(timeout: 80)
+
 Then('I update my Password and Logout') do
 	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
 	sleep 3
