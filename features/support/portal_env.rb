@@ -59,10 +59,10 @@ Before do  #Browser Env
 	# $web_driver = Selenium::WebDriver.for :ie, options: options, prefs: preferences
 	# $web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
 	# $web_driver = Selenium::WebDriver.for :safari, options: options, prefs: preferences
-	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-	#$web_driver.navigate.to "https://google.com/"
+	$web_driver.manage.timeouts.page_load = 360
 	$web_driver.manage.window.maximize
 	Selenium::WebDriver::Wait.new(timeout: 10)
-	$web_driver.manage.timeouts.page_load = 240
 	$web_driver.manage.timeouts.implicit_wait = 10
+	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
+	#$web_driver.navigate.to "https://google.com/"
 end
