@@ -3,7 +3,7 @@
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Given('I am logged in') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
