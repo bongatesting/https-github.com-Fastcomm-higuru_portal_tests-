@@ -31,7 +31,23 @@ class ElementWarehouse
 	LOG_OUT_TWITTER = { xpath: '//*[@id="layers"]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div/div' }
 	CONFIRM_LOGOUT_TWITTER = { xpath: '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]/div/span/span' }
 	TWITTER_PASSWORD = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[2]/label/div/div[2]/div/input' }
-	WEB_MESSAGE_DROP_DOWN = { css: '.button-small' }
+	WEB_MESSAGE_DROP_DOWN = { xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-channel-item[2]/ion-item/ion-button' }
+	WEBMSG_CHANNEL_SETTINGS = { xpath: "//ion-label[contains(.,'Channel Settings')]" }
+	PRE_CHAT_FORM_TOGGLE = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/ion-content/ion-slides/div/ion-slide[1]/app-channel-settings/ion-content/ion-list/form[1]/ion-item/ion-toggle' }
+	WEB_MESSAGE_SECURITY_TAB = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
+	WEB_WHITELIST_MANAGE_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/ion-content/ion-slides/div/ion-slide[2]/app-channel-security/ion-content/ion-list/ion-item-group/ion-item-group[2]/ion-buttons/ion-button' }
+	REMOVE_DOMAIN_1 = { xpath: '//*[@id="domainWhiteListModal"]/div[2]/app-domain-whitelist-management/ion-item-group/ion-item-group/ion-chip[2]/ion-icon' }
+	REMOVE_DOMAIN_2 = { xpath: '//*[@id="domainWhiteListModal"]/div[2]/app-domain-whitelist-management/ion-item-group/ion-item-group/ion-chip/ion-icon' }
+	ADD_DOMAIN_FIELD = { xpath: '//*[@id="domainWhiteListModal"]/div[2]/app-domain-whitelist-management/ion-item-group/form/ion-item/ion-input/input' }
+	WHITE_LIST_SAVE_BUTTON = { xpath: '//*[@id="domainWhiteListModal"]/div[2]/app-domain-whitelist-management/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
+	WEB_INSTALLATION_TAB = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[3]' }
+	CHANNELS_SETTINGS_BACK = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
+	REMOVE_WEB_CHANNEL = { xpath: "//ion-label[contains(.,'Remove Channel')]" }
+	CONFIRM_REMOVE_WEB_CHANNEL = { xpath: "//span[contains(.,'Confirm')]" }
+	WHITELIST_DOMAIN_TOGGLE = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/ion-content/ion-slides/div/ion-slide[2]/app-channel-security/ion-content/ion-list/ion-item-group/ion-item-group[2]/form/ion-toggle' }
+	CHAT_FORM_NAME_CHECKBOX = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/ion-content/ion-slides/div/ion-slide[1]/app-channel-settings/ion-content/ion-list/form[1]/ion-list/ion-item[1]/ion-checkbox' }
+	CHAT_FORM_EMAIL_CHECKBOX = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/ion-content/ion-slides/div/ion-slide[1]/app-channel-settings/ion-content/ion-list/form[1]/ion-list/ion-item[2]/ion-checkbox' }
+	CHAT_FORM_MOBILE_NUMBER_CHECKBOX = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/ion-content/ion-slides/div/ion-slide[1]/app-channel-settings/ion-content/ion-list/form[1]/ion-list/ion-item[3]/ion-checkbox' }
 	CONFIRM_REMOVE_CHANNEL = { xpath: '//*[@id="ion-overlay-7"]/div[2]/div[3]/button[2]' }
 	ADD_FACEBOOK_DONE_BUTTON = { xpath: '//*[@id="channelsNav"]/app-facebook-page-select/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-nav-link/ion-button' }
 	CONFIRM_ADD_FACEBOOK = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
@@ -220,6 +236,12 @@ class ElementWarehouse
 	WEB_MESSAGE_NAME_FIELD = { xpath: '//*[@id="siteName"]/input' }
 	ADD_WEBMESSAGE_POP_UP = { xpath: '//*[@id="webSdkIntroductionModal"]/div[2]/app-web-sdk-introduction/ion-footer/ion-button' }
 	WEB_MESSAGE_ADD_CHANNEL = { xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button' }
+	WEB_MESSAGE_ADD_CHANNEL_2 = { xpath: '//*[@id="webSDKComponent"]/div[2]/app-web-sdk-add/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
+	CHANNEL_DISPLAY_NAME_FIELD = { xpath: '//*[@id="webSDKComponent"]/div[2]/app-web-sdk-add/ion-content/ion-item-group/form/ion-item[1]/ion-input/input' }
+	SETUP_SELECT_JAVASCRIPT = { xpath: '//*[@id="webSDKComponent"]/div[2]/app-web-sdk-add/ion-content/ion-item-group/form/ion-item-group/ion-item-group[1]/ion-card[1]' }
+	SETUP_SELECT_WORDPRESS = { xpath: '//*[@id="webSDKComponent"]/div[2]/app-web-sdk-add/ion-content/ion-item-group/form/ion-item-group/ion-item-group[1]/ion-card[2]' }
+	INSTALLATION_INSTR_EMAIL_FIELD = { xpath: '//*[@id="webSDKComponent"]/div[2]/app-web-sdk-add/ion-content/ion-item-group/form/ion-item[2]/ion-input/input' }
+	DOWNLOAD_PLUGIN = { xpath: '//*[@id="webSDKComponent"]/div[2]/app-web-sdk-add/ion-content/ion-item-group/form/ion-item-group/ion-item-group[2]/ion-buttons/ion-button' }
 	SELECT_WEB_MESSAGE = { xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[1]/app-platform-item/ion-nav-link/ion-card/ion-avatar/img' }
 	ADD_CHANNEL_BUTTON = { xpath: '//*[@id="channelsNav"]/app-channels-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	TWITTER_CHANNEL = {xpath: '//*[@id="channelsNav"]/app-channel-select/ion-content/ion-list/ion-item-group[2]/app-platform-item[2]/ion-nav-link/ion-card/ion-avatar/img'}
