@@ -117,6 +117,16 @@ def wait_for_enter_name_field
   end
 end
 
+def wait_for_your_role_option
+  begin
+    until ($web_driver.find_element(ElementWarehouse::YOUR_ROLE_OPTION)).displayed?
+      sleep 10 # check if message received
+    end
+  rescue
+    wait_for_your_role_option# this block get's executed if there is any kind of exception error
+  end
+end
+
 def wait_for_sign_up_checkbox
   begin
     until ($web_driver.find_element(ElementWarehouse::SIGN_UP_CHECKBOX)).displayed?

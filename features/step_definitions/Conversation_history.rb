@@ -9,6 +9,10 @@ Given('I have conversations') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 end
 

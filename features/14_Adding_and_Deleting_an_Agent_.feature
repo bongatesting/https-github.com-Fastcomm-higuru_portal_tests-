@@ -6,6 +6,6 @@ Feature: Add and Delete an Agent
 
   @Scenario:Adding_and_Deleting_Agent
   Scenario: I want to delete an Agent from a company Unit
-	Given I am logged in
+	Given I want to add an Agent and upgrade him to CU Manager
 	Then I Add the new Agent
-	Then I Remove the Agent
+	Then I downgrade the Company Unit Manager to Agent and Remove it

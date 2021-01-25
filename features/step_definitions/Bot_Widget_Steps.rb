@@ -153,7 +153,7 @@ Then('I get feedback from the Agent And Complete my chat with the bot') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::TECHNICAL_ISSUE).click
+	$web_driver.find_element(ElementWarehouse::HIGURU_TECHNICAL_ISSUE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys('Thank You')
 	sleep 2

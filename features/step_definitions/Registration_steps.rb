@@ -30,7 +30,7 @@ Then('I Sign up with a valid Email') do
 	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_1).click
 end
 
-Then('I sign into outlook and fetch the valid OTP') do
+Then('I sign into gmail and fetch the valid OTP') do
 	open_new_tab
 	$web_driver.get('https://google.co.za/')
 	sleep 3
@@ -42,15 +42,16 @@ Then('I sign into outlook and fetch the valid OTP') do
 		$web_driver.switch_to.window( $web_driver.window_handles.last )
 	end
 	sleep 1
-	$web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD).send_keys(TestUser.email)
+	$web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::GMAIL_NEXT_BUTTON).click
 	sleep 1
-	$web_driver.find_element(ElementWarehouse::GMAIL_PASSWORD_FIELD).send_keys(TestUser.outlook_password)
+	$web_driver.find_element(ElementWarehouse::GMAIL_PASSWORD_FIELD).send_keys(TestUser.gmail_password)
 	sleep 1
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASS_NEXT_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).click
+	sleep 4
 	CODE = $web_driver.find_element(ElementWarehouse::VERIFICATION_CODE).text
 	$stdout.puts(CODE)
 	sleep 4
@@ -59,10 +60,10 @@ Then('I sign into outlook and fetch the valid OTP') do
 	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(CODE)
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::OTP_NEXT_BUTTON).click
+	sleep 3
 end
 
 Then('I create my profile') do
-	$web_driver.find_element(ElementWarehouse::OTP_NEXT_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::CREATE_YOUR_PROFILE_TEXT)
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::ENTER_ACCOUNT_NAME_FIELD).click
@@ -86,11 +87,11 @@ Then('I create my profile') do
 	$web_driver.find_element(ElementWarehouse::CATEGORY_OPTION).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::YOUR_ROLE_FIELD).click
-	sleep 4
+	wait_for_your_role_option
 	$web_driver.find_element(ElementWarehouse::YOUR_ROLE_OPTION).click
-	sleep 4
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_4).click
-	sleep 4
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::ACCOUNT_WALKTHROUGH_TEXT)
 	$web_driver.find_element(ElementWarehouse::ACCOUNT_WALKTHROUGH_NEXT_BUTTON).click
 	sleep 3
