@@ -9,8 +9,12 @@ Given('I have no Bots added') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 5
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
-	sleep 7
+	sleep 4
 end
 
 Then('I Add the Bot') do
@@ -38,7 +42,7 @@ Then('I Add the Bot') do
 	$web_driver.find_element(ElementWarehouse::LINK_BUTTON).click
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::SELECT_BOT).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::LEGAL_BOT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_LEGAL_BOT_BUTTON).click
@@ -91,4 +95,7 @@ Then('I initiate a chat and claim the bot chat') do
 	$web_driver.find_element(ElementWarehouse::QA_CLAIM_BOT_CHAT_BUTTON).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
+	sleep 3
 end

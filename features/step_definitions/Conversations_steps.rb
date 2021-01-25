@@ -26,6 +26,10 @@ Then('I start a new conversation') do
 end
 
 Then('I check if the conversation came through') do
+  $web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+  sleep 3
+  $web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+  sleep 3
   $web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
   sleep 3
   $web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click

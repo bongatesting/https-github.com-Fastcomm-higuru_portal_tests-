@@ -7,6 +7,10 @@ Given('I am on the Company Unit Settings page') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETTINGS).click

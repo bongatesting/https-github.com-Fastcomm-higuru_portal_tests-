@@ -9,6 +9,9 @@ Given('I have an account') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 5
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 end
 
 Then('I go to the billing page and navigate through the tabs') do

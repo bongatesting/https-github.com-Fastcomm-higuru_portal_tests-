@@ -12,7 +12,7 @@ Feature: Higuru Sign In, Registration and Walk Through
 	Given I am viewing the log in page
 	When I enter an Invalid Email
 	Then I Sign up with a valid Email
-	Then I sign into outlook and fetch the valid OTP
+	Then I sign into gmail and fetch the valid OTP
 	Then I create my profile
 
   Scenario: I want to login and take a walk through the Portal

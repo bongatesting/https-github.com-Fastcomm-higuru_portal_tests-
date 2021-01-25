@@ -12,6 +12,10 @@ Then('I add the premium channel')do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	sleep 10
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
 	sleep 2

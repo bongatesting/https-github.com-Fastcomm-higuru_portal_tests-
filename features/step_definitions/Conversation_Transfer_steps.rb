@@ -9,6 +9,10 @@ Given('I am on the Login View and I Create a Second Agent') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 4
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PEOPLE_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_PERSON_BUTTON).click
@@ -17,10 +21,17 @@ Given('I am on the Login View and I Create a Second Agent') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_PERSON_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::ROLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_ROLE).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_PERSON_CREATE_BUTTON).click
 	open_new_tab
 	$web_driver.get 'https://gmail.com/'
 	sleep 5
+	$web_driver.find_element(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	$web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_NEXT_BUTTON).click
@@ -31,7 +42,7 @@ Given('I am on the Login View and I Create a Second Agent') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_OPEN_EMAIL).click
 	sleep 8
-	$web_driver.find_element(ElementWarehouse::GMAIL_AGENT_CONFIRM_EMAIL).click
+	$web_driver.find_element(ElementWarehouse::GMAIL_AGENT_JOIN_EMAIL).click
 	sleep 3
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	sleep 3
@@ -132,12 +143,14 @@ Then('Initiate a Conversation') do
 	sleep 3
 	$web_driver.navigate.to 'https://app-qa.hi.guru/account/login'
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 2
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.test_user_1_password)
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 6
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	sleep 4
 end
@@ -149,14 +162,14 @@ Then('Transfer the conversation') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TRANSFER_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::GCUWA_TAG).click
+	$web_driver.find_element(ElementWarehouse::CENTANE_TAG).click
 	sleep 3
 end
 
 Then('Check if the conversation transfer labels are correct') do
 	$web_driver.find_element(ElementWarehouse::QA_HOME_DASHBOARD).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::QA_CONVERSATION_HISTORY).click
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY_TAB).click
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::OPEN_CONVERSATION).click
 	sleep 5

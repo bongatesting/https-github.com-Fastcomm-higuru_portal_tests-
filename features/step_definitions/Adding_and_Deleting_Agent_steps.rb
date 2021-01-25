@@ -2,6 +2,19 @@
 
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
+Given('I want to add an Agent and upgrade him to CU Manager') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
+end
+
 Then('I Add the new Agent') do
 	$web_driver.find_element(ElementWarehouse::PEOPLE_TAB).click
 	sleep 3
@@ -51,10 +64,16 @@ Then('I Add the new Agent') do
 	#$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
 
-Then('I Remove the Agent') do
+Then('I downgrade the Company Unit Manager to Agent and Remove it') do
 	$web_driver.find_element(ElementWarehouse::PEOPLE_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_AGENT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::EDIT_AGENT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::ROLE_1).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_ROLE_1).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_DROP_DOWN_MENU).click
 	sleep 3
