@@ -18,13 +18,13 @@ Then('I adjust the settings') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::WEBMSG_PRECHAT_TOGGLE).click
+	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::PRE_CHAT_NAME_TICK_BOX).click
+	$web_driver.find_element(ElementWarehouse::CHAT_FORM_NAME_CHECKBOX).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::PRE_CHAT_EMAIL_TICK_BOX).click
+	$web_driver.find_element(ElementWarehouse::CHAT_FORM_EMAIL_CHECKBOX).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::PRE_CHAT_MOB_NUMBER_TICK_BOX).click
+	$web_driver.find_element(ElementWarehouse::CHAT_FORM_MOBILE_NUMBER_CHECKBOX).click
 end
 
 Then('I test if the settings have been applied') do
@@ -64,5 +64,5 @@ Then('I test if the settings have been applied') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::WEBMSG_PRECHAT_TOGGLE).click
+	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
 end
