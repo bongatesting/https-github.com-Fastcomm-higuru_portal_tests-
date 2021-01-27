@@ -11,11 +11,12 @@ Then('I add WebMessage') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_WEBMESSAGE_POP_UP).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_ADD_CHANNEL).click
+	$web_driver.find_element(ElementWarehouse::ADD_WEBMESSAGE_1).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHANNEL_DISPLAY_NAME_FIELD).send_keys('Webmessage Channel')
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETUP_SELECT_JAVASCRIPT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETUP_SELECT_WORDPRESS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETUP_SELECT_JAVASCRIPT).click
@@ -26,7 +27,7 @@ Then('I add WebMessage') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_DROP_DOWN).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::WEBMSG_CHANNEL_SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
 	sleep 3
@@ -38,7 +39,13 @@ Then('I add WebMessage') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_CUSTOMIZE_TAB).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SECURITY_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_WHITELIST_MANAGE_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WHITELIST_DOMAIN_CANCEL_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_WHITELIST_MANAGE_BUTTON).click
 	sleep 3
@@ -54,13 +61,13 @@ Then('I add WebMessage') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WHITE_LIST_SAVE_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::WHITELIST_DOMAIN_TOGGLE).click
+	$web_driver.find_element(ElementWarehouse::WEB_WHITELIST_MANAGE_TOGGLE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_WHITELIST_MANAGE_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::REMOVE_DOMAIN_1).click
+	$web_driver.find_element(ElementWarehouse::REMOVE_DOMAIN).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::REMOVE_DOMAIN_2).click
+	$web_driver.find_element(ElementWarehouse::REMOVE_DOMAIN).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WHITE_LIST_SAVE_BUTTON).click
 	sleep 3
@@ -92,7 +99,13 @@ Then('I add Twitter') do
 	$web_driver.find_element(ElementWarehouse::AUTHORIZE_APP_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_ADD_TWITTER).click
-	sleep 4
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::TWITTER_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::REMOVE_TWITTER_CHANNEL).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONFIRM_REMOVE_TWITTER_CHANNEL).click
+	sleep 3
 end
 
 Then('I add Facebook') do
@@ -114,10 +127,17 @@ Then('I add Facebook') do
 	sleep 7
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	sleep 3
+	wait.until { $web_driver.find_element(ElementWarehouse::FACEBOOK_SELECT_PAGE).displayed? }
 	$web_driver.find_element(ElementWarehouse::FACEBOOK_SELECT_PAGE).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::CONFIRM_ADD_FACEBOOK).click
-	sleep 4
+	sleep 6
 	$web_driver.find_element(ElementWarehouse::ADD_FACEBOOK_DONE_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::REMOVE_FACEBOOK_CHANNEL).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONFIRM_REMOVE_FACEBOOK_CHANNEL).click
 	sleep 3
 end
