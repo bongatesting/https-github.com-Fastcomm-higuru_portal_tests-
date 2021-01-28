@@ -47,7 +47,11 @@ class ElementWarehouse
 	WEB_INSTALLATION_TAB = { xpath: '//ion-segment-button[4]' }
 	CHANNELS_SETTINGS_BACK = { xpath: '//*[@id="channelsNav"]/app-channel-settings-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-nav-link/ion-button' }
 	REMOVE_WEB_CHANNEL = { xpath: "//ion-label[contains(.,'Remove Channel')]" }
+	REMOVE_WEB_CHANNEL_DIALOGUE = { xpath: '//*[@id="alert-16-hdr"]' }
 	REMOVE_TWITTER_CHANNEL = { xpath: "//ion-label[contains(.,'Remove Channel')]" }
+	REMOVE_TWITTER_CHANNEL_DIALOGUE = { xpath: '//*[@id="alert-4-hdr"]' }
+	REMOVE_TWITTER_CANCEL_BUTTON = { xpath: '//*[@id="ion-overlay-4"]/div[2]/div[3]/button[1]/span' }
+	REMOVE_WEB_MESSAGE_CANCEL_BUTTON = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[3]/button[1]/span' }
 	REMOVE_FACEBOOK_CHANNEL = { xpath: "//ion-label[contains(.,'Remove Channel')]" }
 	CONFIRM_REMOVE_WEB_CHANNEL = { xpath: "//span[contains(.,'Confirm')]" }
 	CONFIRM_REMOVE_TWITTER_CHANNEL = { xpath: "//span[contains(.,'Confirm')]" }
@@ -56,6 +60,7 @@ class ElementWarehouse
 	CHAT_FORM_EMAIL_CHECKBOX = { xpath: '//ion-item[2]/ion-checkbox' }
 	CHAT_FORM_MOBILE_NUMBER_CHECKBOX = { xpath: '//ion-item[3]/ion-checkbox' }
 	ADD_FACEBOOK_DONE_BUTTON = { xpath: "//ion-button[contains(.,'Done')]" }
+	CHECK_FACEBOOK_AVATAR = { xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-channel-item/ion-item/ion-avatar/img' }
 	CONFIRM_ADD_FACEBOOK = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	FACEBOOK_SELECT_PAGE = { xpath: '//*[@id="channelsNav"]/app-facebook-page-select/ion-content/ion-list/app-facebook-page-item[1]/ion-item/ion-button' }
 	CONFIRM_ADD_TWITTER = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
@@ -240,10 +245,15 @@ class ElementWarehouse
 	TOP_CONVO_TOPICS = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[4]/ion-card/app-pie-chart/div[1]/span' }
 	CONVO_RESOLUTION_TYPE = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[6]/ion-card/app-pie-chart/div[1]/span' }
 	CHANNELS_TAB = { xpath: "//ion-label[contains(.,'Channels')]" }
+	ACTIVE_CHANNELS_TAB = { xpath: "//ion-segment-button[contains(.,'Active')]" }
+	INACTIVE_CHANNELS_TAB = { xpath: "//ion-segment-button[contains(.,'Inactive')]" }
+	SEARCH_YOUR_CHANNELS = { css: '.searchbar-input' }
+	EMPTY_CHANNELS_AVATAR = { xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-item-group/ion-avatar/img' }
 	WEB_MESSAGE_SEND_LINK = { xpath: '//*[@id="linkWebMessage"]' }
 	WEB_MESSAGE_DONE_BUTTON = { xpath: '//*[@id="channelsNav"]/app-web-message-container/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-nav-link/ion-button' }
 	WEB_MESSAGE_NAME_FIELD = { xpath: '//*[@id="siteName"]/input' }
 	ADD_WEBMESSAGE_POP_UP = { xpath: '//*[@id="webSdkIntroductionModal"]/div[2]/app-web-sdk-introduction/ion-footer/ion-button' }
+	SWIPE_WEBMESSAGE_POP_UP = { xpath: '//ion-button[2]' }
 	ADD_WEBMESSAGE_2 = { xpath: '' }
 	ADD_WEBMESSAGE_1 = { xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button' }
 	WEB_MESSAGE_ADD_CHANNEL = { xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-item/ion-label/ion-button' }
@@ -580,6 +590,7 @@ class ElementWarehouse
 	OUTLOOK_INVITE_EMAIL= { xpath: '//span[contains(text(),"agent account")]' }
 	AGENT_CONFIRM_EMAIL_BUTTON = {xpath: "//div[@id='app']/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/a"}
 	FACEBOOK_CHANNEL_CARD = {xpath: '//ion-item-group[2]/app-platform-item/ion-nav-link/ion-card'}
+	HOW_TO_SETUP_FACEBOOK = {xpath: '//*[@id="channelsNav"]/app-platform-details/ion-content/ion-list/ion-toolbar/ion-segment/ion-segment-button[2]'}
 	ADD_FACEBOOK_CHANNEL_BUTTON = {xpath: '//ion-label/ion-button'}
 	FACEBOOK_EMAIL_FIELD = {xpath: '//*[@id="email"]'}
 	FACEBOOK_EMAIL_FIELD_2 = { id: 'email'}
