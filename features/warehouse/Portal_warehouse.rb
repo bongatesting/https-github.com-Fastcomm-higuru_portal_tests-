@@ -76,7 +76,7 @@ class ElementWarehouse
 	TWEET_ONE = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/div[2]/section/div/div/div/div[1]/div/div/div/article/div/div[2]/div[2]/div[2]/div[1]/div/span' }
 	SELECT_TWITTER_USER = { xpath: '//*[@id="typeaheadDropdown-6"]/div[3]/div[1]/li/div/div[1]/div/div[2]' }
 	TWITTER_SEARCH_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/div/div/form/div[1]/div/div/div[2]/input' }
-	ALLOW_NOTIFICATION = { xpath: '/html/body/app-root/app-home/app-header/app-notification-bar/div/div[2]/span[2]/button' }
+	ALLOW_NOTIFICATION = { xpath: '/html/body/app -root/app-home/app-header/app-notification-bar/div/div[2]/span[2]/button' }
 	QA_NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	NOT_NOW_NOTIFICATION = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/app-header-main/ion-header/app-notification-bar/div/div[2]/span[3]/button' }
 	NOT_NOW_NOTIFICATION_2 = { xpath: '/html/body/app-root/app-home/app-notification-bar/div/div[2]/span[1]/button' }
@@ -166,7 +166,7 @@ class ElementWarehouse
 	QA_WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	QA_INBOUND_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[1]' }
 	TRANSFER_BUTTON = { xpath: '//*[@id="agent-content"]/app-chat-container/app-chat-header/div/div[1]/span' }
-	QA_TEST_BOT = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/app-company-unit-welcome-assistant/ion-item-group/ion-item[1]/ion-card/ion-avatar/img' }
+	QA_TEST_BOT = { xpath: '//ion-item/ion-card/ion-avatar/img' }
 	GCUWA_TAG = { xpath: '//*[@id="mat-menu-panel-3"]/div/button' }
 	CENTANE_TAG = { xpath: "//*[contains(.,'Centane')]" }
 	OPEN_CONVERSATION = { xpath: '//*[@id="consumerPlatformsNav"]/app-consumer-platform-history-container/ion-content/ion-list/app-consumer-platform-history-item[1]/ion-nav-link/ion-item/div[2]/ion-item/ion-label[3]/ion-label[2]/ion-note' }
@@ -359,14 +359,15 @@ class ElementWarehouse
 	OPEN_BOT = { css: '.ng-star-inserted > .hydrated > .md > .md > img' }
 	BOT_MENU_BUTTON = { xpath: '//ion-button[2]' }
 	ACTIVATE_BOT_BUTTON = { xpath: "//ion-label[contains(.,'Activate Bot')]" }
-	DEACTIVATE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-4"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	DELETE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-6"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
-	CONFIRM_DELETE_BOT_BUTTON = { xpath: '//*[@id="ion-overlay-7"]/div[2]/div[3]/button[2]/span' }
-	WELCOME_ASSISTANT_BUTTON = { xpath: '//*[@id="ion-tg-1-lbl"]/ion-label/ion-text' }
+	DEACTIVATE_BOT_BUTTON = { xpath: "//ion-label[contains(.,'Deactivate Bot')]" }
+	DELETE_BOT_BUTTON = { xpath: "//ion-label[contains(.,'Delete Bot')]" }
+	CONFIRM_DELETE_BOT_BUTTON = { xpath: "//span[contains(.,'Remove')]" }
+	WELCOME_ASSISTANT_TOGGLE = { xpath: '//ion-item-group/ion-item/ion-toggle' }
+	WELCOME_ASSISTANT_BUTTON = { xpath: "//ion-text[contains(.,'Already have your own? Use it.')]" }
 	ACTIVATE_TEST_BOT = { xpath: '//ion-item-group/ion-card/ion-avatar/img' }
 	QA_BOT_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[3]' }
 	PUBLIC_BOT_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[4]' }
-	REMOVE_QA_TEST_BOT = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item/ion-label' }
+	REMOVE_QA_TEST_BOT = { xpath: "//ion-label[contains(.,'Remove Bot')]" }
 	SAVE_ASSIGN_CONVERSATION_TOPICS_TAGS = { xpath: '//*[@id="assignSupportQueryTopicTags"]/div/app-assign-support-query-topic-tags/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	QA_INSTANT_RESOLVE = { xpath: '' }
 	QA_SELECT_BOT_CHAT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[3]/ion-list/ion-content/app-room-item/ion-item/ion-avatar/img[1]' }
