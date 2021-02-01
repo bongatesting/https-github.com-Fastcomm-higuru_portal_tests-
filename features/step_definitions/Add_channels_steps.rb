@@ -174,7 +174,7 @@ Then('I add Facebook') do
 	$web_driver.page_source.include? 'Enable Direct Conversations'
 	$web_driver.page_source.include? 'When this is enabled you will receive direct messages to this page as hi.guru Conversations.'
 	$web_driver.page_source.include? 'Enable Public Conversations'
-	$web_driver.page_source.include? 'When this is enabled you will receive Comments and Visititor posts to this page as hi.guru Public Conversations.'
+	$web_driver.page_source.include? 'When this is enabled you will receive Comments and Visitor posts to this page as hi.guru Public Conversations.'
 	$web_driver.find_element(ElementWarehouse::CONFIRM_ADD_FACEBOOK).click
 	$web_driver.page_source.include? 'Remove'
 	$web_driver.find_element(ElementWarehouse::ADD_FACEBOOK_DONE_BUTTON).click

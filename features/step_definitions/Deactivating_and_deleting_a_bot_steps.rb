@@ -9,6 +9,10 @@ Given('The bot is active') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 5
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::SETTINGS).click
@@ -19,6 +23,8 @@ end
 
 Then('I deactivate the Bot') do
 	$web_driver.find_element(ElementWarehouse::REMOVE_QA_TEST_BOT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_TOGGLE).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
 	sleep 3
