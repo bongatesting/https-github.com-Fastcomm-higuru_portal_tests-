@@ -16,3 +16,8 @@ Feature: Add Channels Feature
 	Given I have the Webmessage channel
 	Then I adjust the settings
 	Then I test if the settings have been applied
+
+  @Scenario:Customizing_web_widget
+  Scenario: I want to customize my web widget appearance
+	Given I have the Webmessage channel
+	Then I customize the widget and check if the settings apply
