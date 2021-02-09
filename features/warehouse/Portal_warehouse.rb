@@ -38,6 +38,10 @@ class ElementWarehouse
 	PRE_CHAT_FORM_TOGGLE = { xpath: '//ion-toggle' }
 	WEB_MESSAGE_SECURITY_TAB = { xpath: "//ion-segment-button[contains(.,'Security')]" }
 	WEB_MESSAGE_CUSTOMIZE_TAB = { xpath: "//ion-segment-button[contains(.,'Customise')]" }
+	WEB_WIDGET_COLOR = { xpath: "//div[@id='widgetColour']/span" }
+	WEB_WIDGET_COLOR_PICKER = { xpath: '//div[2]' }
+	WEB_WIDGET_COLOR_OK_BUTTON = { xpath: "//button[contains(.,'Ok')]" }
+	WIDGET_TITLE_TEXT_FIELD = { css: '.sc-ion-input-ios' }
 	WEB_WHITELIST_MANAGE_TOGGLE = { css: '.ion-untouched:nth-child(1)' }
 	WEB_WHITELIST_MANAGE_BUTTON = { xpath: "//ion-button[contains(.,'Manage')]" }
 	WHITELIST_DOMAIN_CANCEL_BUTTON = { xpath: "//ion-button[contains(.,'Cancel')]" }
@@ -224,7 +228,7 @@ class ElementWarehouse
 	HIGHEST_RESOLVED_LAST_WEEK = { xpath: '//*[@id="ion-overlay-11"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	HIGHEST_RESOLVED_LAST_MONTH = { xpath: '//*[@id="ion-overlay-13"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	HIGHEST_RESOLVED_LAST_YEAR = { xpath: '//*[@id="ion-overlay-15"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	RESOLVE_DROP_DOWN = { css: '.button-item:nth-child(3) > .md:nth-child(1)' }
+	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
 	AGENT_ACTIVITY_TAB = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[1]/ion-item[1]/ion-button' }
 	TODAY_STATS = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
@@ -373,7 +377,6 @@ class ElementWarehouse
 	QA_SELECT_BOT_CHAT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[3]/ion-list/ion-content/app-room-item/ion-item/ion-avatar/img[1]' }
 	QA_CLAIM_BOT_CHAT_BUTTON = { xpath: '//*[@id="agent-content"]/app-bot-chat-container/app-claim-footer-block/div/ion-button' }
 	SUPPORT_FEEDBACK_HIGURU_WEB_ICON = { xpath: '//*[@id="higuru-webchat"]/div/div/div' }
-	QA_HOME_DASHBOARD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[1]/img' }
 	ASSIGN_CONVERSATION_TOPICS_TAGS = { xpath: '//*[@id="assignSupportQueryTopicTags"]/div/app-assign-support-query-topic-tags/ion-content/ion-list/ion-item-group/div/ion-item[2]' }
 	MANAGE_CONVERSATION_TOPICS = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[3]/ion-button' }
 	ADD_CONVERSATION_TAG_FIELD = { xpath: '//*[@id="companyUnitConversationTags"]/div/app-company-unit-conversation-tag-settings/ion-content/ion-item-group/ion-input/input' }
@@ -413,7 +416,7 @@ class ElementWarehouse
 	QA_LOGIN_BUTTON = { xpath: '//*[@id="login"]' }
 	NO_BUTTON = { xpath: '//button[contains(.,"No")]' }
   ADD_IMAGE = {id: 'upload-btn'}
-	NO_BUTTON_RESPONSE_1 = { xpath: '//*[contains(.,"It has been great chatting with you.")]' }
+	NO_BUTTON_RESPONSE_1 = { xpath: '//*[contains(.," Is there anything else I can help you with?")]' }
 	NO_BUTTON_RESPONSE_2 = { xpath: '//*[contains(.,"Have a wonderful day")]' }
 	REGISTER_LINK = { xpath: '//a[contains(.,"https://app.hi.guru/account/register")]' }
 	WELCOME_HIGURU = { xpath: '//h1[contains(.,"Welcome to hi.guru")]' }
@@ -441,18 +444,18 @@ class ElementWarehouse
 	SUPPORT_TEXT = { xpath: "//button[contains(.,'Support')]" }
 	END_CHAT_TEXT = { xpath: "//*[contains(.,'End Chat')]" }
 	PRODUCT_INFO_TEXT = { xpath: "//button[contains(.,'Product Info')]" }
-	WHAT_IS_HIGURU = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[1]' }
-	HIGURU_SIGN_UP = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[9]/div[2]/button[1]' }
-	SIGN_UP_CONTINUE = { css: '.higuru_quick-reply:nth-child(1)' }
+	WHAT_IS_HIGURU = { xpath: "//button[contains(.,'What is hi.guru?')]" }
+	HIGURU_SIGN_UP = { xpath: "//button[contains(.,'Sign Up')]" }
+	SIGN_UP_CONTINUE = { xpath: "//button[contains(.,'Continue')]" }
 	USER_HELP_TEXT = { xpath: "//*[contains(.,'User help')]" }
 	TECHNICAL_ISSUE = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[7]/div[2]/button[1]' }
-	HIGURU_TECHNICAL_ISSUE = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[17]/div[2]/button[1]' }
-	HIGURU_SUPPORT = { css: '.higuru_quick-reply:nth-child(3)' }
+	HIGURU_TECHNICAL_ISSUE = { xpath: "//*[contains(.,'Technical issue')]" }
+	HIGURU_SUPPORT = { xpath: "//button[contains(.,'Support')]" }
 	HIGURU_CHAT_TO_SALES = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[15]/div[2]/button[3]' }
 	HG_WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	HG_WEB_WIDGET_AGENT_REPLY = { xpath: "//*[contains(.,'Hello you are speaking to Bonga how may I assist you'" }
 	USE_CASES_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[2]' }
-	WHAT_IS_HIGURU_CONTINUE = { css: '.higuru_quick-reply:nth-child(1)' }
+	WHAT_IS_HIGURU_CONTINUE = { xpath: "//button[contains(.,'Continue')]" }
 	PRICING_AND_PLANS_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[3]' }
 	WHATSAPP_BUSINESS_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div[5]/div[2]/button[4]' }
 	HIGURU_END_CHAT_TEXT = { xpath: "//*[contains(.,'End Chat')]" }

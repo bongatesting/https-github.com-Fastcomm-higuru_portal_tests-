@@ -3,12 +3,13 @@
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Given('I have the Webmessage channel') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
 	sleep 5
 end
@@ -30,7 +31,7 @@ end
 Then('I test if the settings have been applied') do
 	open_new_tab
 	sleep 3
-	$web_driver.get(TestUser.qa_web_widget_1)
+	$web_driver.get(TestUser.qa_web_widget)
 	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
 	sleep 3
@@ -65,4 +66,27 @@ Then('I test if the settings have been applied') do
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
+end
+
+Then('I customize the widget and check if the settings apply') do
+	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_CUSTOMIZE_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD).click
+	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
+	$web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD).send_keys('Updated_Web_Title')
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR_PICKER).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR_OK_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 3
 end
