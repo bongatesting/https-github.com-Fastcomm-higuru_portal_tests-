@@ -207,6 +207,7 @@ class ElementWarehouse
 	PUBLIC_CHAT = { xpath: "/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[4]/ion-list/app-room-item[1]/ion-item/ion-avatar" }
 	DOWNLOAD_ICON = { xpath: '//*[@id="agent-content"]/app-chat/app-chat-header/div/button[1]/ion-icon' }
 	CURRENT_TRANSCRIPT = { xpath: "//app-list-popover/ion-list/ion-item/ion-label" }
+	FULL_TRANSCRIPTS_BUTTON = { xpath: "//ion-label[contains(.,'Full Transcript')]" }
 	RESOLVE_ICON = { xpath: '//*[@id="agent-content"]/app-chat/app-chat-header/div/button[2]/span' }
 	RESOLVE_AND_DOWNLOAD = { xpath: "//button[contains(.,'Resolve & Download')]" }
 	RESOLVE_AND_DOWNLOAD_TOAST = { xpath: "//ion-toast[@id='ion-overlay-1']" }
