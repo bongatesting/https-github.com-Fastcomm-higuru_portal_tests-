@@ -3,7 +3,7 @@
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Given('I am on Free Plan') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.outlook_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.free_plan_email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
@@ -100,7 +100,7 @@ end
 
 Then('I attempt exporting stats') do
 	$web_driver.find_element(ElementWarehouse::STATS_TAB).click
-	sleep 3
+	wait.until { $web_driver.find_element(ElementWarehouse::EXPORT_BUTTON).displayed? }
 	$web_driver.find_element(ElementWarehouse::EXPORT_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DISMISS_PLAN_SELECTION).click
