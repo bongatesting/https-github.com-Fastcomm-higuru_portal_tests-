@@ -13,7 +13,7 @@ Given('I have no Bots added') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
+	$web_driver.find_element(ElementWarehouse::BOTS_TAB).click
 	sleep 4
 end
 
