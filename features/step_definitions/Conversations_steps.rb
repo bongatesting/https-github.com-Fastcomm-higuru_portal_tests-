@@ -38,6 +38,16 @@ Then('I check if the conversation came through') do
   sleep 3
   $web_driver.find_element(ElementWarehouse::CONVO_BOTS_TAB).click
   sleep 3
-  $web_driver.find_element(ElementWarehouse::GO_BACK_TO_DASHBOARD).click
+end
+
+Then('I resolve the conversation') do
+  $web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click
   sleep 3
+  $web_driver.find_element(ElementWarehouse::OPEN_THE_CHAT).click
+  sleep 3
+  $web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
+  sleep 3
+  $web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+  sleep 3
+  $web_driver.find_element(ElementWarehouse::GO_BACK_TO_DASHBOARD).click
 end

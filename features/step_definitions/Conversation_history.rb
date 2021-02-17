@@ -30,9 +30,9 @@ Then('I start a conversation') do
 	sleep 3
 end
 Then('I click on conversation history') do
-	$web_driver.find_element(ElementWarehouse::QA_HOME_DASHBOARD).click
+	$web_driver.find_element(ElementWarehouse::GO_BACK_TO_DASHBOARD).click
 	sleep 6
-	$web_driver.find_element(ElementWarehouse::QA_CONVERSATION_HISTORY).click
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY_TAB).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::QA_DIRECT_CONVERSATION_HISTORY).click
 	sleep 4

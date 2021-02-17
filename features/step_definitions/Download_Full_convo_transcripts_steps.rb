@@ -17,7 +17,7 @@ end
 Then('I download the Full Conversation Transcripts') do
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY_TAB).click
 	sleep 6
-	$web_driver.find_element(ElementWarehouse::OPEN_CONVERSATION).click
+	$web_driver.find_element(ElementWarehouse::RESOLVED_CHAT_CONVO_HISTORY).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_DOWNLOAD_ICON).click
 	sleep 3
