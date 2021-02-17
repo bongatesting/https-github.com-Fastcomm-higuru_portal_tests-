@@ -42,6 +42,8 @@ Then('I add the premium channel')do
 	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	$web_driver.get 'https://mail.google.com/'
 	sleep 4
+	$web_driver.find_element(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::GMAIL_NEXT_BUTTON).click

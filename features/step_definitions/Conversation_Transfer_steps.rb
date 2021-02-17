@@ -49,8 +49,6 @@ Given('I am on the Login View and I Create a Second Agent') do
 	$web_driver.find_element(ElementWarehouse::GOT_IT_WALK_THROUGH).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GOT_IT_WALK_THROUGH).click
-	sleep 3
-	$web_driver.close.last
 	sleep 2
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	$web_driver.navigate.refresh
@@ -71,7 +69,7 @@ Then('Create Routing Tags') do
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::ADD_TAG_2).send_keys(:enter)
 	sleep 2
-	$web_driver.find_element(ElementWarehouse::CLOSE).click
+	$web_driver.find_element(ElementWarehouse::ROUTING_TAGS_DONE_BUTTON).click
 end
 
 Then('Create the second Team and Assign Routing tags to both Teams') do
@@ -149,7 +147,7 @@ Then('Initiate a Conversation') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	$web_driver.find_element(ElementWarehouse::SELECT_NGUNI_LAND).click
 	sleep 3
 	$web_driver.switch_to.window( $web_driver.window_handles.first )
 	sleep 4
@@ -167,12 +165,15 @@ Then('Transfer the conversation') do
 end
 
 Then('Check if the conversation transfer labels are correct') do
-	$web_driver.find_element(ElementWarehouse::QA_HOME_DASHBOARD).click
+	$web_driver.find_element(ElementWarehouse::GO_BACK_TO_DASHBOARD).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY_TAB).click
 	sleep 7
-	$web_driver.find_element(ElementWarehouse::OPEN_CONVERSATION).click
-	sleep 5
+	$web_driver.find_element(ElementWarehouse::OPEN_CHAT_CONVO_HISTORY).click
+	sleep 3
+	$web_driver.page_source.include? 'transferred the conversation to'
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
 end
 
 Then('I Delete Team Two and the Second Agent') do
@@ -187,11 +188,9 @@ Then('I Delete Team Two and the Second Agent') do
 	$web_driver.find_element(ElementWarehouse::CONFIRM_DELETE_TEAM).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::TEAM_1).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::TEAM_EDIT_BUTTON).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::REMOVE_GCUWA_TAG_1).click
-	sleep 3
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::TEAM_EDIT_BUTTON_1).click
+	sleep 6
 	$web_driver.find_element(ElementWarehouse::REMOVE_GCUWA_TAG_1).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::UPDATE_TEAM_BUTTON).click
@@ -216,5 +215,5 @@ Then('I Remove Routing Tags') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::REMOVE_GCUWA_TAG_2).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CLOSE).click
+	$web_driver.find_element(ElementWarehouse::ROUTING_TAGS_DONE_BUTTON).click
 end

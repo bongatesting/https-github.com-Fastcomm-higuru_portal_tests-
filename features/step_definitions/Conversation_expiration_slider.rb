@@ -37,5 +37,5 @@ Then('I initiate a conversation') do
 end
 
 Then('I check if the conversation has been Closed after one hour') do
-	$web_driver.find_element(ElementWarehouse::QA_CONVERSATION_HISTORY).click
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_HISTORY_TAB).click
 end

@@ -9,6 +9,7 @@ Feature: Conversations Feature
 	Given I am signing in
 	Then I start a new conversation
 	Then I check if the conversation came through
+	Then I resolve the conversation
 
   Scenario: As an Agent I want to view the conversation History
 	Given I have conversations
