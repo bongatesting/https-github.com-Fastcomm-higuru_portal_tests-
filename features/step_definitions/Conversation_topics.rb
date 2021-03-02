@@ -14,7 +14,7 @@ Given('I am logged in') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 end
 
-Then('I Add Conversation Topics Tags') do
+Then('I Add Conversation Topics Tags ') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETTINGS).click
