@@ -19,7 +19,8 @@ end
 
 Then('I Adjust Conversation Expiry Slider by One hour') do
 	scroll_to($web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER))
-	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_RESOLVE_SLIDER_TIME).click
 end
 
 Then('I initiate a conversation') do

@@ -65,4 +65,16 @@ Then('I start a conversation and Tag it') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SAVE_ASSIGN_CONVERSATION_TOPICS_TAGS).click
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::GO_BACK_TO_DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::MANAGE_CONVERSATION_TOPICS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::REMOVE_TOPIC_TAG_1).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SAVE_CONVERSATION_TAG).click
+	sleep 3
 end

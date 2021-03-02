@@ -38,5 +38,5 @@ Feature: Conversations Feature
 	Then I start a conversation and Tag it
 
   Scenario: I want to set the Concurrent Conversation Limit
-	Given I am logged in
+	Given I have a bot assigned
 	Then I set the Concurrent Conversation Limit and Test it
