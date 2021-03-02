@@ -88,14 +88,6 @@ Then('Create the second Team and Assign Routing tags to both Teams') do
 	$web_driver.find_element(ElementWarehouse::SELECT_ROUTING_TAG_1).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ASSIGN_ROUTING_TAGS_SAVE).click
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::ASSIGN_ROUTING_TAG).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::SEARCH_ROUTING_TAG).send_keys('General')
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::SELECT_ROUTING_TAG_1).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::ASSIGN_ROUTING_TAGS_SAVE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ASSIGN_TEAM_MEMBERS).click
 	sleep 3
