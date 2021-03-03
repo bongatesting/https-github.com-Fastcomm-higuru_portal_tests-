@@ -13,6 +13,9 @@ end
 
 Then('I click on the Fastcomm WIDGET and test the responses') do
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_NAME_FIELD).send_keys(TestUser.customer_name)
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::WELCOME_FASTCOMM_TEXT)
 	$web_driver.find_element(ElementWarehouse::MORE_FASTCOMM_BUTTON)
 	$web_driver.find_element(ElementWarehouse::MEDIA_BUTTON)
@@ -219,7 +222,7 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you')
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return )
 end
 
 When('I initiate chatting to a live agent') do
