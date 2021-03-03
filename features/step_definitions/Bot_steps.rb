@@ -88,7 +88,7 @@ Then('I initiate a chat and claim the bot chat') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::QA_OUTBOUND_TAB).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::QA_BOT_TAB).click
+	$web_driver.find_element(ElementWarehouse::CONVO_BOTS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_SELECT_BOT_CHAT).click
 	sleep 5
