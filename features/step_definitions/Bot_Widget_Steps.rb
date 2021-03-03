@@ -222,7 +222,7 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you')
-	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return )
 end
 
 When('I initiate chatting to a live agent') do
