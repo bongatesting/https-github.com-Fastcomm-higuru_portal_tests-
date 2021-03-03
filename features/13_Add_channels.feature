@@ -21,3 +21,8 @@ Feature: Add Channels Feature
   Scenario: I want to customize my web widget appearance
 	Given I have the Webmessage channel
 	Then I customize the widget and check if the settings apply
+
+  @Scenario:Web_Widget_appearance
+  Scenario: I want to position the web widget and Add the Widget Button preview text
+	Given I have the Webmessage channel
+	Then I Position the web widget and add preview text

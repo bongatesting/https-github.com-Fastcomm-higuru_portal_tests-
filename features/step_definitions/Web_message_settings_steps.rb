@@ -11,7 +11,7 @@ Given('I have the Webmessage channel') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
-	sleep 5
+	sleep 3
 end
 
 Then('I adjust the settings') do
@@ -80,12 +80,71 @@ Then('I customize the widget and check if the settings apply') do
 	$web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD).click
 	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
 	$web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD).send_keys('Updated_Web_Title')
-	sleep 6
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR_PICKER).click
 	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR_OK_BUTTON))
+	sleep 4
 	$web_driver.find_element(ElementWarehouse::WEB_WIDGET_COLOR_OK_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD))
+	$web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD).click
+	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
+	$web_driver.find_element(ElementWarehouse::WIDGET_TITLE_TEXT_FIELD).send_keys('Nguniland')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+end
+
+Then('I Position the web widget and add preview text') do
+	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_CUSTOMIZE_TAB).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::BUTTON_POSITIONING_LEFT))
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BUTTON_POSITIONING_LEFT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WIDGET_BUTTON_PREVIEW_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WIDGET_PREVIEW_TEXT_FIELD).send_keys('Kumnandi Gqithi ukuba ngu Mxhosa')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	open_new_tab
+	$web_driver.get(TestUser.qa_web_widget)
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
+	sleep 4
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.find_element(ElementWarehouse::BUTTON_POSITIONING_RIGHT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	$web_driver.navigate.refresh
+	$web_driver.navigate.refresh
+	$web_driver.get(TestUser.qa_web_widget)
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
+	sleep 4
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WIDGET_PREVIEW_TEXT_FIELD).click
+	sleep 3
+	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
+	sleep 3
+	$web_driver.action.key_down(:backspace).perform
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WIDGET_BUTTON_PREVIEW_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
