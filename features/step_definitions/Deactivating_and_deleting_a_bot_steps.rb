@@ -26,7 +26,7 @@ Then('I deactivate the Bot') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_TOGGLE).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::QA_BOT_VIEW).click
+	$web_driver.find_element(ElementWarehouse::BOTS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ACTIVE_TEST_BOT).click
 	sleep 3

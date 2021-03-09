@@ -230,6 +230,9 @@ When('I initiate chatting to a live agent') do
 	wait.until { $web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
 	sleep 5
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_NAME_FIELD).send_keys(TestUser.customer_name)
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
 	if $web_driver.find_elements(ElementWarehouse::CHATTING_TO_US_RESPONSE_1).first
 		$stdout.puts 'Agent available'.blue
