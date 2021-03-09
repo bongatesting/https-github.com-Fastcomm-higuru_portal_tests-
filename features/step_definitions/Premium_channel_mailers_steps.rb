@@ -5,7 +5,7 @@ end
 Then('I add the premium channel')do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).click
 	sleep 3
@@ -15,8 +15,6 @@ Then('I add the premium channel')do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
-	sleep 10
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::ADD_CHANNEL_BUTTON).click

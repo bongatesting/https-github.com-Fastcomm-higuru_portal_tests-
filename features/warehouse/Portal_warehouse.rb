@@ -214,11 +214,12 @@ class ElementWarehouse
 	INBOUND_TAB = { xpath: "//span[contains(.,'Inbound')]" }
 	OUTBOUND_TAB = { xpath: "//span[contains(.,'Outbound')]" }
 	PUBLIC_CHAT_TAB = { xpath: "//ion-segment-button[contains(.,'Public')]" }
-	DOWNLOAD_ICON = { xpath: '//*[@id="agent-content"]/app-chat/app-chat-header/div/button[1]/ion-icon' }
+	DOWNLOAD_ICON = { xpath: '//ion-tab-button/ion-icon' }
+	DOWNLOAD_CURRENT_TRANSCRIPTS = { xpath: "//ion-item[contains(.,'Current Transcript')]" }
 	CURRENT_TRANSCRIPT = { xpath: "//app-list-popover/ion-list/ion-item/ion-label" }
 	FULL_TRANSCRIPTS_BUTTON = { xpath: "//ion-label[contains(.,'Full Transcript')]" }
 	RESOLVE_ICON = { xpath: '//*[@id="agent-content"]/app-chat/app-chat-header/div/button[2]/span' }
-	RESOLVE_AND_DOWNLOAD = { xpath: "//button[contains(.,'Resolve & Download')]" }
+	RESOLVE_AND_DOWNLOAD = { xpath: '//ion-item[2]/ion-radio' }
 	RESOLVE_AND_DOWNLOAD_TOAST = { xpath: "//ion-toast[@id='ion-overlay-1']" }
 	RESOLVE_AND_DOWNLOAD_TOAST_2 = { xpath: "xpath=//ion-toast" }
 	HI_GURU_AVATAR = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[1]' }
