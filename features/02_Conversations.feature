@@ -32,10 +32,14 @@ Feature: Conversations Feature
 	Then I Delete Team Two and the Second Agent
 	Then I Remove Routing Tags
 
-  Scenario: I want to add conversation topics
+  Scenario: I want to add conversation topics tags
 	Given I am logged in
 	Then I Add Conversation Topics Tags
 	Then I start a conversation and Tag it
+
+  Scenario: I want to filter conversation topics tags
+	Given I have conversation topic tags added
+	Then I filter the conversation topic tags
 
   Scenario: I want to set the Concurrent Conversation Limit
 	Given I have a bot assigned

@@ -193,7 +193,7 @@ class ElementWarehouse
 	COMPANY_UNIT_SETTINGS = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-footer/ion-toolbar/ion-item/ion-label' }
 	COMPANY_UNIT_SETTINGS_2 = { xpath: '/html/body/app-root/app-home/div/div/app-side-menu/div[2]/ul' }
 	ROUTING_TAG_UPGRADE = { xpath: '//*[@id="upgrade-btn-ga-2"]/div' }
-	DISMISS_PLAN_SELECTION = { xpath: '//ion-buttons/ion-button' }
+	DISMISS_PLAN_SELECTION = { xpath: '//app-billing-plans/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	CONVERSATION_TOPIC_UPGRADE = { xpath: '//*[@id="upgrade-btn-ga-2"]/div' }
 	SETTINGS = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	CONVERSATION_RESOLVE_SLIDER = { xpath: "//ion-label[contains(.,'Conversation Expiry')]" }
@@ -403,6 +403,8 @@ class ElementWarehouse
 	REMOVE_BOT = { xpath: '' }
 	BOT_TEXT = { xpath: '//*[@id="mat-tab-label-0-2"][contains(., "Bot")]' }
 	CONVERSATION_HISTORY_TAB = { xpath: "//ion-label[contains(.,'Conversation History')]" }
+	FILTER_DROP_DOWN = { xpath: '//ion-button' }
+	CONVERSATION_TOPIC_POP_UP = { xpath: "//ion-item[contains(.,'Conversation Topic')]" }
 	CONVO_SEARCH_FIELD = { id: 'mat-input-1' }
 	TEN_SHOULD_NOT_SEE = { xpath: '//*[contains(., "10290")]' }
 	COMPANY_UNIT_NAME = { xpath: '//*[@id="companyUnitCreateComponent"]/div/app-company-unit-create/ion-content/ion-item-group/form/ion-item/ion-input/input' }
