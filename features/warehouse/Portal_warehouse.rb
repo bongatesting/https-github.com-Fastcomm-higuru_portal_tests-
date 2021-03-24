@@ -104,12 +104,12 @@ class ElementWarehouse
 	SEC_CONFIRM_PASSWORD_FIELD = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/form/ion-list/ion-item[3]/ion-input/input' }
 	UPDATE_PASSWORD = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/form/ion-list/ion-buttons/ion-button[2]' }
 	ACCOUNT_FULL_NAME = { xpath: '//*[@id="ion-input-2-lbl"]/ion-input/input' }
-	ACCOUNT_SETTINGS = { xpath: '//*[@id="mat-menu-panel-0"]/div/ion-list/ion-item[3]/ion-label' }
+	ACCOUNT_SETTINGS = { xpath: "//ion-label[contains(.,' Account Settings ')]" }
 	ACCOUNT_INFO_SECURITY = { xpath: '//*[@id="home-content"]/app-account-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[3]' }
 	ACCOUNT_INFO_SETTINGS = { xpath: '//*[@id="home-content"]/app-account-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	ACC_INFO_PASSWD_RESET_BUTTON = { xpath: '//*[@id="home-content"]/app-account-info-container/ion-content/div/ion-slides/div/ion-slide[3]/app-account-security/ion-list/ion-item/ion-button' }
 	PROFILE_BUTTON = { css: '.agent-image' }
-	SIGN_OUT = { xpath: '//*[@id="mat-menu-panel-0"]/div/ion-list/ion-item[6]/ion-label' }
+	SIGN_OUT = { xpath: "//ion-label[contains(.,'Log Out')]" }
 	SIGN_IN = { xpath: '/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a' }
 	GMAIL_EMAIL_FIELD = { xpath: '//*[@id="identifierId"]' }
 	GMAIL_OPEN_EMAIL = { xpath: '//*[@id=":1"]/div/div' }
@@ -403,8 +403,10 @@ class ElementWarehouse
 	REMOVE_BOT = { xpath: '' }
 	BOT_TEXT = { xpath: '//*[@id="mat-tab-label-0-2"][contains(., "Bot")]' }
 	CONVERSATION_HISTORY_TAB = { xpath: "//ion-label[contains(.,'Conversation History')]" }
-	FILTER_DROP_DOWN = { xpath: '//ion-button' }
+	FILTER_DROP_DOWN = { xpath: "//ion-item[contains(.,'Filter')]" }
 	CONVERSATION_TOPIC_POP_UP = { xpath: "//ion-item[contains(.,'Conversation Topic')]" }
+	FILTER_CONVO_TOPIC_TAG = { xpath: "//ion-label[contains(.,'Blomzit')]" }
+	UNFILTER_CONVO_TOPIC_TAG = { xpath: "//ion-label[contains(.,'Blomzit')]" }
 	CONVO_SEARCH_FIELD = { id: 'mat-input-1' }
 	TEN_SHOULD_NOT_SEE = { xpath: '//*[contains(., "10290")]' }
 	COMPANY_UNIT_NAME = { xpath: '//*[@id="companyUnitCreateComponent"]/div/app-company-unit-create/ion-content/ion-item-group/form/ion-item/ion-input/input' }

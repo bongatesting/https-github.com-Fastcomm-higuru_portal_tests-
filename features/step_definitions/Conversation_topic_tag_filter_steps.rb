@@ -22,4 +22,10 @@ Then('I filter the conversation topic tags') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_TOPIC_POP_UP).click
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::FILTER_CONVO_TOPIC_TAG).click
+	sleep 5
+	$web_driver.find_element(ElementWarehouse::UNFILTER_CONVO_TOPIC_TAG).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_TOPIC_POP_UP).click
+	sleep 3
 end
