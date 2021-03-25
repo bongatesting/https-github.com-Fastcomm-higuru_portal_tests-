@@ -11,9 +11,15 @@ Feature: Higuru Sign In, Registration and Walk Through
   Scenario: I want to register On the Portal
 	Given I am viewing the log in page
 	When I enter an Invalid Email
-	Then I Sign up with a valid Email
-	Then I sign into gmail and fetch the valid OTP
-	Then I create my profile
+	Then I select terms of use and privacy policy
+	Then I enter a password less than six characters
+	Then I enter a password longer than 6 characters and select agreement to terms
+
+
+  Scenario: I want to test the sign up Verification link
+	Given I am entering an incorrect OTP and Resending the OTP
+	Then I enter the correct OTP
+	#Then I create my profile
 
   Scenario: I want to login and take a walk through the Portal
 	Given I am already signed in
