@@ -19,18 +19,61 @@ When('I enter an Invalid Email') do
 	end
 end
 
-Then('I Sign up with a valid Email') do
-	$web_driver.find_element(ElementWarehouse::BUSINESS_EMAIL_FIELD).clear
-	$web_driver.find_element(ElementWarehouse::BUSINESS_EMAIL_FIELD).send_keys(TestUser.test_user_2_email)
+Then('I select terms of use and privacy policy') do
+	$web_driver.find_element(ElementWarehouse::HI_GURU_TERMS_OF_USE).click
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::BUSINESS_PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
-	wait_for_sign_up_checkbox
-	$web_driver.find_element(ElementWarehouse::SIGN_UP_CHECKBOX).click
-	sleep 4
-	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_1).click
+	$web_driver.navigate.back
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::HI_GURU_PRIVACY_POLICY).click
+	sleep 3
+	$web_driver.navigate.back
 end
 
-Then('I sign into gmail and fetch the valid OTP') do
+Then('I enter a password less than six characters') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_2_email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys('short')
+	if $web_driver.find_elements(ElementWarehouse::INVALID_EMAIL_TEXT).first
+		$stdout.puts 'Incorrect test Passed'.green
+	else
+		$stdout.puts 'Incorrect test Failed'.red
+	end
+end
+
+Then('I enter a password longer than 6 characters and select agreement to terms') do
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).clear
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SIGN_UP_CHECKBOX).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_1).click
+	sleep 3
+end
+
+Given('I am entering an incorrect OTP and Resending the OTP') do
+	$web_driver.find_element(ElementWarehouse::SIGN_UP_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BUSINESS_EMAIL_FIELD).send_keys(TestUser.test_user_2_email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BUSINESS_PASSWORD_FIELD).send_keys(TestUser.email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SIGN_UP_CHECKBOX).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_1).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(TestUser.incorrect_OTP)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::ACC_VER_NEXT_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::INPUT_4_FIELD).clear
+	$web_driver.find_element(ElementWarehouse::INPUT_5_FIELD).clear
+	$web_driver.find_element(ElementWarehouse::INPUT_6_FIELD).clear
+	$web_driver.find_element(ElementWarehouse::INPUT_7_FIELD).clear
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESEND_OTP).click
+end
+
+Then('I enter the correct OTP') do
 	open_new_tab
 	$web_driver.get('https://google.co.za/')
 	sleep 3
@@ -41,7 +84,7 @@ Then('I sign into gmail and fetch the valid OTP') do
 		$web_driver.close
 		$web_driver.switch_to.window( $web_driver.window_handles.last )
 	end
-	sleep 1
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::GMAIL_NEXT_BUTTON).click
@@ -49,6 +92,8 @@ Then('I sign into gmail and fetch the valid OTP') do
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASSWORD_FIELD).send_keys(TestUser.gmail_password)
 	sleep 1
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASS_NEXT_BUTTON).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL).click
 	sleep 4
@@ -60,7 +105,6 @@ Then('I sign into gmail and fetch the valid OTP') do
 	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(CODE)
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::OTP_NEXT_BUTTON).click
-	sleep 3
 end
 
 Then('I create my profile') do

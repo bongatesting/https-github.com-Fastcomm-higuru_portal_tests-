@@ -488,8 +488,16 @@ class ElementWarehouse
 	EMAIL_TEXT = { xpath: "//*[contains(.,'Email')]" }
 	ENTER_PASSWORD_TEXT = { xpath: "//*[contains(.,'Enter your password')]" }
 	INVALID_EMAIL_TEXT = { xpath: "//*[contains(.,'Invalid email')]" }
+	HI_GURU_TERMS_OF_USE = { xpath: '//*[@id="registrationNav"]/app-register/div[2]/ion-card-content/form/ion-item/ion-text/a[1]' }
+	HI_GURU_PRIVACY_POLICY = { xpath: '//*[@id="registrationNav"]/app-register/div[2]/ion-card-content/form/ion-item/ion-text/a[2]' }
 	LOGIN_FROM_CREATE = { xpath: "//a[contains(.,'Login')]" }
 	OTP_FIELD = { xpath: '//*[@id="digit1"]/input' }
+	ACC_VER_NEXT_BUTTON = { xpath: '//*[@id="validateOtp"]' }
+	INPUT_4_FIELD = { xpath: '//*[@id="digit1"]/input' }
+	INPUT_5_FIELD = { xpath: '//*[@id="digit2"]/input' }
+	INPUT_6_FIELD = { xpath: '//*[@id="digit3"]/input' }
+	INPUT_7_FIELD = { xpath: '//*[@id="digit4"]/input' }
+	RESEND_OTP = { xpath: '//*[@id="resendOTP"]' }
 	OTP_NEXT_BUTTON = { xpath: '//*[@id="validateOtp"]' }
 	GMAIL_NEXT_BUTTON = { xpath: '//*[@id="identifierNext"]/div/button' }
 	GMAIL_PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/div/button/div[2]' }
@@ -527,7 +535,7 @@ class ElementWarehouse
 	BUSINESS_EMAIL_FIELD = { xpath: "(//ion-input[@id='email']/input)[2]" }
 	BUSINESS_PASSWORD_FIELD = { xpath: "(//ion-input[@id='password']/input)[2]" }
 	SIGN_UP_CHECKBOX= { xpath: '//*[@id="acceptTerms"]'}
-	REGISTER_NEXT_BUTTON_1 = { xpath: '//*[@id="register"]'}
+	REGISTER_NEXT_BUTTON_1 = { xpath: "//ion-button[contains(.,'Next')]"}
 	REGISTER_NEXT_BUTTON_3 = { xpath: '//*[@id="goToOrganisationDetail"]'}
 	ORGANISATION_SIZE_FIELD = { xpath: "//ion-nav[@id='registrationNav']/app-organisation-detail/div[2]/ion-card-content/form/ion-item-group/ion-item/ion-label/ion-button/ion-label"}
 	ORGANISATION_SIZE_OPTION = { xpath:"//ion-label[contains(.,'1 - 9 People')]"}
