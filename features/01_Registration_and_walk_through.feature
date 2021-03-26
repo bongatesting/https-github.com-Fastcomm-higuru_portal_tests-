@@ -2,12 +2,12 @@ Feature: Higuru Sign In, Registration and Walk Through
 
   @Feature: Sign In Feature
   @Urgency: High
-
+  @Scenario:Signing_in_Portal
   Scenario: As a User I want to Sign in On the Portal
 	Given I am viewing the log in page
 	When I Sign in with Invalid Credentials
 	Then I Sign in with my own valid Credentials
-
+  @Scenario:Registering_on_the_Portal
   Scenario: I want to register On the Portal
 	Given I am viewing the log in page
 	When I enter an Invalid Email
@@ -15,12 +15,13 @@ Feature: Higuru Sign In, Registration and Walk Through
 	Then I enter a password less than six characters
 	Then I enter a password longer than 6 characters and select agreement to terms
 
-
+   @Scenario:Signing_up_on_Portal
   Scenario: I want to test the sign up Verification link
 	Given I am entering an incorrect OTP and Resending the OTP
 	Then I enter the correct OTP
 	#Then I create my profile
 
+  @Scenario:Login_and_walk_through
   Scenario: I want to login and take a walk through the Portal
 	Given I am already signed in
 	Then I click on Conversation Portal

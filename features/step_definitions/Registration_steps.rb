@@ -61,7 +61,7 @@ Given('I am entering an incorrect OTP and Resending the OTP') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::REGISTER_NEXT_BUTTON_1).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(TestUser.incorrect_OTP)
+	$web_driver.find_element(ElementWarehouse::OTP_FIELD).send_keys(TestUser.incorrect_otp)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ACC_VER_NEXT_BUTTON).click
 	sleep 3
