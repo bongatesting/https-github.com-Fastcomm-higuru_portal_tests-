@@ -34,3 +34,66 @@ Then('I log in with the updated password') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
+
+Then('I switch on and off all the toggles') do
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::OFFLINE_EMAIL_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 2
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::OFFLINE_EMAIL_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::CANNED_REPLIES_TOGGLE))
+	$web_driver.find_element(ElementWarehouse::CANNED_REPLIES_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CANNED_REPLIES_TOGGLE).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::EMAIL_TRANSCRIPTS_TOGGLE))
+	$web_driver.find_element(ElementWarehouse::EMAIL_TRANSCRIPTS_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::EMAIL_TRANSCRIPTS_TOGGLE).click
+	sleep 3
+end
