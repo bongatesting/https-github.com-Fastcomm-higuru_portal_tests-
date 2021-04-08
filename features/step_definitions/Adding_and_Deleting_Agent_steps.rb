@@ -35,6 +35,7 @@ Then('I Add the new Agent') do
 	$web_driver.get 'https://gmail.com/'
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::GMAIL_SIGN_IN_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_NEXT_BUTTON).click

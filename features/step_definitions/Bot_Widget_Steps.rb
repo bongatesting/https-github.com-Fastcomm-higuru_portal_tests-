@@ -4,10 +4,7 @@ wait = Selenium::WebDriver::Wait.new(timeout: 20)
 
 Then('I click on the hi.guru WIDGET') do
 	$web_driver.find_element(ElementWarehouse::HIGURU_WIDGET).click
-	$web_driver.page_source.include? 'Sign Up'
-	$web_driver.page_source.include? 'Product Info'
-	$web_driver.page_source.include? 'Support'
-	$web_driver.page_source.include? 'End Chat'
+sleep 3
 
 end
 
@@ -130,13 +127,25 @@ Then('I click on the WIDGET and send messages instead of clicking') do
 end
 
 Then('I get feedback from the Agent And Complete my chat with the bot') do
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_NAME_FIELD).send_keys('Bonga Test')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
+	sleep 3
+	$web_driver.page_source.include? 'Sign Up'
+	$web_driver.page_source.include? 'Product Info'
+	$web_driver.page_source.include? 'Support'
+	$web_driver.page_source.include? 'End Chat'
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRODUCT_INFO_TEXT).click
+	sleep 3
 	$web_driver.page_source.include? 'Use cases'
-	sleep 2
 	$web_driver.page_source.include? 'Pricing & plans'
-	sleep 2
 	$web_driver.page_source.include? 'Whatsapp Business'
-	sleep 2
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::WHAT_IS_HIGURU).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::WHAT_IS_HIGURU_CONTINUE).click

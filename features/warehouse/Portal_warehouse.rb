@@ -4,7 +4,7 @@ class ElementWarehouse
 
 	#########################-----------HiGuru Elements-----------#########################
 
-	HIGURU_WIDGET = { xpath: '//*[@id="higuru-webchat"]/div/div/div' }
+	HIGURU_WIDGET = { id: 'Oval-19' }
 	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
 	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
 	LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
@@ -199,7 +199,11 @@ class ElementWarehouse
 	ROUTING_TAG_UPGRADE = { xpath: '//*[@id="upgrade-btn-ga-2"]/div' }
 	DISMISS_PLAN_SELECTION = { xpath: '//app-billing-plans/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	CONVERSATION_TOPIC_UPGRADE = { xpath: '//*[@id="upgrade-btn-ga-2"]/div' }
-	SETTINGS = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
+	OFFLINE_EMAIL_TOGGLE = { xpath: '//ion-toggle' }
+	USER_INACTIVITY_TOGGLE = { xpath: '//ion-item[4]/ion-toggle' }
+	CANNED_REPLIES_TOGGLE = { xpath: '//ion-item[6]/ion-toggle' }
+	EMAIL_TRANSCRIPTS_TOGGLE = { xpath: '//ion-item[7]/ion-toggle' }
+	SETTINGS_TAB = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	CONVERSATION_RESOLVE_SLIDER = { xpath: "//ion-label[contains(.,'Conversation Expiry')]" }
 	CONVERSATION_RESOLVE_SLIDER_TIME = { xpath: "//ion-range" }
 	SELECT_INBOUND_CHAT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-content/app-room-item/ion-item/ion-label/ion-text' }
@@ -355,7 +359,7 @@ class ElementWarehouse
 	BOTS_TAB = { xpath: "//ion-label[contains(.,'Bots')]" }
 	ADD_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	BOT_NAME_FIELD = { xpath: '//*[@id="name"]/input' }
-	CONCURRENT_CONVERSATION_LIMIT_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[5]/ion-toggle' }
+	CONCURRENT_CONVERSATION_LIMIT_TOGGLE = { xpath: '//ion-item[5]/ion-toggle' }
 	CONCURRENT_CONVERSATION_LIMIT_FIELD = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/div/ion-item/ion-input/input' }
 	USER_INACTIVITY_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[4]/ion-toggle' }
 	USER_INACTIVITY_INPUT = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[1]/ion-item-group/div/ion-item/ion-input/input' }

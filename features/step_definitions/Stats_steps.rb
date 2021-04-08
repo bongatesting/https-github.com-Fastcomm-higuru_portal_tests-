@@ -79,8 +79,6 @@ Then('Navigate to the Agent Activity and View the Available stats') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LAST_WEEK_STATS_2).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::RESOLVED_DROP_DOWN).click
-	sleep 3
 	$web_driver.find_element(ElementWarehouse::HIGHEST_RESOLVED_LAST_WEEK).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
