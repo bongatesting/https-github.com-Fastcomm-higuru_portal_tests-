@@ -70,6 +70,7 @@ Then('I switch on and off all the toggles') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_TOGGLE).click
 	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE))
 	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click

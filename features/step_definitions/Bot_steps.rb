@@ -61,7 +61,7 @@ Then('I Activate the Bot') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_BUTTON).click
 	sleep 5

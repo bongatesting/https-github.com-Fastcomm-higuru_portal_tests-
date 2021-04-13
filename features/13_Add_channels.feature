@@ -6,7 +6,7 @@ Feature: Add Channels Feature
 
   @Scenario:Adding_channels
   Scenario: I want to Add channels
-	Given I am logged in
+	Given I have no channels added
 	Then I add WebMessage
 	Then I add Twitter
 	Then I add Facebook

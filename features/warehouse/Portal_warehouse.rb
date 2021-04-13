@@ -50,7 +50,7 @@ class ElementWarehouse
 	WIDGET_BUTTON_PREVIEW_TOGGLE = { xpath: "//ion-item-group[2]/ion-toggle" }
 	WIDGET_PREVIEW_TEXT_FIELD = { xpath: "//ion-item-group[2]/ion-item/ion-input/input" }
 	WIDGET_TITLE_TEXT_FIELD = { css: '.sc-ion-input-ios' }
-	WEB_WHITELIST_MANAGE_TOGGLE = { css: '.ion-untouched:nth-child(1)' }
+	WEB_WHITELIST_MANAGE_TOGGLE = { xpath: '//form/ion-toggle' }
 	WEB_WHITELIST_MANAGE_BUTTON = { xpath: "//ion-button[contains(.,'Manage')]" }
 	WHITELIST_DOMAIN_CANCEL_BUTTON = { xpath: "//ion-button[contains(.,'Cancel')]" }
 	REMOVE_DOMAIN = { xpath: '//ion-chip/ion-icon' }
@@ -75,7 +75,7 @@ class ElementWarehouse
 	CHECK_FACEBOOK_AVATAR = { xpath: '//*[@id="channelsNav"]/app-channels-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-channel-item/ion-item/ion-avatar/img' }
 	CONFIRM_ADD_FACEBOOK = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	FACEBOOK_SELECT_PAGE = { xpath: '//*[@id="channelsNav"]/app-facebook-page-select/ion-content/ion-list/app-facebook-page-item[1]/ion-item/ion-button' }
-	CONFIRM_ADD_TWITTER = { xpath: '//*[@id="platformPermissionModal"]/div[2]/app-platform-permissions/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
+	CONFIRM_ADD_TWITTER = { xpath: '//ion-button[2]' }
 	COMPANY_UNITS = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/app-account-company-unit/div/button/img' }
 	I_AGREE_BUTTON = { css: '.radio-container > .ng-dirty' }
 	NEXT_BUTTON_1 = {  xpath: "/html/body/app-root/app-account-container/div/div[2]/app-register-form/div/div/div[2]/form/div/button" }
@@ -332,7 +332,7 @@ class ElementWarehouse
 	BILLING_PAYMENT_METHOD = { xpath: "//ion-segment-button[contains(.,'Payment Method')]" }
 	GO_ENTERPRISE_BUTTON = { xpath: "//ion-button[contains(.,'Go Enterprise')]" }
 	BILLING_INFO_BUTTON = { xpath: "//ion-segment-button[contains(.,'Billing Info')]" }
-	AGENT_IMAGE_CONVERSATION_VIEW = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/app-account-user/div/button/img[1]' }
+	AGENT_IMAGE_CONVERSATION_VIEW = { xpath: '//ion-avatar[4]/img' }
 	AGENT_IMAGE = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img[1]' }
 	I_FORGOT_MY_PASSWORD = { xpath: '//a[contains(text(),"I forgot my Password")]' }
 	SUPPORT_AND_FEEDBACK = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-account-user/ion-list/ion-item[5]' }
@@ -360,10 +360,8 @@ class ElementWarehouse
 	ADD_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	BOT_NAME_FIELD = { xpath: '//*[@id="name"]/input' }
 	CONCURRENT_CONVERSATION_LIMIT_TOGGLE = { xpath: '//ion-item[5]/ion-toggle' }
-	CONCURRENT_CONVERSATION_LIMIT_FIELD = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/div/ion-item/ion-input/input' }
-	USER_INACTIVITY_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[4]/ion-toggle' }
-	USER_INACTIVITY_INPUT = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[1]/ion-item-group/div/ion-item/ion-input/input' }
-	USER_INACTIVITY_INPUT_SAVE = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[1]/ion-item-group/ion-buttons/ion-button[2]' }
+	USER_INACTIVITY_INPUT = { xpath: '//div/ion-item/ion-input/input' }
+	USER_INACTIVITY_INPUT_SAVE = { xpath: "//ion-button[contains(.,'Save')]" }
 	BOT_OVERVIEW_FIELD = { xpath: '//*[@id="description"]/div/textarea' }
 	CONVERSATION_LIMIT_FIELD = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/div/ion-item/ion-input/input' }
 	CONVERSATION_LIMIT_SAVE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/ion-buttons/ion-button[2]' }
@@ -716,8 +714,7 @@ class ElementWarehouse
 	CHATTING_TO_US_RESPONSE_1 = { xpath: "//*[contains(.,'We love connecting. A consultant will be with you shortly to discuss anything further you may be interested in')]" }
 	AGENT_NOT_AVAILABLE = { xpath: "//*[contains(.,'We love connecting. Our consultants are currently unavailable.')]" }
 	AGENT_NOT_AVAILABLE_1 = { xpath: "//*[contains(.,'Please leave us your email and they will get back to you.')]" }
-	AGENT_UNAVAILABLE_BUTTON = { xpath: '//*[@id="cdk-overlay-0"]/div/div/ion-list/ion-item[2]/ion-toggle' }
-	AGENT_AVAILABLE_BUTTON = { xpath: '//*[@id="cdk-overlay-0"]/div/div/ion-list/ion-item[2]/ion-toggle' }
+	AVAILABILITY_TOGGLE = { xpath: '//ion-toggle' }
 	AGENT_RESPONSE = { xpath: "//*[contains(.,'Hi, My name Is BOT, How may I assist you?')]" }
 	AGENT_RESOLVE_TEXT = { xpath: "//*[contains(.,'Conversation resolved by agent')]" }
 	AGENT_RESOLVE_TEXT_2 = { xpath: "//*[contains(.,'Sure thing. Consider it Resolved...')]" }
