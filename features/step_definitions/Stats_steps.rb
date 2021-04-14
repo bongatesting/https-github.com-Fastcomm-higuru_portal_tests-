@@ -78,27 +78,21 @@ Then('Navigate to the Agent Activity and View the Available stats') do
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LAST_WEEK_STATS_2).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::HIGHEST_RESOLVED_LAST_WEEK).click
 	sleep 5
+	$web_driver.find_element(ElementWarehouse::STATS_RESOLVED_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::STATS_HIGHEST_RESOLVED).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LAST_MONTH_STATS_2).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::RESOLVED_DROP_DOWN).click
+	$web_driver.find_element(ElementWarehouse::STATS_RESOLVED_DROP_DOWN).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::HIGHEST_RESOLVED_LAST_MONTH).click
+	$web_driver.find_element(ElementWarehouse::STATS_HIGHEST_RESOLVED).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LAST_YEAR_STATS_2).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::RESOLVED_DROP_DOWN).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::HIGHEST_RESOLVED_LAST_YEAR).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::TODAY_STATS_2).click
-	sleep 3
 end

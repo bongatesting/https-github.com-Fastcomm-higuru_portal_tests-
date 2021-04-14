@@ -244,12 +244,11 @@ class ElementWarehouse
 	LAST_MONTH_STATS_2 = { xpath: '//*[@id="ion-overlay-12"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[3]/ion-label' }
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
 	TODAY_STATS_2 = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	HIGHEST_RESOLVED_LAST_WEEK = { xpath: '//*[@id="ion-overlay-11"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	HIGHEST_RESOLVED_LAST_MONTH = { xpath: '//*[@id="ion-overlay-13"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	HIGHEST_RESOLVED_LAST_YEAR = { xpath: '//*[@id="ion-overlay-15"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
+	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
 	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
 	AGENT_ACTIVITY_TAB = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[1]/ion-item[1]/ion-button' }
+	STATS_RESOLVED_DROP_DOWN = { xpath: '//ion-col[2]/ion-item/ion-button' }
 	TODAY_STATS = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	LAST_WEEK_STATS = { xpath: '//*[@id="ion-overlay-2"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
 	LAST_MONTH_STATS = { xpath: '//*[@id="ion-overlay-3"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[3]/ion-label' }
