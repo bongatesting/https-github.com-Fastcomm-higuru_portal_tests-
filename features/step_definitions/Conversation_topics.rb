@@ -17,7 +17,7 @@ end
 Then('I Add Conversation Topics Tags') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::MANAGE_CONVERSATION_TOPICS).click
 	sleep 3

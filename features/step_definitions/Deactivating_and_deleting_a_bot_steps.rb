@@ -15,7 +15,7 @@ Given('The bot is active') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 5
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::QA_TEST_BOT).click
 	sleep 5

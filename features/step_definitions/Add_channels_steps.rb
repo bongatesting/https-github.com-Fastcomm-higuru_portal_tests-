@@ -2,6 +2,15 @@
 
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
+Given('I have no channels added') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+end
+
 Then('I add WebMessage') do
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
 	$web_driver.find_element(ElementWarehouse::ACTIVE_CHANNELS_TAB)
@@ -126,10 +135,13 @@ Then('I add Twitter') do
 	$web_driver.find_element(ElementWarehouse::TWITTER_PASSWORD).send_keys(TestUser.twitter_password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AUTHORIZE_APP_BUTTON).click
+	sleep 5
 	$web_driver.page_source.include? 'Enable Direct Conversations'
 	$web_driver.page_source.include? 'When this is enabled you will receive direct messages to this account as hi.guru Conversations.'
 	$web_driver.page_source.include? 'Enable Public Conversations'
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_ADD_TWITTER).click
+	sleep 5
 	$web_driver.page_source.include? 'KhivaKaXhoseni'
 	$web_driver.page_source.include? 'Linked on'
 	$web_driver.find_element(ElementWarehouse::TWITTER_DROP_DOWN).click

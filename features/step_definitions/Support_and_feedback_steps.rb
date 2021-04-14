@@ -8,19 +8,28 @@ Given('I have some Feedback') do
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 4
 end
 
 Then('I send Feedback') do
 	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
-	sleep 5
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::SUPPORT_AND_FEEDBACK).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::SUPPORT_FEEDBACK_HIGURU_WEB_ICON).click
+	$web_driver.find_element(ElementWarehouse::HIGURU_WIDGET).click
 	sleep 4
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_NAME_FIELD).send_keys('Bonga Test')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::SUPPORT_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(TestUser.email)
@@ -30,6 +39,8 @@ Then('I send Feedback') do
 	$web_driver.find_element(ElementWarehouse::TECHNICAL_ISSUE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys('Thank You')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
 end
 Then('I check whether the Feedback has been received') do
 	open_new_tab
@@ -44,8 +55,12 @@ Then('I check whether the Feedback has been received') do
 	$web_driver.find_element(ElementWarehouse::HIGURU_COMPANY_UNIT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::HIGURU_COMPANY_UNIT_SELECTION).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::TAG_CONVERSATION))
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::TAG_CONVERSATION).click
 	sleep 3
@@ -58,4 +73,5 @@ Then('I check whether the Feedback has been received') do
 	$web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+	sleep 3
 end

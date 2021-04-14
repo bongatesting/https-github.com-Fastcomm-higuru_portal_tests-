@@ -1,5 +1,4 @@
 Feature: Bot Feature
-
   @TEST:Bots
   @SCENARIO:Bot_test
   @URGENCY:High
@@ -14,4 +13,5 @@ Feature: Bot Feature
   Scenario: I want to deactivate and delete a Bot
 	Given The bot is active
 	Then I deactivate the Bot
+
 	Then I delete the Bot
