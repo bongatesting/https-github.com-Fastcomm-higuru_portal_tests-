@@ -94,5 +94,5 @@ Then('Navigate to the Agent Activity and View the Available stats') do
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LAST_YEAR_STATS_2).click
-	sleep 5
+	sleep 6
 end
