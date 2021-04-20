@@ -198,9 +198,9 @@ Then('I click on Conversation Portal')do
 		sleep 4
 	$web_driver.find_element(ElementWarehouse::INBOUND_TITLE_TEXT)
 	$web_driver.find_element(ElementWarehouse::INBOUND_TEXT_BODY)
-	$web_driver.find_element(ElementWarehouse::INBOUND_GOT_IT_BUTTON).click
+	#$web_driver.find_element(ElementWarehouse::INBOUND_GOT_IT_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::OUTBOUND_TITLE_TEXT)
 	$web_driver.find_element(ElementWarehouse::OUTBOUND_TEXT_BODY)
-	$web_driver.find_element(ElementWarehouse::OUTBOUND_GOT_IT_BUTTON).click
+	#$web_driver.find_element(ElementWarehouse::OUTBOUND_GOT_IT_BUTTON).click
 end

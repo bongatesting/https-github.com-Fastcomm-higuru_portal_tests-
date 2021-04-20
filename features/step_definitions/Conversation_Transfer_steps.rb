@@ -57,7 +57,7 @@ end
 Then('Create Routing Tags') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::MANAGE_ROUTING_SETTINGS).click
 	sleep 2
@@ -194,12 +194,13 @@ Then('I Delete Team Two and the Second Agent') do
 	$web_driver.find_element(ElementWarehouse::AGENT_DROP_DOWN_MENU).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DELETE_USER_BUTTON).click
+	sleep 3
 end
 
 Then('I Remove Routing Tags') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::MANAGE_ROUTING_SETTINGS).click
 	sleep 3

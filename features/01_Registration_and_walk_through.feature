@@ -15,10 +15,10 @@ Feature: Higuru Sign In, Registration and Walk Through
 	Then I enter a password less than six characters
 	Then I enter a password longer than 6 characters and select agreement to terms
 
-   @Scenario:Signing_up_on_Portal
-  Scenario: I want to test the sign up Verification link
-	Given I am entering an incorrect OTP and Resending the OTP
-	Then I enter the correct OTP
+   #@Scenario:Signing_up_on_Portal
+  #Scenario: I want to test the sign up Verification link
+	#Given I am entering an incorrect OTP and Resending the OTP
+	#Then I enter the correct OTP
 	#Then I create my profile
 
   @Scenario:Login_and_walk_through

@@ -50,4 +50,4 @@ Feature: Login_logout Feature
     Scenario: I want to login as an Owner and as an Agent with one email
 	Given I am using one email
 	Then I login as the Owner
-	Then I login ad an Agent
+	Then I login as an Agent
