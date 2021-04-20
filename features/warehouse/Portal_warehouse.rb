@@ -143,7 +143,7 @@ class ElementWarehouse
 	OUTLOOK_ICON = { xpath: '//*[@id="ShellMail_link"]/div' }
 	GMAIL_PASSWORD_FIELD = { xpath: '//input[@name="password"]' }
 	NEW_LOGIN_EMAIL_FIELD = { xpath: '' }
-	MANAGE_ROUTING_SETTINGS = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[1]/ion-button' }
+	MANAGE_ROUTING_SETTINGS = { xpath: "//ion-button[contains(.,'Manage')]" }
 	ADD_TAG_1 = { xpath: '//*[@id="companyUnitSupportTags"]/div/app-company-unit-support-tag/ion-content/ion-item-group/ion-input/input' }
 	ROUTING_TAGS_DONE_BUTTON = { xpath: "//ion-button[contains(.,'Done')]" }
 	ADD_TAG_2 = { xpath: '//*[@id="companyUnitSupportTags"]/div/app-company-unit-support-tag/ion-content/ion-item-group/ion-input/input' }
@@ -212,12 +212,12 @@ class ElementWarehouse
 	CLOSE_NOTIFICATION_CONVO_PAGE = { xpath: '/html/body/app-root/app-agent-interface-page/div[1]/app-notification-bar/div/div[3]' }
 	CONVERSATION_COUNT_ONE = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[2]/div/span' }
 	CONVERSATIONS_TAB = { xpath: "//ion-item[contains(.,'Conversations')]" }
-	INBOUND_TITLE_TEXT = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[1]/ion-label' }
-	INBOUND_TEXT_BODY = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[2]' }
+	INBOUND_TITLE_TEXT = { xpath: "//ion-segment-button[contains(.,'Inbound')]" }
+	INBOUND_TEXT_BODY = { xpath: "//ion-label[contains(.,'No New Conversations')]" }
 	INBOUND_GOT_IT_BUTTON = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[3]/ion-button' }
 	OUTBOUND_GOT_IT_BUTTON = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[3]/ion-button' }
-	OUTBOUND_TITLE_TEXT = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/div/ion-toolbar/ion-segment/ion-segment-button[2]' }
-	OUTBOUND_TEXT_BODY = { xpath: '//*[@id="walkModal"]/div/app-walkthrough-agent-interface/ion-content/ion-item-group/ion-item[2]' }
+	OUTBOUND_TITLE_TEXT = { xpath: "//ion-segment-button[contains(.,'Outbound')]" }
+	OUTBOUND_TEXT_BODY = { xpath: "//ion-label[contains(.,'No Outstanding Responses')]" }
 	CONVO_NAVIGATION_BUTTON = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[2]/img' }
 	INBOUND_TAB = { xpath: "//span[contains(.,'Inbound')]" }
 	OUTBOUND_TAB = { xpath: "//span[contains(.,'Outbound')]" }
@@ -344,7 +344,7 @@ class ElementWarehouse
 	MAIN_COMPANY_UNIT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
 	COMPANY_UNIT_INFO = { xpath: '//*[@id="home-content"]/app-company-units-container/ion-content/ion-list/app-company-unit/ion-card/ion-avatar/img' }
 	COMPANY_UNIT_CHANGE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[1]/app-company-unit-details/ion-content/ion-list/form/ion-item-group[1]/ion-item-group/ion-item/ion-buttons/ion-button' }
-	COMPANY_UNIT_INFO_NAME_FIELD = { xpath: '//*[@id="ion-input-2-lbl"]/ion-input/input' }
+	COMPANY_UNIT_INFO_NAME_FIELD = { xpath: '//ion-input/input' }
 	CREATE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	COMPANY_UNIT_INFO_SAVE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[1]/app-company-unit-details/ion-content/ion-list/form/ion-item-group[1]/ion-item-group/ion-item/ion-buttons/ion-button[2]' }
 	COMPANY_UNIT_IMAGE = {xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
@@ -362,8 +362,8 @@ class ElementWarehouse
 	USER_INACTIVITY_INPUT = { xpath: '//div/ion-item/ion-input/input' }
 	USER_INACTIVITY_INPUT_SAVE = { xpath: "//ion-button[contains(.,'Save')]" }
 	BOT_OVERVIEW_FIELD = { xpath: '//*[@id="description"]/div/textarea' }
-	CONVERSATION_LIMIT_FIELD = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/div/ion-item/ion-input/input' }
-	CONVERSATION_LIMIT_SAVE_BUTTON = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/form[2]/ion-item-group/ion-buttons/ion-button[2]' }
+	CONVERSATION_LIMIT_FIELD = { xpath: '//ion-item-group[2]/div/ion-item/ion-input/input' }
+	CONVERSATION_LIMIT_SAVE_BUTTON = { xpath: "//ion-button[contains(.,'Save')]" }
 	BOT_PLATFORM = { xpath: '//*[@id="botIntegrationType"]/input' }
 	HIGURU_BOT = { xpath: "//ion-label[contains(.,'hi.guru')]" }
 	REQUEST_BUTTON = { xpath: '//*[@id="createBotModal"]/div/app-bot-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
@@ -386,14 +386,14 @@ class ElementWarehouse
 	WELCOME_ASSISTANT_TOGGLE = { xpath: '//ion-item-group/ion-item/ion-toggle' }
 	WELCOME_ASSISTANT_BUTTON = { xpath: "//ion-text[contains(.,'Already have your own? Use it.')]" }
 	ACTIVATE_TEST_BOT = { xpath: '//ion-item-group/ion-card/ion-avatar/img' }
-	PUBLIC_BOT_TAB = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[4]' }
+	PUBLIC_BOT_TAB = { xpath: '' }
 	REMOVE_QA_TEST_BOT = { xpath: "//ion-label[contains(.,'Remove Bot')]" }
 	SAVE_ASSIGN_CONVERSATION_TOPICS_TAGS = { xpath: "//ion-button[contains(.,'Save')]" }
-	QA_SELECT_BOT_CHAT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/ion-content/ion-split-pane/ion-menu/app-rooms-container/ion-content/ion-slides/div/ion-slide[3]/ion-list/ion-content/app-room-item/ion-item/ion-avatar/img[1]' }
+	QA_SELECT_BOT_CHAT = { xpath: '//ion-slide[3]/ion-list/ion-content/app-room-item/ion-item' }
 	QA_CLAIM_BOT_CHAT_BUTTON = { xpath: '//*[@id="agent-content"]/app-bot-chat-container/app-claim-footer-block/div/ion-button' }
 	SUPPORT_FEEDBACK_HIGURU_WEB_ICON = { xpath: '//*[@id="higuru-webchat"]/div/div/div' }
 	ASSIGN_CONVERSATION_TOPICS_TAGS = { xpath: '//*[@id="assignSupportQueryTopicTags"]/div/app-assign-support-query-topic-tags/ion-content/ion-list/ion-item-group/div/ion-item[2]' }
-	MANAGE_CONVERSATION_TOPICS = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/ion-content/ion-slides/div/ion-slide[2]/app-company-unit-settings/ion-content/ion-list/ion-item[3]/ion-button' }
+	MANAGE_CONVERSATION_TOPICS = { xpath: '//ion-item[3]/ion-button' }
 	REMOVE_TOPIC_TAG_1 = { xpath: "(//ion-icon[@name='close-circle'])[3]" }
 	REMOVE_TOPIC_TAG_2 = { xpath: "(//ion-icon[@name='close-circle'])[2]" }
 	REMOVE_TOPIC_TAG_3 = { xpath: "//ion-icon[@name='close-circle']" }
@@ -599,7 +599,7 @@ class ElementWarehouse
 	BACK_TO_PEOPLE = { xpath: '//*[@id="usersNav"]/app-user-details/app-header/ion-header/ion-toolbar/ion-buttons[1]/ion-nav-link/ion-button//button/span' }
 	PEOPLE_TAB_UPGRADE_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]' }
 	AGENT_PLACEHOLDER = { xpath: "//ion-nav[@id='usersNav']/app-users-container/ion-content/ion-list/app-user-item[2]/ion-nav-link/ion-card/ion-avatar/img"}
-	AGENT_DROP_DOWN_MENU = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-agent-interface-page/app-header-main/ion-header/ion-toolbar/ion-avatar[3]/img[1]' }
+	AGENT_DROP_DOWN_MENU = { xpath: '//ion-button[2]' }
 	AGENT_LOGOUT_BUTTON = { xpath: "//ion-label[contains(.,'Log Out')]" }
   DELETE_USER_BUTTON = { xpath: "//ion-label[contains(.,'Delete User')]" }
   MODAL_DELETE_USER_BUTTON = { xpath: "//button[contains(.,'Delete')]" }

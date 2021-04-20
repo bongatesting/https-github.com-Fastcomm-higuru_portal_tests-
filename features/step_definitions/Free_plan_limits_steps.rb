@@ -15,7 +15,7 @@ end
 Then('I attempt adding the routing tags') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ROUTING_TAG_UPGRADE).click
 end
@@ -23,7 +23,7 @@ end
 Then('I attempt adding conversation topic tags') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::SETTINGS).click
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_TOPIC_UPGRADE).click
 	sleep 3

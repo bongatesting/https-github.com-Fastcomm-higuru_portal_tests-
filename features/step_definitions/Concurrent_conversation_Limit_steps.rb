@@ -23,7 +23,7 @@ Then('I set the Concurrent Conversation Limit and Test it') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_FIELD).click
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_FIELD).click
 	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_LIMIT_FIELD).send_keys('2')
@@ -50,4 +50,5 @@ Then('I set the Concurrent Conversation Limit and Test it') do
 	$web_driver.find_element(ElementWarehouse::QA_SELECT_BOT_CHAT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_CLAIM_BOT_CHAT_BUTTON).click
+	sleep 3
 end

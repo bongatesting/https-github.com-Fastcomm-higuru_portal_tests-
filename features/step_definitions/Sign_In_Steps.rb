@@ -99,8 +99,8 @@ Then('I reset the password') do
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASSWORD_FIELD).send_keys(TestUser.gmail_password)
 	sleep 1
 	$web_driver.find_element(ElementWarehouse::GMAIL_PASS_NEXT_BUTTON).click
-	sleep 2
-	$web_driver.find_element(ElementWarehouse::RECEIVED_MAIL_PASS_RESET).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::GMAIL_OPEN_EMAIL).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GMAIL_RESET_PASSWD_LINK).click
 	sleep 4

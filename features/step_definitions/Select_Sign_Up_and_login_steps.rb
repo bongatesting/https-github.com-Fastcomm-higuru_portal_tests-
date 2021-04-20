@@ -7,9 +7,9 @@ Given('I have already signed up') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ALREADY_HAS_ACCOUNT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.free_plan_email)
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.gmail_password)
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 end
@@ -17,7 +17,7 @@ end
 Then('I complete the test') do
 	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LOGOUT_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::OWNER_LOGOUT_BUTTON).click
 end
 
 Given('I have forgotten my Password') do
@@ -95,9 +95,11 @@ Then('I log in and log off') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LOGOUT_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::OWNER_DROP_DOWN_MENU).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::OWNER_LOGOUT_BUTTON).click
 end
 
 Then('select the company account and the company unit') do
@@ -147,8 +149,6 @@ Then('I login and Log out') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_DROP_DOWN_MENU).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LOGOUT_BUTTON).click
-	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_LOGOUT_BUTTON).click
 	sleep 3
 end
@@ -162,22 +162,18 @@ end
 Then('I login as the Owner') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
-	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::OWNER_LOGOUT_BUTTON).click
 	sleep 3
 end
 
-Then('I login ad an Agent') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+Then('I login as an Agent') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_cell)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
-	sleep 2
-	$web_driver.find_element(ElementWarehouse::LOGIN_SELECT_AGENT_ACCOUNT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_DROP_DOWN_MENU).click
 	sleep 3

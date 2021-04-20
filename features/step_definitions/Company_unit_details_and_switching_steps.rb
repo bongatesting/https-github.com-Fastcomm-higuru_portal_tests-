@@ -4,8 +4,12 @@ wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Given('I have upgraded my Account') do
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 5
 end
 
@@ -17,7 +21,6 @@ Then('I edit the Company Unit details') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_CHANGE_BUTTON).click
 	sleep 3
 	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
-	sleep 4
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_INFO_NAME_FIELD).send_keys('Nqadu Updated')
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_INFO_SAVE_BUTTON).click
