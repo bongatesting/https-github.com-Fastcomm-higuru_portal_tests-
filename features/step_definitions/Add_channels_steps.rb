@@ -13,6 +13,7 @@ end
 
 Then('I add WebMessage') do
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ACTIVE_CHANNELS_TAB)
 	$web_driver.page_source.include? ' No channels have been added yet. Once added and activated they will show here.'
 	$web_driver.find_element(ElementWarehouse::EMPTY_CHANNELS_AVATAR)
@@ -204,6 +205,6 @@ Then('I add Facebook') do
 	$web_driver.page_source.include? 'Cancel'
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_REMOVE_FACEBOOK_CHANNEL).click
-	sleep 3
+	sleep 5
 	$web_driver.page_source.include? ' No channels have been added yet. Once added and activated they will show here.'
 end

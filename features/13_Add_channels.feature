@@ -26,3 +26,8 @@ Feature: Add Channels Feature
   Scenario: I want to position the web widget and Add the Widget Button preview text
 	Given I have the Webmessage channel
 	Then I Position the web widget and add preview text
+
+  @Scenario:Web_Widget_Button_icon_selection
+  Scenario: I want to modify the hi.guru webMessage button appearance
+	Given I have the Webmessage channel
+	Then I modify the WebMessage button appearance

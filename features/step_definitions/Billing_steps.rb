@@ -15,7 +15,7 @@ Then('I go to the billing page and navigate through the tabs') do
 	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::BILLING).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::GO_ENTERPRISE_BUTTON).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::DISMISS_PLAN_SELECTION).click

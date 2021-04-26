@@ -43,16 +43,31 @@ Then('I add a Company Unit') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_NAME).send_keys('Zulu')
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_ROUTING_TAGS_FIELD).send_keys('One')
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_ROUTING_TAGS_FIELD).send_keys(:enter)
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_ROUTING_TAGS_FIELD).send_keys('Two')
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_ROUTING_TAGS_FIELD).send_keys(:enter)
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_ROUTING_TAGS_FIELD).send_keys('Three')
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_ROUTING_TAGS_FIELD).send_keys(:enter)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATE_COMPANY_UNIT_ADD_BUTTON).click
 	sleep 7
 	$web_driver.find_element(ElementWarehouse::MAIN_COMPANY_UNIT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SECONDARY_COMPANY_UNIT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::MANAGE_ROUTING_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::ROUTING_TAGS_DONE_BUTTON).click
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_DROP_DOWN).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DELETE_COMPANY_UNIT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_DELETE_COMPANY_UNIT).click
-	sleep 3
+	sleep 5
 end

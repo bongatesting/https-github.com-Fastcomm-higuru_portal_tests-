@@ -41,6 +41,7 @@ class ElementWarehouse
 	PRE_CHAT_FORM_TOGGLE = { xpath: '//ion-toggle' }
 	WEB_MESSAGE_SECURITY_TAB = { xpath: "//ion-segment-button[contains(.,'Security')]" }
 	WEB_MESSAGE_CUSTOMIZE_TAB = { xpath: "//ion-segment-button[contains(.,'Customise')]" }
+	HIDE_HIGURU_BRANDING = { xpath: '//ion-checkbox' }
 	WEB_WIDGET_COLOR = { xpath: "//div[@id='widgetColour']/span" }
 	WEB_WIDGET_COLOR_PICKER = { xpath: '//div[2]' }
 	WEB_WIDGET_COLOR_OK_BUTTON = { xpath: "//button[contains(.,'Ok')]" }
@@ -174,6 +175,11 @@ class ElementWarehouse
 	UPDATE_BUTTON_2 = { xpath: '//*[@id="assignWithChips"]/div/app-assign-with-chips/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	WEB_MESSAGE_CONVERSATION = { xpath: '' }
 	QA_WEB_WIDGET = { xpath: '//*[@id="higuru-webchat"]/div/div' }
+	QA_WEB_WIDGET_TEXT = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[2]/div/a' }
+	WEBMESSAGE_ICON_1 = { xpath: '//ion-item-group/ion-item/ion-icon' }
+	WEBMESSAGE_ICON_2 = { xpath: '//ion-item-group/ion-item[2]/ion-icon' }
+	WEBMESSAGE_ICON_3 = { xpath: '//ion-item-group/ion-item[3]/ion-icon' }
+	WEBMESSAGE_ICON_4 = { xpath: '//ion-item-group/ion-item[4]/ion-icon' }
 	PRECHAT_FORM_NAME_FIELD = { xpath: '//*[@id="preChatForm"]/label[1]/input' }
 	PRECHAT_FORM_EMAIL_FIELD = { xpath: '//*[@id="preChatForm"]/label[2]/input' }
 	PRECHAT_FORM_MOBILE_FIELD = { xpath: '//*[@id="preChatForm"]/label[3]/input' }
@@ -350,8 +356,8 @@ class ElementWarehouse
 	COMPANY_UNIT_IMAGE = {xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-home-container/ion-content/ion-split-pane/ion-menu/app-main-menu/ion-toolbar/ion-avatar/img' }
 	COMPANY_UNIT_DROP_DOWN = {xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	COMPANY_UNIT_SELECT = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-company-unit-selection-container/ion-grid/ion-row/ion-card/ion-card-content/ion-content/ion-list/app-company-unit-item[1]/ion-item/ion-button' }
-	DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-3"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]' }
-	CONFIRM_DELETE_COMPANY_UNIT = { xpath: '//*[@id="ion-overlay-4"]/div[2]/div[3]/button[2]' }
+	DELETE_COMPANY_UNIT = { xpath: "//ion-label[contains(.,'Delete Company Unit')]" }
+	CONFIRM_DELETE_COMPANY_UNIT = { xpath: "//span[contains(.,'Delete')]" }
 	GO_BUTTON_COMPANY_UNIT_SELECT_ON_LOGIN = { css: 'li:nth-child(1) .higuru-button-bordered' }
 	CONVO_EXPIRY_BAR = { xpath: '//*[@id="mat-tab-content-6-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div/div[3]/div[3]' }
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
@@ -416,6 +422,7 @@ class ElementWarehouse
 	TEN_SHOULD_NOT_SEE = { xpath: '//*[contains(., "10290")]' }
 	COMPANY_UNIT_NAME = { xpath: '//*[@id="companyUnitCreateComponent"]/div/app-company-unit-create/ion-content/ion-item-group/form/ion-item/ion-input/input' }
 	COMPANY_UNIT_ADD_IMAGE = { xpath: '//*[@id="addImage"]' }
+	COMPANY_UNIT_ROUTING_TAGS_FIELD = { xpath: "//ion-modal[@id='companyUnitCreateComponent']/div[2]/app-company-unit-create/ion-content/ion-item-group/form/ion-item-group/ion-item/ion-input/input" }
 	ADD_COMPANY_UNIT_BUTTON = { xpath: '//*[@id="home-content"]/app-company-units-container/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	COMPANY_UNIT_INPUT = { xpath: '//*[@id="mat-input-1"]' }
 	CREATE_COMPANY_UNIT_ADD_BUTTON = { xpath: '//*[@id="companyUnitCreateComponent"]/div[2]/app-company-unit-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
@@ -600,6 +607,7 @@ class ElementWarehouse
 	PEOPLE_TAB_UPGRADE_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]' }
 	AGENT_PLACEHOLDER = { xpath: "//ion-nav[@id='usersNav']/app-users-container/ion-content/ion-list/app-user-item[2]/ion-nav-link/ion-card/ion-avatar/img"}
 	AGENT_DROP_DOWN_MENU = { xpath: '//ion-button[2]' }
+	SAQHWITHI_DROP_DOWN_MENU = { xpath: '//ion-avatar[3]/img' }
 	AGENT_LOGOUT_BUTTON = { xpath: "//ion-label[contains(.,'Log Out')]" }
   DELETE_USER_BUTTON = { xpath: "//ion-label[contains(.,'Delete User')]" }
   MODAL_DELETE_USER_BUTTON = { xpath: "//button[contains(.,'Delete')]" }

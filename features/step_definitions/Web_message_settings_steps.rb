@@ -149,3 +149,80 @@ Then('I Position the web widget and add preview text') do
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
 end
+
+Then('I modify the WebMessage button appearance') do
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_CUSTOMIZE_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::HIDE_HIGURU_BRANDING).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 4
+	open_new_tab
+	$web_driver.get(TestUser.qa_web_widget)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
+	sleep 4
+	if $web_driver.find_elements(ElementWarehouse::QA_WEB_WIDGET_TEXT).first
+		$stdout.puts 'WebMessage settings test Failed'.red
+	else
+		$stdout.puts 'WebMessage settings test Passed'.green
+	end
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.find_element(ElementWarehouse::HIDE_HIGURU_BRANDING).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	$web_driver.navigate.refresh
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
+	sleep 3
+	if $web_driver.find_elements(ElementWarehouse::QA_WEB_WIDGET_TEXT).first
+		$stdout.puts 'WebMessage settings test Passed'.green
+	else
+		$stdout.puts 'WebMessage settings test Failed'.red
+	end
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_TEXT).click
+	$web_driver.close.last
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	scroll_to($web_driver.find_element(ElementWarehouse::WEBMESSAGE_ICON_1))
+	$web_driver.find_element(ElementWarehouse::WEBMESSAGE_ICON_2).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	open_new_tab
+	$web_driver.get(TestUser.qa_web_widget)
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.find_element(ElementWarehouse::WEBMESSAGE_ICON_3).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	reload_page
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.find_element(ElementWarehouse::WEBMESSAGE_ICON_4).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	reload_page
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
+	sleep 3
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WEBMESSAGE_ICON_1).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UPDATE_CHANNEL_SETTINGS_BUTTON).click
+	sleep 3
+end
