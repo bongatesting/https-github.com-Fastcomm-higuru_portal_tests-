@@ -147,7 +147,7 @@ end
 Then('I login and Log out') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::AGENT_DROP_DOWN_MENU).click
+	$web_driver.find_element(ElementWarehouse::SAQHWITHI_DROP_DOWN_MENU).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_LOGOUT_BUTTON).click
 	sleep 3
@@ -175,7 +175,7 @@ Then('I login as an Agent') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::AGENT_DROP_DOWN_MENU).click
+	$web_driver.find_element(ElementWarehouse::SAQHWITHI_DROP_DOWN_MENU).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_LOGOUT_BUTTON).click
 	sleep 3
