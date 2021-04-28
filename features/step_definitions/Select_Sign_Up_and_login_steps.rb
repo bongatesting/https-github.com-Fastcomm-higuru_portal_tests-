@@ -98,7 +98,7 @@ Then('I log in and log off') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::OWNER_DROP_DOWN_MENU).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::OWNER_LOGOUT_BUTTON).click
 end
 

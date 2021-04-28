@@ -30,7 +30,7 @@ Feature: Conversations Feature
 	Then Transfer the conversation
 	Then Check if the conversation transfer labels are correct
 	Then I Delete Team Two and the Second Agent
-	Then I Remove Routing Tags
+	Then I Remove Routing Tags and resolve the conversation
 
   Scenario: I want to add conversation topics tags
 	Given I am logged in

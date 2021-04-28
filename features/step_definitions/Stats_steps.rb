@@ -60,8 +60,10 @@ Then('I choose a Custom Date and Export to PDF') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHOOSE_DATE_1_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON).click
+	scroll_to($web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON))
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON).click
+ 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHOOSE_DATE_2_BUTTON).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::CUSTOM_DATE_APPLY_BUTTON).click

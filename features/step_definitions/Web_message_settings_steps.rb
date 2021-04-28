@@ -114,6 +114,7 @@ Then('I Position the web widget and add preview text') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::BUTTON_POSITIONING_LEFT).click
 	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::WIDGET_BUTTON_PREVIEW_TOGGLE))
 	$web_driver.find_element(ElementWarehouse::WIDGET_BUTTON_PREVIEW_TOGGLE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WIDGET_PREVIEW_TEXT_FIELD).send_keys('Kumnandi Gqithi ukuba ngu Mxhosa')
