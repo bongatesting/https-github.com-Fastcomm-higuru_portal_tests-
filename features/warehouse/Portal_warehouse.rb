@@ -48,8 +48,8 @@ class ElementWarehouse
 	BUTTON_POSITIONING_LEFT = { xpath: "//ion-radio[@value='left']" }
 	BUTTON_POSITIONING_RIGHT = { xpath: "//ion-radio[@value='right']" }
 	UPDATE_CHANNEL_SETTINGS_BUTTON = { xpath: "//ion-button[contains(.,'Update')]" }
-	WIDGET_BUTTON_PREVIEW_TOGGLE = { xpath: "//ion-item-group[2]/ion-toggle" }
-	WIDGET_PREVIEW_TEXT_FIELD = { xpath: "//ion-item-group[2]/ion-item/ion-input/input" }
+	WIDGET_BUTTON_PREVIEW_TOGGLE = { xpath: '//ion-item-group[3]/ion-toggle' }
+	WIDGET_PREVIEW_TEXT_FIELD = { xpath: '//ion-item-group[3]/ion-item/ion-input/input' }
 	WIDGET_TITLE_TEXT_FIELD = { css: '.sc-ion-input-ios' }
 	WEB_WHITELIST_MANAGE_TOGGLE = { xpath: '//form/ion-toggle' }
 	WEB_WHITELIST_MANAGE_BUTTON = { xpath: "//ion-button[contains(.,'Manage')]" }

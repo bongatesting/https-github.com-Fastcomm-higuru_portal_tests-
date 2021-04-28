@@ -197,7 +197,7 @@ Then('I Delete Team Two and the Second Agent') do
 	sleep 3
 end
 
-Then('I Remove Routing Tags') do
+Then('I Remove Routing Tags and resolve the conversation') do
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SETTINGS_TAB).click
@@ -209,4 +209,12 @@ Then('I Remove Routing Tags') do
 	$web_driver.find_element(ElementWarehouse::REMOVE_GCUWA_TAG_2).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ROUTING_TAGS_DONE_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
 end

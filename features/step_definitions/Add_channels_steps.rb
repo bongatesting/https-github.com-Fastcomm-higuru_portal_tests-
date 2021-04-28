@@ -143,14 +143,14 @@ Then('I add Twitter') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_ADD_TWITTER).click
 	sleep 5
-	$web_driver.page_source.include? 'KhivaKaXhoseni'
+	$web_driver.page_source.include? 'XhosaMama'
 	$web_driver.page_source.include? 'Linked on'
 	$web_driver.find_element(ElementWarehouse::TWITTER_DROP_DOWN).click
 	sleep 3
 	$web_driver.page_source.include? 'Deactivate Channel'
 	$web_driver.page_source.include? 'Remove Channel'
 	$web_driver.find_element(ElementWarehouse::REMOVE_TWITTER_CHANNEL).click
-	$web_driver.page_source.include? 'Are you sure you want to remove the twitter channel "KhivaKaXhoseni"?'
+	$web_driver.page_source.include? 'Are you sure you want to remove the twitter channel "XhosaMama"?'
 	$web_driver.page_source.include? 'Once this channel is removed, you will no longer be able to exchange conversations through this channel.'
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::REMOVE_TWITTER_CANCEL_BUTTON)
