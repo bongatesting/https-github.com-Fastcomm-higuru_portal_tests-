@@ -75,7 +75,7 @@ Then('I initiate a chat and claim the bot chat') do
 	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_CHAT_FIELD).send_keys('I want to test the Bot and claim the Bot chat')
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_CHAT_FIELD).send_keys('hello')
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
 	sleep 3

@@ -203,7 +203,7 @@ Then('I add Facebook') do
 	$web_driver.page_source.include? 'Are you sure you want to remove the facebook channel'
 	$web_driver.page_source.include? 'Once this channel is removed, you will no longer be able to exchange conversations through this channel.'
 	$web_driver.page_source.include? 'Cancel'
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONFIRM_REMOVE_FACEBOOK_CHANNEL).click
 	sleep 5
 	$web_driver.page_source.include? ' No channels have been added yet. Once added and activated they will show here.'
