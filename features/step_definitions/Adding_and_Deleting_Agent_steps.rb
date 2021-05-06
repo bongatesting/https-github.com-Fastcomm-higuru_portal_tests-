@@ -48,7 +48,7 @@ Then('I Add the new Agent') do
 	sleep 8
 	$web_driver.find_element(ElementWarehouse::GMAIL_AGENT_CONFIRM_EMAIL).click
 	sleep 3
-	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	#$web_driver.switch_to.window( $web_driver.window_handles.last )
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::GOT_IT_WALK_THROUGH).click
 	sleep 3

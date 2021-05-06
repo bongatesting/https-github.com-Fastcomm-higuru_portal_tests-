@@ -157,13 +157,14 @@ Then('I get feedback from the Agent And Complete my chat with the bot') do
 	$web_driver.find_element(ElementWarehouse::SIGN_UP_CONTINUE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::HIGURU_SUPPORT).click
+	sleep 3
 	$web_driver.page_source.include? ' account email address'
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(TestUser.email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
 	$web_driver.page_source.include? 'Technical issue'
 	$web_driver.page_source.include? 'User help'
-	$web_driver.find_element(ElementWarehouse::HIGURU_TECHNICAL_ISSUE).click
+	#$web_driver.find_element(ElementWarehouse::HIGURU_TECHNICAL_ISSUE).click
 	$web_driver.page_source.include? 'One of our agents will be with you shortly.'
 	$web_driver.find_element(ElementWarehouse::HG_WEB_WIDGET_CHAT_FIELD).send_keys('Thank You very much')
 	sleep 2
