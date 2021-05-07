@@ -98,3 +98,50 @@ Then('Navigate to the Agent Activity and View the Available stats') do
 	$web_driver.find_element(ElementWarehouse::LAST_YEAR_STATS_2).click
 	sleep 5
 end
+
+Then('I go to the Stats Conversation DM Volume') do
+	$web_driver.find_element(ElementWarehouse::STATS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::STATS_VIEW_MORE).click
+	sleep 3
+	$web_driver.page_source.include? 'Conversation Volume'
+	sleep 3
+	$web_driver.page_source.include? 'Total DM Message Volume'
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_VOLUME_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_TODAY).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_VOLUME_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_LAST_WEEK).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_VOLUME_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_LAST_YEAR).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_VOLUME_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_CUSTOM_DATE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DATE_DROP_DOWN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::YEAR_2020_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::AUGUST_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHOOSE_DATE_1_BUTTON).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON))
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHOOSE_DATE_2_BUTTON).click
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::CUSTOM_DATE_APPLY_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATION_VOLUME_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_LAST_MONTH).click
+	sleep 3
+end
