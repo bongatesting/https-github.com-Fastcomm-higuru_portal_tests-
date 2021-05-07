@@ -248,6 +248,7 @@ class ElementWarehouse
 	AGENT_ACTIVITY = { xpath: '//ion-segment-button[@value="stats_agentActivity"]' }
 	LAST_MONTH = { xpath: '//ion-header/ion-toolbar/ion-select' }
 	STATS_TAB = { xpath: "//ion-label[contains(.,'Stats')]" }
+	STATS_VIEW_MORE = { xpath: '//div/ion-text' }
 	LAST_WEEK_STATS_2 = { xpath: '//*[@id="ion-overlay-10"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
 	LAST_MONTH_STATS_2 = { xpath: '//*[@id="ion-overlay-12"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[3]/ion-label' }
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
@@ -256,6 +257,12 @@ class ElementWarehouse
 	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
 	AGENT_ACTIVITY_TAB = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[1]/ion-item[1]/ion-button' }
+	CONVERSATION_VOLUME_DROP_DOWN = { xpath: '//app-total-dm-stats/app-header/ion-header/ion-toolbar/ion-item/ion-button' }
+	CONVO_VOLUME_TODAY = { xpath: '//app-list-popover/ion-list/ion-item/ion-label' }
+	CONVO_VOLUME_LAST_WEEK = { xpath: '//app-list-popover/ion-list/ion-item[2]' }
+	CONVO_VOLUME_LAST_YEAR = { xpath: '//app-list-popover/ion-list/ion-item[4]/ion-label' }
+	CONVO_VOLUME_CUSTOM_DATE = { xpath: "//ion-item[contains(.,'Custom Date')]" }
+	CONVO_VOLUME_LAST_MONTH = { xpath: '//app-list-popover/ion-list/ion-item[3]/ion-label' }
 	STATS_RESOLVED_DROP_DOWN = { xpath: '//ion-col[2]/ion-item/ion-button' }
 	TODAY_STATS = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	LAST_WEEK_STATS = { xpath: '//*[@id="ion-overlay-2"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
