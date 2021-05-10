@@ -343,6 +343,9 @@ class ElementWarehouse
 	UPLOAD_ICON = { xpath: '//*[@id="doc-upload-overlay"]/div[4]/div[1]/img' }
 	FAQ_TAB = { xpath: '//*[@id="sidebar-wrapper"]/div[2]/ul/li[8]/span[2]/a' }
 	BILLING = { xpath: "//ion-label[contains(.,'Billing')]" }
+	VIEW_PLANS_BUTTON = { xpath: "//ion-button[contains(.,'View Plans')]" }
+	GO_FREE_BUTTON = { xpath: "//ion-button[contains(.,'Go Free')]" }
+	CANCEL_DOWNGRADE = { xpath: "//span[contains(.,'Cancel')]" }
 	BILLING_PAYMENT_METHOD = { xpath: "//ion-segment-button[contains(.,'Payment Method')]" }
 	GO_ENTERPRISE_BUTTON = { xpath: "//ion-button[contains(.,'Go Enterprise')]" }
 	BILLING_INFO_BUTTON = { xpath: "//ion-segment-button[contains(.,'Billing Info')]" }

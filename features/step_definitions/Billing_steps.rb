@@ -25,3 +25,18 @@ Then('I go to the billing page and navigate through the tabs') do
 	$web_driver.find_element(ElementWarehouse::BILLING_INFO_BUTTON).click
 	sleep 3
 end
+
+Then('I downgrade the Account') do
+	$web_driver.find_element(ElementWarehouse::AGENT_IMAGE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BILLING).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::VIEW_PLANS_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::GO_FREE_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CANCEL_DOWNGRADE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DISMISS_PLAN_SELECTION).click
+	sleep 3
+end
