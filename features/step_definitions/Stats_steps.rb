@@ -7,43 +7,43 @@ Then('I navigate to the stats Tab and View the Statistics') do
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::TODAY_STATS).click
-	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_TODAY).click
+	sleep 5
 	scroll_to($web_driver.find_element(ElementWarehouse::TOP_CONVO_TOPICS))
 	sleep 4
 	scroll_to($web_driver.find_element(ElementWarehouse::CONVO_RESOLUTION_TYPE))
 	sleep 3
-	scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
+	#scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LAST_WEEK_STATS).click
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_LAST_WEEK).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::TOP_CONVO_TOPICS))
 	sleep 4
 	scroll_to($web_driver.find_element(ElementWarehouse::CONVO_RESOLUTION_TYPE))
 	sleep 3
-	scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
+	#scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LAST_MONTH_STATS).click
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_LAST_MONTH).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::TOP_CONVO_TOPICS))
 	sleep 4
 	scroll_to($web_driver.find_element(ElementWarehouse::CONVO_RESOLUTION_TYPE))
 	sleep 3
-	scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
+	#scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::LAST_YEAR_STATS).click
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_LAST_YEAR).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::TOP_CONVO_TOPICS))
 	sleep 4
 	scroll_to($web_driver.find_element(ElementWarehouse::CONVO_RESOLUTION_TYPE))
 	sleep 4
-	scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
+	#scroll_to($web_driver.find_element(ElementWarehouse::STATS_REAL_TIME))
 	sleep 3
 end
 
@@ -71,10 +71,12 @@ Then('I choose a Custom Date and Export to PDF') do
 	$web_driver.find_element(ElementWarehouse::EXPORT_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::EXPORT_PDF_BUTTON).click
-	sleep 6
+	sleep 3
 end
 
 Then('Navigate to the Agent Activity and View the Available stats') do
+	wait.until { $web_driver.find_element(ElementWarehouse::AGENT_ACTIVITY_TAB).displayed? }
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_ACTIVITY_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
