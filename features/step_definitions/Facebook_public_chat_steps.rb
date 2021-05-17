@@ -2,27 +2,55 @@ Given('I go to the log in page') do
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 end
 
-Then('I login to my account') do
+Then('I login to my account and add a facebook page') do
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).click
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
-	# $web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.test_user_1_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).click
-	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	wait_for_account_login_select
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	wait_for_company_unit
-	$web_driver.find_element(ElementWarehouse::LOGIN_CU_SELECT).click
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
+	$web_driver.find_element(ElementWarehouse::ADD_CHANNEL_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_CHANNEL_CARD).click
+	$web_driver.find_element(ElementWarehouse::HOW_TO_SETUP_FACEBOOK).click
+	$web_driver.find_element(ElementWarehouse::ADD_FACEBOOK_CHANNEL_BUTTON).click
+	$web_driver.switch_to.window( $web_driver.window_handles.last )
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_EMAIL_FIELD).send_keys(TestUser.facebook_username)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_PASSWORD_FIELD).send_keys(TestUser.facebook_password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).click
+	sleep 6
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_CONTINUE_AS_BUTTON).click
+	sleep 7
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	$web_driver.page_source.include? 'Facebook Pages you Manage'
+	$web_driver.page_source.include? 'Select page to add'
+	wait.until { $web_driver.find_element(ElementWarehouse::FACEBOOK_SELECT_PAGE).displayed? }
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_SELECT_PAGE).click
+	$web_driver.page_source.include? 'Enable Direct Conversations'
+	$web_driver.page_source.include? 'When this is enabled you will receive direct messages to this page as hi.guru Conversations.'
+	$web_driver.page_source.include? 'Enable Public Conversations'
+	$web_driver.page_source.include? 'When this is enabled you will receive Comments and Visitor posts to this page as hi.guru Public Conversations.'
+	$web_driver.find_element(ElementWarehouse::CONFIRM_ADD_FACEBOOK).click
+	$web_driver.page_source.include? 'Remove'
+	$web_driver.find_element(ElementWarehouse::ADD_FACEBOOK_DONE_BUTTON).click
+	sleep 3
+	$web_driver.page_source.include? 'New_Day'
 end
 
 Then('I create a facebook post') do
 	open_new_tab
 	$web_driver.get 'https://www.facebook.com/'
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::FACEBOOK_EMAIL_FIELD).send_keys(TestUser.email)
+	#$web_driver.find_element(ElementWarehouse::FACEBOOK_EMAIL_FIELD).send_keys(TestUser.email)
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::FACEBOOK_PASSWORD_FIELD).type(TestUser.new_password)
+	#$web_driver.find_element(ElementWarehouse::FACEBOOK_PASSWORD_FIELD).type(TestUser.new_password)
 	sleep 2
 	if $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON).first&.click
 	elsif $web_driver.find_elements(ElementWarehouse::FACEBOOK_LOG_IN_BUTTON_2).first&.click

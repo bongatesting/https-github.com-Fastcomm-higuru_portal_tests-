@@ -245,7 +245,7 @@ class ElementWarehouse
   #CURRENT_TRANSCRIPT_2 = { xpath: '' }
 	MAIN_MENU = { css: '.logo-small' }
 	RESPONSIVENESS_TITLE = { xpath: '//ion-label[contains(.,"Responsiveness")]' }
-	AGENT_ACTIVITY = { xpath: '//ion-segment-button[@value="stats_agentActivity"]' }
+	AGENT_ACTIVITY_TAB = { xpath: "//ion-segment-button[contains(.,'Agent Activity')]" }
 	LAST_MONTH = { xpath: '//ion-header/ion-toolbar/ion-select' }
 	STATS_TAB = { xpath: "//ion-label[contains(.,'Stats')]" }
 	STATS_VIEW_MORE = { xpath: '//div/ion-text' }
@@ -255,8 +255,7 @@ class ElementWarehouse
 	TODAY_STATS_2 = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
 	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
-	AGENT_ACTIVITY_TAB = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
-	STATS_DROP_DOWN_BUTTON = { xpath: '//*[@id="home-content"]/app-stats-container/app-header/ion-header/ion-toolbar[1]/ion-item[1]/ion-button' }
+	STATS_DROP_DOWN_BUTTON = { xpath: '//ion-header/ion-toolbar/ion-item/ion-button' }
 	CONVERSATION_VOLUME_DROP_DOWN = { xpath: '//app-total-dm-stats/app-header/ion-header/ion-toolbar/ion-item/ion-button' }
 	CONVO_VOLUME_TODAY = { xpath: '//app-list-popover/ion-list/ion-item/ion-label' }
 	CONVO_VOLUME_LAST_WEEK = { xpath: '//app-list-popover/ion-list/ion-item[2]' }
@@ -264,10 +263,6 @@ class ElementWarehouse
 	CONVO_VOLUME_CUSTOM_DATE = { xpath: "//ion-item[contains(.,'Custom Date')]" }
 	CONVO_VOLUME_LAST_MONTH = { xpath: '//app-list-popover/ion-list/ion-item[3]/ion-label' }
 	STATS_RESOLVED_DROP_DOWN = { xpath: '//ion-col[2]/ion-item/ion-button' }
-	TODAY_STATS = { xpath: '//*[@id="ion-overlay-1"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
-	LAST_WEEK_STATS = { xpath: '//*[@id="ion-overlay-2"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
-	LAST_MONTH_STATS = { xpath: '//*[@id="ion-overlay-3"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[3]/ion-label' }
-	LAST_YEAR_STATS = { xpath: '//*[@id="ion-overlay-4"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
 	CUSTOM_DATE = { xpath: '//*[@id="ion-overlay-5"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[5]/ion-label' }
 	DATE_DROP_DOWN_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/sat-calendar-header/div/div/button[1]/span/div' }
 	YEAR_2020_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/div/sat-multi-year-view/table/tbody/tr[2]/td[1]/div' }
@@ -277,10 +272,10 @@ class ElementWarehouse
 	NEXT_MONTH_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/sat-calendar-header/div/div/button[3]' }
 	CUSTOM_DATE_APPLY_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	EXPORT_BUTTON = { xpath: "//ion-button[contains(.,'Export')]" }
-	EXPORT_PDF_BUTTON = { xpath: '//*[@id="ion-overlay-7"]/div[2]/div[2]/app-list-popover/ion-list/ion-item/ion-label' }
+	EXPORT_PDF_BUTTON = { xpath: "//ion-label[contains(.,'PDF')]" }
 	STATS_REAL_TIME = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-realtime-overview/ion-list-header' }
-	TOP_CONVO_TOPICS = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[4]/ion-card/app-pie-chart/div[1]/span' }
-	CONVO_RESOLUTION_TYPE = { xpath: '//*[@id="home-content"]/app-stats-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[6]/ion-card/app-pie-chart/div[1]/span' }
+	TOP_CONVO_TOPICS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[4]/ion-card/app-pie-chart/div[1]/span' }
+	CONVO_RESOLUTION_TYPE = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[6]/ion-card/app-pie-chart/div[1]/span' }
 	CHANNELS_TAB = { xpath: "//ion-label[contains(.,'Channels')]" }
 	ACTIVE_CHANNELS_TAB = { xpath: "//ion-segment-button[contains(.,'Active')]" }
 	INACTIVE_CHANNELS_TAB = { xpath: "//ion-segment-button[contains(.,'Inactive')]" }
@@ -374,6 +369,28 @@ class ElementWarehouse
 	CONVO_EXPIRY_BAR = { xpath: '//*[@id="mat-tab-content-6-1"]/div/app-company-unit-settings/div/div[2]/div[6]/div[2]/div[2]/div/mat-slider/div/div[3]/div[3]' }
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
 	BOTS_TAB = { xpath: "//ion-label[contains(.,'Bots')]" }
+	CONTACTS_TAB = { xpath: "//ion-label[contains(.,'Contacts')]" }
+	UNREGISTERED_CONTACTS_TAB = { xpath: "//ion-segment-button[contains(.,'Unregistered')]" }
+	REGISTERED_CONTACTS_TAB = { xpath: "//ion-segment-button[contains(.,'Contacts')]" }
+	CREATE_CONTACT_BUTTON = { xpath: "//ion-button[contains(.,'Create Contact')]" }
+	CONTACT_FULL_NAME_FIELD = { xpath: "//input[@name='ion-input-2']" }
+	CONTACT_ORGANIZATION_FIELD = { xpath: "//input[@name='ion-input-3']" }
+	CONTACT_EMAIL_FIELD = { xpath: "//input[@name='ion-input-4']" }
+	CONTACT_PHONE_DROP_DOWN = { xpath: '//div/div/div' }
+	SELECT_SOUTH_AFRICA = { xpath: "//span[contains(.,'South Africa')]" }
+	CONTACT_PHONE_FIELD = { xpath: "//input[@id='phone']" }
+	CONTACT_CHANNEL_DROP_DOWN = { xpath: "(//ion-input[@type='text'])[4]" }
+	CONTACT_CHANNEL_DROP_DOWN_1 = { xpath: "//app-dropdown-with-images/ion-item-group/ion-item-group/ion-icon" }
+	SELECT_WHATSAPP = { xpath: "//ion-text[contains(.,'WhatsApp')]" }
+	SELECT_FACEBOOK = { xpath: "//ion-text[contains(.,'Facebook')]" }
+	SELECT_GOOGLE_MY_BUSINESS = { xpath: "//ion-text[contains(.,'Google My Business')]" }
+	SELECT_INSTA = { xpath: "//ion-text[contains(.,'Instagram')]" }
+	SELECT_SKYPE = { xpath: "//ion-text[contains(.,'Skype')]" }
+	SELECT_TELEGRAM = { xpath: "//ion-text[contains(.,'Telegram')]" }
+	SELECT_TWITTER = { xpath: "//ion-text[contains(.,'Twitter')]" }
+	CONTACT_CHANNEL_FIELD = { xpath: "//input[@name='ion-input-5']" }
+	DISMISS_CONTACTS_FORM = { xpath: "//app-consumer-create/app-header/ion-header/ion-toolbar/ion-buttons/ion-button" }
+	ADD_CONTACT_BUTTON = { xpath: "//ion-footer/ion-toolbar/ion-buttons/ion-button[2]" }
 	ADD_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
 	BOT_NAME_FIELD = { xpath: '//*[@id="name"]/input' }
 	CONCURRENT_CONVERSATION_LIMIT_TOGGLE = { xpath: '//ion-item[5]/ion-toggle' }

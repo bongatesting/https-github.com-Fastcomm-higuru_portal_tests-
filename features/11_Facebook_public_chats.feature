@@ -7,7 +7,7 @@ Feature: Facebook public chats
   @Scenario:Testing_facebook_public_chats
   Scenario: Receive facebook public chat
 	Given I go to the log in page
-	Then I login to my account
+	Then I login to my account and add a facebook page
 	Then I create a facebook post
 	Then receive the public chat
 	Then I download the current transcript then resolve and download my chat
