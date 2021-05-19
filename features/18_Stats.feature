@@ -14,3 +14,8 @@ Feature: Stats Feature
   Scenario: I want to view the Total DM message volume visualisation
 	Given I am logged in
 	Then I go to the Stats Conversation DM Volume
+
+  Scenario: I want to see if DM Volume count will increase through a Bot chat
+	Given I have added a Bot
+	Then Start a chat and check DM Volume count
+	Then I remove the Bot

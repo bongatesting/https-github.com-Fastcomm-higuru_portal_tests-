@@ -248,7 +248,7 @@ class ElementWarehouse
 	AGENT_ACTIVITY_TAB = { xpath: "//ion-segment-button[contains(.,'Agent Activity')]" }
 	LAST_MONTH = { xpath: '//ion-header/ion-toolbar/ion-select' }
 	STATS_TAB = { xpath: "//ion-label[contains(.,'Stats')]" }
-	STATS_VIEW_MORE = { xpath: '//div/ion-text' }
+	STATS_VIEW_MORE = { xpath: "//ion-text[contains(.,'View More')]" }
 	LAST_WEEK_STATS_2 = { xpath: '//*[@id="ion-overlay-10"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[2]/ion-label' }
 	LAST_MONTH_STATS_2 = { xpath: '//*[@id="ion-overlay-12"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[3]/ion-label' }
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
@@ -411,8 +411,9 @@ class ElementWarehouse
 	SELECT_BOT = { xpath: '//*[@id="botObject"]/input' }
 	ADD_LEGAL_BOT_BUTTON = { xpath: '//*[@id="createBotModal"]/div/app-bot-create/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	INACTIVE_BOT_TAB = { xpath: '//*[@id="botsNav"]/app-bots-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
-	ACTIVE_TEST_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-bot-item/ion-nav-link/ion-card/ion-avatar/img' }
+	ACTIVE_BOT_TAB = { xpath: "//ion-segment-button[contains(.,'Active')]" }
 	INACTIVE_TEST_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/ion-content/ion-slides/div/ion-slide[2]/ion-list/app-bot-item/ion-nav-link/ion-card' }
+	ACTIVE_TEST_BOT = { xpath: '//*[@id="botsNav"]/app-bots-container/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-bot-item/ion-nav-link/ion-card' }
 	OPEN_BOT = { css: '.ng-star-inserted > .hydrated > .md > .md > img' }
 	BOT_MENU_BUTTON = { xpath: '//ion-button[2]' }
 	ACTIVATE_BOT_BUTTON = { xpath: "//ion-label[contains(.,'Activate Bot')]" }
