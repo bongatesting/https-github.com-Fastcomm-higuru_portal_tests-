@@ -13,4 +13,4 @@ Feature: Contacts Feature
   @Scenario:Adding_contact
   Scenario: I want to Add a Contact
 	Given I have an account
-	Then I add and view the Contacts
+	Then I add and view the Contacts  
