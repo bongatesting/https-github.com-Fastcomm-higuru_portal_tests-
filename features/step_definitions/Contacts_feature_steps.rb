@@ -42,36 +42,38 @@ Then('I fill in the Contact form, select all channels and dismiss the form') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_WHATSAPP).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_DROP_DOWN_1).click
+	$web_driver.find_element(ElementWarehouse::WHATSAPP_SELECT_COUNTRY_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WHATSAPP_SELECT_SOUTH_AFRICA).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::WHATSAPP_DROP_DOWN).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_FACEBOOK).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_DROP_DOWN_1).click
+	$web_driver.find_element(ElementWarehouse::FACEBOOK_DROP_DOWN).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_GOOGLE_MY_BUSINESS))
 	$web_driver.find_element(ElementWarehouse::SELECT_GOOGLE_MY_BUSINESS).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_DROP_DOWN_1).click
+	$web_driver.find_element(ElementWarehouse::GOOGLE_MY_BUSINESS_DROP_DOWN).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_SKYPE))
 	$web_driver.find_element(ElementWarehouse::SELECT_SKYPE).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_DROP_DOWN_1).click
+	$web_driver.find_element(ElementWarehouse::SKYPE_DROP_DOWN).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_INSTA))
 	$web_driver.find_element(ElementWarehouse::SELECT_INSTA).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_DROP_DOWN_1).click
+	$web_driver.find_element(ElementWarehouse::INSTA_DROP_DOWN).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_TELEGRAM))
 	$web_driver.find_element(ElementWarehouse::SELECT_TELEGRAM).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_DROP_DOWN_1).click
+	$web_driver.find_element(ElementWarehouse::TELEGRAM_DROP_DOWN).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_TWITTER))
 	$web_driver.find_element(ElementWarehouse::SELECT_TWITTER).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_FIELD).send_keys('Channel')
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DISMISS_CONTACTS_FORM).click
 	sleep 3
@@ -102,8 +104,52 @@ Then('I add and view the Contacts') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_WHATSAPP).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_CHANNEL_FIELD).send_keys('Channel')
+	#$web_driver.find_element(ElementWarehouse::ADD_CONTACT_BUTTON).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::ADD_CONTACT_BUTTON).click
+end
+
+Given('I have various Registered and Unregistered Contacts') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.free_plan_email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+end
+
+Then('I view contacts and their details') do
+	$web_driver.find_element(ElementWarehouse::CONTACTS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::VIEW_CHANNEL_SUBSCRIPTION).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CLOSE_CHANNEL_SUBSCRIPTION).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BACK_TO_CONTACTS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UNREGISTERED_CONTACTS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::VIEW_CHANNEL_SUBSCRIPTION).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CLOSE_CHANNEL_SUBSCRIPTION).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BACK_TO_CONTACTS).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::REGISTERED_CONTACTS_TAB).click
 	sleep 3
 end
