@@ -6,7 +6,7 @@ class ElementWarehouse
 
 	HIGURU_WIDGET = { id: 'Oval-19' }
 	FASTCOMM_WIDGET = { css: '.higuru_higuru-web-icon' }
-	FASTCOMM_LOGO = { xpath: "//img[@alt='Linking People Places Things']" }
+	FASTCOMM_LOGO = { xpath: "//img[contains(@src,'https://fastcomm.com/wp-content/uploads/2020/06/Fastcomm-logo_White.svg')]" }
 	LOGO = { xpath: '/html/body/app-root/app-account-container/div/div[1]/img' }
 	FORGOT_EMAIL_FIELD = { xpath: '/html/body/app-root/ion-app/ion-router-outlet/app-login-container/ion-content/ion-router-outlet/app-forgot-password/ion-grid/ion-row/ion-card/ion-card-content/form/ion-item-group/ion-item' }
 	EMAIL_FIELD = { xpath: '//*[@id="email"]/input' }
@@ -36,7 +36,7 @@ class ElementWarehouse
 	TWITTER_PASSWORD = { xpath: "//input[@id='password']" }
 	WEB_MESSAGE_DROP_DOWN = { xpath: '//ion-item/ion-button' }
 	TWITTER_DROP_DOWN = { xpath: '//ion-item/ion-button' }
-	FACEBOOK_DROP_DOWN = { xpath: '//ion-item/ion-button' }
+	FACEBOOK_DROP_DOWN = { xpath: '//app-dropdown-with-images/ion-item-group/ion-item-group' }
 	WEB_MESSAGE_SETTINGS = { xpath: "//ion-label[contains(.,'Channel Settings')]" }
 	PRE_CHAT_FORM_TOGGLE = { xpath: '//ion-toggle' }
 	WEB_MESSAGE_SECURITY_TAB = { xpath: "//ion-segment-button[contains(.,'Security')]" }
@@ -370,6 +370,13 @@ class ElementWarehouse
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
 	BOTS_TAB = { xpath: "//ion-label[contains(.,'Bots')]" }
 	CONTACTS_TAB = { xpath: "//ion-label[contains(.,'Contacts')]" }
+	CONTACT_MENU = { xpath: '//ion-item/ion-button' }
+	VIEW_CONTACT = { xpath: "//ion-label[contains(.,'View Contact')]" }
+	VIEW_CHANNEL_SUBSCRIPTION = { xpath: '//div/ion-avatar/img' }
+	CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB = { xpath: "//ion-segment-button[contains(.,'Unsubscribed')]" }
+	CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB = { xpath: "//ion-segment-button[contains(.,'Subscribed')]" }
+	CLOSE_CHANNEL_SUBSCRIPTION = { xpath: "//ion-button[contains(.,'close')]" }
+	BACK_TO_CONTACTS = { xpath: '//app-consumer-details/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	UNREGISTERED_CONTACTS_TAB = { xpath: "//ion-segment-button[contains(.,'Unregistered')]" }
 	REGISTERED_CONTACTS_TAB = { xpath: "//ion-segment-button[contains(.,'Contacts')]" }
 	CREATE_CONTACT_BUTTON = { xpath: "//ion-button[contains(.,'Create Contact')]" }
@@ -378,12 +385,18 @@ class ElementWarehouse
 	CONTACT_EMAIL_FIELD = { xpath: "//input[@name='ion-input-4']" }
 	CONTACT_PHONE_DROP_DOWN = { xpath: '//div/div/div' }
 	SELECT_SOUTH_AFRICA = { xpath: "//span[contains(.,'South Africa')]" }
+	WHATSAPP_SELECT_SOUTH_AFRICA = { xpath: "//ion-item-group[5]/ion-item-group/ion-item-group/ngx-intl-tel-input/div/div/div[2]/ul/li[2]" }
 	CONTACT_PHONE_FIELD = { xpath: "//input[@id='phone']" }
 	CONTACT_CHANNEL_DROP_DOWN = { xpath: "(//ion-input[@type='text'])[4]" }
-	CONTACT_CHANNEL_DROP_DOWN_1 = { xpath: "//app-dropdown-with-images/ion-item-group/ion-item-group/ion-icon" }
+	SKYPE_DROP_DOWN = { xpath: '//ion-item-group/img' }
+	INSTA_DROP_DOWN = { xpath: '//ion-item-group/img' }
+	TELEGRAM_DROP_DOWN = { xpath: '//ion-item-group/img' }
+	WHATSAPP_DROP_DOWN = { xpath: '//*[@id="consumerCreateModal"]/div[2]/app-consumer-create/ion-content/ion-item-group/form/ion-item-group[5]/ion-item-group/ion-item-group/app-dropdown-with-images/ion-item-group/ion-item-group' }
+	WHATSAPP_SELECT_COUNTRY_DROP_DOWN = { xpath: "//ion-item-group[5]/ion-item-group/ion-item-group/ngx-intl-tel-input/div/div/div/div[2]" }
 	SELECT_WHATSAPP = { xpath: "//ion-text[contains(.,'WhatsApp')]" }
 	SELECT_FACEBOOK = { xpath: "//ion-text[contains(.,'Facebook')]" }
 	SELECT_GOOGLE_MY_BUSINESS = { xpath: "//ion-text[contains(.,'Google My Business')]" }
+	GOOGLE_MY_BUSINESS_DROP_DOWN = { xpath: '//ion-item-group/img' }
 	SELECT_INSTA = { xpath: "//ion-text[contains(.,'Instagram')]" }
 	SELECT_SKYPE = { xpath: "//ion-text[contains(.,'Skype')]" }
 	SELECT_TELEGRAM = { xpath: "//ion-text[contains(.,'Telegram')]" }
