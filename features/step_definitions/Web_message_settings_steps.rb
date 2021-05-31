@@ -21,11 +21,11 @@ Then('I adjust the settings') do
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_DROP_DOWN).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
-	sleep 3
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::CHAT_FORM_NAME_CHECKBOX).click
-	sleep 3
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::CHAT_FORM_EMAIL_CHECKBOX).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FORM_MOBILE_NUMBER_CHECKBOX).click
@@ -42,6 +42,8 @@ Then('I test if the settings have been applied') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_SELECT_COUNTRY).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
@@ -54,7 +56,14 @@ Then('I test if the settings have been applied') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
+	$web_driver.find_element(ElementWarehouse::SELECT_BONGA_TEST_CHAT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::VIEW_CUSTOMER_INFO).click
+	$web_driver.page_source.include? 'Consumer Info'
+	$web_driver.page_source.include? 'Mobile Number'
+	$web_driver.page_source.include? 'Email'
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CLOSE_CUSTOMER_INFO).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
 	sleep 3
