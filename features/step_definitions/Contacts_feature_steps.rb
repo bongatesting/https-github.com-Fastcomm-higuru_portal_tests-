@@ -153,3 +153,29 @@ Then('I view contacts and their details') do
 	$web_driver.find_element(ElementWarehouse::REGISTERED_CONTACTS_TAB).click
 	sleep 3
 end
+
+Given('I have multiple Contacts') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
+end
+
+Then('I search different contacts') do
+	$web_driver.find_element(ElementWarehouse::CONTACTS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONTACTS_SEARCH_FIELD).send_keys('Bonga')
+	sleep 5
+	reload_page
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONTACTS_SEARCH_FIELD).send_keys('Lili')
+	sleep 5
+	reload_page
+	sleep 3
+end

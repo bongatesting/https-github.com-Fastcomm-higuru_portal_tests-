@@ -19,3 +19,8 @@ Feature: Stats Feature
 	Given I have added a Bot
 	Then Start a chat and check DM Volume count
 	Then I remove the Bot
+
+  Scenario: I want to ensure that the percentage for the Resolved Conversation increases after resolving a chat.
+	Given I am logged in
+	Then I check the number of resolved conversation before I start a conversation
+	Then I resolve the chat and check if the Resolved conversations percentage has increased

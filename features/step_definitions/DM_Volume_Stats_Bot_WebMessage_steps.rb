@@ -109,3 +109,50 @@ Then('I remove the Bot') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_DELETE_BOT_BUTTON).click
 end
+
+Then('I check the number of resolved conversation before I start a conversation') do
+	$web_driver.find_element(ElementWarehouse::STATS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_TODAY).click
+	sleep 4
+	scroll_to($web_driver.find_element(ElementWarehouse::RESOLVED_CONVERSATIONS))
+	sleep 5
+	@resolved_count = $web_driver.find_element(ElementWarehouse::TOTAL_RESOLVED_CONVERSATIONS).text.to_i
+	open_new_tab
+	$web_driver.get(TestUser.qa_web_widget)
+	wait.until { $web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).displayed? }
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_CHAT_FIELD).send_keys('Total Resolved conversations')
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::QA_WEB_WIDGET_CHAT_FIELD).send_keys(:return)
+	$web_driver.close.last
+	$web_driver.switch_to.window( $web_driver.window_handles.first )
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
+	sleep 3
+end
+
+Then('I resolve the chat and check if the Resolved conversations percentage has increased') do
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::GO_BACK_TO_DASHBOARD).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::STATS_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONVO_VOLUME_TODAY).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::RESOLVED_CONVERSATIONS))
+	sleep 5
+	new_resolved_count = $web_driver.find_element(ElementWarehouse::TOTAL_RESOLVED_CONVERSATIONS).text.to_i
+	expect(new_resolved_count).to eq(@resolved_count + 1)
+
+end
