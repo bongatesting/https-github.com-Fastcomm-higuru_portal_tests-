@@ -185,6 +185,7 @@ class ElementWarehouse
 	PRECHAT_FORM_MOBILE_DROP_DOWN = { xpath: '' }
 	PRECHAT_FORM_SELECT_COUNTRY = { xpath: '//*[@id="preChatForm"]/div/div/div/select/option[203]' }
 	PRECHAT_FORM_MOBILE_FIELD = { xpath: '//*[@id="phone-input"]' }
+	PROD_PRECHAT_FORM_MOBILE_FIELD = { xpath: '//*[@id="preChatForm"]/label[3]/input' }
 	START_CHAT_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div/div[2]/button' }
 	QA_WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	QA_INBOUND_TAB = { xpath: "//ion-segment-button[contains(.,'Inbound')]" }
@@ -259,8 +260,10 @@ class ElementWarehouse
 	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
 	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//ion-header/ion-toolbar/ion-item/ion-button' }
+	TOTAL_RESOLVED_CONVERSATIONS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[2]/ion-card/app-line-chart/div/div/div[1]/span[1]' }
 	CONVERSATION_VOLUME_DROP_DOWN = { xpath: '//app-total-dm-stats/app-header/ion-header/ion-toolbar/ion-item/ion-button' }
 	CONVO_VOLUME_TODAY = { xpath: '//app-list-popover/ion-list/ion-item/ion-label' }
+	RESOLVED_CONVERSATIONS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[2]/ion-card/app-line-chart/div/div/span' }
 	CONVO_VOLUME_LAST_WEEK = { xpath: '//app-list-popover/ion-list/ion-item[2]' }
 	CONVO_VOLUME_LAST_YEAR = { xpath: '//app-list-popover/ion-list/ion-item[4]/ion-label' }
 	CONVO_VOLUME_CUSTOM_DATE = { xpath: "//ion-item[contains(.,'Custom Date')]" }
@@ -373,6 +376,7 @@ class ElementWarehouse
 	NEW_COMPANY_UNIT = { xpath: '//*[@id="company-unit-selection-overlay"]/div[3]/div/div[1]/img' }
 	BOTS_TAB = { xpath: "//ion-label[contains(.,'Bots')]" }
 	CONTACTS_TAB = { xpath: "//ion-label[contains(.,'Contacts')]" }
+	CONTACTS_SEARCH_FIELD = { xpath: '//input' }
 	CONTACT_MENU = { xpath: '//ion-item/ion-button' }
 	VIEW_CONTACT = { xpath: "//ion-label[contains(.,'View Contact')]" }
 	VIEW_CHANNEL_SUBSCRIPTION = { xpath: '//div/ion-avatar/img' }

@@ -19,3 +19,8 @@ Feature: Contacts Feature
   Scenario: I want to view contacts
 	Given I have various Registered and Unregistered Contacts
 	Then I view contacts and their details
+
+  @Scenario:Searching_Contacts
+  Scenario: I want to search contacts
+	Given I have multiple Contacts
+	Then I search different contacts

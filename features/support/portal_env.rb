@@ -41,8 +41,11 @@ SimpleCov.start
 #ENV['HOST'] = 'app' if ENV['HOST'].nil?
 
 Before do  #Browser Env
+	chromedriver_path = File.join(File.absolute_path('../..', File.dirname(__FILE__)),"chromedriver.exe")
+	puts chromedriver_path
+	Selenium::WebDriver::Chrome::Service.driver_path = chromedriver_path
 	options = Selenium::WebDriver::Chrome::Options.new
-	# options = Selenium::WebDriver::Firefox::Options.new
+	 #options = Selenium::WebDriver::Firefox::Options.new
 	# options = Selenium::WebDriver::Ie::Options.new
 	# options = Selenium::WebDriver::Edge::Options.new
 	# options = Selenium::WebDriver::Safari::Options.new
@@ -55,7 +58,7 @@ Before do  #Browser Env
 	options.add_preference('profile.managed_default_content_settings.media_stream', 1)
 	options.add_preference('profile.managed_default_content_settings.popups', 1)
 	$web_driver = Selenium::WebDriver.for :chrome, options: options
-	# $web_driver = Selenium::WebDriver.for :firefox, options: options, prefs: preferences
+	 #$web_driver = Selenium::WebDriver.for :firefox, options: options, prefs: preferences
 	# $web_driver = Selenium::WebDriver.for :ie, options: options, prefs: preferences
 	# $web_driver = Selenium::WebDriver.for :edge, options: options, prefs: preferences
 	# $web_driver = Selenium::WebDriver.for :safari, options: options, prefs: preferences
