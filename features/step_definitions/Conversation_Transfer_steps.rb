@@ -12,7 +12,7 @@ Given('I am on the Login View and I Create a Second Agent') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
-	sleep 3
+	sleep 7
 	$web_driver.find_element(ElementWarehouse::PEOPLE_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::ADD_PERSON_BUTTON).click

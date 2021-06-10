@@ -39,6 +39,8 @@ Then('I start a conversation') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.gmail_email)
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_SELECT_COUNTRY).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
@@ -57,6 +59,7 @@ Then('I click on conversation history') do
 	$web_driver.find_element(ElementWarehouse::QA_DIRECT_CONVERSATION_HISTORY).click
 	sleep 4
 	$web_driver.find_element(ElementWarehouse::QA_PUBLIC_CONVERSATION_HISTORY).click
+	sleep 6
 end
 
 Then('I view the Customer info') do
@@ -64,7 +67,7 @@ Then('I view the Customer info') do
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::OPEN_CHAT_CONVO_HISTORY).click
 	sleep 4
-	$web_driver.find_element(ElementWarehouse::VIEW_CUSTOMER_INFO).click
+	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_CUSTOMER_INFO).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CLOSE_CUSTOMER_INFO).click
 	sleep 3

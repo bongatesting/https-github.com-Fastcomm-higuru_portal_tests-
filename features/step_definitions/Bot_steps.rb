@@ -98,4 +98,8 @@ Then('I initiate a chat and claim the bot chat') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+	sleep 3
 end

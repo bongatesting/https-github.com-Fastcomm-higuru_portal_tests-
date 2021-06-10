@@ -154,5 +154,4 @@ Then('I resolve the chat and check if the Resolved conversations percentage has 
 	sleep 5
 	new_resolved_count = $web_driver.find_element(ElementWarehouse::TOTAL_RESOLVED_CONVERSATIONS).text.to_i
 	expect(new_resolved_count).to eq(@resolved_count + 1)
-
 end
