@@ -44,7 +44,7 @@ end
 Then('I resolve the conversation') do
   $web_driver.find_element(ElementWarehouse::QA_INBOUND_TAB).click
   sleep 3
-  $web_driver.find_element(ElementWarehouse::OPEN_THE_CHAT).click
+  $web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
   sleep 3
   $web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
   sleep 3

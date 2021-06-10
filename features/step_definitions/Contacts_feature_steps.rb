@@ -136,19 +136,21 @@ Then('I view contacts and their details') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::UNREGISTERED_CONTACTS_TAB).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::VIEW_CHANNEL_SUBSCRIPTION).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::CLOSE_CHANNEL_SUBSCRIPTION).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::BACK_TO_CONTACTS).click
+	# $web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
+	# sleep 3
+	# $web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
+	# sleep 3
+	# $web_driver.find_element(ElementWarehouse::VIEW_CHANNEL_SUBSCRIPTION).click
+	# sleep 3
+	# $web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB).click
+	# sleep 3
+	# $web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB).click
+	# sleep 3
+	# $web_driver.find_element(ElementWarehouse::CLOSE_CHANNEL_SUBSCRIPTION).click
+	# sleep 3
+	$web_driver.find_element(ElementWarehouse::DUPLICATES_CONTACTS_TAB).click
+	# sleep 3
+	# $web_driver.find_element(ElementWarehouse::BACK_TO_CONTACTS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::REGISTERED_CONTACTS_TAB).click
 	sleep 3
