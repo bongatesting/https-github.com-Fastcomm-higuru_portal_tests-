@@ -32,11 +32,20 @@ class ElementWarehouse
 	TWEET_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[4]/div/div/div[2]/div[3]/div/span/span' }
 	TWITTER_MORE_BUTTON = { xpath: '//*[@id="react-root"]/div/div/div[2]/header/div/div/div/div[2]/div/div/div[1]/div/div[2]' }
 	LOG_OUT_TWITTER = { xpath: '//*[@id="layers"]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div/div' }
+	TWITTER_LOGIN_BUTTON = { xpath: '//a[2]/div' }
+	TWITTER_LOGIN_BUTTON_1 = { xpath: '//span/span' }
+	TWITTER_DM_BUTTON = { xpath: '//a[4]/div/div[2]/span' }
+	TWITTER_DM_SEARCH_FIELD = { xpath: '//section/div/div/div/div/div/div/div[2]' }
+	CHOOSE_TWITTER_USER = { xpath: '//section/div/div/div/div/div/div/div[2]' }
+	TWITTER_DM_MESSAGE_FIELD = { xpath: '//label/div/div/div/div/div/div[2]/div/div/div/div' }
+	TWITTER_SEND_MESSAGE = { css: '.css-1dbjc4n:nth-child(2) > .css-18t94o4:nth-child(3) > .css-901oao > .r-13gxpu9' }
+	TWITTER_USERNAME_FIELD = { xpath: '//div[2]/div/input' }
+	TWITTER_PASSWORD_FIELD = { xpath: '//div[2]/label/div/div[2]/div/input' }
 	CONFIRM_LOGOUT_TWITTER = { xpath: '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]/div/span/span' }
 	TWITTER_PASSWORD = { xpath: "//input[@id='password']" }
 	WEB_MESSAGE_DROP_DOWN = { xpath: '//ion-item/ion-button' }
 	TWITTER_DROP_DOWN = { xpath: '//ion-item/ion-button' }
-	FACEBOOK_DROP_DOWN = { xpath: '//app-dropdown-with-images/ion-item-group/ion-item-group' }
+	FACEBOOK_DROP_DOWN = { xpath: '//ion-item/ion-button' }
 	WEB_MESSAGE_SETTINGS = { xpath: "//ion-label[contains(.,'Channel Settings')]" }
 	PRE_CHAT_FORM_TOGGLE = { xpath: '//ion-toggle' }
 	WEB_MESSAGE_SECURITY_TAB = { xpath: "//ion-segment-button[contains(.,'Security')]" }
@@ -259,7 +268,7 @@ class ElementWarehouse
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
 	TODAY_STATS_2 = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
-	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
+	RESOLVE_DROP_DOWN = { xpath: "//ion-label[contains(.,'Resolve')]" }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//ion-header/ion-toolbar/ion-item/ion-button' }
 	TOTAL_RESOLVED_CONVERSATIONS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[2]/ion-card/app-line-chart/div/div/div[1]/span[1]' }
 	TOTAL_DM_COUNT = { xpath: '//*[@id="dm-stats"]/app-stats-item/ion-card/app-line-chart/div/div/div[1]/span' }
