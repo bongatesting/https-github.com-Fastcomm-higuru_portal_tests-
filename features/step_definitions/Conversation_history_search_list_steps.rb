@@ -21,5 +21,5 @@ Then('I search using a conversation ID') do
 	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_SEARCH_FIELD).send_keys(TestUser.convo_id)
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::OPEN_THE_CHAT).click
-	sleep 3
+	sleep 4
 end
