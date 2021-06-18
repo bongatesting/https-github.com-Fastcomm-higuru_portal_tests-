@@ -452,6 +452,7 @@ class ElementWarehouse
 	DEACTIVATE_BOT_BUTTON = { xpath: "//ion-label[contains(.,'Deactivate Bot')]" }
 	DELETE_BOT_BUTTON = { xpath: "//ion-label[contains(.,'Delete Bot')]" }
 	CONFIRM_DELETE_BOT_BUTTON = { xpath: "//span[contains(.,'Remove')]" }
+	UNABLE_TO_DELETE_BOT_OK_BUTTON = { xpath: "//span[contains(.,'Ok')]" }
 	WELCOME_ASSISTANT_TOGGLE = { xpath: '//ion-item-group/ion-item/ion-toggle' }
 	WELCOME_ASSISTANT_BUTTON = { xpath: "//ion-text[contains(.,'Already have your own? Use it.')]" }
 	ACTIVATE_TEST_BOT = { xpath: '//ion-item-group/ion-card/ion-avatar/img' }
@@ -478,6 +479,7 @@ class ElementWarehouse
 	REMOVE_BOT = { xpath: '' }
 	BOT_TEXT = { xpath: '//*[@id="mat-tab-label-0-2"][contains(., "Bot")]' }
 	CONVERSATION_HISTORY_TAB = { xpath: "//ion-label[contains(.,'Conversation History')]" }
+	CONVO_HISTORY_SEARCH_FIELD = { xpath: '//input' }
 	FILTER_DROP_DOWN = { xpath: "//ion-item[contains(.,'Filter')]" }
 	CONVERSATION_TOPIC_POP_UP = { xpath: "//ion-item[contains(.,'Conversation Topic')]" }
 	FILTER_CONVO_TOPIC_TAG = { xpath: "//ion-label[contains(.,'Blomzit')]" }

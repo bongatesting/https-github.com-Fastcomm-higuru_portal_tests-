@@ -45,3 +45,7 @@ Feature: Conversations Feature
   Scenario: I want to set the Concurrent Conversation Limit
 	Given I have a bot assigned
 	Then I set the Concurrent Conversation Limit and Test it
+
+  Scenario: I want to search the Conversation History List
+	Given I a conversation history
+	Then I search using a conversation ID

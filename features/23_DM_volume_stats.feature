@@ -19,3 +19,9 @@ Feature: DM Volume Feature
 	Then I start a Twitter chat
 	Then I check the Twitter DM count
 	Then I resolve the chat and remove the Twitter page
+
+  @Scenario:Viewing_DM_Volume_stats
+  Scenario: I want to view DM Volume Stats through a Web Message chat
+	Given I have a bot assigned
+	Then I check the DM count and start a Webmessage chat
+	Then I check Webmessage DM count and remove the Bot

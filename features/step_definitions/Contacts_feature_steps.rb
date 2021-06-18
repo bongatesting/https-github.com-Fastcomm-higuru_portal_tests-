@@ -50,7 +50,7 @@ Then('I fill in the Contact form, select all channels and dismiss the form') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_FACEBOOK).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::FACEBOOK_DROP_DOWN).click
+	$web_driver.find_element(ElementWarehouse::WHATSAPP_DROP_DOWN).click
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_GOOGLE_MY_BUSINESS))
 	$web_driver.find_element(ElementWarehouse::SELECT_GOOGLE_MY_BUSINESS).click
