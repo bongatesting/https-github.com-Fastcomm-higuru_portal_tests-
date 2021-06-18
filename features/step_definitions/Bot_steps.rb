@@ -103,3 +103,33 @@ Then('I initiate a chat and claim the bot chat') do
 	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
 	sleep 3
 end
+
+Given('The bot is still active') do
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.email)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
+	sleep 5
+	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BOTS_TAB).click
+	sleep 3
+end
+Then('I try removing the bot') do
+	$web_driver.find_element(ElementWarehouse::ACTIVE_TEST_BOT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::BOT_MENU_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DELETE_BOT_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONFIRM_DELETE_BOT_BUTTON).click
+	$web_driver.page_source.include? 'Unable to delete bot'
+	sleep 3
+	$web_driver.page_source.include? 'Unfortunately this bot cannot be deleted while it is assigned as your welcome assistant.'
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::UNABLE_TO_DELETE_BOT_OK_BUTTON).click
+	sleep 4
+end
