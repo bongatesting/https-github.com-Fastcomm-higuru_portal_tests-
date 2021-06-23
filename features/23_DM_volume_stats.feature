@@ -6,7 +6,7 @@ Feature: DM Volume Feature
 
   @Scenario:Viewing_DM_Volume_stats
   Scenario: I want to view DM Volume Stats through a Facebook chat
-	Given I am on Free Plan
+	Given I have an account
 	Then I add a Facebook page
 	Then I check the DM volume before starting a Facebook chat
 	Then I check the DM count after the message is sent and delivered

@@ -12,7 +12,7 @@ Given('I have the Webmessage channel') do
 	$web_driver.find_element(ElementWarehouse::LOGIN_ACCOUNT_SELECT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SELECT).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::CHANNELS_TAB).click
 	sleep 3
 end
@@ -59,9 +59,33 @@ Then('I test if the settings have been applied') do
 	$web_driver.find_element(ElementWarehouse::SELECT_BONGA_TEST_CHAT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::VIEW_CUSTOMER_INFO).click
-	$web_driver.page_source.include? 'Consumer Info'
-	$web_driver.page_source.include? 'Mobile Number'
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONTACT_DETAILS_BUTTON).click
+	$web_driver.page_source.include? 'WebMessage'
 	$web_driver.page_source.include? 'Email'
+	$web_driver.page_source.include? 'Mobile'
+	$web_driver.find_element(ElementWarehouse::CUSTOM_INFO_BUTTON).click
+	$web_driver.page_source.include? 'There is currently no custom data to show. Custom attributes from integrations will show here.'
+	$web_driver.find_element(ElementWarehouse::CONTACT_INFO_CONVO_TAB).click
+	$web_driver.page_source.include? 'Soon you will be able to view your contacts conversations across channels.'
+	$web_driver.find_element(ElementWarehouse::CONTACT_INFO_TICKETS_TAB).click
+	$web_driver.page_source.include? 'Soon you will be able to view and create tickets.'
+	$web_driver.find_element(ElementWarehouse::CONTACT_INFO_DROP_DOWN).click
+	$web_driver.find_element(ElementWarehouse::CONTACT_INFO_EDIT_CONTACT_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_FULL_NAME_FIELD).click
+	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_FULL_NAME_FIELD).send_keys('Edited Name')
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_ORGANIZATION_FIELD).click
+	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_ORGANIZATION_FIELD).send_keys('New Organization Name')
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_EMAIL_FIELD).click
+	$web_driver.action.key_down(:control).send_keys('a').key_down(:control).send_keys('c').key_up(:control).perform
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_EMAIL_FIELD).send_keys(TestUser.email)
+	scroll_to($web_driver.find_element(ElementWarehouse::EDIT_CONTACT_CHANNEL_ICON))
+	sleep 4
+	$web_driver.find_element(ElementWarehouse::EDIT_CONTACT_UPDATE_BUTTON).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CONTACT_INFO_DETAILS_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CLOSE_CUSTOMER_INFO).click
 	sleep 3
@@ -78,6 +102,7 @@ Then('I test if the settings have been applied') do
 	$web_driver.find_element(ElementWarehouse::WEB_MESSAGE_SETTINGS).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRE_CHAT_FORM_TOGGLE).click
+	sleep 3
 end
 
 Then('I customize the widget and check if the settings apply') do
