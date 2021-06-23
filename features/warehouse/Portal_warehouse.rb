@@ -166,6 +166,7 @@ class ElementWarehouse
 	SELECT_ROUTING_TAG_1 = { xpath: '//*[@id="assignWithChips"]/div/app-assign-with-chips/ion-content/ion-list/ion-item-group/div/ion-item/ion-checkbox' }
 	ASSIGN_ROUTING_TAGS_SAVE = { xpath: '//*[@id="assignWithChips"]/div[2]/app-assign-with-chips/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	ASSIGN_TEAM_MEMBERS = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item-group[2]/ion-item/ion-input/input' }
+	ASSIGN_TEAM_MEMBERS_2 = { xpath: '' }
 	SEARCH_TEAM_MEMBER = { xpath: '//*[@id="assignWithChipsUsers"]/div[2]/app-assign-with-chips/ion-content/ion-item/ion-searchbar/div/input' }
 	SELECT_TEAM_MEMBER = { xpath: '//*[@id="assignWithChipsUsers"]/div[2]/app-assign-with-chips/ion-content/ion-list/ion-item-group/div/ion-item/ion-checkbox' }
 	ASSIGN_MEMBER = { xpath: '//*[@id="assignWithChipsUsers"]/div[2]/app-assign-with-chips/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
@@ -175,6 +176,7 @@ class ElementWarehouse
 	UPDATE_TEAM_BUTTON = { xpath: '//*[@id="TeamUpdateComponent"]/div/app-team-update/ion-footer/ion-toolbar/ion-buttons/ion-button[2]' }
 	TEAM_DROP_DOWN = { xpath: '//ion-button[2]' }
 	DELETE_TEAM = { xpath: "//ion-label[contains(.,'Delete Team')]" }
+	UNDERSTAND_BUTTON = { xpath: "//span[contains(.,'Understand')]" }
 	CONFIRM_DELETE_TEAM = { xpath: "//span[contains(.,'Delete')]" }
 	TEAM_2 = { xpath: '//*[@id="teamsNav"]/app-teams/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-team-item[2]/ion-nav-link/ion-card/ion-avatar/img' }
 	TEAM_EDIT_BUTTON = { xpath: "//ion-nav[@id='teamsNav']/app-team-details/app-header/ion-header/ion-toolbar/ion-buttons[2]/ion-button" }
@@ -205,10 +207,21 @@ class ElementWarehouse
 	CENTANE_TAG = { xpath: '//ion-radio' }
 	OPEN_CHAT_CONVO_HISTORY = { xpath: "//ion-note[contains(.,'Open')]" }
 	VIEW_CUSTOMER_INFO = { xpath: '//ion-nav-link/ion-item/ion-label' }
+	CONTACT_DETAILS_BUTTON = { xpath: "//ion-label[contains(.,'Contact Details')]" }
+	CUSTOM_INFO_BUTTON = { xpath: "//ion-label[contains(.,'Custom Info')]" }
+	CONTACT_INFO_CONVO_TAB = { xpath: "//ion-segment-button[contains(.,'Conversations')]" }
+	CONTACT_INFO_TICKETS_TAB = { xpath: "//ion-segment-button[contains(.,'Tickets')]" }
+	CONTACT_INFO_DROP_DOWN = { xpath: "//ion-buttons[2]/ion-button" }
+	CONTACT_INFO_EDIT_CONTACT_BUTTON = { xpath: "//ion-label[contains(.,'Edit Contact')]" }
+	EDIT_CONTACT_FULL_NAME_FIELD = { xpath: '//*[@id="consumerEditModal"]/div[2]/app-consumer-create/ion-content/ion-item-group/form/ion-item[1]/ion-input/input' }
+	EDIT_CONTACT_ORGANIZATION_FIELD = { xpath: '//*[@id="consumerEditModal"]/div[2]/app-consumer-create/ion-content/ion-item-group/form/ion-item[2]/ion-input/input' }
+	EDIT_CONTACT_EMAIL_FIELD = { xpath: '//*[@id="consumerEditModal"]/div[2]/app-consumer-create/ion-content/ion-item-group/form/ion-item-group[1]/ion-item-group/ion-item/ion-input/input' }
+	EDIT_CONTACT_CHANNEL_ICON = { xpath: '//ion-item-group/img' }
+	EDIT_CONTACT_UPDATE_BUTTON = { xpath: "//ion-button[contains(.,'Update')]" }
+	CONTACT_INFO_DETAILS_TAB = { xpath: "//ion-segment-button[contains(.,'Details')]" }
 	CONVO_HISTORY_CUSTOMER_INFO = { xpath: '//ion-label/ion-text' }
-	CLOSE_CUSTOMER_INFO = { xpath: '//ion-header/ion-toolbar/ion-buttons/ion-nav-link/ion-button' }
+	CLOSE_CUSTOMER_INFO = { xpath: '//ion-header/ion-toolbar/ion-buttons/ion-button' }
 	RESOLVED_CHAT_CONVO_HISTORY = { xpath: "//ion-note[contains(.,'Resolved')]" }
-	NEW_LOGIN_PASSWORD= { xpath: '' }
 	SELECT_CONVO_TOPIC_TAG= { xpath: "//ion-modal[@id='assignSupportQueryTopicTags']/div[2]/app-assign-support-query-topic-tags/ion-content/ion-list/ion-item-group/div/ion-item/ion-checkbox" }
 	SEARCH_CONVO_TOPIC_TAG= { xpath: '//*[@id="assignSupportQueryTopicTags"]/div[2]/app-assign-support-query-topic-tags/app-header/ion-header/ion-toolbar[2]/ion-searchbar/div/input' }
 	PASSWORD_NEXT_BUTTON = { xpath: '//*[@id="passwordNext"]/span/span' }
@@ -268,7 +281,7 @@ class ElementWarehouse
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
 	TODAY_STATS_2 = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
-	RESOLVE_DROP_DOWN = { xpath: "//ion-label[contains(.,'Resolve')]" }
+	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[4]/ion-icon' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//ion-header/ion-toolbar/ion-item/ion-button' }
 	TOTAL_RESOLVED_CONVERSATIONS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[2]/ion-card/app-line-chart/div/div/div[1]/span[1]' }
 	TOTAL_DM_COUNT = { xpath: '//*[@id="dm-stats"]/app-stats-item/ion-card/app-line-chart/div/div/div[1]/span' }
@@ -284,6 +297,7 @@ class ElementWarehouse
 	DATE_DROP_DOWN_BUTTON = { xpath: '//*[@id="mediaCarouselModal"]/div[2]/app-date-picker/ion-content/div/sat-calendar/sat-calendar-header/div/div/button[1]/span/div' }
 	YEAR_2020_BUTTON = { xpath: '//tr[6]/td[3]/div' }
 	DECEMBER_BUTTON = { xpath: '//tr[4]/td[4]/div' }
+	AUGUST_BUTTON = { xpath: '//tr[3]/td[4]/div' }
 	CHOOSE_DATE_1_BUTTON = { xpath: '//td[2]/div' }
 	CHOOSE_DATE_2_BUTTON = { xpath: '//tr[5]/td[7]/div' }
 	NEXT_MONTH_BUTTON = { xpath: '//button[3]' }
@@ -339,10 +353,13 @@ class ElementWarehouse
 	UPGRADE_TEAMS_BUTTON = { xpath: '//*[@id="upgrade-btn-ga-11"]/div' }
 	UPGRADE_BILLING_PAGE = { xpath: "//ion-button[contains(.,'Upgrade')]" }
 	UPGRADE_ACCOUNT = { xpath: '//app-upgrade-button/div' }
-	TEAM_TWO = { xpath: '//*[@id="teamsNav"]/app-teams/ion-content/ion-slides/div/ion-slide[1]/ion-list/app-team-item[2]/ion-nav-link/ion-card' }
+	TEAM_TWO = { xpath: '//ion-slide[2]/ion-list/app-team-item/ion-nav-link/ion-card' }
+	TEAM_ONE = { xpath: '//ion-card' }
 	ADD_TEAM_BUTTON = { xpath: '//*[@id="teamsNav"]/app-teams/app-header/ion-header/ion-toolbar[1]/ion-buttons/ion-button' }
-	TEAM_NAME = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item[1]/ion-input/input' }
-	TEAM_DESCRIPTION = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item[2]/ion-input/input' }
+	TEAM_NAME_FIELD = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item[1]/ion-input/input' }
+	TEAM_NAME_FIELD_1 = { xpath: '//ion-input/input' }
+	TEAM_DESCRIPTION_FIELD = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item[2]/ion-input/input' }
+	TEAM_DESCRIPTION_FIELD_2 = { xpath: '//ion-item[2]/ion-input/input' }
 	ASSIGN_ROUTING_TAG = { xpath: '//*[@id="TeamCreateComponent"]/div[2]/app-team-create/ion-content/ion-item-group/form/ion-item-group[1]/ion-item/ion-input/input' }
 	PEOPLE_TAB = { xpath: "//ion-item[contains(.,'People')]" }
 	DOCUMENTS_LIBRARY_TAB = { xpath: "//ion-label[contains(.,'Document Library')]" }

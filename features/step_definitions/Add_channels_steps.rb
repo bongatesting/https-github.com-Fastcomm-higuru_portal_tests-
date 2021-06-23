@@ -3,7 +3,7 @@
 wait = Selenium::WebDriver::Wait.new(timeout: 80)
 
 Given('I have no channels added') do
-	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.channel_free_email)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.password)
 	sleep 3

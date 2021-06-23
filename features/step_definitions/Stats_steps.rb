@@ -60,6 +60,8 @@ Then('I choose a Custom Date and Export to PDF') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHOOSE_DATE_1_BUTTON).click
 	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON))
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON).click
@@ -145,6 +147,8 @@ Then('I go to the Stats Conversation DM Volume') do
 	scroll_to($web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON))
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::NEXT_MONTH_BUTTON).click
+	sleep 3
+	scroll_to($web_driver.find_element(ElementWarehouse::CHOOSE_DATE_2_BUTTON))
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHOOSE_DATE_2_BUTTON).click
 	sleep 4
