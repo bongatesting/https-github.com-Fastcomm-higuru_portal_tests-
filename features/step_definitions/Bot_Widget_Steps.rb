@@ -131,7 +131,9 @@ Then('I get feedback from the Agent And Complete my chat with the bot') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
 	sleep 3
-	#$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_SELECT_COUNTRY).click
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_SELECT_COUNTRY).click
+	sleep 3
+	#$web_driver.find_element(ElementWarehouse::PROD_PRECHAT_FORM_MOBILE_FIELD).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PROD_PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
 	sleep 3

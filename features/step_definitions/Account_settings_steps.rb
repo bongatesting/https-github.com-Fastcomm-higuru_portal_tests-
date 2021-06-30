@@ -56,10 +56,14 @@ Then('I switch on and off all the toggles') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_TOGGLE).click
 	sleep 3
+	$web_driver.page_source.include? 'Welcome Message'
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
 	sleep 3
+	$web_driver.page_source.include? 'Welcome Message'
+	sleep 2
 	$web_driver.find_element(ElementWarehouse::WELCOME_ASSISTANT_TOGGLE).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_TOGGLE).click
@@ -70,8 +74,12 @@ Then('I switch on and off all the toggles') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::USER_INACTIVITY_TOGGLE).click
 	sleep 3
+	$web_driver.page_source.include? 'mins'
+	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE))
 	$web_driver.find_element(ElementWarehouse::CONCURRENT_CONVERSATION_LIMIT_TOGGLE).click
+	sleep 3
+	$web_driver.page_source.include? 'assigned conversations'
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
@@ -82,6 +90,7 @@ Then('I switch on and off all the toggles') do
 	scroll_to($web_driver.find_element(ElementWarehouse::CANNED_REPLIES_TOGGLE))
 	$web_driver.find_element(ElementWarehouse::CANNED_REPLIES_TOGGLE).click
 	sleep 3
+	$web_driver.page_source.include? 'Canned Message'
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::COMPANY_UNIT_SETTINGS).click
@@ -90,6 +99,8 @@ Then('I switch on and off all the toggles') do
 	sleep 3
 	scroll_to($web_driver.find_element(ElementWarehouse::EMAIL_TRANSCRIPTS_TOGGLE))
 	$web_driver.find_element(ElementWarehouse::EMAIL_TRANSCRIPTS_TOGGLE).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::EMAIL_TRANSCRIPTS_MANAGE_BUTTON)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::DASHBOARD).click
 	sleep 3
