@@ -114,11 +114,12 @@ Then('I add WebMessage') do
 	$web_driver.find_element(ElementWarehouse::REMOVE_WEB_CHANNEL).click
 	$web_driver.page_source.include? 'Are you sure you want to remove the web-sdk channel "Webmessage Channel"?'
 	$web_driver.page_source.include? 'Once this channel is removed, you will no longer be able to exchange conversations through this channel.'
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::REMOVE_WEB_MESSAGE_CANCEL_BUTTON)
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONFIRM_REMOVE_WEB_CHANNEL).click
 	sleep 3
+	$web_driver.page_source.include? 'Channel removed successfully'
 end
 
 Then('I add Twitter') do

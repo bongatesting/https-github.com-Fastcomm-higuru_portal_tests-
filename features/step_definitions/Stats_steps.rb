@@ -88,7 +88,7 @@ Then('Navigate to the Agent Activity and View the Available stats') do
 	wait.until { $web_driver.find_element(ElementWarehouse::AGENT_ACTIVITY_TAB).displayed? }
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::AGENT_ACTIVITY_TAB).click
-	sleep 3
+	sleep 5
 	$web_driver.find_element(ElementWarehouse::STATS_DROP_DOWN_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::LAST_WEEK_STATS_2).click

@@ -120,15 +120,23 @@ end
 Then('I view contacts and their details') do
 	$web_driver.find_element(ElementWarehouse::CONTACTS_TAB).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
-	sleep 3
-	$web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
+	#$web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
+	#$web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
+	$web_driver.find_element(ElementWarehouse::SELECT_CONTACT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::VIEW_CHANNEL_SUBSCRIPTION).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CHANNEL_SUBSCRIPTIONS_MENU).click
+	sleep 3
+	$web_driver.page_source.include? 'Unsubscribe'
+	sleep 3
+	$web_driver.page_source.include? 'Block Contact'
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::CLOSE_CHANNEL_SUBSCRIPTIONS_MENU).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CLOSE_CHANNEL_SUBSCRIPTION).click
 	sleep 3

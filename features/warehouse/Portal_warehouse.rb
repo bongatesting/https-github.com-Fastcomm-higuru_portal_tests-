@@ -196,7 +196,7 @@ class ElementWarehouse
 	PRECHAT_FORM_MOBILE_DROP_DOWN = { xpath: '' }
 	PRECHAT_FORM_SELECT_COUNTRY = { xpath: '//*[@id="preChatForm"]/div/div/div/select/option[203]' }
 	PRECHAT_FORM_MOBILE_FIELD = { xpath: '//*[@id="phone-input"]' }
-	PROD_PRECHAT_FORM_MOBILE_FIELD = { xpath: '//*[@id="preChatForm"]/label[3]/input' }
+	PROD_PRECHAT_FORM_MOBILE_FIELD = { xpath: '//div/input' }
 	START_CHAT_BUTTON = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[2]/div/div[2]/button' }
 	QA_WEB_WIDGET_CHAT_FIELD = { xpath: '//*[@id="higuru-webchat"]/div/div/div[1]/div[3]/div[1]/div/div/div[1]' }
 	QA_INBOUND_TAB = { xpath: "//ion-segment-button[contains(.,'Inbound')]" }
@@ -237,6 +237,7 @@ class ElementWarehouse
 	USER_INACTIVITY_TOGGLE = { xpath: '//ion-item[4]/ion-toggle' }
 	CANNED_REPLIES_TOGGLE = { xpath: '//ion-item[6]/ion-toggle' }
 	EMAIL_TRANSCRIPTS_TOGGLE = { xpath: '//ion-item[7]/ion-toggle' }
+	EMAIL_TRANSCRIPTS_MANAGE_BUTTON = { xpath: "//ion-button[contains(.,'Manage')]" }
 	SETTINGS_TAB = { xpath: '//*[@id="home-content"]/app-company-unit-info-container/app-header/ion-header/ion-toolbar[2]/ion-segment/ion-segment-button[2]' }
 	CONVERSATION_RESOLVE_SLIDER = { xpath: "//ion-label[contains(.,'Conversation Expiry')]" }
 	CONVERSATION_RESOLVE_SLIDER_TIME = { xpath: "//ion-range" }
@@ -407,9 +408,12 @@ class ElementWarehouse
 	CONTACTS_SEARCH_FIELD = { xpath: '//input' }
 	CONTACT_MENU = { xpath: '//ion-item/ion-button' }
 	VIEW_CONTACT = { xpath: "//ion-label[contains(.,'View Contact')]" }
+	SELECT_CONTACT = { xpath: "//ion-text[contains(.,'Yonela Neku')]" }
 	VIEW_CHANNEL_SUBSCRIPTION = { xpath: '//div/ion-avatar/img' }
 	CHANNEL_SUBSCRIPTION_UNSUBSCRIBED_TAB = { xpath: "//ion-segment-button[contains(.,'Unsubscribed')]" }
 	CHANNEL_SUBSCRIPTION_SUBSCRIBED_TAB = { xpath: "//ion-segment-button[contains(.,'Subscribed')]" }
+	CHANNEL_SUBSCRIPTIONS_MENU = { xpath: '//ion-list/ion-item/ion-button' }
+	CLOSE_CHANNEL_SUBSCRIPTIONS_MENU = { xpath: '//ion-popover/ion-backdrop' }
 	CLOSE_CHANNEL_SUBSCRIPTION = { xpath: "//ion-button[contains(.,'close')]" }
 	BACK_TO_CONTACTS = { xpath: '//app-consumer-details/app-header/ion-header/ion-toolbar/ion-buttons/ion-button' }
 	UNREGISTERED_CONTACTS_TAB = { xpath: "//ion-segment-button[contains(.,'Unregistered')]" }

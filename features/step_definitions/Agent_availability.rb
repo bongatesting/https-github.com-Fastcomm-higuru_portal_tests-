@@ -37,6 +37,8 @@ Then('I make a conversation and check if it comes through') do
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
 	sleep 4
+	$web_driver.page_source.include? 'Unassigned conversations in queue'
+	sleep 4
 end
 
 Then('I switch back to available and check if the conversation comes through') do
@@ -45,6 +47,12 @@ Then('I switch back to available and check if the conversation comes through') d
 	$web_driver.find_element(ElementWarehouse::AVAILABILITY_TOGGLE).click
 	sleep 3
 	$web_driver.navigate.refresh
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::SELECT_INBOUND_CHAT).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
 	sleep 3
 end
 
