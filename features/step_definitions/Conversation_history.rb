@@ -62,7 +62,7 @@ Then('I click on conversation history') do
 	sleep 6
 end
 
-Then('I view the Customer info') do
+Then('I view the Contact info') do
 	$web_driver.find_element(ElementWarehouse::QA_ALL_CONVERSATION_HISTORY).click
 	sleep 6
 	$web_driver.find_element(ElementWarehouse::OPEN_CHAT_CONVO_HISTORY).click

@@ -15,7 +15,7 @@ Feature: Conversations Feature
 	Given I have conversations
 	Then I start a conversation
 	Then I click on conversation history
-	Then I view the Customer info
+	Then I view the Contact info
 
   Scenario: I want to adjust the conversation expiry slider
 	Given I am on the Company Unit Settings page
