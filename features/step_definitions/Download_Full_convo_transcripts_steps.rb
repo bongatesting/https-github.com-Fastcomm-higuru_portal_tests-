@@ -22,5 +22,5 @@ Then('I download the Full Conversation Transcripts') do
 	$web_driver.find_element(ElementWarehouse::CONVO_HISTORY_DOWNLOAD_ICON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::FULL_TRANSCRIPTS_BUTTON).click
-	sleep 3
+	sleep 5
 end

@@ -100,6 +100,7 @@ end
 
 Then('I attempt exporting stats') do
 	$web_driver.find_element(ElementWarehouse::STATS_TAB).click
+	sleep 3
 	wait.until { $web_driver.find_element(ElementWarehouse::EXPORT_BUTTON).displayed? }
 	$web_driver.find_element(ElementWarehouse::EXPORT_BUTTON).click
 	sleep 3

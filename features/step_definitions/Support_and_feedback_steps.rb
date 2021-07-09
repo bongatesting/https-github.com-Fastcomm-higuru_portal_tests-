@@ -28,6 +28,10 @@ Then('I send Feedback') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::PROD_PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
 	sleep 3
+	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_SELECT_COUNTRY).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::PROD_PRECHAT_FORM_MOBILE_FIELD).send_keys(TestUser.mobile_number)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::SUPPORT_BUTTON).click

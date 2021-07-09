@@ -219,6 +219,8 @@ class ElementWarehouse
 	EDIT_CONTACT_CHANNEL_ICON = { xpath: '//ion-item-group/img' }
 	EDIT_CONTACT_UPDATE_BUTTON = { xpath: "//ion-button[contains(.,'Update')]" }
 	CONTACT_INFO_DETAILS_TAB = { xpath: "//ion-segment-button[contains(.,'Details')]" }
+	SIDE_PANEL_CALL_BUTTON = { xpath: "//ion-tab-button/ion-icon" }
+	HANG_UP_BUTTON = { css: '//*[@id="new-toolbox"]/div/div/div/div[4]/div/div/div/svg/path' }
 	CONVO_HISTORY_CUSTOMER_INFO = { xpath: '//ion-label/ion-text' }
 	CLOSE_CUSTOMER_INFO = { xpath: '//ion-header/ion-toolbar/ion-buttons/ion-button' }
 	RESOLVED_CHAT_CONVO_HISTORY = { xpath: "//ion-note[contains(.,'Resolved')]" }
@@ -282,7 +284,7 @@ class ElementWarehouse
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
 	TODAY_STATS_2 = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
-	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[4]/ion-icon' }
+	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//ion-header/ion-toolbar/ion-item/ion-button' }
 	TOTAL_RESOLVED_CONVERSATIONS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[2]/ion-card/app-line-chart/div/div/div[1]/span[1]' }
 	TOTAL_DM_COUNT = { xpath: '//*[@id="dm-stats"]/app-stats-item/ion-card/app-line-chart/div/div/div[1]/span' }

@@ -9,53 +9,95 @@ sleep 3
 end
 
 Then('I click on the Fastcomm WIDGET and test the responses') do
+	wait.until { $web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).displayed? }
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_NAME_FIELD).send_keys(TestUser.customer_name)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::WELCOME_FASTCOMM_TEXT)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::MORE_FASTCOMM_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::MEDIA_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATING_WITH_US_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE_1)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::FC_SOLUTION_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::FC_SOLUTION_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE_4)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE_5)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::HI_GURU_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::HELLOTHING_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_1)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_4)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_URL).click
+	sleep 3
 	$web_driver.switch_to.window($web_driver.window_handles.last)
 	$web_driver.find_element(ElementWarehouse::LATCH_SITE_TEXT)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_SIGN_IN)
 	sleep 2
 	$web_driver.close.last
 	sleep 2
 	$web_driver.switch_to.window($web_driver.window_handles.first)
 	$web_driver.find_element(ElementWarehouse::NO_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::YES_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_YES_RESPONSE_1)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_YES_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_YES_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::MEDIA_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATING_WITH_US_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::MORE_FASTCOMM_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ABOUT_FASTCOMM_RESPONSE_1)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ABOUT_FASTCOMM_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ABOUT_FASTCOMM_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ABOUT_FASTCOMM_RESPONSE_4)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ABOUT_FASTCOMM_RESPONSE_5)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::ABOUT_FASTCOMM_RESPONSE_6)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_LINK).click
+	sleep 3
 	$web_driver.switch_to.window($web_driver.window_handles.last)
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_TITLE)
@@ -69,29 +111,52 @@ end
 
 Then('I click on the WIDGET and send messages instead of clicking') do
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::WELCOME_FASTCOMM_TEXT)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::MORE_FASTCOMM_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::MEDIA_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATING_WITH_US_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('I would like more info on your Solutions')
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE_1)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::HG_SOLUTION_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::HG_SOLUTION_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE_4)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::OUR_SOLUTION_RESPONSE_5)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::HI_GURU_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::HELLOTHING_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('I would like to know about Latch')
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_1)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_RESPONSE_4)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_URL).click
+	sleep 3
 	$web_driver.switch_to.window($web_driver.window_handles.last)
 	$web_driver.find_element(ElementWarehouse::LATCH_SITE_TEXT)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LATCH_SIGN_IN)
 	sleep 2
 	$web_driver.close.last
@@ -211,9 +276,13 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 	$web_driver.switch_to.window($web_driver.window_handles.last)
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_LOGO)
-	$web_driver.find_element(ElementWarehouse::MEDIA_URL_TEXT)
-	$web_driver.find_element(ElementWarehouse::MEDIA_URL_TEXT_2)
+	sleep 3
+	#$web_driver.find_element(ElementWarehouse::MEDIA_URL_TEXT)
+	sleep 3
+	#$web_driver.find_element(ElementWarehouse::MEDIA_URL_TEXT_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::SHOPPING_CART)
+	sleep 3
 	#$web_driver.find_element(ElementWarehouse::MEDIA_PLAY_BUTTON)
 	# TODO: - Nice to have video played
 	# $web_driver.find_element(ElementWarehouse::YOUTUBE_PLAY_BUTTON).click
@@ -228,15 +297,24 @@ Then('I re-initiate my Chat with the Fastcomm Sites Bot') do
 	#$web_driver.find_element(ElementWarehouse::COMPANY_TEXT)
 	#$web_driver.find_element(ElementWarehouse::THREE_LINES_CLOSE_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::HELP_BOT_RESPONSE)
+	sleep 3
 	#$web_driver.find_element(ElementWarehouse::YES_BUTTON).click
 	$web_driver.find_element(ElementWarehouse::CREATING_WITH_US_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATING_RESPONSE)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATING_RESPONSE_2)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CREATING_RESPONSE_3)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(TestUser.email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys('Thank you')
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return )
+	sleep 3
 end
 
 When('I initiate chatting to a live agent') do
@@ -245,9 +323,13 @@ When('I initiate chatting to a live agent') do
 	$web_driver.find_element(ElementWarehouse::FASTCOMM_WIDGET).click
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_NAME_FIELD).send_keys(TestUser.customer_name)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PRECHAT_FORM_EMAIL_FIELD).send_keys(TestUser.gmail_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::START_CHAT_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CHATTING_TO_US_BUTTON).click
+	sleep 3
 	if $web_driver.find_elements(ElementWarehouse::CHATTING_TO_US_RESPONSE_1).first
 		$stdout.puts 'Agent available'.blue
 		$stdout.flush
@@ -255,9 +337,13 @@ When('I initiate chatting to a live agent') do
 		$stdout.puts 'Agent not available'.red
 		$stdout.flush
 		$web_driver.find_element(ElementWarehouse::AGENT_NOT_AVAILABLE_1)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(TestUser.email)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_TEXT_FIELD).send_keys(:return)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::EMAIL_RESPONSE)
+		sleep 3
 	end
 end
 
@@ -267,96 +353,160 @@ Then('I reply as an Agent and resolve the chat') do
 	$web_driver.get 'https://app-qa.hi.guru/account/login'
 	sleep 5
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEST_FASTCOMM).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
+	sleep 3
 	if $web_driver.find_elements(ElementWarehouse::CONVERSATION_COUNT_ONE).first
+		sleep 3
 		$web_driver.find_elements(ElementWarehouse::CONVERSATION_COUNT_ONE).first.click
 		sleep 5
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT).click
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Hi, My name Is BOT, How may I assist you?')
 		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.first)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::AGENT_RESPONSE)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi Bot, I am just testing. We may close this query')
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.last)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CLIENT_RESOLVE_TEXT)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Sure thing. Consider it Resolved...')
 		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.first)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::AGENT_RESOLVE_TEXT_2)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot')
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.last)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.first)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+		sleep 3
 	elsif $web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first
+		sleep 3
 		$web_driver.find_elements(ElementWarehouse::CONVERSATIONS_TAB).first.click
-		$web_driver.find_elements(ElementWarehouse::BOT_TAB).click
+		sleep 3
+		$web_driver.find_elements(ElementWarehouse::BOTS_TAB).click
+		sleep 3
 		$web_driver.find_elements(ElementWarehouse::BOT_CHAT).click
+		sleep 3
 		$web_driver.find_elements(ElementWarehouse::CLAIM_BUTTON).click
+		sleep 3
 		$web_driver.find_elements(ElementWarehouse::INBOUND_TAB).click
+		sleep 3
 		$web_driver.find_elements(ElementWarehouse::INBOUND_CHAT).click
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Hi, My name Is BOT, How may I assist you?')
 		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.first)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::AGENT_RESPONSE)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Hi Bot, I am just testing. We may close this query')
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.last)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CLIENT_RESOLVE_TEXT)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_FIELD).send_keys('Sure thing. Consider it Resolved...')
 		sleep 3
 		$web_driver.find_element(ElementWarehouse::INBOUND_CHAT_SEND_BUTTON).click
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.first)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::AGENT_RESOLVE_TEXT_2)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys('Thank you Awesome Bot')
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CHAT_FIELD).send_keys(:return)
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.last)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
+		sleep 3
 		$web_driver.switch_to.window($web_driver.window_handles.first)
+		sleep 3
 		$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+		sleep 3
 	end
 end
 
 Then('I claim and close the chat on Fastcomm Portal Channel') do
 	$web_driver.find_element(ElementWarehouse::YES_BUTTON)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::NO_BUTTON)
 	sleep 2
 	open_new_tab
 	 $web_driver.get 'https://app-qa.hi.guru/account/login'
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::EMAIL_FIELD).send_keys(TestUser.hi_guru_email)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::PASSWORD_FIELD).send_keys(TestUser.hi_guru_password)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::LOGIN_BUTTON).click
 	sleep 2
 	$web_driver.find_element(ElementWarehouse::TEST_FASTCOMM).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CLOSE_NOTIFICATION).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATIONS_TAB).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::BOT_TEXT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::BOT_CHAT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CLAIM_BUTTON).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVO_CLAIMED_TEXT)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::INBOUND_TAB).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::INBOUND_CHAT).click
-	sleep 2
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::RESOLVE_BUTTON).click
-	sleep 1
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::RESOLVE_TEXT).click
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::RESOLVED_TEXT)
+	sleep 3
 	$web_driver.switch_to.window($web_driver.window_handles.first)
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVERSATION_AGENT_RESOLVED)
+	sleep 3
 end
 
 Then('I get feedback from the agent') do
