@@ -5,6 +5,6 @@ Feature: iLab Feature
   @URGENCY:Low
 
   @Scenario:Automation_assessment
-	Scenario: I want to Fill in the Application From
-	Given I am applying for a Jop post
+	Scenario: I want to Fill in the Application Form
+	Given I am applying for a Job post
 	Then I fill in the form and apply for the job

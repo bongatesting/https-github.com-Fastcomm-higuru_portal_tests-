@@ -67,5 +67,5 @@ Before do  #Browser Env
 	Selenium::WebDriver::Wait.new(timeout: 10)
 	$web_driver.manage.timeouts.implicit_wait = 10
 	$web_driver.navigate.to "https://#{ENV['HOST']}.hi.guru/"
-	#$web_driver.navigate.to "https://google.com/"
+	$web_driver.navigate.to "https://google.com/"
 end
