@@ -434,6 +434,7 @@ class ElementWarehouse
 	ILAB_PHONE_FIELD = { xpath: '//div[3]/div/input' }
 	ILAB_MESSAGE_FILED = { xpath: '//textarea' }
 	ILAB_SUBMIT_BUTTON = { xpath: '//fieldset[2]/input' }
+	YOU_NEED_TO_UPLOAD_TEXT = { xpath: '//span[2]' }
 	SELECT_SOUTH_AFRICA = { xpath: "//span[contains(.,'South Africa')]" }
 	WHATSAPP_SELECT_SOUTH_AFRICA = { xpath: "//ion-item-group[5]/ion-item-group/ion-item-group/ngx-intl-tel-input/div/div/div[2]/ul/li[2]" }
 	CONTACT_PHONE_FIELD = { xpath: "//input[@id='phone']" }
