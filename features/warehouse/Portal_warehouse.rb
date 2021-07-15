@@ -284,7 +284,7 @@ class ElementWarehouse
 	LAST_YEAR_STATS_2 = { xpath: '//*[@id="ion-overlay-14"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[4]/ion-label' }
 	TODAY_STATS_2 = { xpath: '//*[@id="ion-overlay-16"]/div[2]/div[2]/app-list-popover/ion-list/ion-item[1]/ion-label' }
 	STATS_HIGHEST_RESOLVED = { xpath: "//ion-label[contains(.,'Highest')]" }
-	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[3]/ion-icon' }
+	RESOLVE_DROP_DOWN = { xpath: '//ion-tab-button[4]/ion-icon' }
 	STATS_DROP_DOWN_BUTTON = { xpath: '//ion-header/ion-toolbar/ion-item/ion-button' }
 	TOTAL_RESOLVED_CONVERSATIONS = { xpath: '//*[@id="statsSlides"]/div/ion-slide[1]/ion-list/ion-item-group/app-stats-item[2]/ion-card/app-line-chart/div/div/div[1]/span[1]' }
 	TOTAL_DM_COUNT = { xpath: '//*[@id="dm-stats"]/app-stats-item/ion-card/app-line-chart/div/div/div[1]/span' }
@@ -426,6 +426,14 @@ class ElementWarehouse
 	CONTACT_ORGANIZATION_FIELD = { xpath: "//input[@name='ion-input-3']" }
 	CONTACT_EMAIL_FIELD = { xpath: "//input[@name='ion-input-4']" }
 	CONTACT_PHONE_DROP_DOWN = { xpath: '//div/div/div' }
+	SELECT_COUNTRY = { xpath: "//a[contains(.,'South Africa')]" }
+	SELECT_JOB_POSITION = { xpath: "//a[contains(.,'Software Test Engineer - Johannesburg')]" }
+	ILAB_APPLICANT_NAME_FIELD = { xpath: '//div/input' }
+	ILAB_APPLY_ONLINE = { xpath: '//div/div[2]/div/a' }
+	ILAB_EMAIL_FIELD = { xpath: '//div[2]/div/input' }
+	ILAB_PHONE_FIELD = { xpath: '//div[3]/div/input' }
+	ILAB_MESSAGE_FILED = { xpath: '//textarea' }
+	ILAB_SUBMIT_BUTTON = { xpath: '//fieldset[2]/input' }
 	SELECT_SOUTH_AFRICA = { xpath: "//span[contains(.,'South Africa')]" }
 	WHATSAPP_SELECT_SOUTH_AFRICA = { xpath: "//ion-item-group[5]/ion-item-group/ion-item-group/ngx-intl-tel-input/div/div/div[2]/ul/li[2]" }
 	CONTACT_PHONE_FIELD = { xpath: "//input[@id='phone']" }

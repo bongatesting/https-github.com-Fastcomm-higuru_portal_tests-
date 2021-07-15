@@ -122,6 +122,8 @@ Then('I view contacts and their details') do
 	sleep 3
 	#$web_driver.find_element(ElementWarehouse::CONTACT_MENU).click
 	#$web_driver.find_element(ElementWarehouse::VIEW_CONTACT).click
+	scroll_to($web_driver.find_element(ElementWarehouse::SELECT_CONTACT))
+	sleep 3
 	$web_driver.find_element(ElementWarehouse::SELECT_CONTACT).click
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::VIEW_CHANNEL_SUBSCRIPTION).click
