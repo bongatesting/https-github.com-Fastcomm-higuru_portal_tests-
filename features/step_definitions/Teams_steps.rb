@@ -46,6 +46,12 @@ Then('I edit the Team description and Name') do
 	$web_driver.find_element(ElementWarehouse::TEAM_DESCRIPTION_FIELD_2).send_keys('Updated Team description')
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::UPDATE_TEAM_BUTTON).click
+	sleep 7
+	$web_driver.find_element(ElementWarehouse::TEAM_TWO).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::TEAM_DROP_DOWN).click
+	sleep 3
+	$web_driver.find_element(ElementWarehouse::DELETE_TEAM).click
 	sleep 3
 end
 

@@ -94,9 +94,9 @@ Then('I set the Concurrent Conversation Limit and Test it') do
 	sleep 3
 	$web_driver.find_element(ElementWarehouse::CONVO_BOTS_TAB).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::QA_SELECT_BOT_CHAT).click
+	$web_driver.find_element(ElementWarehouse::OPEN_THE_CHAT).click
 	sleep 3
-	$web_driver.find_element(ElementWarehouse::QA_CLAIM_BOT_CHAT_BUTTON).click
+	$web_driver.find_element(ElementWarehouse::CLAIM_BUTTON).click
 	sleep 3
 	$web_driver.page_source.include? 'Concurrent conversation limit reached'
 	sleep 5
