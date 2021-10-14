@@ -1,4 +1,4 @@
-# HiGuru Portal Tests
+# OneDayOnly Web Tests
 Testing All platforms and websites where the hiGugru widget is active
 
 ##Setup for Ubuntu:
